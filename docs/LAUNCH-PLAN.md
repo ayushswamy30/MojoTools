@@ -1,20 +1,22 @@
-# 02b — Phase 1 Launch Campaign Plan
+# Mojo Tools — R0 Launch Campaign Plan
 
-**Purpose:** a marketing plan for launching the Phase 1 company site ([`phasing.md`](phasing.md)) so it brings in enquiries from day one. It also sets the **analytics and tracking requirements** the architecture must support ([`02-architecture-summary.md`](02-architecture-summary.md)).
+> **Version 0.2** (08 Oct 2026). Built with the campaign-planning skill.
 
-> **Inputs and assumptions.** Goal and audience come from the PRD (goals G1 and G3, §3 personas). **Launch date and budget have not been given yet**, so the calendar counts in weeks relative to launch (L-4 … L+8), and the budget is shown as three tiers to choose from. Assumptions are marked 🟡; see [Next steps](#10-next-steps).
+**Purpose:** a marketing plan for launching the **R0 company site** ([`PRD.md §12`](PRD.md#12-release-plan)) so it brings in enquiries from day one. Its tracking requirements are built into [`ARCHITECTURE.md §11`](ARCHITECTURE.md#11-analytics--attribution) and tasks T2.5 / T5.6 in [`TASKS.md`](TASKS.md).
+
+> **Inputs and assumptions.** Goal and audience come from the PRD (goals G1 and G3, §3 personas). **Launch date and budget have not been given yet** (owner task T0.6), so the calendar counts in weeks relative to launch (L-4 … L+8), and the budget is shown as three tiers to choose from. Assumptions are marked 🟡; see [Next steps](#10-next-steps).
 
 ---
 
 ## 1. Campaign overview
 
 - **Campaign name (suggestion):** **"Mojo Tools is Online"**, with the B2B tagline *"Every brand. Every tool. One quote away."*
-- **Summary:** tell existing customers and nearby trade buyers that Mojo Tools now has a website where they can see the brands it stocks and get a quote in minutes, and turn that visibility into enquiries before the online shop launches.
+- **Summary:** tell existing customers and nearby trade buyers that Mojo Tools now has a website where they can see the brands it stocks and get a quote in minutes, and turn that visibility into enquiries before the online shop (R1) launches.
 - **Primary objective (SMART, 🟡 targets to confirm):** get **150 qualified enquiries** (quote requests + WhatsApp chats + calls from the site) within **8 weeks of launch**, with at least **60 %** from B2B buyers.
 - **Secondary objectives:**
   - Site indexed and ranking on page 1 for "Mojo Tools" and for "[brand] dealer in [city]" for the top 10 brands, within 8 weeks.
   - Google Business Profile verified, with **25+ reviews** by L+8.
-  - Build a **launch-notify list of 300+ contacts** for the Phase 2 e-commerce launch.
+  - Build a **launch-notify list of 300+ contacts** for the R1 e-commerce launch.
 
 ## 2. Target audience
 
@@ -30,7 +32,7 @@
 | Pain | Message angle |
 |------|---------------|
 | "Is it genuine?" (fakes are common in tools) | Authorised distributor; brand logos; GST invoice |
-| "I have to call five shops for a price" | One quote form or WhatsApp, reply within one working day |
+| "I have to call five shops for a price" | One quote form or WhatsApp, reply within {response promise} 🟡 |
 | "Is it in stock?" | Brand range shown; ask on WhatsApp for live stock |
 | "I need it billed properly" | GST invoice, GSTIN on bill |
 | Dealers: "What's my margin?" | Request dealer price list |
@@ -43,7 +45,7 @@
 |--------------------|----------------------------------|
 | **Genuine, authorised.** We are a direct distributor/dealer for [brands]. | Brand logos, authorisation certificates, years in business |
 | **Everything in one place.** [X]+ products across [Y] brands for contractors, workshops and factories. | SKU and brand counts (the stats strip) |
-| **Fast quotes, proper billing.** Send your list and get a priced quote with a GST invoice. | Response-time promise (e.g. within one working day) |
+| **Fast quotes, proper billing.** Send your list and get a priced quote with a GST invoice. | Response-time promise (owner to set, T0.6) |
 | **Trusted locally.** Serving [city/region] since [year]. | Customer count, real testimonials, Google rating |
 
 **Variation by channel:**
@@ -79,14 +81,14 @@ The audience is mostly local and repeat B2B, so **owned and local channels come 
 
 | Week | Content piece | Channel | Owner / notes | Status |
 |------|---------------|---------|---------------|--------|
-| **L-4** | Collect proof points: years, brand list + logos, SKU count, customer count, 5 real testimonials, photos | Internal | Owner. These also feed About/Home ([`phasing.md`](phasing.md#phase-1-data-needed-from-the-owner)) | ☐ |
+| **L-4** | Collect proof points: years, brand list + logos, SKU count, customer count, 5 real testimonials, photos | Internal | Owner. These also feed About/Home (TASKS T0.4–T0.5) | ☐ |
 | L-4 | Claim / clean up Google Business Profile; consistent name, address, phone everywhere | GBP, IndiaMART | Owner + ops | ☐ |
 | L-3 | Write brand-page copy (top 10 brands first) + home/about copy | Website | Owner + writer | ☐ |
 | L-3 | Email/WhatsApp each brand partner asking for a dealer-locator link | Brand partners | Owner | ☐ |
 | L-2 | Shoot photos/video: warehouse, counter, team, top stock | All | Ops | ☐ |
 | L-2 | Set up WhatsApp Business profile, catalogue, quick replies | WhatsApp | Sales | ☐ |
 | L-2 | Print QR standees, invoice footer, visiting-card reprint | In-store | Ops (**depends on final domain**) | ☐ |
-| L-1 | **Tracking QA** (see §7): GA4 events, UTMs stored in enquiries, Search Console verified, sitemap submitted | Website | Dev (**blocks all paid**) | ☐ |
+| L-1 | **Tracking QA** (see §7): GA4 events, UTMs stored in enquiries, Search Console verified, sitemap submitted | Website | Dev, TASKS T5.6 (**blocks all paid**) | ☐ |
 | L-1 | Draft launch messages (owner WhatsApp broadcast, SMS, LinkedIn, Instagram) | Owned | Owner + writer | ☐ |
 | **L0 — Launch** | Site live; owner broadcast to existing customers; LinkedIn + Instagram launch posts; GBP post; QR standees out | All owned | Everyone | ☐ |
 | L+1 | Review requests to the 50 most loyal customers (GBP link) | WhatsApp | Sales | ☐ |
@@ -99,8 +101,8 @@ The audience is mostly local and repeat B2B, so **owned and local channels come 
 | L+5 | Testimonial post (real customer, with permission) | LinkedIn, Instagram | Marketing | ☐ |
 | L+6 | Meta click-to-WhatsApp test (if budget tier = Growth) | Paid | Marketing | ☐ |
 | L+6 | Brand spotlight #4 + GBP post | Social, GBP | Marketing | ☐ |
-| L+7 | "Online ordering coming soon — join the list" push | All owned | Marketing (builds the Phase 2 list) | ☐ |
-| **L+8** | **Campaign wrap-up report**; decide on the Phase 2 launch campaign | Internal | Owner | ☐ |
+| L+7 | "Online ordering coming soon — join the list" push | All owned | Marketing (builds the R1 list) | ☐ |
+| **L+8** | **Campaign wrap-up report**; decide on the R1 launch campaign | Internal | Owner | ☐ |
 
 About 20 % of slots are left open for reactive posts (new stock arrivals, festival greetings such as Diwali / Vishwakarma Puja, which matter in the tools trade).
 
@@ -128,14 +130,14 @@ About 20 % of slots are left open for reactive posts (new stock arrivals, festiv
 | KPI | Target 🟡 | Tracked by |
 |-----|-----------|-----------|
 | **Qualified enquiries** (primary) | 150 in 8 weeks, ≥60 % B2B | `enquiries` table + GA4 `generate_lead` + WhatsApp/call click events |
-| Enquiry → quote sent → order | Track the baseline; aim for 25 % enquiry-to-order | Sales updates `enquiries.status` (manual in Phase 1) |
+| Enquiry → quote sent → order | Track the baseline; aim for 25 % enquiry-to-order | Sales updates `enquiries.status` (manual in R0) |
 | Enquiries by source | Know the top 3 sources by L+4 | UTM + `source_page` stored on each enquiry |
 | GBP reviews / rating | 25+ reviews, ≥4.5 | GBP insights |
 | Organic search | Indexed by L+1; page 1 for brand name + 5 "[brand] dealer [city]" terms | Search Console |
-| Phase 2 launch list | 300+ contacts | Newsletter/notify table |
+| R1 launch notify list | 300+ contacts | Newsletter/notify table |
 | Ad cost per enquiry (if paid) | ≤ ₹300 🟡 | Google Ads / Meta + GA4 |
 
-**Tracking requirements for the build** (these feed back into architecture AR-1):
+**Tracking requirements for the build** (specified in [`ARCHITECTURE.md §11`](ARCHITECTURE.md#11-analytics--attribution)):
 
 | Event (GA4) | Fires when | Parameters |
 |-------------|-----------|------------|
@@ -149,7 +151,7 @@ About 20 % of slots are left open for reactive posts (new stock arrivals, festiv
 - Capture `utm_source / utm_medium / utm_campaign` on first landing (first-party cookie) and save them on the enquiry row.
 - Every QR code, broadcast link and social link uses a UTM URL, e.g. `?utm_source=instore&utm_medium=qr&utm_campaign=launch`.
 - Pre-fill WhatsApp click-to-chat with the page name ("Hi, I'm interested in Bosch tools [from website]"), so WhatsApp leads can be attributed.
-- Analytics loads only **after cookie consent** (DPDP, PRD GL-6).
+- Analytics loads only **after cookie consent** (DPDP, PRD GL-6). Enquiry counts in the database work without consent, so they are the source of truth for the primary KPI.
 
 **Reporting cadence:** a weekly 15-minute look (enquiries by source, top pages, ad spend), the mid-point review at L+4, and the full report at L+8.
 
@@ -170,11 +172,11 @@ Recommendation: start with **Starter**. Put most of the paid money into **Google
 
 | Risk | Mitigation |
 |------|------------|
-| **Enquiries arrive but nobody follows up fast.** Leads go cold, and buyers won't come back. | Promise a reply within one working day; email + WhatsApp alert to sales on every enquiry; one named owner per day; track `status`. |
+| **Enquiries arrive but nobody follows up fast.** Leads go cold, and buyers won't come back. | Set and publish the response promise (T0.6); email + WhatsApp alert to sales on every enquiry; one named owner per day; track `status`. |
 | **Missing content and assets delay launch** (logos, photos, brand copy are all still ❓). | Start asset collection at L-4; launch with the top 10 brands complete and add others weekly. |
-| **Expectation gap: "Where do I buy online?"** | Clear "Get a quote / WhatsApp to order" CTAs; "Online ordering coming soon" banner; use the notify list as a Phase 2 asset. |
-| **Spam on the quote form** skews the numbers. | Turnstile + rate limit (AR-6); count only enquiries sales marks as qualified. |
-| **Brand trademark use.** Using brand logos and names in ads or on pages without permission. | Use logos only for brands Mojo is authorised for; keep authorisation letters; don't bid on brand terms where the brand forbids it. |
+| **Expectation gap: "Where do I buy online?"** | Clear "Get a quote / WhatsApp to order" CTAs; "Online ordering coming soon" banner; use the notify list as an R1 asset. |
+| **Spam on the quote form** skews the numbers. | Turnstile + rate limit; count only enquiries sales marks `qualified`. |
+| **Brand trademark use.** Using brand logos and names in ads or on pages without permission. | Use the "authorised" badge only where `brands.is_authorised` is true; keep authorisation letters; don't bid on brand terms where the brand forbids it. |
 
 ## 10. Next steps
 
@@ -190,4 +192,4 @@ Recommendation: start with **Starter**. Put most of the paid money into **Google
 - Claim / verify the Google Business Profile.
 - Message brand partners about dealer-locator links.
 
-**Feeds into the build:** analytics events + UTM capture (§7) → architecture AR-1; consent-gated analytics → cookie banner; WhatsApp prefill → FAB component.
+**Feeds into the build:** analytics events + UTM capture → `ARCHITECTURE.md §11`, TASKS T2.5; consent-gated analytics → `CookieBanner` (T2.4); WhatsApp prefill → `WhatsAppFab` (T2.4); tracking QA → T5.6.

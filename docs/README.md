@@ -1,36 +1,33 @@
 # Mojo Tools — Project Documentation
 
-This folder is the single source of truth for the project. It is built up incrementally
-from five briefing files supplied by the client, each covering a different aspect of the project.
+Mojo Tools trades **tools, machinery and hardware materials**, mostly to B2B buyers (contractors, workshops, factories, resellers) with a smaller B2C walk-in segment. All sales are offline today. This project builds **one website that is both the company site and an e-commerce store**, plus an admin panel.
 
-## Project overview (as stated at kickoff)
+**Current release: ▶️ R0, the company site.** The online shop (R1) follows once the main site is live.
 
-- **Company:** Mojo Tools
-- **Business:** Trading of hardware tools and machinery
-- **Owner (per PRD):** Yash
-- **Sales channels today:** Mostly B2B (contractors, workshops, factories, resellers, institutions), smaller B2C walk-in; all offline
-- **What we're building:** One codebase with a company site, an e-commerce shop (B2C checkout + B2B tools such as RFQ, quick order, dealer price lists) and an admin panel
-- **Proposed stack (🟡 unconfirmed):** Next.js + Supabase + Vercel
-- **Current phase:** ▶️ **Phase 1: company site first.** E-commerce comes after the main site is live. See [`phasing.md`](phasing.md).
-- **Releases:** Phase 1 (company site) → PRD R1 MVP → R2 → R3
+| Release | What ships |
+|---|---|
+| **R0: Company site** | Home, About, Brands, Contact, enquiry / quote form, WhatsApp, SEO, launch campaign |
+| **R1: E-commerce MVP** | Catalogue, search, cart, checkout (Razorpay + NEFT), B2B accounts, RFQ, quick order, price lists, GST invoices, admin |
+| **R2 / R3** | Tier pricing, Hindi, OTP, COD, returns… / credit, ERP sync, reviews, blog |
 
-## Briefing files
+## The documents (all v0.2, corrected and consolidated)
 
-| # | File | Aspect covered | Status | Summary doc |
-|---|------|----------------|--------|-------------|
-| 1 | [`PRD.md`](source-files/PRD.md) | Product requirements: goals, users, features, priorities, release plan | ✅ Received 2026-10-07 | [`01-prd-summary.md`](01-prd-summary.md) |
-| 2 | [`ARCHITECTURE.md`](source-files/ARCHITECTURE.md) | Technical architecture: stack, routes, data model, flows, security, environments | ✅ Received 2026-10-08 | [`02-architecture-summary.md`](02-architecture-summary.md) + [`02a` accessibility review](02a-accessibility-review.md) + [`02b` launch campaign plan](02b-launch-campaign-plan.md) |
-| 3 | `RULES.md` (expected) | Rules / conventions | Not received | — |
-| 4 | `DESIGN.md` (expected) | Visual & UX design | Not received | — |
-| 5 | `TASKS.md` (expected) | Build task breakdown | Not received | — |
+| Doc | What it answers | Read it when |
+|---|---|---|
+| [`PRD.md`](PRD.md) | **What** we build and for whom: goals, personas, sitemap, every requirement tagged R0–R3, release plan | You need scope or a requirement ID |
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | **How** it's built: stack, routes, data model, flows, security, analytics, R0 slice | Before touching code or data |
+| [`DESIGN.md`](DESIGN.md) | **How it looks and behaves**: tokens (contrast-checked), components, UX rules, Claude Design prompts, accessibility spec | Designing or building UI |
+| [`RULES.md`](RULES.md) | **How we work**: coding, security, accessibility, SEO, testing, git, Definition of Done | Before every task |
+| [`TASKS.md`](TASKS.md) | **What's next**: ordered task list, R0 first (Phases 0–5), then R1 (6–17), R2/R3 | Picking the next piece of work |
+| [`LAUNCH-PLAN.md`](LAUNCH-PLAN.md) | **How we launch R0**: audience, messages, channels, 8-week calendar, KPIs, budget tiers | Planning marketing |
+| [`DECISIONS.md`](DECISIONS.md) | Every decision made and why | Before re-opening a settled point |
+| [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md) | What the owner still needs to answer or supply | Preparing for an owner check-in |
+| [`CHANGELOG.md`](CHANGELOG.md) | History of the docs + the **consolidation log** (every issue found and how it was fixed) | Wondering why something changed |
 
-File names 2–5 are taken from the PRD's "Companion docs" list.
+## Status legend (used everywhere)
 
-Original files are kept in [`source-files/`](source-files/); each gets a structured summary in this folder.
+✅ decided · 🟡 default assumed, owner to confirm · ❓ open question.
 
-## Other docs
+## Starting a new chat or coding session
 
-- [`phasing.md`](phasing.md) — what is in Phase 1 (company site) vs. later (e-commerce)
-- [`decisions.md`](decisions.md) — decisions made along the way
-- [`open-questions.md`](open-questions.md) — unresolved questions and gaps between the briefs
-- [`changelog.md`](changelog.md) — what changed in the docs, and when
+> "Continue the Mojo Tools project on branch `prd`. Read `docs/README.md` first, then `docs/RULES.md`."
