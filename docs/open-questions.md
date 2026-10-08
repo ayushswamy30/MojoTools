@@ -17,7 +17,6 @@ Legend: 🟡 default assumed, needs confirmation · ❓ no answer yet · ⚠️ 
 | Q6 | Confirm payments: Razorpay + NEFT at launch, COD later. | **[Phase 2]** PRD §10 #3, CO-3/4/5 | 🟡 |
 | Q7 | Confirm mobile OTP login at launch (needs an SMS provider and DLT registration in India). | **[Phase 2]** PRD AC-1 | 🟡 |
 | Q8 | Confirm that prices are public to everyone (one selling price + MRP), with bulk prices only via RFQ until R2. | **[Phase 2]** PRD §10 #5 | 🟡 |
-
 | Q9 | Are prices stored GST-inclusive? | **[Phase 2]** ARCH §5 | 🟡 |
 | Q10 | Mojo Tools' own state for CGST/SGST vs IGST (from the business GSTIN, A6) | **[Phase 2]** ARCH §5 | ❓ |
 
