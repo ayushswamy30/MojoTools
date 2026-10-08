@@ -19,7 +19,7 @@ from five briefing files supplied by the client, each covering a different aspec
 | # | File | Aspect covered | Status | Summary doc |
 |---|------|----------------|--------|-------------|
 | 1 | [`PRD.md`](source-files/PRD.md) | Product requirements: goals, users, features, priorities, release plan | ✅ Received 2026-10-07 | [`01-prd-summary.md`](01-prd-summary.md) |
-| 2 | `ARCHITECTURE.md` (expected) | Technical architecture | Not received | — |
+| 2 | [`ARCHITECTURE.md`](source-files/ARCHITECTURE.md) | Technical architecture: stack, routes, data model, flows, security, environments | ✅ Received 2026-10-08 | [`02-architecture-summary.md`](02-architecture-summary.md) + [`02a` accessibility review](02a-accessibility-review.md) + [`02b` launch campaign plan](02b-launch-campaign-plan.md) |
 | 3 | `RULES.md` (expected) | Rules / conventions | Not received | — |
 | 4 | `DESIGN.md` (expected) | Visual & UX design | Not received | — |
 | 5 | `TASKS.md` (expected) | Build task breakdown | Not received | — |
