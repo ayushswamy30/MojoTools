@@ -45,7 +45,8 @@ Two modes of the same system:
 | `--danger` | `#D93025` | Out of stock, errors, **Clearance** badge, % off |
 | `--info` | `#1A5FB4` | Links in shop, info notes |
 | `--economy` | `#0E7C7B` | **Economy Series** badge |
-| `--whatsapp` | `#128C7E` | WhatsApp FAB fill (white glyph) |
+| `--whatsapp` | `#128C7E` | WhatsApp FAB fill (white glyph, icon only) |
+| `--whatsapp-dark` | `#075E54` | WhatsApp buttons with white text (7.67:1) |
 | `--focus-ring` | `--ink-900` on light / `--brand-yellow` on dark | 2 px ring, 2 px offset |
 
 **Rules**

@@ -1,6 +1,8 @@
 # Mojo Tools — Open Questions for the Owner
 
 Only questions that still need the owner's answer. Contradictions between the briefs have been resolved; see [`CHANGELOG.md`](CHANGELOG.md#consolidation-log-08-oct-2026).
+**Where placeholders live:** all demo business data is in `src/features/content/site.ts` and `supabase/seed.sql` (marked `SEED`); draft legal text in `src/features/content/policies.ts`. Answers here replace those files only — no component changes needed.
+
 Legend: 🟡 a default is in place and work can proceed (please confirm) · ❓ no answer yet; blocks the linked task.
 
 ## Needed for R0 (company site)

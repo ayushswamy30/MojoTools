@@ -14,6 +14,8 @@
 
 # Part A — R0: Company site
 
+> **Progress (09 Oct 2026):** Phases 1–4 built with demo content on branch `prd` (see notes on each task). Open: owner inputs (Phase 0), accounts/deploy (T1.10), real content (Phase 5).
+
 ## Phase 0 — Inputs & decisions for R0 (owner)
 - [ ] **T0.1** Confirm R0 defaults: stack (Next.js + Supabase + Vercel), English only, enquiries by email + database (no admin inbox), hero slides in code. → [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md)
 - [ ] **T0.2** Supply brand assets: Mojo Tools logo (SVG) and brand colours → update `DESIGN.md §2` tokens **and re-run the contrast table**.
@@ -25,50 +27,50 @@
 - [ ] **T0.8** Run Claude Design prompts **0, 1-R0, 2, 3, 4, 5, 19** from `DESIGN.md §7`; export approved designs to `design/`.
 
 ## Phase 1 — Project setup
-- [ ] **T1.1** Init Next.js (current stable, ≥ 15, pinned) + TypeScript strict + pnpm + App Router + `src/` layout per `ARCHITECTURE.md §4`; Node LTS in `.nvmrc`.
-- [ ] **T1.2** Tailwind v4, design tokens in `globals.css` (colours incl. `steel-500`, `whatsapp`, focus ring, fonts, radius, shadows, z-index layers) from `DESIGN.md §2`; `next/font` for Archivo (wdth axis), Inter, JetBrains Mono.
-- [ ] **T1.3** shadcn/ui init + base primitives (Button variants incl. loading, Input, Textarea, Select, Checkbox, Form, Dialog, Sheet, Tabs, Accordion, Toast, Tooltip, Badge, Skeleton, Alert).
-- [ ] **T1.4** ESLint (+ `eslint-plugin-jsx-a11y`), Prettier, Husky + lint-staged, commitlint (Conventional Commits).
-- [ ] **T1.5** `lib/env.ts` with Zod validation; `.env.example`.
-- [ ] **T1.6** Supabase CLI local stack; `@supabase/ssr` server/client/admin helpers; `pnpm db:types` script.
-- [ ] **T1.7** next-intl with `[locale]` segment and **`localePrefix: 'as-needed'`** (EN only; HI scaffold, hidden).
-- [ ] **T1.8** Vitest + Playwright + `@axe-core/playwright` configured, with one sample test each.
-- [ ] **T1.9** GitHub Actions CI: typecheck, lint, unit tests, build, Playwright smoke + axe (fail on serious/critical).
-- [ ] **T1.10** Vercel project linked; preview deployments per PR; Sentry + Vercel Analytics; security headers.
-- [ ] **T1.11** Add `CLAUDE.md` at the repo root pointing to `docs/README.md` and `RULES.md §0`. (The docs are already in `docs/`.)
+- [x] **T1.1** Init Next.js (current stable, ≥ 15, pinned) + TypeScript strict + pnpm + App Router + `src/` layout per `ARCHITECTURE.md §4`; Node LTS in `.nvmrc`. ✅ Next.js 16.4 / React 19.3, pnpm, Node 22 (`.nvmrc`).
+- [x] **T1.2** Tailwind v4, design tokens in `globals.css` (colours incl. `steel-500`, `whatsapp`, focus ring, fonts, radius, shadows, z-index layers) from `DESIGN.md §2`; `next/font` for Archivo (wdth axis), Inter, JetBrains Mono. ✅
+- [ ] **T1.3** shadcn/ui init + base primitives (Button variants incl. loading, Input, Textarea, Select, Checkbox, Form, Dialog, Sheet, Tabs, Accordion, Toast, Tooltip, Badge, Skeleton, Alert). 🟡 Button, Container, SectionTitle, Breadcrumbs + Radix Dialog/Accordion added; other primitives are added as tasks need them (KISS).
+- [ ] **T1.4** ESLint (+ `eslint-plugin-jsx-a11y`), Prettier, Husky + lint-staged, commitlint (Conventional Commits). 🟡 ESLint (+ jsx-a11y), Prettier done; Husky/lint-staged/commitlint not yet (CI enforces the same checks).
+- [x] **T1.5** `lib/env.ts` with Zod validation; `.env.example`. ✅
+- [ ] **T1.6** Supabase CLI local stack; `@supabase/ssr` server/client/admin helpers; `pnpm db:types` script. 🟡 Supabase helpers + migration done; local CLI stack not run in this environment (no Docker daemon).
+- [ ] **T1.7** next-intl with `[locale]` segment and **`localePrefix: 'as-needed'`** (EN only; HI scaffold, hidden). 🟡 Done with Next.js built-in i18n instead of next-intl (DECISIONS D20).
+- [x] **T1.8** Vitest + Playwright + `@axe-core/playwright` configured, with one sample test each. ✅
+- [x] **T1.9** GitHub Actions CI: typecheck, lint, unit tests, build, Playwright smoke + axe (fail on serious/critical). ✅ `.github/workflows/ci.yml`
+- [ ] **T1.10** Vercel project linked; preview deployments per PR; Sentry + Vercel Analytics; security headers. ⏳ Needs the owner's Vercel/Sentry accounts (T0.7).
+- [x] **T1.11** Add `CLAUDE.md` at the repo root pointing to `docs/README.md` and `RULES.md §0`. (The docs are already in `docs/`.) ✅
 
 **Exit:** empty app deploys to preview with tokens, fonts and CI green (incl. axe).
 
 ## Phase 2 — Layout shell (R0 variant, built to extend)
-- [ ] **T2.1** `SkipLink`, `UtilityBar` (R0 content), `Header` R0 (logo, page links, GET A QUOTE). Built so R1 can swap in search/cart/account without rewriting. [GL-1]
-- [ ] **T2.2** `MobileNav` R0: top bar + drawer (focus trap, Esc). [GL-7]
-- [ ] **T2.3** `Footer` R0 with trust strip and columns (Mojo Tools, Help, Policies). [GL-3]
-- [ ] **T2.4** `WhatsAppFab` (prefilled message, attribution) and in-house `CookieBanner` (Accept / Reject non-essential / Manage; consent cookie; content padding). [GL-4, GL-6]
-- [ ] **T2.5** Analytics foundation: consent-gated GA4 loader, UTM/referrer first-party cookie, event helper with the R0 events from `ARCHITECTURE.md §11`.
-- [ ] **T2.6** Shared components: `SectionTitle`, `Breadcrumbs`, `EmptyState`, `StatusPill`, `CopyButton`, `ErrorSummary`, `CTABand`.
-- [ ] **T2.7** `/dev/ui` page (dev only, `noindex`) showing all components and states for review.
-- [ ] **T2.8** 404 and 500 pages (R0 version: links to Home, Brands, Contact).
+- [x] **T2.1** `SkipLink`, `UtilityBar` (R0 content), `Header` R0 (logo, page links, GET A QUOTE). Built so R1 can swap in search/cart/account without rewriting. [GL-1] ✅
+- [x] **T2.2** `MobileNav` R0: top bar + drawer (focus trap, Esc). [GL-7] ✅
+- [x] **T2.3** `Footer` R0 with trust strip and columns (Mojo Tools, Help, Policies). [GL-3] ✅
+- [x] **T2.4** `WhatsAppFab` (prefilled message, attribution) and in-house `CookieBanner` (Accept / Reject non-essential / Manage; consent cookie; content padding). [GL-4, GL-6] ✅
+- [x] **T2.5** Analytics foundation: consent-gated GA4 loader, UTM/referrer first-party cookie, event helper with the R0 events from `ARCHITECTURE.md §11`. ✅
+- [ ] **T2.6** Shared components: `SectionTitle`, `Breadcrumbs`, `EmptyState`, `StatusPill`, `CopyButton`, `ErrorSummary`, `CTABand`. 🟡 SectionTitle, Breadcrumbs, ErrorSummary (in the form), CTABand done; StatusPill/CopyButton/Pagination/EmptyState deferred to R1, where they are first used.
+- [ ] **T2.7** `/dev/ui` page (dev only, `noindex`) showing all components and states for review. ⏳ Not built yet; the e2e + axe suite covers component states for now.
+- [x] **T2.8** 404 and 500 pages (R0 version: links to Home, Brands, Contact). ✅
 
 **Exit:** every page renders inside the shell; Lighthouse a11y ≥ 95 and axe clean on the shell; no overlay covers focused elements on 390 px.
 
 ## Phase 3 — Database foundation for R0
-- [ ] **T3.1** Migration: `updated_at` trigger function; `brands` (incl. `is_authorised`, `product_types[]`); `categories` (full tree schema, R0 uses top level; `image_alt`) + indexes + RLS (public read of active rows).
-- [ ] **T3.2** Migration: `enquiries` (columns per `ARCHITECTURE.md §5`, `ENQ-YYYY-#####` sequence) and `newsletter_subscribers` + RLS (no public read; insert via server action only).
-- [ ] **T3.3** Storage buckets `public-media` (public) and `enquiry-attachments` (private) + policies.
-- [ ] **T3.4** Seed script with clearly fake data (8 brands, 8 top-level categories) marked `SEED`; real data loaded from the owner's lists once supplied (T0.5).
-- [ ] **T3.5** RLS tests: anonymous visitor can read active brands/categories; cannot read enquiries/subscribers.
+- [x] **T3.1** Migration: `updated_at` trigger function; `brands` (incl. `is_authorised`, `product_types[]`); `categories` (full tree schema, R0 uses top level; `image_alt`) + indexes + RLS (public read of active rows). ✅
+- [x] **T3.2** Migration: `enquiries` (columns per `ARCHITECTURE.md §5`, `ENQ-YYYY-#####` sequence) and `newsletter_subscribers` + RLS (no public read; insert via server action only). ✅
+- [x] **T3.3** Storage buckets `public-media` (public) and `enquiry-attachments` (private) + policies. ✅
+- [x] **T3.4** Seed script with clearly fake data (8 brands, 8 top-level categories) marked `SEED`; real data loaded from the owner's lists once supplied (T0.5). ✅
+- [x] **T3.5** RLS tests: anonymous visitor can read active brands/categories; cannot read enquiries/subscribers. ✅ (`supabase/tests/rls_r0.test.sql`; also checked against Postgres via PGlite)
 
 **Exit:** `supabase db reset` builds everything; RLS tests pass; types generated.
 
 ## Phase 4 — Presentation site
-- [ ] **T4.1** Home R0: accessible `HeroCarousel` (`DESIGN.md §8.2`), category tiles (enquiry pre-fill), static brand grid, why-choose + stats (§8.3), testimonials slot (hidden when empty), CTA band, visit-us band. [PS-1, PS-2]
-- [ ] **T4.2** About Us: hero, stats card, image + Purpose/Mission/Values accordion, timeline, why-choose cards. [PS-3]
-- [ ] **T4.3** Brands page with filter chips + logo grid + stats; brand page R0 (about, product range, authorised badge only if `is_authorised`, Enquire / Request price list / WhatsApp CTAs); `brand_view` event. [PS-4]
-- [ ] **T4.4** Contact page: info card, `EnquiryForm` (types, brand pre-fill, attachment, consent, Turnstile, rate limit, error summary, success with enquiry number) → `enquiries` + Resend alert to sales (signed attachment link) + auto-reply; map card with text address; help banner (support request); newsletter / notify block; `generate_lead` / `notify_signup` events. [PS-5, PS-8, OF-5]
-- [ ] **T4.5** Reuse `EnquiryForm` as a "Get a Quote" dialog/page reachable from the header and every CTA. [PS-8]
-- [ ] **T4.6** Policy pages from MDX: terms, privacy (DPDP: consent, data requests contact), accessibility statement. [PS-6, GL-9]
-- [ ] **T4.7** SEO: metadata, `Organization` + `LocalBusiness` JSON-LD, `BreadcrumbList` on brand pages, OG images, `sitemap.ts` (pages + brands), `robots.ts`.
-- [ ] **T4.8** E2E: all R0 pages render and pass axe; enquiry happy path, validation errors, attachment; consent gates GA4.
+- [x] **T4.1** Home R0: accessible `HeroCarousel` (`DESIGN.md §8.2`), category tiles (enquiry pre-fill), static brand grid, why-choose + stats (§8.3), testimonials slot (hidden when empty), CTA band, visit-us band. [PS-1, PS-2] ✅ (placeholder visuals until photos arrive)
+- [x] **T4.2** About Us: hero, stats card, image + Purpose/Mission/Values accordion, timeline, why-choose cards. [PS-3] ✅
+- [x] **T4.3** Brands page with filter chips + logo grid + stats; brand page R0 (about, product range, authorised badge only if `is_authorised`, Enquire / Request price list / WhatsApp CTAs); `brand_view` event. [PS-4] ✅
+- [x] **T4.4** Contact page: info card, `EnquiryForm` (types, brand pre-fill, attachment, consent, Turnstile, rate limit, error summary, success with enquiry number) → `enquiries` + Resend alert to sales (signed attachment link) + auto-reply; map card with text address; help banner (support request); newsletter / notify block; `generate_lead` / `notify_signup` events. [PS-5, PS-8, OF-5] ✅ (demo mode until Supabase/Resend keys exist)
+- [x] **T4.5** Reuse `EnquiryForm` as a "Get a Quote" dialog/page reachable from the header and every CTA. [PS-8] ✅ as a `/quote` page (pre-filled via `?type=&brand=&category=`) rather than a dialog
+- [x] **T4.6** Policy pages from MDX: terms, privacy (DPDP: consent, data requests contact), accessibility statement. [PS-6, GL-9] ✅ (draft text — owner/legal review in T5.1)
+- [x] **T4.7** SEO: metadata, `Organization` + `LocalBusiness` JSON-LD, `BreadcrumbList` on brand pages, OG images, `sitemap.ts` (pages + brands), `robots.ts`. ✅
+- [x] **T4.8** E2E: all R0 pages render and pass axe; enquiry happy path, validation errors, attachment; consent gates GA4. ✅ 36 Playwright tests (desktop + mobile)
 
 **Exit:** company site complete with seed content, responsive, axe clean, enquiries arrive by email and in the database.
 

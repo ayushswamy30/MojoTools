@@ -2,7 +2,9 @@
 
 Mojo Tools trades **tools, machinery and hardware materials**, mostly to B2B buyers (contractors, workshops, factories, resellers) with a smaller B2C walk-in segment. All sales are offline today. This project builds **one website that is both the company site and an e-commerce store**, plus an admin panel.
 
-**Current release: ▶️ R0, the company site**, built first and reviewed on a private preview. **The site goes public once, together with the online shop (R1)**, with a target **within 3 months (by early January 2027)**.
+**Current release: ▶️ R0, the company site** — **built with demo content** (see TASKS Part A progress); waiting on real business details from the owner.
+
+**Release plan:** R0, the company site, built first and reviewed on a private preview. **The site goes public once, together with the online shop (R1)**, with a target **within 3 months (by early January 2027)**.
 
 | Release | What ships |
 |---|---|

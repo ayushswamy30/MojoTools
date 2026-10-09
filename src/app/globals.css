@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens: docs/DESIGN.md §2. Placeholder brand colours until the Mojo Tools
+ * logo arrives (TASKS T0.2). Re-run the contrast table in DESIGN §2.1 if any value changes.
+ */
+@theme {
+  --color-brand-yellow: #ffc20e;
+  --color-brand-yellow-hover: #e6ae00;
+  --color-brand-yellow-soft: #fff4cc;
+  --color-ink-900: #141414;
+  --color-ink-800: #1f1f1f;
+  --color-ink-700: #2b2b2b;
+  --color-steel-600: #4a4f55;
+  --color-steel-500: #6b7178;
+  --color-steel-400: #8a9097;
+  --color-steel-200: #d9dce0;
+  --color-steel-100: #eef0f2;
+  --color-steel-50: #f7f8f9;
+  --color-success: #188038;
+  --color-warning: #9a5b00;
+  --color-danger: #d93025;
+  --color-info: #1a5fb4;
+  --color-economy: #0e7c7b;
+  --color-whatsapp: #128c7e; /* FAB fill behind a white icon (3:1 graphic) */
+  --color-whatsapp-dark: #075e54; /* buttons with white text (7.67:1) */
+
+  --font-display: var(--font-archivo), 'Arial Narrow', sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-hover: 0 6px 16px rgb(0 0 0 / 0.1);
+  --shadow-overlay: 0 12px 32px rgb(0 0 0 / 0.18);
+
+  --ease-brand: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Z-index layers (DESIGN §2.3) */
+:root {
+  --z-sticky-header: 40;
+  --z-bottom-bar: 50;
+  --z-fab: 55;
+  --z-sheet: 60;
+  --z-cookie: 70;
+  --z-dialog: 80;
+  --z-toast: 90;
+  /* Updated by the cookie banner so fixed overlays never hide focused content (WCAG 2.4.11). */
+  --cookie-banner-height: 0px;
+}
+
+/* Base styles live in the base layer so Tailwind utilities (e.g. text-white) always win. */
+@layer base {
+  html {
+    scroll-padding-top: 6rem;
+    scroll-padding-bottom: calc(6rem + var(--cookie-banner-height));
+  }
+
+  body {
+    background: var(--color-white, #fff);
+    color: var(--color-steel-600);
+    font-family: var(--font-sans);
+    padding-bottom: var(--cookie-banner-height);
+  }
+
+  :where(h1, h2, h3, h4) {
+    color: var(--color-ink-900);
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  /* Visible focus everywhere: ink on light, yellow on dark sections (DESIGN §2.1). */
+  :focus-visible {
+    outline: 2px solid var(--color-ink-900);
+    outline-offset: 2px;
+  }
+  .on-dark :focus-visible {
+    outline-color: var(--color-brand-yellow);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

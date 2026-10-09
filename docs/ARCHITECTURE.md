@@ -58,7 +58,7 @@ flowchart LR
 | Framework | Next.js (App Router), React, TypeScript (strict). **Current stable major at task T1.1 (15 or newer), then pinned.** | SSR/ISR for SEO, server actions, one codebase |
 | Styling | Tailwind CSS v4 + CSS variables (design tokens) | Matches [`DESIGN.md §2`](DESIGN.md#2-design-tokens) tokens 1:1 |
 | UI primitives | shadcn/ui (Radix) + lucide-react icons | Accessible, owned source |
-| Forms & validation | React Hook Form + Zod (shared schemas client/server) via shadcn `<Form>` | One source of truth for validation; wires `aria-invalid` / `aria-describedby` |
+| Forms & validation | Server actions + React `useActionState` + shared Zod schemas (DECISIONS D21); RHF optional for complex R1 forms | One source of truth for validation; works without JS |
 | Data access | `@supabase/ssr` + generated DB types | RLS enforced, typed queries |
 | Database | Supabase Postgres 15+, `pg_trgm`, `unaccent`, FTS | SKU/name search without an extra service |
 | Auth | Supabase Auth | Email, Google (R1); phone OTP (R2) |
@@ -67,7 +67,7 @@ flowchart LR
 | PDF | `@react-pdf/renderer` (invoices, quotes, proforma; R1). Output is untagged, so every PDF has an HTML equivalent. | Server-generated, stored in Storage |
 | Import | SheetJS (`xlsx`) + Zod row validation (R1) | Owner's catalogue arrives as XLSX/CSV |
 | Email | Resend + React Email templates | Transactional email |
-| i18n | `next-intl` with `localePrefix: 'as-needed'` (EN default, unprefixed; HI under `/hi` in R2) | UI strings only; no URL change when Hindi is added |
+| i18n | Next.js built-in: `app/[lang]` + `proxy.ts` rewrite + `next/root-params` + `src/i18n/messages/*.json` (EN unprefixed; HI under `/hi` in R2) — DECISIONS D20 | UI strings only; no URL change when Hindi is added |
 | Testing | Vitest (unit), Playwright (e2e) + **`@axe-core/playwright`** (accessibility), Supabase local for DB tests | |
 | Quality | ESLint (+ **`eslint-plugin-jsx-a11y`**), Prettier, TypeScript, Husky + lint-staged, commitlint, GitHub Actions | |
 | Monitoring | Vercel Analytics, Sentry, GA4 (consent-gated) | |
@@ -174,7 +174,7 @@ mojo-tools/
 │  │  └─ env.ts               Zod-validated env vars
 │  ├─ i18n/                   messages/en.json (hi.json in R2), routing config
 │  ├─ styles/globals.css      design tokens
-│  └─ middleware.ts           locale, consent cookie, auth session refresh (R1), admin guard (R1)
+│  └─ proxy.ts                locale rewrite (R0); auth session refresh + admin guard (R1)
 ├─ tests/                     e2e (Playwright + axe), fixtures
 └─ .github/workflows/ci.yml
 ```
