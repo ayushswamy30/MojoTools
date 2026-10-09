@@ -7,6 +7,7 @@
 - **07 Oct 2026**: Owner decided to build the company site first and the e-commerce shop later.
 - **08 Oct 2026**: Received ARCHITECTURE (brief 2/5). Wrote an architecture summary, a WCAG 2.2 AA accessibility review (design skill) and a launch campaign plan (campaign-planning skill).
 - **08 Oct 2026**: Received DESIGN, RULES and TASKS (briefs 3–5). **Consolidated all five briefs into corrected v0.2 documents**: `PRD.md`, `ARCHITECTURE.md`, `DESIGN.md`, `RULES.md`, `TASKS.md`, plus `LAUNCH-PLAN.md`, `DECISIONS.md` and `OPEN-QUESTIONS.md`. Earlier reviews were folded in: the accessibility review → `DESIGN.md §8` + `RULES.md §6`; the campaign plan → `LAUNCH-PLAN.md`; the architecture recommendations → `ARCHITECTURE.md`. Removed the original briefs (`source-files/`), interim summaries (`01-…`, `02-…`) and `phasing.md`; they remain in git history (commit `d7e269b` and earlier).
+- **09 Oct 2026**: Owner answers recorded: no separate R0 launch (the site goes public with the full shop, within 3 months); reply within 1 working day; English only; enquiries by email + DB; category tiles → enquiry form; GBP + IndiaMART exist; budget undecided. Updated PRD, DESIGN, TASKS (Phase 5 = preview sign-off; launch, domain and tracking moved to Phase 17; Phase 6 starts now), RULES, LAUNCH-PLAN, OPEN-QUESTIONS, DECISIONS P7–P10. Removed the "coming soon" notice.
 
 ## Consolidation log (08 Oct 2026)
 

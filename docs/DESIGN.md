@@ -162,10 +162,9 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 | `ContactInfoCard` | R0 | Address, hours, phone (`tel:`), WhatsApp, email, GSTIN |
 | `EnquiryForm` | R0 | Types: Product enquiry · Bulk quote · Price list request · Become a dealer · Support. Fields + states in §8.4 |
 | `HelpBanner` | R0 | Call / WhatsApp / Raise a support request (opens the enquiry form with type = support) |
-| `NewsletterQuoteBlock` | R0 | Newsletter / "notify me when online ordering launches" + Request a Quote |
+| `NewsletterQuoteBlock` | R0 | Newsletter signup + Request a Quote |
 | `Timeline` | R0 | Ordered list semantics |
-| `CTABand` | R0 | "Buying in bulk? Get a quote within {response promise}" (🟡 promise pending owner, see [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md)) |
-| `ComingSoonNotice` | R0 | "Online ordering is coming soon. Get notified" (removed at R1) |
+| `CTABand` | R0 | "Buying in bulk? Get a quote within 1 working day" (✅ owner-confirmed promise) |
 | `MapCard` | R0 | Iframe with `title`, address as text, "Get directions" link |
 
 ### Shop (R1 unless noted)
@@ -250,14 +249,13 @@ HOME — R0 (desktop)
 ├ Testimonials (real only; hide section if none) ───────────────────────┤
 ├ CTA band: Buying in bulk? Get a quote [REQUEST A QUOTE] [WHATSAPP] ──┤
 ├ Visit us band (warehouse photo, address, hours, directions) ──────────┤
-├ Coming soon: online ordering — [Notify me] ──────────────────────────┤
 └ Footer ───────────────────────────────────────────────────────────────┘
                                             (WhatsApp FAB bottom-right)
 
 HOME — R1 additions
 Header/MainNav switch to the R1 versions · hero CTA [SHOP NOW] + "Get a bulk quote →"
 · category tiles link to shop · Clearance | Economy promo pair · featured products rail
-· CTA band adds [REGISTER AS BUSINESS] · coming-soon notice removed
+· CTA band adds [REGISTER AS BUSINESS]
 
 LISTING (R1)
 ┌ Breadcrumbs / H1 / short intro ───────────────────────────────┐
@@ -388,13 +386,12 @@ Then R0 sections:
 3. Why Mojo Tools: 4 icon cards (Genuine brands, Bulk & B2B quotes, GST invoices,
    Expert advice) + stats strip (Years in business, SKUs, Brands, Customers — "XX+").
 4. Testimonials slot (show as optional: hidden when there are no real testimonials).
-5. B2B CTA band on ink-900: "Buying in bulk? Get a quote within {response promise}"
+5. B2B CTA band on ink-900: "Buying in bulk? Get a quote within within 1 working day"
    [REQUEST A QUOTE] [CHAT ON WHATSAPP].
 6. Visit us: warehouse/store photo band with address, hours, "Get directions".
-7. Slim notice: "Online ordering is coming soon" [NOTIFY ME].
 R1 frame adds: twin promo "STOCK CLEARANCE SALE — up to 40% off" (danger accent) and
 "ECONOMY SERIES — dependable tools, lower prices" (economy accent); featured products
-rail (8 ProductCards); CTA band adds [REGISTER AS BUSINESS]; notice removed.
+rail (8 ProductCards); CTA band adds [REGISTER AS BUSINESS].
 Show hover and focus on category tile, the hero paused state, and the reduced-motion
 state (hero paused on load, stats showing final values).
 ```
@@ -448,11 +445,11 @@ normal density).
    Turnstile (managed — usually invisible), yellow SUBMIT.
    Show: error summary at the top of the form + inline errors after a failed submit;
    success message replacing the form ("Thanks, {name}. Your enquiry number is
-   ENQ-2026-00012. We'll reply within {response promise}.").
+   ENQ-2026-00012. We'll reply within within 1 working day.").
 3. Embedded map card with the address in text beside it and "Get directions".
 4. Help banner split: left yellow panel "Need help choosing the right tool?" with
-   Call / WhatsApp / Raise a support request buttons; right panel newsletter / "notify me
-   when online ordering launches" (email + Subscribe) and "Request a Quote" outline button.
+   Call / WhatsApp / Raise a support request buttons; right panel newsletter
+   (email + Subscribe) and "Request a Quote" outline button.
 ```
 
 ### Prompt 6 — Shop landing (R1)
@@ -564,7 +561,7 @@ Design /rfq. Two entry modes: "From my cart" (pre-filled items) and "Build a lis
 (pre-filled for logged-in business users; guest sees name, company, GSTIN optional,
 email, mobile). Required-by date, delivery pincode, message, attachment upload
 (PDF/XLSX/CSV/image, 10 MB). Submit → confirmation screen with RFQ number and
-"We usually reply within {response promise}".
+"We usually reply within within 1 working day".
 Also design the buyer's quote view: Quote QT-2026-00042, status pill, valid-until date,
 priced lines with GST, totals, buttons ACCEPT & PLACE ORDER / Download PDF /
 Ask a question.

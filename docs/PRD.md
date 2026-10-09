@@ -20,7 +20,7 @@ Mojo Tools is an established trader of **tools, machinery and hardware materials
 
 Today the business has no online presence that lets buyers browse the catalogue, check stock, get wholesale pricing or place orders. The owner already holds the full catalogue data: product names, **brand-wise (company-wise) categories, SKU codes**, etc.
 
-**Delivery approach (✅ decided 07 Oct 2026):** build and launch the **company site first (R0)**, then add the e-commerce shop (R1 onward) on the same codebase. Product data work starts with R1.
+**Delivery approach (✅ decided 07–09 Oct 2026):** build the **company site first (R0)**, then the e-commerce shop (R1) on the same codebase. **R0 is not launched on its own:** it is reviewed on a private preview, and the site goes public **once, together with the full shop (R1)**. Target public launch: **within 3 months (by early January 2027)**. Product data work starts now, in parallel with R0.
 
 ## 2. Goals
 
@@ -109,10 +109,10 @@ English URLs carry **no locale prefix**; Hindi (R2) lives under `/hi/...` (see [
 | ID | Requirement | Rel |
 |---|---|---|
 | PS-1 | **Home hero:** full-width image carousel, bold uppercase headline, short copy, single yellow CTA, numbered pager + pause (Stanley/DeWalt style). Must meet the carousel accessibility spec in [`DESIGN.md §8`](DESIGN.md#8-accessibility-specification). | R0 |
-| PS-2 | Home sections. **R0:** category tiles (showcase; open the enquiry form pre-filled), featured brands strip, why-choose-us, stats counters, B2B CTA ("Get a bulk quote"), testimonials (real only), warehouse/visit-us band, "online ordering coming soon" notice. **R1 adds:** clearance/economy promos, featured product rail, links into the shop. | R0 / R1 |
+| PS-2 | Home sections. **R0:** category tiles (showcase; open the enquiry form pre-filled), featured brands strip, why-choose-us, stats counters, B2B CTA ("Get a bulk quote"), testimonials (real only), warehouse/visit-us band. **R1 adds:** clearance/economy promos, featured product rail, links into the shop. | R0 / R1 |
 | PS-3 | **About Us:** hero, company story/timeline, image + Core Purpose / Mission / Values accordion, stats strip (years, SKUs, brands, customers), Why Choose Us cards, warehouse/team photos | R0 |
 | PS-4 | **Brands / Distributors:** logo grid with filter chips (by product type), stats counters, each logo links to its brand page. **Brand page R0:** logo, about, product range, authorised-distributor badge (only where authorised ❓), "Enquire about this brand" / "Request price list" CTAs. **R1 adds:** brand's categories into the shop, top products rail, gated price-list download, "Shop all". | R0 / R1 |
-| PS-5 | **Contact Us:** info card (address, hours, phone, email, GSTIN), enquiry form (name, email, mobile, company, enquiry type, message, optional attachment, consent, captcha), Google map with text address + directions link, "Need help choosing the right tool?" banner (Call / WhatsApp / **Raise a support request** = enquiry of type *support*), newsletter / "notify me when online ordering launches" signup + Request-a-Quote block | R0 |
+| PS-5 | **Contact Us:** info card (address, hours, phone, email, GSTIN), enquiry form (name, email, mobile, company, enquiry type, message, optional attachment, consent, captcha), Google map with text address + directions link, "Need help choosing the right tool?" banner (Call / WhatsApp / **Raise a support request** = enquiry of type *support*), newsletter signup + Request-a-Quote block | R0 |
 | PS-6 | Policy pages. **R0:** terms, privacy, accessibility. **R1:** shipping, returns & refunds, cancellation, grievance officer. | R0 / R1 |
 | PS-7 | Blog / buying guides | R3 |
 | PS-8 | **Enquiry / quote request form** (the R0 stand-in for RFQ): types *contact*, *quote*, *price list*, *dealer*, *support*; optional brand/category pre-fill, optional GSTIN, file upload (PDF/XLSX/CSV/JPG/PNG/WEBP, ≤ 10 MB). Stored, emailed to sales, auto-reply to the customer. In R1 a *quote* enquiry can be converted into an RFQ. | R0 |
@@ -269,7 +269,7 @@ English URLs carry **no locale prefix**; Hindi (R2) lives under `/hi/...` (see [
 
 | Release | Contents |
 |---|---|
-| **R0: Company site** (current) | Home, About, Brands + brand pages, Contact, terms/privacy/accessibility; R0 header/footer; WhatsApp button; cookie consent; enquiry / quote request form with attachments and attribution; newsletter / notify-me signup; SEO (Organization/LocalBusiness), GA4 lead events; launch campaign ([`LAUNCH-PLAN.md`](LAUNCH-PLAN.md)) |
-| **R1: E-commerce MVP** | Full header + mega-menu, catalogue + search + filters, cart/checkout (Razorpay + NEFT), B2C & B2B accounts (email + Google) with GSTIN verification, RFQ, quick order, price-list PDFs, clearance/economy/offers, GST invoices, shipping rules with manual AWB, cancellation & data-deletion requests, admin essentials (incl. enquiries inbox and catalogue import), R1 policy pages |
+| **R0: Company site** (current; reviewed on a private preview, goes public with R1) | Home, About, Brands + brand pages, Contact, terms/privacy/accessibility; R0 header/footer; WhatsApp button; cookie consent; enquiry / quote request form with attachments and attribution; newsletter / notify-me signup; SEO (Organization/LocalBusiness), GA4 lead events; launch campaign ([`LAUNCH-PLAN.md`](LAUNCH-PLAN.md)) |
+| **R1: E-commerce MVP** (🚀 public launch of the whole site, target by early Jan 2027) | Full header + mega-menu, catalogue + search + filters, cart/checkout (Razorpay + NEFT), B2C & B2B accounts (email + Google) with GSTIN verification, RFQ, quick order, price-list PDFs, clearance/economy/offers, GST invoices, shipping rules with manual AWB, cancellation & data-deletion requests, admin essentials (incl. enquiries inbox and catalogue import), R1 policy pages |
 | **R2** | Tier & customer-specific pricing, Hindi UI + language switch, mobile OTP, WhatsApp/SMS notifications, COD, coupons, saved lists/reorder, PO upload, returns, variant picker, shipping aggregator, newsletter sending, reports, audit-log viewer, side widget |
 | **R3** | Credit terms & ledger, multi-user companies, ERP/Tally sync, reviews, compare, blog, external search engine if > 100k SKUs |

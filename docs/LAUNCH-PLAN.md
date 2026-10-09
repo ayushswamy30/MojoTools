@@ -1,8 +1,8 @@
-# Mojo Tools — R0 Launch Campaign Plan
+# Mojo Tools — Public Launch Campaign Plan
 
 > **Version 0.2** (08 Oct 2026). Built with the campaign-planning skill.
 
-**Purpose:** a marketing plan for launching the **R0 company site** ([`PRD.md §12`](PRD.md#12-release-plan)) so it brings in enquiries from day one. Its tracking requirements are built into [`ARCHITECTURE.md §11`](ARCHITECTURE.md#11-analytics--attribution) and tasks T2.5 / T5.6 in [`TASKS.md`](TASKS.md).
+**Purpose:** a marketing plan for the **public launch of the whole site** (company site + online shop, R0 + R1, target by early January 2027; [`PRD.md §12`](PRD.md#12-release-plan)) so it brings in enquiries and orders from day one. *(Updated 09 Oct 2026: the site no longer launches before the shop. Items about a "coming soon" waitlist were removed. Order KPIs will be added once checkout scope is final.)* Its tracking requirements are built into [`ARCHITECTURE.md §11`](ARCHITECTURE.md#11-analytics--attribution) and tasks T2.5 / T5.6 in [`TASKS.md`](TASKS.md).
 
 > **Inputs and assumptions.** Goal and audience come from the PRD (goals G1 and G3, §3 personas). **Launch date and budget have not been given yet** (owner task T0.6), so the calendar counts in weeks relative to launch (L-4 … L+8), and the budget is shown as three tiers to choose from. Assumptions are marked 🟡; see [Next steps](#10-next-steps).
 
@@ -16,7 +16,7 @@
 - **Secondary objectives:**
   - Site indexed and ranking on page 1 for "Mojo Tools" and for "[brand] dealer in [city]" for the top 10 brands, within 8 weeks.
   - Google Business Profile verified, with **25+ reviews** by L+8.
-  - Build a **launch-notify list of 300+ contacts** for the R1 e-commerce launch.
+  - **First online orders:** target set with the owner before launch (🟡).
 
 ## 2. Target audience
 
@@ -32,7 +32,7 @@
 | Pain | Message angle |
 |------|---------------|
 | "Is it genuine?" (fakes are common in tools) | Authorised distributor; brand logos; GST invoice |
-| "I have to call five shops for a price" | One quote form or WhatsApp, reply within {response promise} 🟡 |
+| "I have to call five shops for a price" | One quote form or WhatsApp, reply within 1 working day ✅ |
 | "Is it in stock?" | Brand range shown; ask on WhatsApp for live stock |
 | "I need it billed properly" | GST invoice, GSTIN on bill |
 | Dealers: "What's my margin?" | Request dealer price list |
@@ -82,7 +82,7 @@ The audience is mostly local and repeat B2B, so **owned and local channels come 
 | Week | Content piece | Channel | Owner / notes | Status |
 |------|---------------|---------|---------------|--------|
 | **L-4** | Collect proof points: years, brand list + logos, SKU count, customer count, 5 real testimonials, photos | Internal | Owner. These also feed About/Home (TASKS T0.4–T0.5) | ☐ |
-| L-4 | Claim / clean up Google Business Profile; consistent name, address, phone everywhere | GBP, IndiaMART | Owner + ops | ☐ |
+| L-4 | Clean up the **existing** Google Business Profile and IndiaMART listing ✅ (both exist): consistent name, address, phone; add the website link at launch | GBP, IndiaMART | Owner + ops | ☐ |
 | L-3 | Write brand-page copy (top 10 brands first) + home/about copy | Website | Owner + writer | ☐ |
 | L-3 | Email/WhatsApp each brand partner asking for a dealer-locator link | Brand partners | Owner | ☐ |
 | L-2 | Shoot photos/video: warehouse, counter, team, top stock | All | Ops | ☐ |
@@ -101,7 +101,7 @@ The audience is mostly local and repeat B2B, so **owned and local channels come 
 | L+5 | Testimonial post (real customer, with permission) | LinkedIn, Instagram | Marketing | ☐ |
 | L+6 | Meta click-to-WhatsApp test (if budget tier = Growth) | Paid | Marketing | ☐ |
 | L+6 | Brand spotlight #4 + GBP post | Social, GBP | Marketing | ☐ |
-| L+7 | "Online ordering coming soon — join the list" push | All owned | Marketing (builds the R1 list) | ☐ |
+| L+7 | "Order online" push: how to register as a business, quick order, quotes | All owned | Marketing | ☐ |
 | **L+8** | **Campaign wrap-up report**; decide on the R1 launch campaign | Internal | Owner | ☐ |
 
 About 20 % of slots are left open for reactive posts (new stock arrivals, festival greetings such as Diwali / Vishwakarma Puja, which matter in the tools trade).
@@ -123,7 +123,7 @@ About 20 % of slots are left open for reactive posts (new stock arrivals, festiv
 | Search ad set | 3 ad groups (brand dealer, tool category, Mojo brand), call extensions | Nice (budget) | L+1 |
 | Click-to-WhatsApp ad | Local radius, 2 creatives | Nice (budget) | L+5 |
 | Review-request message | Short, polite, with GBP review link | Must | L+1 |
-| "Coming soon: online ordering" banner + list signup | On site and social | Should | L+6 |
+| "How to order online" explainer (register, quick order, quote) | On site and social | Should | L+6 |
 
 ## 7. Success metrics
 
@@ -134,7 +134,7 @@ About 20 % of slots are left open for reactive posts (new stock arrivals, festiv
 | Enquiries by source | Know the top 3 sources by L+4 | UTM + `source_page` stored on each enquiry |
 | GBP reviews / rating | 25+ reviews, ≥4.5 | GBP insights |
 | Organic search | Indexed by L+1; page 1 for brand name + 5 "[brand] dealer [city]" terms | Search Console |
-| R1 launch notify list | 300+ contacts | Newsletter/notify table |
+| Business account registrations | Track baseline | `companies` table |
 | Ad cost per enquiry (if paid) | ≤ ₹300 🟡 | Google Ads / Meta + GA4 |
 
 **Tracking requirements for the build** (specified in [`ARCHITECTURE.md §11`](ARCHITECTURE.md#11-analytics--attribution)):
@@ -146,7 +146,7 @@ About 20 % of slots are left open for reactive posts (new stock arrivals, festiv
 | `call_click` | `tel:` link clicked | `placement`, `page` |
 | `price_list_request` | "Request price list" chosen | `brand` |
 | `brand_view` | Brand page viewed | `brand` |
-| `notify_signup` | Online-ordering waitlist signup | `page` |
+| `notify_signup` | Newsletter signup | `page` |
 
 - Capture `utm_source / utm_medium / utm_campaign` on first landing (first-party cookie) and save them on the enquiry row.
 - Every QR code, broadcast link and social link uses a UTM URL, e.g. `?utm_source=instore&utm_medium=qr&utm_campaign=launch`.
@@ -172,19 +172,19 @@ Recommendation: start with **Starter**. Put most of the paid money into **Google
 
 | Risk | Mitigation |
 |------|------------|
-| **Enquiries arrive but nobody follows up fast.** Leads go cold, and buyers won't come back. | Set and publish the response promise (T0.6); email + WhatsApp alert to sales on every enquiry; one named owner per day; track `status`. |
+| **Enquiries arrive but nobody follows up fast.** Leads go cold, and buyers won't come back. | Publish the "within 1 working day" promise; email + WhatsApp alert to sales on every enquiry; one named owner per day; track `status`. |
 | **Missing content and assets delay launch** (logos, photos, brand copy are all still ❓). | Start asset collection at L-4; launch with the top 10 brands complete and add others weekly. |
-| **Expectation gap: "Where do I buy online?"** | Clear "Get a quote / WhatsApp to order" CTAs; "Online ordering coming soon" banner; use the notify list as an R1 asset. |
+| **Buyers used to ordering by phone ignore the website.** | Staff point every caller to quick order / quotes; QR codes on invoices; WhatsApp stays as a fallback. |
 | **Spam on the quote form** skews the numbers. | Turnstile + rate limit; count only enquiries sales marks `qualified`. |
 | **Brand trademark use.** Using brand logos and names in ads or on pages without permission. | Use the "authorised" badge only where `brands.is_authorised` is true; keep authorisation letters; don't bid on brand terms where the brand forbids it. |
 
 ## 10. Next steps
 
 **Decisions needed from the owner:**
-1. Target launch date (turns L-weeks into real dates).
+1. ~~Target launch date~~ ✅ within 3 months (by early January 2027); exact date to fix once the catalogue data is in.
 2. Budget tier: Lean / Starter / Growth.
 3. Confirm the targets in §1 and §7, or give historical enquiry volumes to set them properly.
-4. Response-time promise for enquiries (e.g. same day / one working day).
+4. ~~Response-time promise~~ ✅ within 1 working day. Still needed: who receives enquiry alerts.
 5. Who handles enquiries day to day (name for the alert emails/WhatsApp).
 
 **Start now (no decisions needed):**

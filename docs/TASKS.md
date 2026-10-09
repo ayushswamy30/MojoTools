@@ -20,7 +20,7 @@
 - [ ] **T0.3** Supply business details: legal name, GSTIN, address(es), hours, phone, WhatsApp, email; **domain + business email**.
 - [ ] **T0.4** Supply About Us content (story, purpose, mission, values, timeline), real stats, team/warehouse photos, real testimonials (if any).
 - [ ] **T0.5** Supply the brand list + logos + product types per brand, and mark **which brands Mojo is formally authorised for**; top-level categories with one image each; hero images/slogans.
-- [ ] **T0.6** Decide on the enquiry response promise and who receives enquiry alerts; launch date; marketing budget tier ([`LAUNCH-PLAN.md §10`](LAUNCH-PLAN.md#10-next-steps)).
+- [x] **T0.6** ~~Response promise~~ (✅ within 1 working day) · ~~launch date~~ (✅ public launch with R1, within 3 months) · still open: who receives enquiry alerts, marketing budget tier ([`LAUNCH-PLAN.md §10`](LAUNCH-PLAN.md#10-next-steps)).
 - [ ] **T0.7** Create accounts: GitHub repo access, Vercel, Supabase, Resend, Cloudflare Turnstile, Google Analytics 4, Google Search Console, Sentry, Google Business Profile.
 - [ ] **T0.8** Run Claude Design prompts **0, 1-R0, 2, 3, 4, 5, 19** from `DESIGN.md §7`; export approved designs to `design/`.
 
@@ -61,7 +61,7 @@
 **Exit:** `supabase db reset` builds everything; RLS tests pass; types generated.
 
 ## Phase 4 — Presentation site
-- [ ] **T4.1** Home R0: accessible `HeroCarousel` (`DESIGN.md §8.2`), category tiles (enquiry pre-fill), static brand grid, why-choose + stats (§8.3), testimonials slot (hidden when empty), CTA band, visit-us band, coming-soon notice + notify signup. [PS-1, PS-2]
+- [ ] **T4.1** Home R0: accessible `HeroCarousel` (`DESIGN.md §8.2`), category tiles (enquiry pre-fill), static brand grid, why-choose + stats (§8.3), testimonials slot (hidden when empty), CTA band, visit-us band. [PS-1, PS-2]
 - [ ] **T4.2** About Us: hero, stats card, image + Purpose/Mission/Values accordion, timeline, why-choose cards. [PS-3]
 - [ ] **T4.3** Brands page with filter chips + logo grid + stats; brand page R0 (about, product range, authorised badge only if `is_authorised`, Enquire / Request price list / WhatsApp CTAs); `brand_view` event. [PS-4]
 - [ ] **T4.4** Contact page: info card, `EnquiryForm` (types, brand pre-fill, attachment, consent, Turnstile, rate limit, error summary, success with enquiry number) → `enquiries` + Resend alert to sales (signed attachment link) + auto-reply; map card with text address; help banner (support request); newsletter / notify block; `generate_lead` / `notify_signup` events. [PS-5, PS-8, OF-5]
@@ -72,22 +72,26 @@
 
 **Exit:** company site complete with seed content, responsive, axe clean, enquiries arrive by email and in the database.
 
-## Phase 5 — R0 hardening & launch
+## Phase 5 — R0 review on private preview (no public launch)
+
+> The site goes public only with R1 (✅ owner, 09 Oct 2026). R0 is finished and signed off on a password-protected preview; domain, tracking QA and the launch campaign move to Phase 17.
 - [ ] **T5.1** Replace all `SEED` content with the owner's real content; confirm every claim ([`RULES.md §11`](RULES.md#11-content--copy-rules)); owner reviews terms/privacy.
 - [ ] **T5.2** Performance pass: Core Web Vitals green on mobile for all R0 pages.
 - [ ] **T5.3** Accessibility audit: axe + keyboard + 200 % zoom + NVDA / VoiceOver / TalkBack; fix all AA issues.
 - [ ] **T5.4** Security pass: RLS review, headers (CSP, HSTS), secret scan, dependency audit, rate limits verified.
-- [ ] **T5.5** Domain + SSL; business email DNS (SPF/DKIM/DMARC) for Resend; Turnstile + GA4 production keys.
-- [ ] **T5.6** Tracking QA ([`LAUNCH-PLAN.md §7`](LAUNCH-PLAN.md#7-success-metrics)): GA4 events and conversions, UTMs saved on enquiries, Search Console verified, sitemap submitted. **Blocks paid campaigns.**
-- [ ] **T5.7** Backups (PITR) enabled; uptime monitoring.
+- [ ] **T5.5** Preview protection (Vercel password / deployment protection) and `noindex` on all preview URLs. *(Domain, DNS and production keys moved to T17.8.)*
+- [ ] **T5.6** Check GA4 events and UTM capture on the preview with test traffic. *(Production tracking QA moved to T17.8.)*
+- [ ] **T5.7** Owner walkthrough of every R0 page on the preview; collect changes.
 - [ ] **T5.8** Short guide for sales: handling enquiry emails and updating `status`.
-- [ ] **T5.9** 🚀 Launch R0 and run the launch campaign ([`LAUNCH-PLAN.md`](LAUNCH-PLAN.md)); monitor errors and enquiries for 2 weeks.
+- [ ] **T5.9** ✅ Owner signs off R0 on the preview. R1 build starts (owner R1 inputs in Phase 6 should already be under way).
 
 ---
 
 # Part B — R1: E-commerce MVP
 
-## Phase 6 — Inputs & decisions for R1 (owner)
+## Phase 6 — Inputs & decisions for R1 (owner, **start now, in parallel with R0**)
+
+> With a 3-month public-launch target, the catalogue data (T6.2) is on the critical path. It should arrive while R0 is being built.
 - [ ] **T6.1** Confirm R1 🟡 items: payments (Razorpay + NEFT), inventory master (Tally?), public prices, GST-inclusive prices, single warehouse, delivery approach. → `OPEN-QUESTIONS.md`
 - [ ] **T6.2** Supply the catalogue XLSX (category tree, products/SKUs, prices, HSN, GST %, stock, **country of origin**) + images named by SKU.
 - [ ] **T6.3** Supply price-list PDFs per brand; returns/shipping/cancellation terms; grievance officer details.
@@ -126,7 +130,7 @@
 - [ ] **T9.6** Dynamic spec filters per category (`categories.spec_filters`). [CA-6]
 - [ ] **T9.7** PDP: gallery, PriceBlock, StockBadge, pack/MOQ, QtyStepper, specs, documents, related, recently viewed (local per viewer), country of origin, Product JSON-LD, mobile sticky bar. [CA-8]
 - [ ] **T9.8** Clearance, Economy, Offers listing pages; offer cards. [OF-2, OF-3, OF-4]
-- [ ] **T9.9** Upgrade R0 pages to R1: home promos + featured rail, category tiles → shop links, brand pages → shop/price list; remove the coming-soon notice. [PS-2, PS-4]
+- [ ] **T9.9** Upgrade R0 pages to R1: home promos + featured rail, category tiles → shop links, brand pages → shop/price list. [PS-2, PS-4]
 - [ ] **T9.10** ISR + tag revalidation for catalogue pages; sitemap adds categories/products.
 
 ## Phase 10 — Search
@@ -202,10 +206,10 @@
 - [ ] **T17.5** Accessibility audit (axe + keyboard + screen readers), incl. checkout and Razorpay flow.
 - [ ] **T17.6** Security pass: RLS review, CSP update for Razorpay, secret scan, dependency audit, admin MFA on.
 - [ ] **T17.7** Full E2E regression suite green on preview.
-- [ ] **T17.8** Switch Razorpay to live.
-- [ ] **T17.9** Restore drill from backups.
+- [ ] **T17.8** Domain + SSL; business email DNS (SPF/DKIM/DMARC) for Resend; production keys (Turnstile, GA4, Razorpay live); tracking QA ([`LAUNCH-PLAN.md §7`](LAUNCH-PLAN.md#7-success-metrics)): GA4 events and conversions, UTMs, Search Console, sitemap. **Blocks paid campaigns.**
+- [ ] **T17.9** Backups (PITR) enabled, restore drill, uptime monitoring.
 - [ ] **T17.10** Owner & staff training + short admin guide.
-- [ ] **T17.11** 🚀 Launch R1 (with its own launch campaign, built on the R0 notify list); monitor errors/orders for 2 weeks.
+- [ ] **T17.11** 🚀 **Public launch of the whole site (company site + shop)** and run the launch campaign ([`LAUNCH-PLAN.md`](LAUNCH-PLAN.md)); monitor errors, enquiries and orders for 2 weeks.
 
 ---
 
@@ -239,7 +243,7 @@
 ## Suggested order of work with Claude Code
 
 ```
-R0 ── Phase 0 (owner) ─┬─> 1 Setup ─> 2 Shell ─> 3 DB (R0) ─> 4 Presentation site ─> 5 Launch R0 🚀
+R0 ── Phase 0 (owner) ─┬─> 1 Setup ─> 2 Shell ─> 3 DB (R0) ─> 4 Presentation site ─> 5 Sign-off on preview
                        └─> Claude Design R0 prompts (T0.8) feed Phases 2 and 4
 
 R1 ── Phase 6 (owner) ─┬─> 7 DB (commerce) ─> 8 Auth ─┬─> 9 Shop shell & catalogue ─> 10 Search
@@ -247,7 +251,7 @@ R1 ── Phase 6 (owner) ─┬─> 7 DB (commerce) ─> 8 Auth ─┬─> 9 Sh
                        │                              └─> 14 B2B ─> 15 Account
                        └─> Claude Design R1 prompts (T6.5)        16 Admin (can start after 7;
                                                                      import before 17)
-                                                                  17 Launch R1 🚀
+                                                                  17 Public launch 🚀 (R0 + R1)
 ```
 
 Prompt to start each Claude Code session:

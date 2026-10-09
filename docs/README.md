@@ -2,7 +2,7 @@
 
 Mojo Tools trades **tools, machinery and hardware materials**, mostly to B2B buyers (contractors, workshops, factories, resellers) with a smaller B2C walk-in segment. All sales are offline today. This project builds **one website that is both the company site and an e-commerce store**, plus an admin panel.
 
-**Current release: ▶️ R0, the company site.** The online shop (R1) follows once the main site is live.
+**Current release: ▶️ R0, the company site**, built first and reviewed on a private preview. **The site goes public once, together with the online shop (R1)**, with a target **within 3 months (by early January 2027)**.
 
 | Release | What ships |
 |---|---|
@@ -19,7 +19,7 @@ Mojo Tools trades **tools, machinery and hardware materials**, mostly to B2B buy
 | [`DESIGN.md`](DESIGN.md) | **How it looks and behaves**: tokens (contrast-checked), components, UX rules, Claude Design prompts, accessibility spec | Designing or building UI |
 | [`RULES.md`](RULES.md) | **How we work**: coding, security, accessibility, SEO, testing, git, Definition of Done | Before every task |
 | [`TASKS.md`](TASKS.md) | **What's next**: ordered task list, R0 first (Phases 0–5), then R1 (6–17), R2/R3 | Picking the next piece of work |
-| [`LAUNCH-PLAN.md`](LAUNCH-PLAN.md) | **How we launch R0**: audience, messages, channels, 8-week calendar, KPIs, budget tiers | Planning marketing |
+| [`LAUNCH-PLAN.md`](LAUNCH-PLAN.md) | **How we launch the site publicly**: audience, messages, channels, 8-week calendar, KPIs, budget tiers | Planning marketing |
 | [`DECISIONS.md`](DECISIONS.md) | Every decision made and why | Before re-opening a settled point |
 | [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md) | What the owner still needs to answer or supply | Preparing for an owner check-in |
 | [`CHANGELOG.md`](CHANGELOG.md) | History of the docs + the **consolidation log** (every issue found and how it was fixed) | Wondering why something changed |

@@ -8,7 +8,7 @@
 ## 0. How to work on this project (read first)
 
 1. **Read the docs before coding** (all in `docs/`): [`README.md`](README.md) (index + current release), `PRD.md` (what), `ARCHITECTURE.md` (how it fits), `DESIGN.md` (how it looks), `TASKS.md` (what's next). Consult `DECISIONS.md` and `OPEN-QUESTIONS.md` before re-opening a settled point.
-2. **Work one task at a time** from `TASKS.md`, in order. The current release is **R0 (company site)**; do not start R1 tasks until R0 has launched, unless a task says otherwise. Tick the checkbox in the same PR that completes it.
+2. **Work one task at a time** from `TASKS.md`, in order. The current release is **R0 (company site)**; do not start R1 build tasks until R0 is signed off on the preview (T5.9), unless a task says otherwise. The owner's R1 inputs (Phase 6) run in parallel. Nothing goes public until the full launch (T17.11). Tick the checkbox in the same PR that completes it.
 3. **Plan → build → verify → document.** Before writing code, state the files you will touch. Afterwards, run typecheck, lint and tests, and look at the page in a browser (desktop + mobile width, keyboard only, reduced motion on).
 4. **Keep docs in sync.** New table, route, env var, integration or analytics event → update `ARCHITECTURE.md` in the same PR. New/changed token or component → `DESIGN.md`. New decision → `DECISIONS.md`. Changed docs → a line in `CHANGELOG.md`.
 5. **Never invent business data** (prices, GSTIN, addresses, testimonials, stats, delivery reach, response times). Use clearly fake seed data marked `// SEED` or `{placeholder}` until the owner supplies real data.

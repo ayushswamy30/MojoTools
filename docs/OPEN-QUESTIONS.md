@@ -9,18 +9,17 @@ Legend: 🟡 a default is in place and work can proceed (please confirm) · ❓ 
 |---|----------|----------------|--------|--------|
 | Q4 | Domain name and business email? | — | ❓ | T5.5, QR print in the launch plan |
 | Q5 | Confirm the stack: Next.js + Supabase + Vercel | As documented | 🟡 | T1.1 |
-| R0-1 | English only for R0? | Yes; Hindi in R2 | 🟡 | — |
-| R0-2 | Enquiries handled by email + database (no admin inbox until R1)? | Yes | 🟡 | T4.4 |
+| R0-1 | English only for R0? | ✅ Yes (owner, 09 Oct); Hindi in R2 | ✅ | — |
+| R0-2 | Enquiries handled by email + database (no admin inbox until R1)? | ✅ Yes (owner, 09 Oct) | ✅ | T4.4 |
 | R0-3 | Hero slides and site copy fixed in code until R1? | Yes | 🟡 | T4.1 |
-| R0-4 | Category tiles open the enquiry form (no shop yet)? | Yes | 🟡 | T4.1 |
+| R0-4 | Category tiles open the enquiry form (no shop yet)? | ✅ Yes (owner, 09 Oct) | ✅ | T4.1 |
 | R0-5 | Price lists requested via the enquiry form until R1? | Yes | 🟡 | T4.3 |
-| R0-6 | Show an "online ordering coming soon" notice + notify signup? | Yes | 🟡 | T4.1 |
-| C1 | Target launch date for the company site | — | ❓ | Launch plan dates |
-| C2 | Marketing budget tier: Lean (₹0 media) / Starter (~₹40k) / Growth (~₹1.2L) over 8 weeks | Starter recommended | ❓ | Launch plan §8 |
-| C3 | Confirm targets (150 enquiries in 8 weeks, 25 Google reviews, 300 notify signups), or share past enquiry volumes | As stated | 🟡 | Launch plan §7 |
-| C4 | **Response-time promise** for enquiries and quotes, and who receives enquiry alerts | Shown as `{response promise}` until set | ❓ | T4.4, copy everywhere |
+| C1 | Public launch date | ✅ Whole site (R0 + full shop R1) goes public together, **within 3 months** (by early Jan 2027). Exact date once catalogue data is in. | ✅ | — |
+| C2 | Marketing budget tier: Lean (₹0 media) / Starter (~₹40k) / Growth (~₹1.2L) over 8 weeks | Not decided yet (owner, 09 Oct); Starter recommended | ❓ | Launch plan §8 |
+| C3 | Confirm targets (150 enquiries in 8 weeks, 25 Google reviews, first-orders target), or share past enquiry volumes | As stated | 🟡 | Launch plan §7 |
+| C4 | ~~Response-time promise~~ ✅ **within 1 working day**. Still open: **who receives enquiry alerts** (names / email / WhatsApp)? | — | ❓ | T4.4 |
 | C5 | Which brands is Mojo **formally authorised** for? | No badge until confirmed | ❓ | T4.3 (`is_authorised`) |
-| C6 | Existing Google Business Profile / IndiaMART listing? | — | ❓ | Launch plan L-4 |
+| C6 | Existing Google Business Profile / IndiaMART listing? | ✅ Both exist; no WhatsApp Business or social pages yet | ✅ | — |
 
 ### Assets for R0
 
@@ -32,7 +31,9 @@ Legend: 🟡 a default is in place and work can proceed (please confirm) · ❓ 
 | A6 | Business details: legal name, address, GSTIN, hours, phone, WhatsApp, email | ❓ |
 | A8 | Top-level categories with one image each; hero images / slogans | ❓ |
 
-## Needed for R1 (e-commerce), can wait
+## Needed for R1 (e-commerce): **start now**
+
+The site goes public only with the full shop, within 3 months, so these are now on the critical path.
 
 | # | Question | Default / note | Status |
 |---|----------|----------------|--------|

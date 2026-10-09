@@ -30,3 +30,7 @@ Status: ✅ decided · 🟡 default adopted, owner to confirm.
 | D17 | 08 Oct 2026 | Hindi language switch hidden until the Hindi UI ships (R2); R0 is English only. | 🟡 | PRD GL-1, GL-8 |
 | D18 | 08 Oct 2026 | Unconfirmed business claims (authorised dealer, delivery reach, response time, returns) are placeholders and hidden in production until the owner confirms them. | ✅ | RULES §11 |
 | D19 | 08 Oct 2026 | Generated PDFs (react-pdf, untagged) always have an HTML equivalent. | ✅ | DESIGN §8.6 |
+| P7 | 09 Oct 2026 | **No separate public launch for the company site.** R0 is built first and reviewed on a private preview; the whole site (R0 + full shop R1) goes public together. No "coming soon" notice. | ✅ | Owner answer, 09 Oct 2026 |
+| P8 | 09 Oct 2026 | Public launch target: **within 3 months (by early January 2027)**, with the full R1 scope. Catalogue data (T6.2) is on the critical path; R1 owner inputs start now in parallel with R0. | ✅ | Owner answer. ⚠️ Tight for the full R1 scope; review the date once catalogue data arrives. |
+| P9 | 09 Oct 2026 | Enquiry / quote response promise: **within 1 working day**. | ✅ | Owner answer; replaces `{response promise}` |
+| P10 | 09 Oct 2026 | R0 confirmed: English only; enquiries by email + database; category tiles open the enquiry form. | ✅ | Owner answer (R0-1, R0-2, R0-4) |

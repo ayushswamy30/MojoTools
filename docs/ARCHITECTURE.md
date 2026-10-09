@@ -397,7 +397,7 @@ Supports the launch campaign targets in [`LAUNCH-PLAN.md`](LAUNCH-PLAN.md).
 | `call_click` | R0 | Any `tel:` link | `placement`, `page` |
 | `price_list_request` | R0 | Enquiry type = price list | `brand` |
 | `brand_view` | R0 | Brand page view | `brand` |
-| `notify_signup` | R0 | Newsletter / launch notify signup | `topic`, `page` |
+| `notify_signup` | R0 | Newsletter signup | `topic`, `page` |
 | `search`, `view_item`, `add_to_cart`, `begin_checkout`, `purchase`, `rfq_submit` | R1 | Shop funnel | standard GA4 e-commerce params |
 
 ## 12. R0 slice (what the company site actually uses)
