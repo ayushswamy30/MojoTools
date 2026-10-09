@@ -2,7 +2,7 @@
 
 > **Version 0.2** (08 Oct 2026). Built with the campaign-planning skill.
 
-**Purpose:** a marketing plan for the **public launch of the whole site** (company site + online shop, R0 + R1, target by early January 2027; [`PRD.md §12`](PRD.md#12-release-plan)) so it brings in enquiries and orders from day one. *(Updated 09 Oct 2026: the site no longer launches before the shop. Items about a "coming soon" waitlist were removed. Order KPIs will be added once checkout scope is final.)* Its tracking requirements are built into [`ARCHITECTURE.md §11`](ARCHITECTURE.md#11-analytics--attribution) and tasks T2.5 / T5.6 in [`TASKS.md`](TASKS.md).
+**Purpose:** a marketing plan for the **public launch of the whole site** (company site + online shop, R0 + R1, target by early January 2027; [`PRD.md §12`](PRD.md#12-release-plan)) so it brings in enquiries and orders from day one. *(Updated 09 Oct 2026: the site no longer launches before the shop. Items about a "coming soon" waitlist were removed. Order KPIs will be added once checkout scope is final.)* Its tracking requirements are built into [`ARCHITECTURE.md §11`](ARCHITECTURE.md#11-analytics--attribution) and tasks T2.5 / T17.8 in [`TASKS.md`](TASKS.md).
 
 > **Inputs and assumptions.** Goal and audience come from the PRD (goals G1 and G3, §3 personas). **Launch date and budget have not been given yet** (owner task T0.6), so the calendar counts in weeks relative to launch (L-4 … L+8), and the budget is shown as three tiers to choose from. Assumptions are marked 🟡; see [Next steps](#10-next-steps).
 
@@ -88,7 +88,7 @@ The audience is mostly local and repeat B2B, so **owned and local channels come 
 | L-2 | Shoot photos/video: warehouse, counter, team, top stock | All | Ops | ☐ |
 | L-2 | Set up WhatsApp Business profile, catalogue, quick replies | WhatsApp | Sales | ☐ |
 | L-2 | Print QR standees, invoice footer, visiting-card reprint | In-store | Ops (**depends on final domain**) | ☐ |
-| L-1 | **Tracking QA** (see §7): GA4 events, UTMs stored in enquiries, Search Console verified, sitemap submitted | Website | Dev, TASKS T5.6 (**blocks all paid**) | ☐ |
+| L-1 | **Tracking QA** (see §7): GA4 events, UTMs stored in enquiries, Search Console verified, sitemap submitted | Website | Dev, TASKS T17.8 (**blocks all paid**) | ☐ |
 | L-1 | Draft launch messages (owner WhatsApp broadcast, SMS, LinkedIn, Instagram) | Owned | Owner + writer | ☐ |
 | **L0 — Launch** | Site live; owner broadcast to existing customers; LinkedIn + Instagram launch posts; GBP post; QR standees out | All owned | Everyone | ☐ |
 | L+1 | Review requests to the 50 most loyal customers (GBP link) | WhatsApp | Sales | ☐ |
@@ -192,4 +192,4 @@ Recommendation: start with **Starter**. Put most of the paid money into **Google
 - Claim / verify the Google Business Profile.
 - Message brand partners about dealer-locator links.
 
-**Feeds into the build:** analytics events + UTM capture → `ARCHITECTURE.md §11`, TASKS T2.5; consent-gated analytics → `CookieBanner` (T2.4); WhatsApp prefill → `WhatsAppFab` (T2.4); tracking QA → T5.6.
+**Feeds into the build:** analytics events + UTM capture → `ARCHITECTURE.md §11`, TASKS T2.5; consent-gated analytics → `CookieBanner` (T2.4); WhatsApp prefill → `WhatsAppFab` (T2.4); tracking QA → T17.8.
