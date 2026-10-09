@@ -78,34 +78,91 @@ export const brands: Brand[] = [
 export type CategoryIcon =
   'drill' | 'wrench' | 'factory' | 'ruler' | 'disc' | 'nut' | 'hard-hat' | 'flame'
 
-export type Category = { slug: string; name: string; icon: CategoryIcon; blurb: string }
+export type Category = {
+  slug: string
+  name: string
+  icon: CategoryIcon
+  blurb: string
+  /** Longer description for the Products page. SEED: owner to confirm wording and ranges. */
+  description: string
+  /** Links the category to brands via their product types; undefined = ask us. */
+  productType?: ProductType
+}
 
 // SEED (A8): top-level categories from DESIGN.md Prompt 1; to be replaced by the owner's list.
 export const categories: Category[] = [
-  { slug: 'power-tools', name: 'Power Tools', icon: 'drill', blurb: 'Drills, grinders, saws' },
-  { slug: 'hand-tools', name: 'Hand Tools', icon: 'wrench', blurb: 'Spanners, pliers, sets' },
-  { slug: 'machinery', name: 'Machinery', icon: 'factory', blurb: 'Workshop machines' },
+  {
+    slug: 'power-tools',
+    name: 'Power Tools',
+    icon: 'drill',
+    blurb: 'Drills, grinders, saws',
+    description: 'Corded and cordless drills, angle grinders, saws, hammers and accessories.',
+    productType: 'Power Tools',
+  },
+  {
+    slug: 'hand-tools',
+    name: 'Hand Tools',
+    icon: 'wrench',
+    blurb: 'Spanners, pliers, sets',
+    description: 'Spanners, sockets, pliers, screwdrivers, hammers and complete tool kits.',
+    productType: 'Hand Tools',
+  },
+  {
+    slug: 'machinery',
+    name: 'Machinery',
+    icon: 'factory',
+    blurb: 'Workshop machines',
+    description: 'Workshop and site machines: drilling, cutting, compressors and more.',
+    productType: 'Machinery',
+  },
   {
     slug: 'measuring-testing',
     name: 'Measuring & Testing',
     icon: 'ruler',
     blurb: 'Gauges, meters',
+    description: 'Measuring tapes, levels, gauges, calipers and electrical testers.',
+    productType: 'Measuring',
   },
   {
     slug: 'cutting-abrasives',
     name: 'Cutting & Abrasives',
     icon: 'disc',
     blurb: 'Discs, blades, wheels',
+    description: 'Cutting and grinding discs, saw blades, flap wheels and sanding products.',
   },
   {
     slug: 'fasteners-hardware',
     name: 'Fasteners & Hardware',
     icon: 'nut',
     blurb: 'Bolts, anchors, fixings',
+    description: 'Bolts, screws, anchors, fixings and general hardware.',
+    productType: 'Fasteners & Hardware',
   },
-  { slug: 'safety-ppe', name: 'Safety & PPE', icon: 'hard-hat', blurb: 'Helmets, gloves, eyewear' },
-  { slug: 'welding', name: 'Welding', icon: 'flame', blurb: 'Machines, rods, accessories' },
+  {
+    slug: 'safety-ppe',
+    name: 'Safety & PPE',
+    icon: 'hard-hat',
+    blurb: 'Helmets, gloves, eyewear',
+    description: 'Helmets, gloves, eyewear, ear protection, safety shoes and harnesses.',
+    productType: 'Safety',
+  },
+  {
+    slug: 'welding',
+    name: 'Welding',
+    icon: 'flame',
+    blurb: 'Machines, rods, accessories',
+    description: 'Welding machines, electrodes, torches and welding safety gear.',
+  },
 ]
+
+export function brandsForCategory(category: Category) {
+  const type = category.productType
+  return type ? brands.filter((brand) => brand.productTypes.includes(type)) : []
+}
+
+export function categoriesForBrand(brand: Brand) {
+  return categories.filter((c) => c.productType && brand.productTypes.includes(c.productType))
+}
 
 export type HeroSlide = {
   id: string

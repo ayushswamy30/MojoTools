@@ -14,7 +14,7 @@
 
 # Part A — R0: Company site
 
-> **Progress (09 Oct 2026):** Phases 1–4 built with demo content on branch `prd` (see notes on each task). Open: owner inputs (Phase 0), accounts/deploy (T1.10), real content (Phase 5).
+> **Progress (10 Oct 2026):** Phases 1–4 built with demo content on branch `pre-mojo` (see notes on each task). Open: owner inputs (Phase 0), accounts/deploy (T1.10), real content (Phase 5).
 
 ## Phase 0 — Inputs & decisions for R0 (owner)
 - [ ] **T0.1** Confirm R0 defaults: stack (Next.js + Supabase + Vercel), English only, enquiries by email + database (no admin inbox), hero slides in code. → [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md)
@@ -70,7 +70,8 @@
 - [x] **T4.5** Reuse `EnquiryForm` as a "Get a Quote" dialog/page reachable from the header and every CTA. [PS-8] ✅ as a `/quote` page (pre-filled via `?type=&brand=&category=`) rather than a dialog
 - [x] **T4.6** Policy pages from MDX: terms, privacy (DPDP: consent, data requests contact), accessibility statement. [PS-6, GL-9] ✅ (draft text — owner/legal review in T5.1)
 - [x] **T4.7** SEO: metadata, `Organization` + `LocalBusiness` JSON-LD, `BreadcrumbList` on brand pages, OG images, `sitemap.ts` (pages + brands), `robots.ts`. ✅
-- [x] **T4.8** E2E: all R0 pages render and pass axe; enquiry happy path, validation errors, attachment; consent gates GA4. ✅ 36 Playwright tests (desktop + mobile)
+- [x] **T4.8** E2E: all R0 pages render and pass axe; enquiry happy path, validation errors, attachment; consent gates GA4. ✅ 41 Playwright tests (desktop + mobile)
+- [x] **T4.9** Products page (`/products`): category cards with description, matching brands, Enquire + WhatsApp CTAs, jump links; added to the menu between About and Brands; Home link removed from the menu (logo goes home). [PS-9] ✅
 
 **Exit:** company site complete with seed content, responsive, axe clean, enquiries arrive by email and in the database.
 

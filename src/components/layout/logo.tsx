@@ -1,10 +1,11 @@
 import Link from 'next/link'
 
 /** Text wordmark placeholder until the real logo SVG arrives (A5). */
-export function Logo({ name }: { name: string }) {
+export function Logo({ name, homeLabel }: { name: string; homeLabel: string }) {
   return (
     <Link
       href="/"
+      aria-label={`${name}, ${homeLabel}`}
       className="inline-flex min-h-11 items-center gap-2 font-display text-xl font-extrabold tracking-tight whitespace-nowrap text-white uppercase [font-stretch:125%]"
     >
       <span

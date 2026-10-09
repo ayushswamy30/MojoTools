@@ -139,7 +139,7 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 |---|---|---|
 | `SkipLink` | R0 | "Skip to main content"; first focusable element; visible on focus |
 | `UtilityBar` | R0 | Thin top strip. **R0:** "GST-registered supplier" (only once the GSTIN is supplied) · phone · WhatsApp. **R1 adds** "Pan-India delivery" (🟡 only once true). **R2 adds** the EN / हिंदी toggle. |
-| `Header` | R0 / R1 | **R0:** logo · Home · About · Brands · Contact · yellow **GET A QUOTE**. **R1:** logo · search (wide) · Support · **QUOTE / ORDER** (yellow) · Login/Account · Cart (count badge). |
+| `Header` | R0 / R1 | **R0:** logo (link to home; accessible name "Mojo Tools, home") · About · Products · Brands · Contact · yellow **GET A QUOTE**. **R1:** logo · search (wide) · Support · **QUOTE / ORDER** (yellow) · Login/Account · Cart (count badge). |
 | `MainNav` | R1 | `Categories ▾` (dark button) · `Brands ▾` · Economy Series ("SAVE MORE" tag) · **Stock Clearance** (red dot + text, not colour alone) · Offers · Price Lists · About · Contact |
 | `MegaMenu` | R1 | Left: L1 categories with icons; right: L2/L3 columns + featured brand; Radix `NavigationMenu`; opens on click/Enter, hover intent 150 ms; Esc closes and returns focus |
 | `SearchBox` | R1 | Placeholder "Search by product, brand or SKU" (+ visible or visually hidden label); suggestions combobox (`role="combobox"`, `aria-activedescendant`): SKU matches first (mono), products with thumb + price, brands, categories, recent searches |
@@ -235,7 +235,7 @@ Sizes: `sm 32` (desktop dense tables only), `md 40`, `lg 48` px height. On touch
 ```
 HOME — R0 (desktop)
 ┌ SkipLink (on focus) · UtilityBar: GST-registered supplier · ☎ · WhatsApp ─────────────┐
-├ Header: [LOGO]   Home  About  Brands  Contact          [GET A QUOTE] ┤
+├ Header: [LOGO]   About  Products  Brands  Contact     [GET A QUOTE] ┤
 ├══ 4px yellow rule ═══════════════════════════════════════════════════┤
 │ HERO (full-bleed photo, dark gradient scrim left)                    │
 │ ◤                                                                   │
@@ -313,7 +313,7 @@ Tokens (use exactly):
 Global chrome — R0 (company site):
 - Skip link. Utility bar (ink-900, 32px): "GST-registered supplier" left; phone and
   WhatsApp right. No language toggle yet.
-- Header: logo left; Home, About, Brands, Contact; yellow "GET A QUOTE" button.
+- Header: logo left (links home); About, Products, Brands, Contact; yellow "GET A QUOTE" button.
 - Footer: trust strip (Genuine brands, GST invoice, Expert help on WhatsApp),
   columns (Mojo Tools, Help, Policies), address + map link, socials, GST badge, legal bar.
 - Floating WhatsApp button bottom-right; cookie bar (Accept all / Reject non-essential /

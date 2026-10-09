@@ -42,4 +42,6 @@ Status: ✅ decided · 🟡 default adopted, owner to confirm.
 | D25 | 09 Oct 2026 | Enquiry attachments are sent as email attachments in the sales alert instead of links, so private-bucket URLs never outlive 10 minutes (RULES §5). | ✅ | |
 | D26 | 09 Oct 2026 | New token `--whatsapp-dark #075E54` (7.67:1) for WhatsApp buttons with text; `#128C7E` stays for the icon-only FAB (4.14:1, graphic). | ✅ | Found by axe (white on #128C7E = 4.13:1 for text) |
 | D27 | 09 Oct 2026 | Stats strips show final values with no count-up animation. | ✅ | Simplest way to satisfy DESIGN §8.3 |
+| P11 | 10 Oct 2026 | Working branch is now **`pre-mojo`** (branched from `prd`, which stays as the earlier snapshot). | ✅ | Owner request |
+| P12 | 10 Oct 2026 | New **Products** section between About and Brands (`/products`); **Home removed from the menu** — the logo links home (accessible name "Mojo Tools, home"). | ✅ | Owner request after reviewing screenshots |
 

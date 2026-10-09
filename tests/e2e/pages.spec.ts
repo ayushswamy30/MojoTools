@@ -4,6 +4,7 @@ import { expect, test } from '@playwright/test'
 const pages = [
   '/',
   '/about',
+  '/products',
   '/brands',
   '/brands/brand-a',
   '/contact',
@@ -62,4 +63,27 @@ test('previews are not indexable', async ({ page, request }) => {
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
   const robots = await (await request.get('/robots.txt')).text()
   expect(robots).toContain('Disallow: /')
+})
+
+test('main menu: no Home link, Products sits between About and Brands, logo goes home', async ({
+  page,
+  isMobile,
+}) => {
+  test.skip(isMobile, 'desktop navigation')
+  await page.goto('/brands')
+  const nav = page.getByRole('navigation', { name: 'Main' })
+  await expect(nav.getByRole('link')).toHaveText(['About', 'Products', 'Brands', 'Contact'])
+  await page
+    .getByRole('banner')
+    .getByRole('link', { name: /Mojo Tools, home/ })
+    .click()
+  await expect(page).toHaveURL(/\/$/)
+})
+
+test('products page lists categories with enquiry links', async ({ page }) => {
+  await page.goto('/products')
+  await expect(page.getByRole('heading', { level: 2, name: 'Power Tools' })).toBeVisible()
+  await page.getByRole('link', { name: 'Enquire about Power Tools' }).click()
+  await expect(page).toHaveURL(/\/quote\?type=quote&category=power-tools$/)
+  await expect(page.getByLabel(/^Category/)).toHaveValue('power-tools')
 })

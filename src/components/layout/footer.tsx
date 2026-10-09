@@ -20,6 +20,7 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
       title: f.company,
       links: [
         { href: '/about', label: c.about },
+        { href: '/products', label: c.products },
         { href: '/brands', label: c.brands },
         { href: '/contact', label: c.contact },
       ],
@@ -56,7 +57,7 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
       </div>
       <Container className="grid gap-10 py-12 md:grid-cols-[1.5fr_repeat(3,1fr)]">
         <div>
-          <Logo name={business.name} />
+          <Logo name={business.name} homeLabel={c.logoHome} />
           <address className="mt-4 text-sm leading-6 not-italic">
             {business.address.line1}
             <br />

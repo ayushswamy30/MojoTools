@@ -14,8 +14,8 @@ import { NavLinks, type NavItem } from './nav-links'
 export function Header({ dict }: { dict: Dictionary }) {
   const c = dict.chrome
   const items: NavItem[] = [
-    { href: '/', label: c.home },
     { href: '/about', label: c.about },
+    { href: '/products', label: c.products },
     { href: '/brands', label: c.brands },
     { href: '/contact', label: c.contact },
   ]
@@ -48,7 +48,7 @@ export function Header({ dict }: { dict: Dictionary }) {
         </Container>
       </div>
       <Container className="flex h-16 items-center justify-between gap-6">
-        <Logo name={business.name} />
+        <Logo name={business.name} homeLabel={c.logoHome} />
         <nav aria-label={c.mainNav} className="hidden lg:block">
           <NavLinks items={items} className="flex items-center gap-8" />
         </nav>

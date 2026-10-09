@@ -64,6 +64,7 @@ Plus an **Admin panel** to run both (R1; in R0 enquiries arrive by email and are
 ```
 R0  /                         Home (hero carousel, brands, categories, why-us, stats, quote CTA)
 R0  /about                    About Us (story, core purpose, mission, values, stats, why choose us)
+R0  /products                 Products: category overview + enquiry per category (R1: links into /shop)
 R0  /brands                   Brands we distribute (filterable logo grid + stats)
 R0  /brands/[brand]           Brand page (R0: info + enquire; R1: + links into shop, price list)
 R0  /contact                  Contact Us (info card, enquiry form, map, WhatsApp, help banner)
@@ -95,7 +96,7 @@ English URLs carry **no locale prefix**; Hindi (R2) lives under `/hi/...` (see [
 ### 6.1 Global (all pages)
 | ID | Requirement | Rel |
 |---|---|---|
-| GL-1 | **Upper horizontal navigation.** **R1 full version:** logo, large search (name / SKU / brand), Categories mega-menu, Brands menu, **Stock Clearance**, **Economy Series**, Offers, Price Lists, About, Contact, Support, **Quote / Order** button, Login/Register, Cart. **R0 version:** logo, Home, About, Brands, Contact, phone, WhatsApp, yellow **Get a Quote** button. The **EN / हिंदी switch appears only in R2**, once the Hindi UI exists. | R0 / R1 |
+| GL-1 | **Upper horizontal navigation.** **R1 full version:** logo, large search (name / SKU / brand), Categories mega-menu, Brands menu, **Stock Clearance**, **Economy Series**, Offers, Price Lists, About, Contact, Support, **Quote / Order** button, Login/Register, Cart. **R0 version:** logo (links home, so no separate Home item), About, **Products**, Brands, Contact, phone, WhatsApp, yellow **Get a Quote** button. The **EN / हिंदी switch appears only in R2**, once the Hindi UI exists. | R0 / R1 |
 | GL-2 | Mega-menu for categories (multi-column, sub-categories, icons) | R1 |
 | GL-3 | **Footer:** trust strip (genuine products, GST invoice, help desk; *pan-India delivery* and *secure payment* only once true, R1), link columns (Company, Help, Shop, Account, Policies; Shop/Account from R1), contact, social, payment icons (R1), GST registration badge | R0 / R1 |
 | GL-4 | Floating WhatsApp / help button | R0 |
@@ -115,6 +116,7 @@ English URLs carry **no locale prefix**; Hindi (R2) lives under `/hi/...` (see [
 | PS-5 | **Contact Us:** info card (address, hours, phone, email, GSTIN), enquiry form (name, email, mobile, company, enquiry type, message, optional attachment, consent, captcha), Google map with text address + directions link, "Need help choosing the right tool?" banner (Call / WhatsApp / **Raise a support request** = enquiry of type *support*), newsletter signup + Request-a-Quote block | R0 |
 | PS-6 | Policy pages. **R0:** terms, privacy, accessibility. **R1:** shipping, returns & refunds, cancellation, grievance officer. | R0 / R1 |
 | PS-7 | Blog / buying guides | R3 |
+| PS-9 | **Products page:** all top-level categories with description, matching brands and "Enquire about {category}" + WhatsApp CTAs; jump links per category. Sits between About and Brands in the menu. R1: categories link into the shop listing. | R0 |
 | PS-8 | **Enquiry / quote request form** (the R0 stand-in for RFQ): types *contact*, *quote*, *price list*, *dealer*, *support*; optional brand/category pre-fill, optional GSTIN, file upload (PDF/XLSX/CSV/JPG/PNG/WEBP, ≤ 10 MB). Stored, emailed to sales, auto-reply to the customer. In R1 a *quote* enquiry can be converted into an RFQ. | R0 |
 
 ### 6.3 Catalogue & discovery

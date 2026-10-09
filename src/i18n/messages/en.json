@@ -13,10 +13,12 @@
     "breadcrumb": "Breadcrumb",
     "home": "Home",
     "about": "About",
+    "products": "Products",
     "brands": "Brands",
     "contact": "Contact",
     "whatsappFab": "Chat with us on WhatsApp (opens in a new tab)",
-    "opensNewTab": "(opens in a new tab)"
+    "opensNewTab": "(opens in a new tab)",
+    "logoHome": "home"
   },
   "footer": {
     "trustGenuine": "Genuine brands",
@@ -123,7 +125,8 @@
     "ctaQuote": "Request a quote",
     "ctaWhatsapp": "Chat on WhatsApp",
     "visitTitle": "Visit our store",
-    "visitLink": "Contact & directions"
+    "visitLink": "Contact & directions",
+    "viewAllProducts": "View all products"
   },
   "about": {
     "metaTitle": "About us",
@@ -165,5 +168,16 @@
     "metaDescription": "Send your list and get a priced quote from Mojo Tools.",
     "title": "Get a quote",
     "subtitle": "Send your list and we'll reply {promise}. For anything urgent, call or WhatsApp us."
+  },
+  "productsPage": {
+    "metaTitle": "Products",
+    "metaDescription": "Tools, machinery and hardware categories supplied by Mojo Tools.",
+    "title": "Products",
+    "subtitle": "Browse what we supply. Our online catalogue opens with the shop; until then, send an enquiry for prices and availability.",
+    "jumpTo": "Jump to a category",
+    "brandsLabel": "Brands",
+    "anyBrand": "Many brands — ask us for options.",
+    "enquire": "Enquire about {category}",
+    "whatsapp": "Ask on WhatsApp"
   }
 }

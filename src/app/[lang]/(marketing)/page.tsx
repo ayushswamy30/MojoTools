@@ -72,6 +72,12 @@ export default async function HomePage() {
             subtitle={dict.home.categoriesSubtitle}
           />
           <CategoryTiles categories={categories} enquireLabel={dict.home.enquire} />
+          <Link
+            href="/products"
+            className="mt-6 inline-flex min-h-11 items-center font-semibold text-ink-900 underline underline-offset-4"
+          >
+            {dict.home.viewAllProducts}
+          </Link>
         </Container>
       </section>
 

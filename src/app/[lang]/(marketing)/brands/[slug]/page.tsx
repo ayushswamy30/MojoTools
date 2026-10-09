@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { BadgeCheck, MessageCircle } from 'lucide-react'
-import { brands, categories, getBrand, whatsappHref } from '@/features/content/site'
+import { brands, categoriesForBrand, getBrand, whatsappHref } from '@/features/content/site'
 import { getDictionary, t } from '@/i18n/dictionary'
 import en from '@/i18n/messages/en.json'
 import { publicEnv } from '@/lib/public-env'
@@ -33,12 +33,7 @@ export default async function BrandPage({ params }: PageProps<'/[lang]/brands/[s
   const brand = getBrand((await params).slug)
   if (!brand) notFound()
   const dict = await getDictionary()
-  // Product range shown as the categories that match the brand's product types (R0 showcase; R1 uses real data).
-  const range = categories.filter((category) =>
-    brand.productTypes.some((type) =>
-      category.name.toLowerCase().includes(type.split(' ')[0]!.toLowerCase()),
-    ),
-  )
+  const range = categoriesForBrand(brand)
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

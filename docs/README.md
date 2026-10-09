@@ -24,6 +24,7 @@ Mojo Tools trades **tools, machinery and hardware materials**, mostly to B2B buy
 | [`LAUNCH-PLAN.md`](LAUNCH-PLAN.md) | **How we launch the site publicly**: audience, messages, channels, 8-week calendar, KPIs, budget tiers | Planning marketing |
 | [`DECISIONS.md`](DECISIONS.md) | Every decision made and why | Before re-opening a settled point |
 | [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md) | What the owner still needs to answer or supply | Preparing for an owner check-in |
+| [`PROGRESS.md`](PROGRESS.md) | **Where we are**: plain-language status of everything done so far, what's demo, what's next | Catching up on the project |
 | [`CHANGELOG.md`](CHANGELOG.md) | History of the docs + the **consolidation log** (every issue found and how it was fixed) | Wondering why something changed |
 
 ## Status legend (used everywhere)
@@ -32,4 +33,4 @@ Mojo Tools trades **tools, machinery and hardware materials**, mostly to B2B buy
 
 ## Starting a new chat or coding session
 
-> "Continue the Mojo Tools project on branch `prd`. Read `docs/README.md` first, then `docs/RULES.md`."
+> "Continue the Mojo Tools project on branch `pre-mojo`. Read `docs/README.md` first, then `docs/RULES.md`."
