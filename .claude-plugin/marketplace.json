@@ -1,0 +1,14 @@
+{
+  "name": "mojotools-creative",
+  "description": "Creative skills marketplace: design, UI, motion, video, 3D and illustration skills for Claude Code.",
+  "owner": {
+    "name": "KBI"
+  },
+  "plugins": [
+    {
+      "name": "creative-skills",
+      "source": "./plugins/creative-skills",
+      "description": "48 global creative skills across design/UI, motion/animation, video/motion-graphics, and 3D/WebGL/illustration, with an intelligent direction -> construction -> QA hierarchy."
+    }
+  ]
+}

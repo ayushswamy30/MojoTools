@@ -1,0 +1,8 @@
+{
+  "name": "creative-skills",
+  "description": "48 creative skills: design-system, frontend-design, impeccable, visual-art-direction, canvas-design, algorithmic-art, theme-factory, web-artifacts-builder, tone-of-voice, apple-hig, tweak, motion & animation (motion-art-direction, animation-principles, animate, review/improve-animations, gsap-web, svg/lottie/logo/kinetic/micro/page-transition/motion-background, 60fps & accessible gates), video (remotion, explainer/short-form/ad/product-demo/presentation/audiogram/diagram/whiteboard, soundtrack, lower-thirds), and 3D/WebGL/illustration (threejs, shader-glsl, particle-system, generative-illustration, webgl-art-direction).",
+  "version": "1.0.0",
+  "author": {
+    "name": "KBI"
+  }
+}
