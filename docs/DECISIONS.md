@@ -1,0 +1,52 @@
+# Mojo Tools — Decision Log
+
+The single log for project, product and architecture decisions. Add a row whenever a decision is made or a rule is broken ([`RULES.md`](RULES.md)).
+Status: ✅ decided · 🟡 default adopted, owner to confirm.
+
+| ID | Date | Decision | Status | Context / source |
+|----|------|----------|--------|------------------|
+| P1 | 07 Oct 2026 | All project documentation lives in this repo under `docs/`. | ✅ | The briefs arrived across several chats; the repo is the shared memory. |
+| P2 | 07 Oct 2026 | Documentation branch is `prd`. | ✅ | Owner asked for a recognisable branch name. |
+| P3 | 07 Oct 2026 | **Company site first, e-commerce later.** | ✅ | Owner has many product files; the shop follows once the main site is up. |
+| P4 | 08 Oct 2026 | Releases are named **R0** (company site), **R1** (e-commerce MVP), **R2**, **R3**. "Phase" means a build phase in `TASKS.md` only. | ✅ | Removes the clash between the earlier "Phase 1/2" wording and the TASKS phases. |
+| P5 | 08 Oct 2026 | The five briefs were consolidated into corrected v0.2 documents; the originals and interim summaries were removed (still in git history). | ✅ | Owner request. Full list of fixes in `CHANGELOG.md`. |
+| P6 | 07 Oct 2026 | v1 excludes: third-party marketplace, native apps, ERP replacement, credit / pay-later (R3). | ✅ | PRD §2 non-goals. |
+| D1 | 07 Oct 2026 | Single Next.js app with route groups for site, shop, admin. | 🟡 | ARCHITECTURE §1 |
+| D2 | 07 Oct 2026 | Supabase (Postgres + Auth + Storage). | 🟡 | ARCHITECTURE §1 |
+| D3 | 07 Oct 2026 | Postgres FTS + trigram for search at launch; external engine only beyond ~100k SKUs. | ✅ | ARCHITECTURE §7 |
+| D4 | 07 Oct 2026 | R1 B2B = RFQ + GST invoices + business verification; tiers R2; credit R3. | ✅ | PRD §10 #2 |
+| D5 | 07 Oct 2026 | Money stored as paise `bigint`. | ✅ | ARCHITECTURE §5 |
+| D6 | 07 Oct 2026 | Admin panel is the inventory master; XLSX import; no ERP sync until R3. | 🟡 | ARCHITECTURE §6.5 |
+| D7 | 08 Oct 2026 | Framework versions: current stable Next.js/React at T1.1 (≥ 15), then pinned; Node active LTS. | ✅ | Replaces the hard "Next.js 15" lock. |
+| D8 | 08 Oct 2026 | `next-intl` with `localePrefix: 'as-needed'`: English URLs unprefixed, Hindi under `/hi` (R2). | ✅ | Keeps URLs stable when Hindi is added. |
+| D9 | 08 Oct 2026 | `enquiries` is the R0 lead table (types, attachment, UTM, consent, status) and converts to RFQs in R1; `newsletter_subscribers` from R0. | ✅ | ARCHITECTURE §5, §6.0 |
+| D10 | 08 Oct 2026 | R0 has no auth and no admin UI: enquiries arrive by email and are stored in the DB; hero/site content in code. | 🟡 | Keeps R0 small; admin comes in R1. |
+| D11 | 08 Oct 2026 | Accessibility target **WCAG 2.2 AA**, enforced in CI (axe + jsx-a11y) and by a manual screen-reader pass per release. | ✅ | DESIGN §8, RULES §6 |
+| D12 | 08 Oct 2026 | Colour tokens corrected for contrast: `--brand-yellow #FFC20E` is fill-only; new `--steel-500` for secondary text; `--success #188038`, `--warning #9A5B00`; inputs bordered with `--steel-400`; WhatsApp FAB `#128C7E`. | ✅ | DESIGN §2.1 |
+| D13 | 08 Oct 2026 | Cookie banner built in-house with Accept / Reject non-essential / Manage; analytics only after consent. | ✅ | DPDP; RULES §5 |
+| D14 | 08 Oct 2026 | Mobile OTP login moved to R2 (with MSG91). | 🟡 | Resolves the PRD vs architecture conflict. |
+| D15 | 08 Oct 2026 | R1 shipping = rules engine + manual courier/AWB entry; aggregator integration in R2. | 🟡 | Resolves the PRD vs architecture conflict. |
+| D16 | 08 Oct 2026 | Product variants: data model from R1 (≥ 1 variant per product); picker UI in R2. | ✅ | PRD CA-4 |
+| D17 | 08 Oct 2026 | Hindi language switch hidden until the Hindi UI ships (R2); R0 is English only. | 🟡 | PRD GL-1, GL-8 |
+| D18 | 08 Oct 2026 | Unconfirmed business claims (authorised dealer, delivery reach, response time, returns) are placeholders and hidden in production until the owner confirms them. | ✅ | RULES §11 |
+| D19 | 08 Oct 2026 | Generated PDFs (react-pdf, untagged) always have an HTML equivalent. | ✅ | DESIGN §8.6 |
+| P7 | 09 Oct 2026 | **No separate public launch for the company site.** R0 is built first and reviewed on a private preview; the whole site (R0 + full shop R1) goes public together. No "coming soon" notice. | ✅ | Owner answer, 09 Oct 2026 |
+| P8 | 09 Oct 2026 | Public launch target: **within 3 months (by early January 2027)**, with the full R1 scope. Catalogue data (T6.2) is on the critical path; R1 owner inputs start now in parallel with R0. | ✅ | Owner answer. ⚠️ Tight for the full R1 scope; review the date once catalogue data arrives. |
+| P9 | 09 Oct 2026 | Enquiry / quote response promise: **within 1 working day**. | ✅ | Owner answer; replaces `{response promise}` |
+| P10 | 09 Oct 2026 | R0 confirmed: English only; enquiries by email + database; category tiles open the enquiry form. | ✅ | Owner answer (R0-1, R0-2, R0-4) |
+| D20 | 09 Oct 2026 | **i18n with Next.js built-ins instead of `next-intl`:** `app/[lang]` + `proxy.ts` rewrite (unprefixed English, `/en/*` → 308 to clean URL) + `next/root-params` + JSON messages. Same URL behaviour as D8. | ✅ | Next.js 16's documented pattern works with Cache Components; one less dependency. Revisit if R2 Hindi needs plural/ICU formatting. |
+| D21 | 09 Oct 2026 | **Forms: server actions + `useActionState` + shared Zod schema instead of React Hook Form.** Works without JavaScript; error summary/linking per DESIGN §8.4. | ✅ | Next.js 16 forms guide; fewer client bytes. RHF can still be added for complex R1 forms (checkout, quick order). |
+| D22 | 09 Oct 2026 | Next.js 16 conventions: `proxy.ts` (formerly middleware), `cacheComponents` + `partialPrefetching` on; marketing pages prerender statically. | ✅ | Framework defaults for 16.x (D7) |
+| D23 | 09 Oct 2026 | **Demo mode:** without Supabase/Resend/Turnstile keys the site still works end to end — enquiries are validated and get a `DEMO-` number but are not stored or emailed. A "Preview — demo content" bar shows on non-indexable builds. | ✅ | Owner asked to continue with placeholders until client details arrive |
+| D24 | 09 Oct 2026 | Enquiry rate limit (5/min/IP, in-memory) counts only submissions that pass validation, so visitors fixing errors are never locked out. Move to a shared store before R1. | ✅ | Found by the e2e suite |
+| D25 | 09 Oct 2026 | Enquiry attachments are sent as email attachments in the sales alert instead of links, so private-bucket URLs never outlive 10 minutes (RULES §5). | ✅ | |
+| D26 | 09 Oct 2026 | New token `--whatsapp-dark #075E54` (7.67:1) for WhatsApp buttons with text; `#128C7E` stays for the icon-only FAB (4.14:1, graphic). | ✅ | Found by axe (white on #128C7E = 4.13:1 for text) |
+| D27 | 09 Oct 2026 | Stats strips show final values with no count-up animation. | ✅ | Simplest way to satisfy DESIGN §8.3 |
+| P11 | 10 Oct 2026 | Working branch is now **`pre-mojo`** (branched from `prd`, which stays as the earlier snapshot). | ✅ | Owner request |
+| P12 | 10 Oct 2026 | New **Products** section between About and Brands (`/products`); **Home removed from the menu** — the logo links home (accessible name "Mojo Tools, home"). | ✅ | Owner request after reviewing screenshots |
+| P13 | 10 Oct 2026 | Mobile: hamburger menu on the **left**, next to the logo; the drawer slides in from the left. Desktop keeps the inline menu. | ✅ | Owner feedback |
+| P14 | 10 Oct 2026 | **Brands renamed to Distributorship** (`/distributorship`, brand pages `/distributorship/[brand]`; old `/brands` URLs redirect permanently). Every brand listed there is one Mojo Tools **officially distributes**, shown with an "Official distributor" badge. | ✅ | Owner request; the owner supplies the final list (C5) |
+| P15 | 10 Oct 2026 | New **Awards** page (`/awards`) in the menu after Distributorship; placeholder cards until real awards/certificates arrive (never invented). | ✅ | Owner request |
+| P16 | 10 Oct 2026 | Floating WhatsApp button now uses the WhatsApp logo with a visible "WhatsApp us" label (desktop), stacked above the assistant launcher; hidden while the chat panel is open. | ✅ | Owner asked what the unlabeled "comment" button was |
+| D28 | 10 Oct 2026 | **AI assistant "Mojo Mitra"** (bottom-right): Vercel AI SDK v7 agent with **Gemini or Groq** (whichever key is set; `AI_PROVIDER` picks when both). Tools only read site content or build links (search catalogue, open page, prepare pre-filled quote, contact team, business info) — it never submits forms or quotes prices. Without a key it shows helpful links. Keys stay server-side; rate-limited; message caps. | ✅ 🟡 | Owner request. Defaults `gemini-3.5-flash` / `openai/gpt-oss-120b`, override with `AI_MODEL`. R1 adds product search, stock and cart tools. Chat-log retention is an open question. |
+
