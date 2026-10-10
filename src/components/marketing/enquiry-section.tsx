@@ -10,7 +10,7 @@ export function EnquirySection({
   sourcePage,
 }: {
   dict: Dictionary
-  defaults: { type?: string; brand?: string; category?: string }
+  defaults: { type?: string; brand?: string; category?: string; message?: string }
   sourcePage: string
 }) {
   return (
@@ -35,9 +35,12 @@ export function enquiryDefaults(searchParams: Record<string, string | string[] |
   const type = pick(searchParams.type)
   const brand = pick(searchParams.brand)
   const category = pick(searchParams.category)
+  // Message pre-fill comes from Mojo Mitra's prepareQuote links; plain text, capped.
+  const message = pick(searchParams.message)?.slice(0, 500)
   return {
     type: enquiryTypes.some((t) => t.value === type) ? type : undefined,
     brand: brands.some((b) => b.slug === brand) ? brand : undefined,
     category: categories.some((c) => c.slug === category) ? category : undefined,
+    message: message || undefined,
   }
 }

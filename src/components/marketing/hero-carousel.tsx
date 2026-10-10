@@ -121,7 +121,7 @@ export function HeroCarousel({ slides, labels }: { slides: HeroSlide[]; labels: 
                       {labels.primaryCta}
                     </Link>
                     <Link
-                      href="/brands"
+                      href="/distributorship"
                       className="inline-flex min-h-11 items-center font-semibold text-white underline underline-offset-4"
                     >
                       {labels.secondaryCta} <span aria-hidden="true">&nbsp;→</span>

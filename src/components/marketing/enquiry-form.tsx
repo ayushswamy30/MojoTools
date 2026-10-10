@@ -19,7 +19,7 @@ type Props = {
   types: readonly Option[]
   brands: Option[]
   categories: Option[]
-  defaults: { type?: string; brand?: string; category?: string }
+  defaults: { type?: string; brand?: string; category?: string; message?: string }
   sourcePage: string
   responsePromise: string
   turnstileSiteKey?: string
@@ -328,7 +328,7 @@ export function EnquiryForm(props: Props) {
           name="message"
           rows={5}
           required
-          defaultValue={value('message')}
+          defaultValue={value('message', props.defaults.message ?? '')}
           aria-invalid={Boolean(errorFor('message'))}
           aria-describedby={describedBy('message', true)}
           className={inputClass}

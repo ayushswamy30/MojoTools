@@ -13,6 +13,11 @@ const schema = z.object({
   ENQUIRY_FROM_EMAIL: z.email().optional(),
   ENQUIRY_ALERT_EMAILS: z.string().min(1).optional(),
   TURNSTILE_SECRET_KEY: z.string().min(1).optional(),
+  // AI assistant (Mojo Mitra). Either key enables it; AI_PROVIDER picks one when both are set.
+  GOOGLE_GENERATIVE_AI_API_KEY: z.string().min(1).optional(),
+  GROQ_API_KEY: z.string().min(1).optional(),
+  AI_PROVIDER: z.enum(['gemini', 'groq']).optional(),
+  AI_MODEL: z.string().min(1).optional(),
 })
 
 const parsed = schema.safeParse(process.env)
@@ -26,4 +31,5 @@ export const integrations = {
   database: Boolean(env.SUPABASE_URL && env.SUPABASE_SERVICE_ROLE_KEY),
   email: Boolean(env.RESEND_API_KEY && env.ENQUIRY_FROM_EMAIL && env.ENQUIRY_ALERT_EMAILS),
   captcha: Boolean(env.TURNSTILE_SECRET_KEY),
+  assistant: Boolean(env.GOOGLE_GENERATIVE_AI_API_KEY || env.GROQ_API_KEY),
 }

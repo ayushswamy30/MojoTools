@@ -1,9 +1,11 @@
 'use client'
 
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
+
 import { useState } from 'react'
 import Link from 'next/link'
 import { Dialog } from 'radix-ui'
-import { Menu, MessageCircle, Phone, X } from 'lucide-react'
+import { Menu, Phone, X } from 'lucide-react'
 import type { NavItem } from './nav-links'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/cn'
@@ -27,13 +29,13 @@ export function MobileNav({ items, labels, telHref, whatsappHref }: Props) {
   const [open, setOpen] = useState(false)
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger className="inline-flex size-11 items-center justify-center rounded-sm text-white lg:hidden">
+      <Dialog.Trigger className="-ml-2 inline-flex size-11 items-center justify-center rounded-sm text-white lg:hidden">
         <Menu aria-hidden="true" className="size-6" />
         <span className="sr-only">{labels.menu}</span>
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-[var(--z-sheet)] bg-black/60" />
-        <Dialog.Content className="on-dark fixed inset-y-0 right-0 z-[var(--z-sheet)] flex w-[min(22rem,100%)] flex-col bg-ink-900 p-6 text-white shadow-overlay">
+        <Dialog.Content className="on-dark fixed inset-y-0 left-0 z-[var(--z-sheet)] flex w-[min(22rem,100%)] flex-col bg-ink-900 p-6 text-white shadow-overlay">
           <div className="flex items-center justify-between">
             <Dialog.Title className="font-display text-lg font-bold text-white">
               {labels.menu}
@@ -76,7 +78,7 @@ export function MobileNav({ items, labels, telHref, whatsappHref }: Props) {
               rel="noopener noreferrer"
               className={cn(buttonVariants({ variant: 'whatsapp' }))}
             >
-              <MessageCircle aria-hidden="true" /> {labels.whatsapp}
+              <WhatsAppIcon className="size-4" /> {labels.whatsapp}
             </a>
           </div>
         </Dialog.Content>

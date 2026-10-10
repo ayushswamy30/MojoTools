@@ -14,11 +14,13 @@
     "home": "Home",
     "about": "About",
     "products": "Products",
-    "brands": "Brands",
+    "distributorship": "Distributorship",
+    "awards": "Awards",
     "contact": "Contact",
     "whatsappFab": "Chat with us on WhatsApp (opens in a new tab)",
     "opensNewTab": "(opens in a new tab)",
-    "logoHome": "home"
+    "logoHome": "home",
+    "brandsShort": "Brands"
   },
   "footer": {
     "trustGenuine": "Genuine brands",
@@ -99,7 +101,7 @@
     "showing": "Showing {count} brands",
     "enquire": "Enquire about {brand}",
     "requestPriceList": "Request price list",
-    "authorised": "Authorised distributor",
+    "authorised": "Official distributor",
     "productRange": "Product range"
   },
   "notFound": {
@@ -116,8 +118,8 @@
     "categoriesTitle": "Shop by category",
     "categoriesSubtitle": "Tell us what you need and we'll quote from our full range.",
     "enquire": "Enquire",
-    "brandsTitle": "Brands we distribute",
-    "viewAllBrands": "View all brands",
+    "brandsTitle": "Official distributor for",
+    "viewAllBrands": "View our distributorship",
     "whyTitle": "Why Mojo Tools",
     "testimonialsTitle": "What our customers say",
     "ctaTitle": "Buying in bulk?",
@@ -142,12 +144,12 @@
     "ctaBody": "Call, WhatsApp or send us your list."
   },
   "brandsPage": {
-    "metaTitle": "Brands we distribute",
-    "metaDescription": "Tool and machinery brands supplied by Mojo Tools.",
-    "title": "Brands we distribute",
-    "subtitle": "Genuine products from the brands our customers trust.",
-    "brandMetaTitle": "{brand} dealer & distributor",
-    "brandMetaDescription": "Enquire about {brand} tools and machinery from Mojo Tools.",
+    "metaTitle": "Distributorship — official brand distributor",
+    "metaDescription": "Mojo Tools is an official distributor of leading tool and machinery brands.",
+    "title": "Distributorship",
+    "subtitle": "Mojo Tools is an official distributor of the brands below. Buy genuine products, sourced through our distributorship, with GST invoices.",
+    "brandMetaTitle": "{brand} — official distributor",
+    "brandMetaDescription": "Mojo Tools is an official distributor of {brand}. Enquire about {brand} tools and machinery.",
     "aboutBrand": "About {brand}"
   },
   "contactPage": {
@@ -179,5 +181,41 @@
     "anyBrand": "Many brands — ask us for options.",
     "enquire": "Enquire about {category}",
     "whatsapp": "Ask on WhatsApp"
+  },
+  "awardsPage": {
+    "metaTitle": "Awards & recognition",
+    "metaDescription": "Awards and recognition received by Mojo Tools from brands and industry.",
+    "title": "Awards",
+    "subtitle": "Recognition from the brands we distribute and the industry we serve.",
+    "awardedBy": "Awarded by",
+    "empty": "Our awards will appear here soon."
+  },
+  "assistant": {
+    "launcher": "Ask Mojo Mitra",
+    "title": "Mojo Mitra",
+    "subtitle": "AI assistant · can make mistakes",
+    "close": "Close chat",
+    "welcome": "Namaste! I'm Mojo Mitra. I can help you find tools and brands, get a bulk quote, or reach our team.",
+    "offline": "Namaste! I'm Mojo Mitra. I'm not switched on in this preview yet, but these links will get you where you need to go:",
+    "inputLabel": "Message Mojo Mitra",
+    "placeholder": "Ask about tools, brands or a quote…",
+    "send": "Send",
+    "stop": "Stop",
+    "thinking": "Mojo Mitra is typing…",
+    "error": "Sorry, something went wrong. Please try again, or chat with our team on WhatsApp.",
+    "retry": "Try again",
+    "privacy": "Chats are processed by {provider} to answer you. Don't share bank, card or ID details.",
+    "privacyLink": "Privacy policy",
+    "you": "You",
+    "suggestions": "Suggestions",
+    "quickFind": "Find a product",
+    "quickFindPrompt": "I'm looking for a product. Can you help me find it?",
+    "quickQuote": "Get a bulk quote",
+    "quickQuotePrompt": "I want a bulk quote.",
+    "quickDealer": "Become a dealer",
+    "quickDealerPrompt": "How can I become a dealer for Mojo Tools?",
+    "quickPerson": "Talk to a person",
+    "quickPersonPrompt": "I'd like to talk to someone from the team.",
+    "whatsappFab": "WhatsApp us"
   }
 }

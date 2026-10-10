@@ -1,4 +1,5 @@
-import { Clock, FileText, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
+import { Clock, FileText, Mail, MapPin, Phone } from 'lucide-react'
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
 import { business, whatsappHref } from '@/features/content/site'
 import { telHref } from '@/lib/format'
 
@@ -12,7 +13,7 @@ export function ContactInfoCard({ title, newTabLabel }: { title: string; newTabL
     { icon: Clock, label: 'Store hours', value: business.hours },
     { icon: Phone, label: 'Phone', value: business.phone, href: telHref(business.phone) },
     {
-      icon: MessageCircle,
+      icon: WhatsAppIcon,
       label: 'WhatsApp',
       value: business.whatsapp,
       href: whatsappHref('Hi, I have an enquiry'),

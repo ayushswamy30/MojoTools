@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { BadgeCheck, FileText, MessageCircle } from 'lucide-react'
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
+import { BadgeCheck, FileText } from 'lucide-react'
 import { business, whatsappHref } from '@/features/content/site'
 import type { Dictionary } from '@/i18n/dictionary'
 import { telHref } from '@/lib/format'
@@ -13,7 +14,7 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
   const trust = [
     { icon: BadgeCheck, label: f.trustGenuine },
     { icon: FileText, label: f.trustGst },
-    { icon: MessageCircle, label: f.trustHelp },
+    { icon: WhatsAppIcon, label: f.trustHelp },
   ]
   const columns = [
     {
@@ -21,7 +22,8 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
       links: [
         { href: '/about', label: c.about },
         { href: '/products', label: c.products },
-        { href: '/brands', label: c.brands },
+        { href: '/distributorship', label: c.distributorship },
+        { href: '/awards', label: c.awards },
         { href: '/contact', label: c.contact },
       ],
     },

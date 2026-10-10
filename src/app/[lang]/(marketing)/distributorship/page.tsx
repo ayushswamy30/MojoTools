@@ -10,7 +10,7 @@ import { StatsStrip } from '@/components/marketing/stats-strip'
 export const metadata: Metadata = {
   title: en.brandsPage.metaTitle,
   description: en.brandsPage.metaDescription,
-  alternates: { canonical: '/brands' },
+  alternates: { canonical: '/distributorship' },
 }
 
 export default async function BrandsPage() {
@@ -20,7 +20,7 @@ export default async function BrandsPage() {
       <PageHero
         title={dict.brandsPage.title}
         subtitle={dict.brandsPage.subtitle}
-        crumbs={[{ label: dict.chrome.home, href: '/' }, { label: dict.chrome.brands }]}
+        crumbs={[{ label: dict.chrome.home, href: '/' }, { label: dict.chrome.distributorship }]}
         breadcrumbLabel={dict.chrome.breadcrumb}
       />
       <section aria-label={dict.brandsPage.title} className="bg-ink-900 pb-16">

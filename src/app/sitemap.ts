@@ -8,10 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/',
     '/about',
     '/products',
-    '/brands',
+    '/awards',
+    '/distributorship',
     '/contact',
     '/quote',
-    ...brands.map((brand) => `/brands/${brand.slug}`),
+    ...brands.map((brand) => `/distributorship/${brand.slug}`),
     ...policies.map((policy) => `/policies/${policy.slug}`),
   ]
   return paths.map((path) => ({ url: `${publicEnv.siteUrl}${path === '/' ? '' : path}` }))

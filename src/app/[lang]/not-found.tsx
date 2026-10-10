@@ -15,8 +15,8 @@ export default function NotFound() {
         <Link href="/" className={buttonVariants({ variant: 'primary' })}>
           {m.home}
         </Link>
-        <Link href="/brands" className={buttonVariants({ variant: 'outline' })}>
-          {en.chrome.brands}
+        <Link href="/distributorship" className={buttonVariants({ variant: 'outline' })}>
+          {en.chrome.distributorship}
         </Link>
         <Link href="/contact" className={buttonVariants({ variant: 'outline' })}>
           {en.chrome.contact}

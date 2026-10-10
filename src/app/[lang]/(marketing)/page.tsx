@@ -86,7 +86,7 @@ export default async function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionTitle id="brands-title" title={dict.home.brandsTitle} className="mb-0" />
             <Link
-              href="/brands"
+              href="/distributorship"
               className="inline-flex min-h-11 items-center font-semibold text-ink-900 underline underline-offset-4"
             >
               {dict.home.viewAllBrands}

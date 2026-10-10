@@ -70,8 +70,12 @@
 - [x] **T4.5** Reuse `EnquiryForm` as a "Get a Quote" dialog/page reachable from the header and every CTA. [PS-8] ✅ as a `/quote` page (pre-filled via `?type=&brand=&category=`) rather than a dialog
 - [x] **T4.6** Policy pages from MDX: terms, privacy (DPDP: consent, data requests contact), accessibility statement. [PS-6, GL-9] ✅ (draft text — owner/legal review in T5.1)
 - [x] **T4.7** SEO: metadata, `Organization` + `LocalBusiness` JSON-LD, `BreadcrumbList` on brand pages, OG images, `sitemap.ts` (pages + brands), `robots.ts`. ✅
-- [x] **T4.8** E2E: all R0 pages render and pass axe; enquiry happy path, validation errors, attachment; consent gates GA4. ✅ 41 Playwright tests (desktop + mobile)
+- [x] **T4.8** E2E: all R0 pages render and pass axe; enquiry happy path, validation errors, attachment; consent gates GA4. ✅ 54 Playwright tests (desktop + mobile)
 - [x] **T4.9** Products page (`/products`): category cards with description, matching brands, Enquire + WhatsApp CTAs, jump links; added to the menu between About and Brands; Home link removed from the menu (logo goes home). [PS-9] ✅
+- [x] **T4.10** Mobile hamburger moved to the left; drawer slides from the left. [GL-1] ✅
+- [x] **T4.11** Brands renamed to **Distributorship** (`/distributorship`, redirects from `/brands`), "Official distributor" wording and badge. [PS-4] ✅
+- [x] **T4.12** **Awards** page (`/awards`) with placeholder cards. [PS-10] ✅
+- [x] **T4.13** **Mojo Mitra** AI assistant (Gemini/Groq) + labelled WhatsApp button; tests with a mock model; preview mode without keys. [GL-10] ✅
 
 **Exit:** company site complete with seed content, responsive, axe clean, enquiries arrive by email and in the database.
 
@@ -141,6 +145,7 @@
 - [ ] **T10.2** `/api/search/suggest` + header combobox autocomplete (SKU, products, brands, categories, recent searches). [CA-7]
 - [ ] **T10.3** No-results state with mini RFQ form.
 - [ ] **T10.4** Search analytics events (query, results count, click).
+- [ ] **T10.5** Mojo Mitra R1 tools: real product search, stock/price lookup, add-to-cart / add-to-quote with confirmation, order status for logged-in users. [GL-10]
 
 **Exit:** SKU exact match is always first; suggest responds < 300 ms p95.
 

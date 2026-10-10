@@ -5,8 +5,9 @@ const pages = [
   '/',
   '/about',
   '/products',
-  '/brands',
-  '/brands/brand-a',
+  '/awards',
+  '/distributorship',
+  '/distributorship/brand-a',
   '/contact',
   '/quote',
   '/policies/terms',
@@ -65,14 +66,20 @@ test('previews are not indexable', async ({ page, request }) => {
   expect(robots).toContain('Disallow: /')
 })
 
-test('main menu: no Home link, Products sits between About and Brands, logo goes home', async ({
+test('main menu: no Home link, About · Products · Distributorship · Awards · Contact, logo goes home', async ({
   page,
   isMobile,
 }) => {
   test.skip(isMobile, 'desktop navigation')
-  await page.goto('/brands')
+  await page.goto('/distributorship')
   const nav = page.getByRole('navigation', { name: 'Main' })
-  await expect(nav.getByRole('link')).toHaveText(['About', 'Products', 'Brands', 'Contact'])
+  await expect(nav.getByRole('link')).toHaveText([
+    'About',
+    'Products',
+    'Distributorship',
+    'Awards',
+    'Contact',
+  ])
   await page
     .getByRole('banner')
     .getByRole('link', { name: /Mojo Tools, home/ })
@@ -86,4 +93,23 @@ test('products page lists categories with enquiry links', async ({ page }) => {
   await page.getByRole('link', { name: 'Enquire about Power Tools' }).click()
   await expect(page).toHaveURL(/\/quote\?type=quote&category=power-tools$/)
   await expect(page.getByLabel(/^Category/)).toHaveValue('power-tools')
+})
+
+test('old /brands links redirect to Distributorship', async ({ page }) => {
+  await page.goto('/brands/brand-a')
+  await expect(page).toHaveURL(/\/distributorship\/brand-a$/)
+  await expect(page.getByText('Official distributor').first()).toBeVisible()
+})
+
+test('mobile menu opens from the left', async ({ page, isMobile }) => {
+  test.skip(!isMobile, 'mobile navigation')
+  await page.goto('/')
+  const trigger = page.getByRole('button', { name: 'Menu' })
+  const box = await trigger.boundingBox()
+  expect(box!.x).toBeLessThan(60)
+  await trigger.click()
+  const drawer = page.getByRole('dialog', { name: 'Menu' })
+  await expect(drawer).toBeVisible()
+  expect((await drawer.boundingBox())!.x).toBe(0)
+  await expect(drawer.getByRole('link', { name: 'Distributorship' })).toBeVisible()
 })

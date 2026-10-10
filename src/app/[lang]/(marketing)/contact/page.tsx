@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
 import Link from 'next/link'
-import { MessageCircle, Phone } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import { business, whatsappHref } from '@/features/content/site'
 import { getDictionary, t } from '@/i18n/dictionary'
 import en from '@/i18n/messages/en.json'
@@ -57,7 +58,7 @@ export default async function ContactPage() {
               rel="noopener noreferrer"
               className={buttonVariants({ variant: 'secondary' })}
             >
-              <MessageCircle aria-hidden="true" /> {dict.chrome.whatsapp}
+              <WhatsAppIcon className="size-4" /> {dict.chrome.whatsapp}
               <span className="sr-only"> {dict.chrome.opensNewTab}</span>
             </a>
             <Link href="/quote?type=support" className={buttonVariants({ variant: 'outline' })}>

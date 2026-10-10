@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { BadgeCheck, MessageCircle } from 'lucide-react'
+import { BadgeCheck } from 'lucide-react'
 import { brands, categoriesForBrand, getBrand, whatsappHref } from '@/features/content/site'
 import { getDictionary, t } from '@/i18n/dictionary'
 import en from '@/i18n/messages/en.json'
@@ -19,17 +20,17 @@ export function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: PageProps<'/[lang]/brands/[slug]'>): Promise<Metadata> {
+}: PageProps<'/[lang]/distributorship/[slug]'>): Promise<Metadata> {
   const brand = getBrand((await params).slug)
   if (!brand) return {}
   return {
     title: t(en.brandsPage.brandMetaTitle, { brand: brand.name }),
     description: t(en.brandsPage.brandMetaDescription, { brand: brand.name }),
-    alternates: { canonical: `/brands/${brand.slug}` },
+    alternates: { canonical: `/distributorship/${brand.slug}` },
   }
 }
 
-export default async function BrandPage({ params }: PageProps<'/[lang]/brands/[slug]'>) {
+export default async function BrandPage({ params }: PageProps<'/[lang]/distributorship/[slug]'>) {
   const brand = getBrand((await params).slug)
   if (!brand) notFound()
   const dict = await getDictionary()
@@ -42,8 +43,8 @@ export default async function BrandPage({ params }: PageProps<'/[lang]/brands/[s
       {
         '@type': 'ListItem',
         position: 2,
-        name: dict.chrome.brands,
-        item: `${publicEnv.siteUrl}/brands`,
+        name: dict.chrome.distributorship,
+        item: `${publicEnv.siteUrl}/distributorship`,
       },
       { '@type': 'ListItem', position: 3, name: brand.name },
     ],
@@ -61,7 +62,7 @@ export default async function BrandPage({ params }: PageProps<'/[lang]/brands/[s
         title={brand.name}
         crumbs={[
           { label: dict.chrome.home, href: '/' },
-          { label: dict.chrome.brands, href: '/brands' },
+          { label: dict.chrome.distributorship, href: '/distributorship' },
           { label: brand.name },
         ]}
         breadcrumbLabel={dict.chrome.breadcrumb}
@@ -99,7 +100,7 @@ export default async function BrandPage({ params }: PageProps<'/[lang]/brands/[s
               rel="noopener noreferrer"
               className={buttonVariants({ variant: 'whatsapp', size: 'lg' })}
             >
-              <MessageCircle aria-hidden="true" /> {dict.chrome.whatsapp}
+              <WhatsAppIcon className="size-4" /> {dict.chrome.whatsapp}
               <span className="sr-only"> {dict.chrome.opensNewTab}</span>
             </a>
           </div>

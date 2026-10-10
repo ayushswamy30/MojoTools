@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
 import Link from 'next/link'
-import { MessageCircle } from 'lucide-react'
+
 import { brandsForCategory, business, categories, whatsappHref } from '@/features/content/site'
 import { getDictionary, t } from '@/i18n/dictionary'
 import en from '@/i18n/messages/en.json'
@@ -78,7 +79,7 @@ export default async function ProductsPage() {
                         {categoryBrands.map((brand) => (
                           <li key={brand.slug}>
                             <Link
-                              href={`/brands/${brand.slug}`}
+                              href={`/distributorship/${brand.slug}`}
                               className="inline-flex min-h-11 items-center rounded-sm bg-steel-100 px-3 text-sm font-semibold text-ink-900 underline-offset-4 hover:underline"
                             >
                               {brand.name}
@@ -103,7 +104,7 @@ export default async function ProductsPage() {
                       rel="noopener noreferrer"
                       className={buttonVariants({ variant: 'outline' })}
                     >
-                      <MessageCircle aria-hidden="true" /> {p.whatsapp}
+                      <WhatsAppIcon className="size-4" /> {p.whatsapp}
                       <span className="sr-only"> {dict.chrome.opensNewTab}</span>
                     </a>
                   </div>

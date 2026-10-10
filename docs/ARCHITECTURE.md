@@ -376,6 +376,7 @@ CI (GitHub Actions): typecheck → lint (incl. jsx-a11y) → unit tests → buil
 | Cloudflare Turnstile | R0 | Captcha (managed mode) |
 | Google Maps embed | R0 | Contact page (with text address + directions link) |
 | GA4 + Vercel Analytics + Sentry | R0 | Analytics (consent-gated), errors |
+| Google Gemini **or** Groq (AI SDK v7) | R0 | Mojo Mitra assistant (§14) |
 | Google Search Console | R0 | Indexing, sitemap |
 | Razorpay | R1 | Online payments, refunds |
 | MSG91 / WhatsApp Cloud API | R2 | Phone OTP, order/quote notifications |
@@ -398,6 +399,7 @@ Supports the launch campaign targets in [`LAUNCH-PLAN.md`](LAUNCH-PLAN.md).
 | `price_list_request` | R0 | Enquiry type = price list | `brand` |
 | `brand_view` | R0 | Brand page view | `brand` |
 | `notify_signup` | R0 | Newsletter signup | `topic`, `page` |
+| `assistant_open`, `assistant_message` | R0 | Mojo Mitra opened / message sent | — |
 | `search`, `view_item`, `add_to_cart`, `begin_checkout`, `purchase`, `rfq_submit` | R1 | Shop funnel | standard GA4 e-commerce params |
 
 ## 12. R0 slice (what the company site actually uses)
@@ -416,3 +418,17 @@ Built so R1 slots in without migration: same codebase, same URLs, the `brands` s
 ## 13. Decision log
 
 All decisions (architecture and project) live in [`DECISIONS.md`](DECISIONS.md). Architecture decisions keep their IDs D1–D6 there.
+
+## 14. AI assistant — Mojo Mitra
+
+| Piece | Where | Notes |
+|---|---|---|
+| Chat UI | `src/components/assistant/floating-actions.tsx` | `useChat` (`@ai-sdk/react`); non-modal dialog, polite live log, Esc closes; WhatsApp button stacked above the launcher |
+| Endpoint | `src/app/api/chat/route.ts` | `streamText` → UI message stream; zod-validated body (≤ 20 messages, last ≤ 1,000 chars); 20 req/min/IP; `maxOutputTokens` 700; ≤ 4 agent steps; friendly error text |
+| Model | `src/features/assistant/model.ts` | `GOOGLE_GENERATIVE_AI_API_KEY` → Gemini (`gemini-3.5-flash`), `GROQ_API_KEY` → Groq (`openai/gpt-oss-120b`); `AI_PROVIDER`, `AI_MODEL` override. No key → 503 and the UI shows links instead |
+| Instructions | `src/features/assistant/instructions.ts` | Mojo-only scope; never invent prices/stock/awards; short replies; Hindi/Hinglish OK; no sensitive data |
+| Tools | `src/features/assistant/tools.ts`, `catalog.ts` | `searchCatalog`, `openPage`, `prepareQuote` (pre-filled `/quote?…&message=`), `contactTeam`, `getBusinessInfo`. Read-only: nothing is submitted for the visitor |
+| Analytics | `assistant_open`, `assistant_message` (consent-gated) | Add to §11 funnel |
+
+**R1 additions:** product search on the real catalogue, stock/price lookup (respecting B2B rules), add-to-cart / add-to-quote tools with visitor confirmation, order status for logged-in users. Store chat transcripts only after the retention question is answered.
+

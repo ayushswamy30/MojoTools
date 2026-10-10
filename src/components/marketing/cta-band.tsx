@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { MessageCircle } from 'lucide-react'
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
+
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 
@@ -43,7 +44,7 @@ export function CtaBand({
             rel="noopener noreferrer"
             className={buttonVariants({ variant: 'outline-light', size: 'lg' })}
           >
-            <MessageCircle aria-hidden="true" /> {whatsappLabel}
+            <WhatsAppIcon className="size-4" /> {whatsappLabel}
             <span className="sr-only"> {newTabLabel}</span>
           </a>
         </div>

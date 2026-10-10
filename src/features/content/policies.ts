@@ -44,6 +44,13 @@ export const policies: Policy[] = [
         ],
       },
       {
+        heading: 'AI assistant (Mojo Mitra)',
+        body: [
+          'If you chat with Mojo Mitra, your messages are sent to our AI provider (Google Gemini or Groq) to generate replies. You should not share bank, card or identity details in the chat.',
+          'Placeholder: confirm with the owner whether chat logs are stored, and for how long, before launch.',
+        ],
+      },
+      {
         heading: 'Why we use it',
         body: [
           'To reply to your enquiry, prepare quotes, and with your consent send occasional product news. We do not sell your data.',

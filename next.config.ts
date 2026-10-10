@@ -36,6 +36,13 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async redirects() {
+    // Brands was renamed to Distributorship (DECISIONS P14); keep old links working.
+    return [
+      { source: '/brands', destination: '/distributorship', permanent: true },
+      { source: '/brands/:slug', destination: '/distributorship/:slug', permanent: true },
+    ]
+  },
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }]
   },

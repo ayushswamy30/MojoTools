@@ -59,7 +59,8 @@ const demoBrand = (letter: string, productTypes: ProductType[], isFeatured = tru
   name: `Brand ${letter}`,
   productTypes,
   description: `Placeholder description for Brand ${letter}. The real brand list, logos and product ranges come from the owner (A1).`,
-  isAuthorised: false,
+  // Brands on the Distributorship page are the ones Mojo officially distributes (DECISIONS P14).
+  isAuthorised: true,
   isFeatured,
 })
 
@@ -261,3 +262,36 @@ export function whatsappHref(message: string) {
   const digits = business.whatsapp.replace(/\D/g, '')
   return `https://wa.me/${digits}?text=${encodeURIComponent(`${message} [via website]`)}`
 }
+
+export type Award = {
+  title: string
+  awardedBy: string
+  year: string
+  description: string
+}
+
+/**
+ * SEED (A9): placeholder award cards to show the layout. Never publish invented awards
+ * (RULES §11) — replace with the owner's real awards and certificates, or empty the list
+ * (the page then shows a short "coming soon" note).
+ */
+export const awards: Award[] = [
+  {
+    title: 'Award title (placeholder)',
+    awardedBy: 'Brand or organisation name',
+    year: 'YYYY',
+    description: 'One line on what the award recognises, e.g. top regional distributor.',
+  },
+  {
+    title: 'Award title (placeholder)',
+    awardedBy: 'Brand or organisation name',
+    year: 'YYYY',
+    description: 'One line on what the award recognises.',
+  },
+  {
+    title: 'Certificate title (placeholder)',
+    awardedBy: 'Issuing body',
+    year: 'YYYY',
+    description: 'Certifications such as authorised-dealer certificates can be listed here too.',
+  },
+]

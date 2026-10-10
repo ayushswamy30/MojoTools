@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { MessageCircle, Phone } from 'lucide-react'
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
+import { Phone } from 'lucide-react'
 import { business, whatsappHref } from '@/features/content/site'
 import type { Dictionary } from '@/i18n/dictionary'
 import { cn } from '@/lib/cn'
@@ -16,7 +17,8 @@ export function Header({ dict }: { dict: Dictionary }) {
   const items: NavItem[] = [
     { href: '/about', label: c.about },
     { href: '/products', label: c.products },
-    { href: '/brands', label: c.brands },
+    { href: '/distributorship', label: c.distributorship },
+    { href: '/awards', label: c.awards },
     { href: '/contact', label: c.contact },
   ]
   const wa = whatsappHref('Hi, I have an enquiry')
@@ -40,7 +42,7 @@ export function Header({ dict }: { dict: Dictionary }) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 hover:text-white"
             >
-              <MessageCircle aria-hidden="true" className="size-3.5" />
+              <WhatsAppIcon aria-hidden="true" className="size-3.5" />
               {c.whatsapp}
               <span className="sr-only"> {c.opensNewTab}</span>
             </a>
@@ -48,7 +50,23 @@ export function Header({ dict }: { dict: Dictionary }) {
         </Container>
       </div>
       <Container className="flex h-16 items-center justify-between gap-6">
-        <Logo name={business.name} homeLabel={c.logoHome} />
+        {/* Mobile: hamburger on the left, next to the logo (owner feedback, DECISIONS P13). */}
+        <div className="flex items-center gap-1">
+          <MobileNav
+            items={items}
+            labels={{
+              menu: c.menu,
+              close: c.closeMenu,
+              getQuote: c.getQuote,
+              call: c.call,
+              whatsapp: c.whatsapp,
+              mainNav: c.mainNav,
+            }}
+            telHref={telHref(business.phone)}
+            whatsappHref={wa}
+          />
+          <Logo name={business.name} homeLabel={c.logoHome} />
+        </div>
         <nav aria-label={c.mainNav} className="hidden lg:block">
           <NavLinks items={items} className="flex items-center gap-8" />
         </nav>
@@ -66,19 +84,6 @@ export function Header({ dict }: { dict: Dictionary }) {
             <Phone aria-hidden="true" className="size-5" />
             <span className="sr-only">{c.call}</span>
           </a>
-          <MobileNav
-            items={items}
-            labels={{
-              menu: c.menu,
-              close: c.closeMenu,
-              getQuote: c.getQuote,
-              call: c.call,
-              whatsapp: c.whatsapp,
-              mainNav: c.mainNav,
-            }}
-            telHref={telHref(business.phone)}
-            whatsappHref={wa}
-          />
         </div>
       </Container>
       <div aria-hidden="true" className="h-1 bg-brand-yellow" />

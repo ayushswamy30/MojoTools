@@ -139,7 +139,7 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 |---|---|---|
 | `SkipLink` | R0 | "Skip to main content"; first focusable element; visible on focus |
 | `UtilityBar` | R0 | Thin top strip. **R0:** "GST-registered supplier" (only once the GSTIN is supplied) · phone · WhatsApp. **R1 adds** "Pan-India delivery" (🟡 only once true). **R2 adds** the EN / हिंदी toggle. |
-| `Header` | R0 / R1 | **R0:** logo (link to home; accessible name "Mojo Tools, home") · About · Products · Brands · Contact · yellow **GET A QUOTE**. **R1:** logo · search (wide) · Support · **QUOTE / ORDER** (yellow) · Login/Account · Cart (count badge). |
+| `Header` | R0 / R1 | **R0:** [mobile: ☰ on the left] logo (link to home; accessible name "Mojo Tools, home") · About · Products · Distributorship · Awards · Contact · yellow **GET A QUOTE**. **R1:** logo · search (wide) · Support · **QUOTE / ORDER** (yellow) · Login/Account · Cart (count badge). |
 | `MainNav` | R1 | `Categories ▾` (dark button) · `Brands ▾` · Economy Series ("SAVE MORE" tag) · **Stock Clearance** (red dot + text, not colour alone) · Offers · Price Lists · About · Contact |
 | `MegaMenu` | R1 | Left: L1 categories with icons; right: L2/L3 columns + featured brand; Radix `NavigationMenu`; opens on click/Enter, hover intent 150 ms; Esc closes and returns focus |
 | `SearchBox` | R1 | Placeholder "Search by product, brand or SKU" (+ visible or visually hidden label); suggestions combobox (`role="combobox"`, `aria-activedescendant`): SKU matches first (mono), products with thumb + price, brands, categories, recent searches |
@@ -147,6 +147,8 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 | `Footer` | R0 / R1 | Trust strip · columns (**R0:** Mojo Tools, Help, Policies; **R1 adds** Shop, My Account) · address · socials · GST badge · legal bar · payment icons (R1) |
 | `SideWidget` | R2 | Desktop right edge: Recently viewed · Saved list · Cart (count) |
 | `WhatsAppFab` | R0 | Bottom-right, `--whatsapp` fill, 56 px; accessible name "Chat with us on WhatsApp (opens in new tab)"; prefilled message with page/brand; on mobile with the R1 bottom bar it sits above the bar; hidden on PDP mobile when the sticky Add-to-cart bar shows (WhatsApp moves into that bar) |
+| `FloatingActions` | R0 | Bottom-right stack: **WhatsApp** button (WhatsApp logo + "WhatsApp us" label on desktop, `--whatsapp-dark`) above the yellow **"Ask Mojo Mitra"** launcher. WhatsApp hides while the chat is open. |
+| `AssistantPanel` (Mojo Mitra) | R0 | 380 px panel (full-width sheet on mobile): header with name, "AI assistant · can make mistakes" and a call button; polite live message log; suggestion chips; tool results as yellow link chips; textarea (Enter sends, Shift+Enter new line); privacy note naming the provider. Offline/preview state shows quick links. |
 | `CookieBanner` | R0 | Bottom bar, **not modal**: Accept all · Reject non-essential (equal prominence) · Manage. Built in-house (no third-party script). Content gets bottom padding while it's shown. |
 
 ### Marketing
@@ -235,7 +237,7 @@ Sizes: `sm 32` (desktop dense tables only), `md 40`, `lg 48` px height. On touch
 ```
 HOME — R0 (desktop)
 ┌ SkipLink (on focus) · UtilityBar: GST-registered supplier · ☎ · WhatsApp ─────────────┐
-├ Header: [LOGO]   About  Products  Brands  Contact     [GET A QUOTE] ┤
+├ Header: [LOGO]  About  Products  Distributorship  Awards  Contact  [GET A QUOTE] ┤
 ├══ 4px yellow rule ═══════════════════════════════════════════════════┤
 │ HERO (full-bleed photo, dark gradient scrim left)                    │
 │ ◤                                                                   │
@@ -313,7 +315,7 @@ Tokens (use exactly):
 Global chrome — R0 (company site):
 - Skip link. Utility bar (ink-900, 32px): "GST-registered supplier" left; phone and
   WhatsApp right. No language toggle yet.
-- Header: logo left (links home); About, Products, Brands, Contact; yellow "GET A QUOTE" button.
+- Header: logo left (links home); About, Products, Distributorship, Awards, Contact; yellow "GET A QUOTE" button. Mobile: hamburger on the LEFT of the logo, drawer slides from the left.
 - Footer: trust strip (Genuine brands, GST invoice, Expert help on WhatsApp),
   columns (Mojo Tools, Help, Policies), address + map link, socials, GST badge, legal bar.
 - Floating WhatsApp button bottom-right; cookie bar (Accept all / Reject non-essential /

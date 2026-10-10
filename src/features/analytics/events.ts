@@ -8,6 +8,8 @@ export type AnalyticsEvent =
   | 'price_list_request'
   | 'brand_view'
   | 'notify_signup'
+  | 'assistant_open'
+  | 'assistant_message'
 
 type Gtag = (command: 'event', name: string, params?: Record<string, string>) => void
 

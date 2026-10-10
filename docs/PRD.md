@@ -65,8 +65,9 @@ Plus an **Admin panel** to run both (R1; in R0 enquiries arrive by email and are
 R0  /                         Home (hero carousel, brands, categories, why-us, stats, quote CTA)
 R0  /about                    About Us (story, core purpose, mission, values, stats, why choose us)
 R0  /products                 Products: category overview + enquiry per category (R1: links into /shop)
-R0  /brands                   Brands we distribute (filterable logo grid + stats)
-R0  /brands/[brand]           Brand page (R0: info + enquire; R1: + links into shop, price list)
+R0  /distributorship          Distributorship: brands Mojo officially distributes (filterable grid + stats)
+R0  /distributorship/[brand]  Brand page (R0: info + enquire; R1: + links into shop, price list)
+R0  /awards                    Awards & recognition
 R0  /contact                  Contact Us (info card, enquiry form, map, WhatsApp, help banner)
 R0  /policies/[slug]          R0: terms, privacy, accessibility · R1: shipping, returns & refunds,
                               cancellation, grievance officer
@@ -96,10 +97,11 @@ English URLs carry **no locale prefix**; Hindi (R2) lives under `/hi/...` (see [
 ### 6.1 Global (all pages)
 | ID | Requirement | Rel |
 |---|---|---|
-| GL-1 | **Upper horizontal navigation.** **R1 full version:** logo, large search (name / SKU / brand), Categories mega-menu, Brands menu, **Stock Clearance**, **Economy Series**, Offers, Price Lists, About, Contact, Support, **Quote / Order** button, Login/Register, Cart. **R0 version:** logo (links home, so no separate Home item), About, **Products**, Brands, Contact, phone, WhatsApp, yellow **Get a Quote** button. The **EN / हिंदी switch appears only in R2**, once the Hindi UI exists. | R0 / R1 |
+| GL-1 | **Upper horizontal navigation.** **R1 full version:** logo, large search (name / SKU / brand), Categories mega-menu, Brands menu, **Stock Clearance**, **Economy Series**, Offers, Price Lists, About, Contact, Support, **Quote / Order** button, Login/Register, Cart. **R0 version:** logo (links home, so no separate Home item), About, Products, **Distributorship**, **Awards**, Contact, phone, WhatsApp, yellow **Get a Quote** button. Mobile: hamburger on the left. The **EN / हिंदी switch appears only in R2**, once the Hindi UI exists. | R0 / R1 |
 | GL-2 | Mega-menu for categories (multi-column, sub-categories, icons) | R1 |
 | GL-3 | **Footer:** trust strip (genuine products, GST invoice, help desk; *pan-India delivery* and *secure payment* only once true, R1), link columns (Company, Help, Shop, Account, Policies; Shop/Account from R1), contact, social, payment icons (R1), GST registration badge | R0 / R1 |
-| GL-4 | Floating WhatsApp / help button | R0 |
+| GL-4 | Floating WhatsApp button (logo + "WhatsApp us" label) | R0 |
+| GL-10 | **AI assistant "Mojo Mitra"** (bottom-right): answers questions, finds categories/brands, navigates, prepares pre-filled quotes, hands off to WhatsApp/phone. Gemini or Groq via API key. **R1 adds** product search, stock, cart and order-status tools. | R0 / R1 |
 | GL-5 | Floating side widget: Recently viewed, Saved list, Cart (desktop) | R2 |
 | GL-6 | Cookie consent banner (Accept all / Reject non-essential / Manage). Analytics loads only after consent. | R0 |
 | GL-7 | Responsive: mobile, tablet, desktop | R0 |
@@ -112,11 +114,12 @@ English URLs carry **no locale prefix**; Hindi (R2) lives under `/hi/...` (see [
 | PS-1 | **Home hero:** full-width image carousel, bold uppercase headline, short copy, single yellow CTA, numbered pager + pause (Stanley/DeWalt style). Must meet the carousel accessibility spec in [`DESIGN.md §8`](DESIGN.md#8-accessibility-specification). | R0 |
 | PS-2 | Home sections. **R0:** category tiles (showcase; open the enquiry form pre-filled), featured brands strip, why-choose-us, stats counters, B2B CTA ("Get a bulk quote"), testimonials (real only), warehouse/visit-us band. **R1 adds:** clearance/economy promos, featured product rail, links into the shop. | R0 / R1 |
 | PS-3 | **About Us:** hero, company story/timeline, image + Core Purpose / Mission / Values accordion, stats strip (years, SKUs, brands, customers), Why Choose Us cards, warehouse/team photos | R0 |
-| PS-4 | **Brands / Distributors:** logo grid with filter chips (by product type), stats counters, each logo links to its brand page. **Brand page R0:** logo, about, product range, authorised-distributor badge (only where authorised ❓), "Enquire about this brand" / "Request price list" CTAs. **R1 adds:** brand's categories into the shop, top products rail, gated price-list download, "Shop all". | R0 / R1 |
+| PS-4 | **Distributorship** (renamed from Brands): states that Mojo Tools is an official distributor of the listed brands. logo grid with filter chips (by product type), stats counters, each logo links to its brand page. **Brand page R0:** logo, about, product range, authorised-distributor badge (only where authorised ❓), "Enquire about this brand" / "Request price list" CTAs. **R1 adds:** brand's categories into the shop, top products rail, gated price-list download, "Shop all". | R0 / R1 |
 | PS-5 | **Contact Us:** info card (address, hours, phone, email, GSTIN), enquiry form (name, email, mobile, company, enquiry type, message, optional attachment, consent, captcha), Google map with text address + directions link, "Need help choosing the right tool?" banner (Call / WhatsApp / **Raise a support request** = enquiry of type *support*), newsletter signup + Request-a-Quote block | R0 |
 | PS-6 | Policy pages. **R0:** terms, privacy, accessibility. **R1:** shipping, returns & refunds, cancellation, grievance officer. | R0 / R1 |
 | PS-7 | Blog / buying guides | R3 |
 | PS-9 | **Products page:** all top-level categories with description, matching brands and "Enquire about {category}" + WhatsApp CTAs; jump links per category. Sits between About and Brands in the menu. R1: categories link into the shop listing. | R0 |
+| PS-10 | **Awards page:** awards and certificates (title, awarded by, year, description). Real items only. | R0 |
 | PS-8 | **Enquiry / quote request form** (the R0 stand-in for RFQ): types *contact*, *quote*, *price list*, *dealer*, *support*; optional brand/category pre-fill, optional GSTIN, file upload (PDF/XLSX/CSV/JPG/PNG/WEBP, ≤ 10 MB). Stored, emailed to sales, auto-reply to the customer. In R1 a *quote* enquiry can be converted into an RFQ. | R0 |
 
 ### 6.3 Catalogue & discovery

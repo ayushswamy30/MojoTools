@@ -6,12 +6,14 @@ import { business, isDemoContent, whatsappHref } from '@/features/content/site'
 import { getDictionary } from '@/i18n/dictionary'
 import { locales } from '@/i18n/config'
 import { publicEnv } from '@/lib/public-env'
+import { resolveProvider } from '@/features/assistant/model'
+import { telHref } from '@/lib/format'
+import { FloatingActions } from '@/components/assistant/floating-actions'
 import { Analytics } from '@/components/layout/analytics'
 import { CookieBanner } from '@/components/layout/cookie-banner'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
 import { SkipLink } from '@/components/layout/skip-link'
-import { WhatsAppFab } from '@/components/layout/whatsapp-fab'
 import '../globals.css'
 
 const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-archivo' })
@@ -42,6 +44,7 @@ async function currentYear() {
 export default async function RootLayout({ children }: LayoutProps<'/[lang]'>) {
   const [locale, dict, year] = await Promise.all([lang(), getDictionary(), currentYear()])
   const c = dict.chrome
+  const provider = resolveProvider()
   return (
     <html
       lang={locale}
@@ -59,7 +62,14 @@ export default async function RootLayout({ children }: LayoutProps<'/[lang]'>) {
           {children}
         </main>
         <Footer dict={dict} year={year} />
-        <WhatsAppFab href={whatsappHref('Hi, I have an enquiry')} label={c.whatsappFab} />
+        <FloatingActions
+          labels={dict.assistant}
+          enabled={provider !== null}
+          provider={provider === 'groq' ? 'Groq' : provider === 'gemini' ? 'Google Gemini' : null}
+          whatsappHref={whatsappHref('Hi, I have an enquiry')}
+          telHref={telHref(business.phone)}
+          newTabLabel={c.opensNewTab}
+        />
         <CookieBanner labels={dict.cookies} />
         <Analytics gaId={publicEnv.gaId} />
       </body>

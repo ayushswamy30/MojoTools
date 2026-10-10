@@ -20,7 +20,9 @@ Legend: 🟡 a default is in place and work can proceed (please confirm) · ❓ 
 | C2 | Marketing budget tier: Lean (₹0 media) / Starter (~₹40k) / Growth (~₹1.2L) over 8 weeks | Not decided yet (owner, 09 Oct); Starter recommended | ❓ | Launch plan §8 |
 | C3 | Confirm targets (150 enquiries in 8 weeks, 25 Google reviews, first-orders target), or share past enquiry volumes | As stated | 🟡 | Launch plan §7 |
 | C4 | ~~Response-time promise~~ ✅ **within 1 working day**. Still open: **who receives enquiry alerts** (names / email / WhatsApp)? | — | ❓ | T4.4 |
-| C5 | Which brands is Mojo **formally authorised** for? | No badge until confirmed | ❓ | T4.3 (`is_authorised`) |
+| C5 | **Which brands does Mojo officially distribute?** Every brand on the Distributorship page is shown as an official distributor. | Demo brands A–H until the list arrives | ❓ | Distributorship page |
+| C7 | **AI assistant:** which provider (Gemini or Groq) and who holds the API key? Should chat logs be stored (and for how long)? | Works with either key; logs not stored | ❓ | Mojo Mitra go-live |
+| C8 | Is "Mojo Mitra" the right name for the assistant? | Mojo Mitra | 🟡 | — |
 | C6 | Existing Google Business Profile / IndiaMART listing? | ✅ Both exist; no WhatsApp Business or social pages yet | ✅ | — |
 
 ### Assets for R0
@@ -32,6 +34,7 @@ Legend: 🟡 a default is in place and work can proceed (please confirm) · ❓ 
 | A5 | Mojo Tools logo + brand colours (until then: yellow + charcoal tokens) | ❓ |
 | A6 | Business details: legal name, address, GSTIN, hours, phone, WhatsApp, email | ❓ |
 | A8 | Top-level categories with one image each; hero images / slogans | ❓ |
+| A9 | Awards and certificates: title, who gave it, year, one-line description, photo/scan if available | ❓ |
 
 ## Needed for R1 (e-commerce): **start now**
 
