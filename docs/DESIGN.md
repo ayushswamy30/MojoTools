@@ -34,7 +34,7 @@ Two modes of the same system:
 | `--ink-800` | `#1F1F1F` | Dark surfaces, footer |
 | `--ink-700` | `#2B2B2B` | Dark cards, nav bar |
 | `--steel-600` | `#4A4F55` | Body text on light |
-| `--steel-500` | `#6B7178` | **Secondary / meta text on light** (new: replaces steel-400 for text) |
+| `--steel-500` | `#62686F` | **Secondary / meta text on light** (new: replaces steel-400 for text) |
 | `--steel-400` | `#8A9097` | Icons, **input borders**, disabled text on light; secondary text **on dark** |
 | `--steel-200` | `#D9DCE0` | Decorative borders, dividers (not for input borders) |
 | `--steel-100` | `#EEF0F2` | Section backgrounds in shop |
@@ -65,7 +65,7 @@ Two modes of the same system:
 | brand-yellow text on ink-900 / ink-700 (dark sections) | 11.38 / 8.75 | 4.5 | ✅ |
 | **brand-yellow on white** | **1.62** | 4.5 | ❌ never as text, icon or link |
 | steel-600 body on white / steel-50 / steel-100 | 8.27 / 7.77 / 7.23 | 4.5 | ✅ |
-| steel-500 secondary on white / steel-50 | 4.93 / 4.64 | 4.5 | ✅ |
+| steel-500 secondary on white / steel-50 / steel-100 / yellow-soft | 5.63 / 5.30 / 4.93 / 5.11 | 4.5 | ✅ (old `#6B7178` = 4.32 on steel-100, 4.48 on yellow-soft ❌; D31) |
 | steel-400 on white (old secondary text) | 3.22 | 4.5 | ❌ text · ✅ icons, input borders (3:1) |
 | steel-400 on ink-800 (secondary text on dark) | 5.12 | 4.5 | ✅ |
 | steel-200 border vs white | 1.38 | 3 (inputs) | ❌ for inputs, so input borders use steel-400 |
@@ -298,7 +298,7 @@ DeWalt, with the dense, search-first shop layout of Moglix and MISUMI.
 Tokens (use exactly):
 - Colours: brand-yellow #FFC20E (FILLS ONLY — never text, icons or links on white/light),
   yellow-hover #E6AE00, yellow-soft #FFF4CC, ink-900 #141414, ink-800 #1F1F1F,
-  ink-700 #2B2B2B, steel-600 #4A4F55 (body text), steel-500 #6B7178 (secondary text on
+  ink-700 #2B2B2B, steel-600 #4A4F55 (body text), steel-500 #62686F (secondary text on
   light), steel-400 #8A9097 (icons, input borders, secondary text on dark),
   steel-200 #D9DCE0 (decorative borders), steel-100 #EEF0F2, steel-50 #F7F8F9 (shop bg),
   success #188038, warning #9A5B00, danger #D93025 (clearance, % off),
@@ -316,8 +316,9 @@ Global chrome — R0 (company site):
 - Skip link. Utility bar (ink-900, 32px): "GST-registered supplier" left; phone and
   WhatsApp right. No language toggle yet.
 - Header: logo left (links home); About, Products, Distributorship, Awards, Contact; yellow "GET A QUOTE" button. Mobile: hamburger on the LEFT of the logo, drawer slides from the left.
-- Footer: trust strip (Genuine brands, GST invoice, Expert help on WhatsApp),
-  columns (Mojo Tools, Help, Policies), address + map link, socials, GST badge, legal bar.
+- Footer: trust strip (Genuine brands, {N}+ years of trust, Bulk & trade quotes, Expert product
+  advice), columns (Mojo Tools; Help: quote, contact, WhatsApp, call, support; Policies: terms,
+  privacy, cookies, refunds, accessibility, Cookie settings), address, GSTIN when supplied, legal bar.
 - Floating WhatsApp button bottom-right; cookie bar (Accept all / Reject non-essential /
   Manage) that never covers form fields.
 

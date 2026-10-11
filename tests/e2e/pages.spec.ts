@@ -12,6 +12,8 @@ const pages = [
   '/quote',
   '/policies/terms',
   '/policies/privacy',
+  '/policies/cookies',
+  '/policies/refunds',
   '/policies/accessibility',
 ]
 
@@ -112,4 +114,42 @@ test('mobile menu opens from the left', async ({ page, isMobile }) => {
   await expect(drawer).toBeVisible()
   expect((await drawer.boundingBox())!.x).toBe(0)
   await expect(drawer.getByRole('link', { name: 'Distributorship' })).toBeVisible()
+})
+
+test('footer: four trust points (no GST, no WhatsApp), WhatsApp in Help, all policy links', async ({
+  page,
+}) => {
+  await page.goto('/')
+  const footer = page.getByRole('contentinfo')
+  const trust = footer.locator('ul').first().getByRole('listitem')
+  await expect(trust).toHaveText([
+    'Genuine brands',
+    '5+ years of trust',
+    'Bulk & trade quotes',
+    'Expert product advice',
+  ])
+  await expect(trust.filter({ hasText: /GST|WhatsApp/ })).toHaveCount(0)
+  const help = footer.getByRole('navigation', { name: 'Help' })
+  await expect(help.getByRole('link', { name: /Chat on WhatsApp/ })).toHaveAttribute(
+    'href',
+    /^https:\/\/wa\.me\//,
+  )
+  await expect(help.getByRole('link', { name: 'Contact us' })).toHaveAttribute('href', '/contact')
+  const policies = footer.getByRole('navigation', { name: 'Policies' })
+  await expect(policies.getByRole('link')).toHaveText([
+    'Terms and conditions',
+    'Privacy policy',
+    'Cookie policy',
+    'Refunds and returns',
+    'Accessibility',
+  ])
+  await expect(policies.getByRole('button', { name: 'Cookie settings' })).toBeVisible()
+})
+
+test('no placeholder stats, awards or structured data are published', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.getByText('XX+')).toHaveCount(0)
+  await expect(page.locator('script[type="application/ld+json"]')).toHaveCount(0)
+  await page.goto('/awards')
+  await expect(page.getByText('Our awards will appear here soon.')).toBeVisible()
 })

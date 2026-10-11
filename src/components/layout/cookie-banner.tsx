@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from 'react'
 import Link from 'next/link'
-import { readConsent, writeConsent } from '@/features/analytics/consent'
+import { OPEN_COOKIE_SETTINGS_EVENT, readConsent, writeConsent } from '@/features/analytics/consent'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 
@@ -15,19 +15,23 @@ type Labels = {
   analyticsLabel: string
   analyticsHint: string
   save: string
-  privacyLink: string
+  policyLink: string
 }
 
 /**
  * In-house, non-modal consent bar (DECISIONS D13): Accept / Reject non-essential / Manage
  * with equal prominence. While visible it publishes its height so content and the WhatsApp
  * button move up and nothing focused is hidden behind it (WCAG 2.4.11).
+ * "Cookie settings" links reopen it in Manage mode, so consent can be changed or withdrawn
+ * as easily as it was given (DPDP Act 2023 s.6(4)).
  */
 export function CookieBanner({ labels }: { labels: Labels }) {
   const [visible, setVisible] = useState(false)
   const [managing, setManaging] = useState(false)
   const [analytics, setAnalytics] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const checkboxRef = useRef<HTMLInputElement>(null)
+  const focusOnOpen = useRef(false)
   const titleId = useId()
   const hintId = useId()
 
@@ -35,7 +39,23 @@ export function CookieBanner({ labels }: { labels: Labels }) {
     // Reading a cookie is only possible after hydration; show the bar if no choice was made yet.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setVisible(readConsent() === null)
+    const reopen = () => {
+      setAnalytics(readConsent()?.analytics ?? false)
+      setManaging(true)
+      setVisible(true)
+      focusOnOpen.current = true
+    }
+    window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, reopen)
+    return () => window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, reopen)
   }, [])
+
+  useEffect(() => {
+    // Opened from a "Cookie settings" link: move keyboard focus into the settings.
+    if (visible && managing && focusOnOpen.current) {
+      focusOnOpen.current = false
+      checkboxRef.current?.focus()
+    }
+  }, [visible, managing])
 
   useEffect(() => {
     const root = document.documentElement
@@ -75,13 +95,14 @@ export function CookieBanner({ labels }: { labels: Labels }) {
           </h2>
           <p className="mt-1 text-sm">
             {labels.body}{' '}
-            <Link href="/policies/privacy" className="text-info underline underline-offset-4">
-              {labels.privacyLink}
+            <Link href="/policies/cookies" className="text-info underline underline-offset-4">
+              {labels.policyLink}
             </Link>
           </p>
           {managing ? (
             <div className="mt-3 flex items-start gap-3">
               <input
+                ref={checkboxRef}
                 id={`${titleId}-analytics`}
                 type="checkbox"
                 checked={analytics}

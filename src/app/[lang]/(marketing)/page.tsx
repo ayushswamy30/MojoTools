@@ -5,6 +5,7 @@ import {
   business,
   categories,
   heroSlides,
+  isDemoContent,
   stats,
   testimonials,
   whatsappHref,
@@ -52,13 +53,16 @@ export default async function HomePage() {
   const featured = brands.filter((brand) => brand.isFeatured)
   return (
     <>
-      <script
-        type="application/ld+json"
-        // JSON-LD must be raw JSON; the content is our own static data.
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationJsonLd()).replace(/</g, '\\u003c'),
-        }}
-      />
+      {/* Structured data only with real business details: never publish placeholder facts. */}
+      {isDemoContent ? null : (
+        <script
+          type="application/ld+json"
+          // JSON-LD must be raw JSON; the content is our own static data.
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd()).replace(/</g, '\\u003c'),
+          }}
+        />
+      )}
       <h1 className="sr-only">
         {business.name}: {business.tagline}
       </h1>
@@ -106,9 +110,11 @@ export default async function HomePage() {
         <Container>
           <SectionTitle id="why-title" title={dict.home.whyTitle} />
           <FeatureCards items={whyChoose} />
-          <div className="mt-12">
-            <StatsStrip stats={stats} />
-          </div>
+          {stats.length > 0 ? (
+            <div className="mt-12">
+              <StatsStrip stats={stats} />
+            </div>
+          ) : null}
         </Container>
       </section>
 

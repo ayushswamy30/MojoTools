@@ -1,22 +1,28 @@
 import Link from 'next/link'
-import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
-import { BadgeCheck, FileText } from 'lucide-react'
+import { BadgeCheck, Handshake, Headset, PackageCheck, type LucideIcon } from 'lucide-react'
 import { business, whatsappHref } from '@/features/content/site'
-import type { Dictionary } from '@/i18n/dictionary'
+import { t, type Dictionary } from '@/i18n/dictionary'
 import { telHref } from '@/lib/format'
 import { Container } from '@/components/ui/container'
+import { CookieSettingsButton } from './cookie-settings-button'
 import { Logo } from './logo'
+
+type FooterLink = { href: string; label: string; external?: boolean }
+
+const linkClass =
+  'inline-flex min-h-11 items-center text-sm underline-offset-4 hover:underline md:min-h-8'
 
 /** R0 footer (DESIGN §4): trust strip · Mojo Tools / Help / Policies · address · legal bar. */
 export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
   const f = dict.footer
   const c = dict.chrome
-  const trust = [
+  const trust: { icon: LucideIcon; label: string }[] = [
     { icon: BadgeCheck, label: f.trustGenuine },
-    { icon: FileText, label: f.trustGst },
-    { icon: WhatsAppIcon, label: f.trustHelp },
+    { icon: Handshake, label: t(f.trustYears, { years: String(business.yearsInBusiness) }) },
+    { icon: PackageCheck, label: f.trustBulk },
+    { icon: Headset, label: f.trustAdvice },
   ]
-  const columns = [
+  const columns: { title: string; links: FooterLink[] }[] = [
     {
       title: f.company,
       links: [
@@ -24,14 +30,16 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
         { href: '/products', label: c.products },
         { href: '/distributorship', label: c.distributorship },
         { href: '/awards', label: c.awards },
-        { href: '/contact', label: c.contact },
       ],
     },
     {
       title: f.help,
       links: [
         { href: '/quote', label: f.requestQuote },
-        { href: '/contact', label: c.contact },
+        { href: '/contact', label: f.contactUs },
+        { href: whatsappHref('Hi, I have a question'), label: f.whatsappUs, external: true },
+        { href: telHref(business.phone), label: f.callUs },
+        { href: '/quote?type=support', label: f.support },
       ],
     },
     {
@@ -39,6 +47,8 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
       links: [
         { href: '/policies/terms', label: f.terms },
         { href: '/policies/privacy', label: f.privacy },
+        { href: '/policies/cookies', label: f.cookies },
+        { href: '/policies/refunds', label: f.refunds },
         { href: '/policies/accessibility', label: f.accessibility },
       ],
     },
@@ -47,10 +57,10 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
     <footer className="on-dark bg-ink-800 text-steel-200">
       <div className="border-b border-ink-700">
         <Container>
-          <ul className="grid gap-4 py-6 sm:grid-cols-3">
+          <ul className="grid gap-4 py-6 sm:grid-cols-2 lg:grid-cols-4">
             {trust.map(({ icon: Icon, label }) => (
               <li key={label} className="flex items-center gap-3 font-semibold text-white">
-                <Icon aria-hidden="true" className="size-6 text-brand-yellow" />
+                <Icon aria-hidden="true" className="size-6 shrink-0 text-brand-yellow" />
                 {label}
               </li>
             ))}
@@ -85,31 +95,41 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
             <ul className="mt-4 space-y-1">
               {column.links.map((link) => (
                 <li key={`${column.title}-${link.href}`}>
-                  <Link
-                    href={link.href}
-                    className="inline-flex min-h-11 items-center text-sm underline-offset-4 hover:underline md:min-h-8"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={linkClass}
+                    >
+                      {link.label}
+                      <span className="sr-only"> {c.opensNewTab}</span>
+                    </a>
+                  ) : link.href.startsWith('/') ? (
+                    <Link href={link.href} className={linkClass}>
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a href={link.href} className={linkClass}>
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
+              {column.title === f.policies ? (
+                <li>
+                  <CookieSettingsButton label={f.cookieSettings} className={linkClass} />
+                </li>
+              ) : null}
             </ul>
           </nav>
         ))}
       </Container>
       <div className="border-t border-ink-700">
-        <Container className="flex flex-col gap-2 py-5 text-[13px] text-steel-400 sm:flex-row sm:justify-between">
+        <Container className="py-5 text-[13px] text-steel-400">
           <p>
             © {year} {business.name}. {f.rights}
           </p>
-          <a
-            href={whatsappHref('Hi, I have a question')}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline-offset-4 hover:underline"
-          >
-            {c.whatsapp} <span className="sr-only">{c.opensNewTab}</span>
-          </a>
         </Container>
       </div>
     </footer>

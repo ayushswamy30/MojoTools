@@ -34,7 +34,12 @@ Legend: 🟡 a default is in place and work can proceed (please confirm) · ❓ 
 | A5 | Mojo Tools logo + brand colours (until then: yellow + charcoal tokens) | ❓ |
 | A6 | Business details: legal name, address, GSTIN, hours, phone, WhatsApp, email | ❓ |
 | A8 | Top-level categories with one image each; hero images / slogans | ❓ |
-| A9 | Awards and certificates: title, who gave it, year, one-line description, photo/scan if available | ❓ |
+| A9 | Awards and certificates: title, who gave it, year, one-line description, photo/scan if available (page shows "coming soon" until then) | ❓ |
+| A10 | Real stats (years, products, brands, customers): the stats strips stay hidden until supplied | ❓ |
+| A11 | Founding year, to confirm the footer's "5+ years of trust" | 🟡 5+ |
+| A12 | **Grievance officer** (name, designation, email, phone) and the privacy-request email. Required by law before launch | ❓ |
+| A13 | Policy defaults in `policies.ts → policySettings`: report problems within **7 days**, refunds within **7 working days**, keep enquiries **3 years**, answer privacy requests within **30 days**; no change-of-mind returns on opened consumables, cut/special-order items, used PPE or installed electrical items | 🟡 |
+| A14 | Which **Gemini** plan is used? The free tier lets Google use chat content to improve its products; use a paid key (or Groq) before launch | ❓ |
 
 ## Needed for R1 (e-commerce): **start now**
 

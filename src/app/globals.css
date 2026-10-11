@@ -12,7 +12,7 @@
   --color-ink-800: #1f1f1f;
   --color-ink-700: #2b2b2b;
   --color-steel-600: #4a4f55;
-  --color-steel-500: #6b7178;
+  --color-steel-500: #62686f; /* ≥4.5:1 on white, steel-50, steel-100 and yellow-soft */
   --color-steel-400: #8a9097;
   --color-steel-200: #d9dce0;
   --color-steel-100: #eef0f2;

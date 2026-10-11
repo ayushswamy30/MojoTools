@@ -14,6 +14,6 @@ export const initialEnquiryState: EnquiryState = { status: 'idle' }
 
 export type NewsletterState =
   | { status: 'idle' }
-  | { status: 'invalid'; error: string }
-  | { status: 'error' }
+  | { status: 'invalid'; errors: { email?: true; consent?: true }; email: string }
+  | { status: 'error'; email: string }
   | { status: 'success'; demo: boolean }
