@@ -146,13 +146,7 @@ export function EnquiryForm(props: Props) {
     ) : null
 
   return (
-    <form
-      key={state.attempt}
-      action={formAction}
-      noValidate
-      className="space-y-5"
-      encType="multipart/form-data"
-    >
+    <form key={state.attempt} action={formAction} noValidate className="space-y-5">
       {summaryErrors.length > 0 || generalError ? (
         <div
           ref={summaryRef}
