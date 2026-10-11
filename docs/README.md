@@ -25,6 +25,7 @@ Mojo Tools trades **tools, machinery and hardware materials**, mostly to B2B buy
 | [`DECISIONS.md`](DECISIONS.md) | Every decision made and why | Before re-opening a settled point |
 | [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md) | What the owner still needs to answer or supply | Preparing for an owner check-in |
 | [`PROGRESS.md`](PROGRESS.md) | **Where we are**: plain-language status of everything done so far, what's demo, what's next | Catching up on the project |
+| [`LEGAL.md`](LEGAL.md) | **Legal & compliance**: what the site does for Indian law, what the owner must supply, risk register | Before launch, or when adding data, tracking, images or embeds |
 | [`CHANGELOG.md`](CHANGELOG.md) | History of the docs + the **consolidation log** (every issue found and how it was fixed) | Wondering why something changed |
 
 ## Status legend (used everywhere)

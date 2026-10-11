@@ -388,7 +388,9 @@ CI (GitHub Actions): typecheck → lint (incl. jsx-a11y) → unit tests → buil
 Supports the launch campaign targets in [`LAUNCH-PLAN.md`](LAUNCH-PLAN.md).
 
 - **Consent first:** GA4 loads only after the visitor accepts analytics cookies (DPDP). Server-side counts (enquiries table) work without consent.
-- **UTM capture:** on first landing, `utm_source/medium/campaign` and `referrer` go into a first-party cookie (30 days). They are saved on `enquiries` and `newsletter_subscribers` rows.
+- **UTM capture (consent-gated, D29):** on landing, `utm_source/medium/campaign` and `referrer` are read into memory and written to the first-party `mt_attr` cookie (30 days) only once the visitor accepts analytics cookies. They are saved on `enquiries` and `newsletter_subscribers` rows.
+- **Withdrawal:** "Cookie settings" (footer, cookie policy) reopens the banner; turning analytics off sets `ga-disable-<id>` and deletes `_ga*` and `mt_attr`.
+- **Third-party embeds:** the Google Maps iframe loads only on click (D30). Turnstile is the only third-party script loaded without consent (security, strictly necessary). Fonts are self-hosted by `next/font`.
 - **WhatsApp attribution:** click-to-chat links prefill "Hi, I'm interested in {page/brand} [via website]".
 
 | Event (GA4) | Rel | Fires when | Parameters |

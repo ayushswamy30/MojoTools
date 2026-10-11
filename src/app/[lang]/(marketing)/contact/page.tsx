@@ -33,7 +33,14 @@ export default async function ContactPage() {
       <Container className="grid gap-10 py-12 lg:grid-cols-[2fr_3fr]">
         <div className="space-y-8">
           <ContactInfoCard title={p.infoTitle} newTabLabel={dict.chrome.opensNewTab} />
-          <MapCard />
+          <MapCard
+            labels={dict.mapCard}
+            name={business.name}
+            address={`${business.address.line1}, ${business.address.city}, ${business.address.state} ${business.address.pincode}`}
+            embedUrl={business.mapEmbedUrl}
+            directionsUrl={business.directionsUrl}
+            newTabLabel={dict.chrome.opensNewTab}
+          />
         </div>
         <section aria-labelledby="contact-form-title">
           <h2 id="contact-form-title" className="mb-6 text-2xl font-bold">

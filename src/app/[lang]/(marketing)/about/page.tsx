@@ -28,11 +28,13 @@ export default async function AboutPage() {
         crumbs={[{ label: dict.chrome.home, href: '/' }, { label: dict.chrome.about }]}
         breadcrumbLabel={dict.chrome.breadcrumb}
       />
-      <Container className="-mt-6 md:-mt-10">
-        <div className="relative rounded-md bg-white p-6 shadow-overlay md:p-8">
-          <StatsStrip stats={stats} />
-        </div>
-      </Container>
+      {stats.length > 0 ? (
+        <Container className="-mt-6 md:-mt-10">
+          <div className="relative rounded-md bg-white p-6 shadow-overlay md:p-8">
+            <StatsStrip stats={stats} />
+          </div>
+        </Container>
+      ) : null}
 
       <section aria-labelledby="purpose-title" className="py-16">
         <Container className="grid gap-10 md:grid-cols-2">

@@ -84,23 +84,36 @@ const subscriberSchema = z.object({
   sourcePage: z.string().max(200).optional(),
 })
 
+/** Newsletter sign-up: needs its own, separate, unticked consent (DPDP Act 2023 s.6). */
 export async function subscribeNewsletter(
   _prev: NewsletterState,
   formData: FormData,
 ): Promise<NewsletterState> {
+  const rawEmail = formData.get('email')
+  const email = typeof rawEmail === 'string' ? rawEmail.slice(0, 254) : ''
   const ip = await clientIp()
-  if (!rateLimit(`newsletter:${ip ?? 'unknown'}`)) return { status: 'error' }
+  if (!rateLimit(`newsletter:${ip ?? 'unknown'}`)) return { status: 'error', email }
   const parsed = subscriberSchema.safeParse({
-    email: formData.get('email'),
+    email: rawEmail,
     sourcePage: formData.get('sourcePage') ?? undefined,
   })
-  if (!parsed.success) return { status: 'invalid', error: 'invalid' }
+  const consented = formData.get('consent') === 'on'
+  if (!parsed.success || !consented) {
+    return {
+      status: 'invalid',
+      errors: {
+        ...(parsed.success ? {} : { email: true }),
+        ...(consented ? {} : { consent: true }),
+      },
+      email,
+    }
+  }
   try {
     const attribution = parseAttribution((await cookies()).get(ATTRIBUTION_COOKIE)?.value)
     const result = await saveSubscriber(parsed.data.email, parsed.data.sourcePage, attribution)
     return { status: 'success', demo: result.demo }
   } catch (error) {
     logger.error('newsletter signup failed', { error: String(error) })
-    return { status: 'error' }
+    return { status: 'error', email }
   }
 }

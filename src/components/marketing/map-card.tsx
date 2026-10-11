@@ -1,25 +1,53 @@
-import { MapPin } from 'lucide-react'
-import { business } from '@/features/content/site'
+'use client'
 
-/** Map with the address always available as text (DESIGN §8.6). Placeholder until the address is final. */
-export function MapCard() {
-  const address = `${business.address.line1}, ${business.address.city}, ${business.address.state} ${business.address.pincode}`
+import { useState } from 'react'
+import { MapPin } from 'lucide-react'
+import type { Dictionary } from '@/i18n/dictionary'
+
+type Props = {
+  labels: Dictionary['mapCard']
+  name: string
+  address: string
+  embedUrl: string | null
+  directionsUrl: string | null
+  newTabLabel: string
+}
+
+/**
+ * Map with the address always available as text (DESIGN §8.6). The Google Maps embed sets
+ * third-party cookies, so it loads only when the visitor asks for it (click to load).
+ */
+export function MapCard({ labels, name, address, embedUrl, directionsUrl, newTabLabel }: Props) {
+  const [showMap, setShowMap] = useState(false)
   return (
     <section
       aria-labelledby="map-title"
       className="overflow-hidden rounded-md border border-steel-200"
     >
-      {business.mapEmbedUrl ? (
+      {embedUrl && showMap ? (
         <iframe
-          title={`${business.name} location map`}
-          src={business.mapEmbedUrl}
+          title={labels.frameTitle.replace('{name}', name)}
+          src={embedUrl}
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
+          referrerPolicy="strict-origin-when-cross-origin"
           className="h-72 w-full border-0"
         />
       ) : (
-        <div className="flex h-72 items-center justify-center bg-steel-100 p-6 text-center text-sm text-steel-600">
-          Map appears here once the shop address is confirmed (placeholder).
+        <div className="flex h-72 flex-col items-center justify-center gap-4 bg-steel-100 p-6 text-center text-sm text-steel-600">
+          {embedUrl ? (
+            <>
+              <p className="max-w-sm">{labels.notice}</p>
+              <button
+                type="button"
+                onClick={() => setShowMap(true)}
+                className="inline-flex min-h-11 items-center rounded-sm border border-ink-900 bg-white px-4 font-semibold text-ink-900"
+              >
+                {labels.show}
+              </button>
+            </>
+          ) : (
+            <p>{labels.placeholder}</p>
+          )}
         </div>
       )}
       <div className="flex flex-wrap items-center justify-between gap-3 p-5">
@@ -27,19 +55,19 @@ export function MapCard() {
           <MapPin aria-hidden="true" className="mt-0.5 size-5 text-ink-900" />
           <div>
             <h2 id="map-title" className="font-sans text-base font-semibold">
-              Find us
+              {labels.title}
             </h2>
             <p className="text-sm">{address}</p>
           </div>
         </div>
-        {business.directionsUrl ? (
+        {directionsUrl ? (
           <a
-            href={business.directionsUrl}
+            href={directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-info underline underline-offset-4"
           >
-            Get directions <span className="sr-only">(opens in a new tab)</span>
+            {labels.directions} <span className="sr-only">{newTabLabel}</span>
           </a>
         ) : null}
       </div>

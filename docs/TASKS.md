@@ -208,7 +208,7 @@
 
 ## Phase 17 — R1 hardening & launch
 - [ ] **T17.1** Load the real catalogue via import; fix data issues with the owner.
-- [ ] **T17.2** Replace all `SEED` shop content; R1 policy pages (shipping, returns & refunds, cancellation, grievance officer) reviewed by owner/advisor. [PS-6]
+- [ ] **T17.2** Replace all `SEED` shop content; R1 policy pages (shipping, returns & refunds, cancellation, grievance officer) reviewed by owner/advisor. [PS-6] Drafts of refunds/returns/cancellation, cookie policy and grievance officer added 11 Oct 2026 (D32); shipping still to write.
 - [ ] **T17.3** SEO pass: metadata, JSON-LD validation, sitemap, robots, canonical, `noindex` rules.
 - [ ] **T17.4** Performance pass: Core Web Vitals green on mobile for Home, listing, PDP.
 - [ ] **T17.5** Accessibility audit (axe + keyboard + screen readers), incl. checkout and Razorpay flow.

@@ -30,6 +30,20 @@ export const business = {
   directionsUrl: null as string | null,
   responsePromise: 'within 1 working day', // ✅ owner-confirmed (DECISIONS P9)
   social: [] as { label: string; href: string }[], // SEED: no social pages yet (C6)
+  /** 🟡 Owner said "5+ years of trust" (11 Oct 2026); confirm the founding year (A11). */
+  yearsInBusiness: 5,
+  /**
+   * Grievance officer (Consumer Protection (E-Commerce) Rules 2020, r.4; DPDP Act 2023 s.8(9)).
+   * SEED (A12): a named person must be supplied before launch.
+   */
+  grievanceOfficer: {
+    name: '{Grievance officer name}',
+    designation: 'Grievance Officer',
+    email: 'grievance@example.com',
+    phone: '+91 90000 00000',
+  },
+  /** Where privacy requests go. SEED (A12): defaults to the grievance officer's inbox. */
+  privacyEmail: 'grievance@example.com',
 }
 
 export type ProductType =
@@ -194,13 +208,11 @@ export const heroSlides: HeroSlide[] = [
   },
 ]
 
-/** SEED (A4): real numbers only from the owner — shown as "XX" until then. */
-export const stats = [
-  { value: 'XX+', label: 'Years in business' },
-  { value: 'XX,XXX+', label: 'Products' },
-  { value: 'XX+', label: 'Brands' },
-  { value: 'X,XXX+', label: 'Customers served' },
-]
+/**
+ * Real numbers only, from the owner (A4). Empty hides the stats strip, so no placeholder
+ * or unsupported figures are ever shown (RULES §0.5). Shape: { value: '5+', label: 'Years in business' }.
+ */
+export const stats: { value: string; label: string }[] = []
 
 export const whyChoose = [
   { title: 'Genuine brands', body: 'Sourced from brand distributors, with proper billing.' },
@@ -271,27 +283,7 @@ export type Award = {
 }
 
 /**
- * SEED (A9): placeholder award cards to show the layout. Never publish invented awards
- * (RULES §11) — replace with the owner's real awards and certificates, or empty the list
- * (the page then shows a short "coming soon" note).
+ * Real awards only (RULES §11), from the owner (A9). Empty shows a short "coming soon" note;
+ * placeholder award cards were removed so nothing invented can reach the public site.
  */
-export const awards: Award[] = [
-  {
-    title: 'Award title (placeholder)',
-    awardedBy: 'Brand or organisation name',
-    year: 'YYYY',
-    description: 'One line on what the award recognises, e.g. top regional distributor.',
-  },
-  {
-    title: 'Award title (placeholder)',
-    awardedBy: 'Brand or organisation name',
-    year: 'YYYY',
-    description: 'One line on what the award recognises.',
-  },
-  {
-    title: 'Certificate title (placeholder)',
-    awardedBy: 'Issuing body',
-    year: 'YYYY',
-    description: 'Certifications such as authorised-dealer certificates can be listed here too.',
-  },
-]
+export const awards: Award[] = []

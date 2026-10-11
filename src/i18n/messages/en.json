@@ -24,27 +24,35 @@
   },
   "footer": {
     "trustGenuine": "Genuine brands",
-    "trustGst": "GST invoice",
-    "trustHelp": "Expert help on WhatsApp",
+    "trustYears": "{years}+ years of trust",
+    "trustBulk": "Bulk & trade quotes",
+    "trustAdvice": "Expert product advice",
     "company": "Mojo Tools",
     "help": "Help",
     "policies": "Policies",
-    "terms": "Terms of use",
+    "terms": "Terms and conditions",
     "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "refunds": "Refunds and returns",
     "accessibility": "Accessibility",
+    "cookieSettings": "Cookie settings",
     "requestQuote": "Request a quote",
+    "contactUs": "Contact us",
+    "whatsappUs": "Chat on WhatsApp",
+    "callUs": "Call us",
+    "support": "Raise a support request",
     "rights": "All rights reserved."
   },
   "cookies": {
     "title": "Cookies on this site",
-    "body": "We use essential cookies to run the site. With your permission we also use analytics cookies to understand which pages help our customers.",
+    "body": "We use essential cookies to run the site. With your permission we also use analytics cookies to see which pages and campaigns help our customers.",
     "acceptAll": "Accept all",
     "rejectNonEssential": "Reject non-essential",
     "manage": "Manage",
     "analyticsLabel": "Analytics cookies",
-    "analyticsHint": "Help us improve the site (Google Analytics).",
+    "analyticsHint": "Google Analytics, and which campaign or website brought you here. Off unless you turn it on.",
     "save": "Save choices",
-    "privacyLink": "Read our privacy policy"
+    "policyLink": "Read our cookie policy"
   },
   "hero": {
     "region": "Featured",
@@ -93,7 +101,11 @@
     "submit": "Subscribe",
     "success": "Thanks — you're subscribed.",
     "successDemo": "Demo mode: the address was checked but not saved.",
-    "invalid": "Enter an email address like name@company.com"
+    "invalid": "Enter an email address like name@company.com",
+    "consent": "I agree to receive occasional product news and offers from Mojo Tools by email. I can unsubscribe at any time. See the",
+    "consentError": "Tick the box to agree to receive emails",
+    "privacyPolicy": "privacy policy",
+    "required": "required"
   },
   "brands": {
     "filterLabel": "Filter brands by product type",
@@ -217,5 +229,19 @@
     "quickPerson": "Talk to a person",
     "quickPersonPrompt": "I'd like to talk to someone from the team.",
     "whatsappFab": "WhatsApp us"
+  },
+  "policyPage": {
+    "lastUpdated": "Last updated: {date}",
+    "draft": "Draft for review: this text must be checked by the owner and a legal adviser before the site goes public.",
+    "contents": "On this page",
+    "cookieSettings": "Change cookie settings"
+  },
+  "mapCard": {
+    "title": "Find us",
+    "placeholder": "The map appears here once the shop address is confirmed.",
+    "show": "Show map",
+    "notice": "The map is provided by Google Maps. Loading it lets Google set cookies and receive your IP address.",
+    "frameTitle": "{name} location map",
+    "directions": "Get directions"
   }
 }
