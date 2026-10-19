@@ -1,9 +1,15 @@
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getPolicy, policies } from '@/features/content/policies'
 import { getDictionary } from '@/i18n/dictionary'
 import { Container } from '@/components/ui/container'
 import { PageHero } from '@/components/marketing/page-hero'
+import { PageHeroSkeleton } from '@/components/marketing/page-hero-skeleton'
+
+// Every valid URL is listed below and nothing reads request data, so the page is fully
+// static; Next.js validates this in dev and build (instant navigation).
+export const ensureStatic = 'navigation'
 
 export function generateStaticParams() {
   return policies.map((policy) => ({ slug: policy.slug }))
@@ -18,7 +24,21 @@ export async function generateMetadata({
     : {}
 }
 
-export default async function PolicyPage({ params }: PageProps<'/[lang]/policies/[slug]'>) {
+// URL params are read inside <Suspense> so client navigations show the shell instantly
+// (Next.js instant navigation); the full page is still prerendered for every listed slug.
+export default function PolicyPage({ params }: PageProps<'/[lang]/policies/[slug]'>) {
+  return (
+    <Suspense fallback={<PageHeroSkeleton />}>
+      <PolicyContent params={params} />
+    </Suspense>
+  )
+}
+
+async function PolicyContent({
+  params,
+}: {
+  params: PageProps<'/[lang]/policies/[slug]'>['params']
+}) {
   const policy = getPolicy((await params).slug)
   if (!policy) notFound()
   const dict = await getDictionary()

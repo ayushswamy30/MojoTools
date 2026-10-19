@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
 import Link from 'next/link'
@@ -12,7 +13,12 @@ import { Container } from '@/components/ui/container'
 import { SectionTitle } from '@/components/ui/section-title'
 import { CategoryTiles } from '@/components/marketing/category-tiles'
 import { PageHero } from '@/components/marketing/page-hero'
+import { PageHeroSkeleton } from '@/components/marketing/page-hero-skeleton'
 import { BrandViewTracker } from './brand-view-tracker'
+
+// Every valid URL is listed below and nothing reads request data, so the page is fully
+// static; Next.js validates this in dev and build (instant navigation).
+export const ensureStatic = 'navigation'
 
 export function generateStaticParams() {
   return brands.map((brand) => ({ slug: brand.slug }))
@@ -30,7 +36,21 @@ export async function generateMetadata({
   }
 }
 
-export default async function BrandPage({ params }: PageProps<'/[lang]/distributorship/[slug]'>) {
+// URL params are read inside <Suspense> so client navigations show the shell instantly
+// (Next.js instant navigation); the full page is still prerendered for every listed slug.
+export default function BrandPage({ params }: PageProps<'/[lang]/distributorship/[slug]'>) {
+  return (
+    <Suspense fallback={<PageHeroSkeleton />}>
+      <BrandContent params={params} />
+    </Suspense>
+  )
+}
+
+async function BrandContent({
+  params,
+}: {
+  params: PageProps<'/[lang]/distributorship/[slug]'>['params']
+}) {
   const brand = getBrand((await params).slug)
   if (!brand) notFound()
   const dict = await getDictionary()
