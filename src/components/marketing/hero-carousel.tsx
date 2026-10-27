@@ -70,7 +70,8 @@ export function HeroCarousel({ slides, labels }: { slides: HeroSlide[]; labels: 
       className="on-dark relative isolate bg-ink-900"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      onFocus={() => setFocusWithin(true)}
+      // Pause only for keyboard focus; a mouse click leaves focus on the button and would stall rotation forever.
+      onFocus={(event) => setFocusWithin(event.target.matches(':focus-visible'))}
       onBlur={(event) => {
         if (!regionRef.current?.contains(event.relatedTarget as Node | null)) setFocusWithin(false)
       }}
