@@ -38,6 +38,17 @@
   --shadow-overlay: 0 12px 32px rgb(0 0 0 / 0.18);
 
   --ease-brand: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Hero carousel progress segment; duration is set inline from SLIDE_MS. */
+  --animate-slide-progress: slide-progress linear forwards;
+  @keyframes slide-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
 }
 
 /* Z-index layers (DESIGN §2.3) */

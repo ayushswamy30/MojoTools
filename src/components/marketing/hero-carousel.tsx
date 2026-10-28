@@ -26,7 +26,7 @@ const fill = (message: string, n: number, total: number) =>
 
 /**
  * Home hero carousel — accessibility spec in DESIGN §8.2:
- * pause first in tab order; stops on hover / focus / user pause; starts paused under
+ * pause first in tab order; stops on keyboard focus / user pause (not hover: the hero fills the viewport, so it would never rotate); starts paused under
  * reduced motion; slide semantics; inactive slides inert; live region polite only after
  * manual navigation.
  */
@@ -34,7 +34,6 @@ export function HeroCarousel({ slides, labels }: { slides: HeroSlide[]; labels: 
   const [index, setIndex] = useState(0)
   const [userPaused, setUserPaused] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
-  const [hovered, setHovered] = useState(false)
   const [focusWithin, setFocusWithin] = useState(false)
   const [manual, setManual] = useState(false)
   const regionRef = useRef<HTMLElement>(null)
@@ -48,14 +47,18 @@ export function HeroCarousel({ slides, labels }: { slides: HeroSlide[]; labels: 
   }, [])
 
   const paused = userPaused || reducedMotion
-  const rotating = !paused && !hovered && !focusWithin
+  const rotating = !paused && !focusWithin
   const total = slides.length
 
+  const advance = useCallback(() => setIndex((i) => (i + 1) % total), [total])
+
+  // The progress bar's animationend drives rotation so it pauses and resumes in sync;
+  // reduced motion collapses CSS animations globally, so fall back to a timer there.
   useEffect(() => {
-    if (!rotating || total < 2) return
-    const timer = window.setTimeout(() => setIndex((i) => (i + 1) % total), SLIDE_MS)
+    if (!rotating || total < 2 || !reducedMotion) return
+    const timer = window.setTimeout(advance, SLIDE_MS)
     return () => window.clearTimeout(timer)
-  }, [rotating, index, total])
+  }, [rotating, reducedMotion, index, total, advance])
 
   const goTo = useCallback((next: number) => {
     setManual(true)
@@ -68,8 +71,6 @@ export function HeroCarousel({ slides, labels }: { slides: HeroSlide[]; labels: 
       aria-roledescription="carousel"
       aria-label={labels.region}
       className="on-dark relative isolate bg-ink-900"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       // Pause only for keyboard focus; a mouse click leaves focus on the button and would stall rotation forever.
       onFocus={(event) => setFocusWithin(event.target.matches(':focus-visible'))}
       onBlur={(event) => {
@@ -165,11 +166,24 @@ export function HeroCarousel({ slides, labels }: { slides: HeroSlide[]; labels: 
               </li>
             ))}
           </ol>
-          <div aria-hidden="true" className="h-0.5 w-16 bg-white/30">
-            <div
-              className="h-full bg-brand-yellow"
-              style={{ width: `${((index + 1) / total) * 100}%` }}
-            />
+          {/* One segment per slide: past ones full, the current one fills until the next slide. */}
+          <div aria-hidden="true" className="flex gap-1">
+            {slides.map((slide, i) => (
+              <div key={slide.id} className="h-0.5 w-8 bg-white/30">
+                {i < index && <div className="h-full bg-brand-yellow" />}
+                {i === index && (
+                  <div
+                    key={index}
+                    className="h-full origin-left animate-slide-progress bg-brand-yellow"
+                    style={{
+                      animationDuration: `${SLIDE_MS}ms`,
+                      animationPlayState: rotating ? 'running' : 'paused',
+                    }}
+                    onAnimationEnd={() => !reducedMotion && total > 1 && advance()}
+                  />
+                )}
+              </div>
+            ))}
           </div>
         </Container>
       </div>
