@@ -12,8 +12,8 @@ type FooterLink = { href: string; label: string; external?: boolean }
 const linkClass =
   'inline-flex min-h-11 items-center text-sm underline-offset-4 hover:underline md:min-h-8'
 
-/** R0 footer (DESIGN §4): trust strip · Mojo Tools / Help / Policies · address · legal bar. */
-export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
+/** R0 footer (DESIGN §4): trust strip · Mojo Tools / Help / Policies · address · wordmark. */
+export function Footer({ dict }: { dict: Dictionary }) {
   const f = dict.footer
   const c = dict.chrome
   const trust: { icon: LucideIcon; label: string }[] = [
@@ -67,7 +67,7 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
           </ul>
         </Container>
       </div>
-      <Container className="grid gap-10 py-12 md:grid-cols-[1.5fr_repeat(3,1fr)]">
+      <Container className="grid gap-10 pt-12 pb-4 md:grid-cols-[1.5fr_repeat(3,1fr)]">
         <div>
           <Logo name={business.name} homeLabel={c.logoHome} />
           <address className="mt-4 text-sm leading-6 not-italic">
@@ -125,19 +125,14 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
           </nav>
         ))}
       </Container>
-      <div className="border-t border-ink-700">
-        <Container className="py-5 text-[13px] text-steel-400">
-          <p>
-            © {year} {business.name}. {f.rights}
-          </p>
-        </Container>
-      </div>
-      {/* Decorative sign-off: the footer fades into brand yellow behind the wordmark; cqw sizes it to span the container. */}
+      {/* Decorative sign-off: the footer fades into brand yellow behind the wordmark; cqw sizes it to span the container.
+          The id lets the sticky header slide away while this is on screen. */}
       <div
+        id="footer-wordmark"
         aria-hidden="true"
         className="bg-linear-to-b from-ink-800 via-brand-yellow via-70% to-brand-yellow select-none"
       >
-        <Container className="overflow-hidden pt-24 pb-6 md:pt-40">
+        <Container className="overflow-hidden pt-16 pb-6 md:pt-24">
           <p className="@container">
             <span className="block font-display text-[11.6cqw] leading-[0.8] font-extrabold tracking-[-0.01em] whitespace-nowrap text-ink-900 uppercase [font-stretch:125%]">
               {business.name}
