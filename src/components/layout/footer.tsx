@@ -132,6 +132,19 @@ export function Footer({ dict, year }: { dict: Dictionary; year: number }) {
           </p>
         </Container>
       </div>
+      {/* Decorative sign-off: the footer fades into brand yellow behind the wordmark; cqw sizes it to span the container. */}
+      <div
+        aria-hidden="true"
+        className="bg-linear-to-b from-ink-800 via-brand-yellow via-70% to-brand-yellow select-none"
+      >
+        <Container className="overflow-hidden pt-24 pb-6 md:pt-40">
+          <p className="@container">
+            <span className="block font-display text-[11.6cqw] leading-[0.8] font-extrabold tracking-[-0.01em] whitespace-nowrap text-ink-900 uppercase [font-stretch:125%]">
+              {business.name}
+            </span>
+          </p>
+        </Container>
+      </div>
     </footer>
   )
 }
