@@ -49,6 +49,14 @@
       transform: scaleX(1);
     }
   }
+
+  /* Brand strip: the list is rendered 4×, so -50% lands exactly on the 3rd copy's start. */
+  --animate-marquee: marquee 30s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 /* Z-index layers (DESIGN §2.3) */
