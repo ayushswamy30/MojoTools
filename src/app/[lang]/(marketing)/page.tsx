@@ -96,14 +96,22 @@ export default async function HomePage() {
               {dict.home.viewAllBrands}
             </Link>
           </div>
-          <ul className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
-            {featured.map((brand) => (
-              <li key={brand.slug}>
-                <BrandCard brand={brand} />
-              </li>
-            ))}
-          </ul>
         </Container>
+        {/* Pauses on hover/focus so the moving strip can be stopped (WCAG 2.2.2). */}
+        <div className="group mt-8 overflow-hidden">
+          <div className="flex w-max animate-marquee group-focus-within:[animation-play-state:paused] group-hover:[animation-play-state:paused]">
+            {/* 4 copies so half the track still spans wide screens; only the first is exposed to AT/keyboard. */}
+            {[0, 1, 2, 3].map((copy) => (
+              <ul key={copy} className="flex" aria-hidden={copy > 0 || undefined} inert={copy > 0}>
+                {featured.map((brand) => (
+                  <li key={brand.slug} className="w-52 shrink-0 pr-4">
+                    <BrandCard brand={brand} />
+                  </li>
+                ))}
+              </ul>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section aria-labelledby="why-title" className="py-16">
