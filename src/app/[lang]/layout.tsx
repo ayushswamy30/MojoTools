@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { cacheLife } from 'next/cache'
 import { lang } from 'next/root-params'
 import { Archivo, Inter, JetBrains_Mono } from 'next/font/google'
 import { business, isDemoContent, whatsappHref } from '@/features/content/site'
@@ -35,14 +34,8 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }))
 }
 
-async function currentYear() {
-  'use cache'
-  cacheLife('days')
-  return new Date().getFullYear()
-}
-
 export default async function RootLayout({ children }: LayoutProps<'/[lang]'>) {
-  const [locale, dict, year] = await Promise.all([lang(), getDictionary(), currentYear()])
+  const [locale, dict] = await Promise.all([lang(), getDictionary()])
   const c = dict.chrome
   const provider = resolveProvider()
   return (
@@ -61,7 +54,7 @@ export default async function RootLayout({ children }: LayoutProps<'/[lang]'>) {
         <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
           {children}
         </main>
-        <Footer dict={dict} year={year} />
+        <Footer dict={dict} />
         <FloatingActions
           labels={dict.assistant}
           enabled={provider !== null}

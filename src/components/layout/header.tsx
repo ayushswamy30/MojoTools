@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
 import { Phone } from 'lucide-react'
 import { business, whatsappHref } from '@/features/content/site'
 import type { Dictionary } from '@/i18n/dictionary'
@@ -7,6 +6,7 @@ import { cn } from '@/lib/cn'
 import { telHref } from '@/lib/format'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
+import { HeaderShell } from './header-shell'
 import { Logo } from './logo'
 import { MobileNav } from './mobile-nav'
 import { NavLinks, type NavItem } from './nav-links'
@@ -23,32 +23,7 @@ export function Header({ dict }: { dict: Dictionary }) {
   ]
   const wa = whatsappHref('Hi, I have an enquiry')
   return (
-    <header className="on-dark sticky top-0 z-[var(--z-sticky-header)] bg-ink-900">
-      <div className="hidden bg-ink-800 text-[13px] text-steel-200 md:block">
-        <Container className="flex h-8 items-center justify-between">
-          <p>{c.utilityTagline}</p>
-          <div className="flex items-center gap-5">
-            <a
-              href={telHref(business.phone)}
-              className="inline-flex items-center gap-1.5 hover:text-white"
-            >
-              <Phone aria-hidden="true" className="size-3.5" />
-              <span className="sr-only">{c.call}: </span>
-              {business.phone}
-            </a>
-            <a
-              href={wa}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-white"
-            >
-              <WhatsAppIcon aria-hidden="true" className="size-3.5" />
-              {c.whatsapp}
-              <span className="sr-only"> {c.opensNewTab}</span>
-            </a>
-          </div>
-        </Container>
-      </div>
+    <HeaderShell className="on-dark sticky top-0 z-[var(--z-sticky-header)] bg-ink-900">
       <Container className="flex h-16 items-center justify-between gap-6">
         {/* Mobile: hamburger on the left, next to the logo (owner feedback, DECISIONS P13). */}
         <div className="flex items-center gap-1">
@@ -79,7 +54,7 @@ export function Header({ dict }: { dict: Dictionary }) {
           </Link>
           <a
             href={telHref(business.phone)}
-            className="inline-flex size-11 items-center justify-center rounded-sm text-white md:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-sm text-white lg:hidden"
           >
             <Phone aria-hidden="true" className="size-5" />
             <span className="sr-only">{c.call}</span>
@@ -87,6 +62,6 @@ export function Header({ dict }: { dict: Dictionary }) {
         </div>
       </Container>
       <div aria-hidden="true" className="h-1 bg-brand-yellow" />
-    </header>
+    </HeaderShell>
   )
 }

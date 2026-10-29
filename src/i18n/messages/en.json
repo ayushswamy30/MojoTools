@@ -2,7 +2,6 @@
   "chrome": {
     "skipToContent": "Skip to main content",
     "previewBanner": "Preview — demo content. Not the live site.",
-    "utilityTagline": "Tools, machinery & hardware for the trade",
     "call": "Call",
     "whatsapp": "WhatsApp",
     "getQuote": "Get a quote",
@@ -40,8 +39,7 @@
     "contactUs": "Contact us",
     "whatsappUs": "Chat on WhatsApp",
     "callUs": "Call us",
-    "support": "Raise a support request",
-    "rights": "All rights reserved."
+    "support": "Raise a support request"
   },
   "cookies": {
     "title": "Cookies on this site",
