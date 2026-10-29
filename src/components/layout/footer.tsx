@@ -54,7 +54,9 @@ export function Footer({ dict }: { dict: Dictionary }) {
     },
   ]
   return (
-    <footer className="on-dark bg-ink-800 text-steel-200">
+    // lg+: one smooth fade across the whole footer, starting late enough that link text keeps ≥4.5:1.
+    // Smaller screens stack or wrap the columns (tall footer), so the fade stays behind the wordmark only.
+    <footer className="on-dark bg-ink-800 text-steel-200 lg:bg-linear-to-b lg:from-ink-800 lg:from-35% lg:to-brand-yellow">
       <div className="border-b border-ink-700">
         <Container>
           <ul className="grid gap-4 py-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -130,7 +132,7 @@ export function Footer({ dict }: { dict: Dictionary }) {
       <div
         id="footer-wordmark"
         aria-hidden="true"
-        className="bg-linear-to-b from-ink-800 via-brand-yellow via-70% to-brand-yellow select-none"
+        className="bg-linear-to-b from-ink-800 via-brand-yellow via-70% to-brand-yellow select-none lg:bg-none"
       >
         <Container className="overflow-hidden pt-16 pb-6 md:pt-24">
           <p className="@container">
