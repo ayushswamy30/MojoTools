@@ -1,7 +1,6 @@
 {
   "chrome": {
     "skipToContent": "Skip to main content",
-    "previewBanner": "Preview — demo content. Not the live site.",
     "call": "Call",
     "whatsapp": "WhatsApp",
     "getQuote": "Get a quote",

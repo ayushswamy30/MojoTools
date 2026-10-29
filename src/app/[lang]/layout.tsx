@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { lang } from 'next/root-params'
 import { Archivo, Inter, JetBrains_Mono } from 'next/font/google'
-import { business, isDemoContent, whatsappHref } from '@/features/content/site'
+import { business, whatsappHref } from '@/features/content/site'
 import { getDictionary } from '@/i18n/dictionary'
 import { locales } from '@/i18n/config'
 import { publicEnv } from '@/lib/public-env'
@@ -45,11 +45,6 @@ export default async function RootLayout({ children }: LayoutProps<'/[lang]'>) {
     >
       <body className="flex min-h-dvh flex-col antialiased">
         <SkipLink label={c.skipToContent} />
-        {isDemoContent && !publicEnv.indexable ? (
-          <p className="bg-brand-yellow-soft px-4 py-1.5 text-center text-[13px] font-semibold text-ink-900">
-            {c.previewBanner}
-          </p>
-        ) : null}
         <Header dict={dict} />
         <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
           {children}
