@@ -138,13 +138,13 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 | Component | Rel | Notes / states |
 |---|---|---|
 | `SkipLink` | R0 | "Skip to main content"; first focusable element; visible on focus |
-| `UtilityBar` | R0 | Thin top strip. **R0:** "GST-registered supplier" (only once the GSTIN is supplied) · phone · WhatsApp. **R1 adds** "Pan-India delivery" (🟡 only once true). **R2 adds** the EN / हिंदी toggle. |
-| `Header` | R0 / R1 | **R0:** [mobile: ☰ on the left] logo (link to home; accessible name "Mojo Tools, home") · About · Products · Distributorship · Awards · Contact · yellow **GET A QUOTE**. **R1:** logo · search (wide) · Support · **QUOTE / ORDER** (yellow) · Login/Account · Cart (count badge). |
+| `UtilityBar` | — | **Removed (owner, 30 Oct 2026).** Phone and WhatsApp stay reachable through the header phone icon (below `lg`), the mobile drawer and the WhatsApp button. Revisit for the R1 "Pan-India delivery" line and the R2 EN / हिंदी toggle. |
+| `Header` | R0 / R1 | **R0:** [mobile: ☰ on the left] logo (link to home; accessible name "Mojo Tools, home") · About · Products · Distributorship · Awards · Contact · yellow **GET A QUOTE** · phone icon below `lg`. Sticky; slides up out of view while the footer wordmark is on screen and returns on scroll up (owner, 30 Oct 2026). **R1:** logo · search (wide) · Support · **QUOTE / ORDER** (yellow) · Login/Account · Cart (count badge). |
 | `MainNav` | R1 | `Categories ▾` (dark button) · `Brands ▾` · Economy Series ("SAVE MORE" tag) · **Stock Clearance** (red dot + text, not colour alone) · Offers · Price Lists · About · Contact |
 | `MegaMenu` | R1 | Left: L1 categories with icons; right: L2/L3 columns + featured brand; Radix `NavigationMenu`; opens on click/Enter, hover intent 150 ms; Esc closes and returns focus |
 | `SearchBox` | R1 | Placeholder "Search by product, brand or SKU" (+ visible or visually hidden label); suggestions combobox (`role="combobox"`, `aria-activedescendant`): SKU matches first (mono), products with thumb + price, brands, categories, recent searches |
 | `MobileNav` | R0 / R1 | **R0:** top bar (logo, menu) + slide-in drawer with page links, call and WhatsApp. **R1:** bottom tab bar (Home, Categories, Search, Quote, Account) + drawer with category drill-down |
-| `Footer` | R0 / R1 | Trust strip · columns (**R0:** Mojo Tools, Help, Policies; **R1 adds** Shop, My Account) · address · socials · GST badge · legal bar · payment icons (R1) |
+| `Footer` | R0 / R1 | Trust strip · columns (**R0:** Mojo Tools, Help, Policies; **R1 adds** Shop, My Account) · address · socials · GST badge · payment icons (R1) · full-width **MOJO TOOLS** sign-off wordmark (Archivo Expanded 800, `ink-900`, decorative) on an `ink-800` → `brand-yellow` gradient. From `lg` the gradient spans the whole footer, starting at 35% so link text keeps ≥ 4.5:1; below `lg` it sits behind the wordmark only. No legal bar in R0 (owner, 30 Oct 2026). |
 | `SideWidget` | R2 | Desktop right edge: Recently viewed · Saved list · Cart (count) |
 | `WhatsAppFab` | R0 | Bottom-right, `--whatsapp` fill, 56 px; accessible name "Chat with us on WhatsApp (opens in new tab)"; prefilled message with page/brand; on mobile with the R1 bottom bar it sits above the bar; hidden on PDP mobile when the sticky Add-to-cart bar shows (WhatsApp moves into that bar) |
 | `FloatingActions` | R0 | Bottom-right stack: **WhatsApp** button (WhatsApp logo + "WhatsApp us" label on desktop, `--whatsapp-dark`) above the yellow **"Ask Mojo Mitra"** launcher. WhatsApp hides while the chat is open. |
@@ -157,7 +157,7 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 | `HeroCarousel` | R0 | See §8.2 for the full accessibility spec |
 | `SectionTitle` | R0 | Real heading level + yellow rule |
 | `CategoryTiles` | R0 / R1 | **R0:** showcase tiles; click opens the enquiry form pre-filled with the category. **R1:** link to `/shop/c/...` with item counts |
-| `BrandStrip` | R0 | **Static grid / horizontally scrollable row. No auto-scrolling marquee** (moving content needs a pause control) |
+| `BrandStrip` | R0 | **Infinite right-to-left marquee** (owner, 30 Oct 2026; replaces the earlier static-grid rule, CHANGELOG A-5). Pauses on hover and keyboard focus; still under reduced motion; repeat copies are `aria-hidden` + `inert`. 🟡 Open: touch screens have no way to pause it, so WCAG 2.2.2 is not fully met there; add a pause button before launch. |
 | `StatsStrip` | R0 | Count-up animation only without reduced motion; final values in the DOM (§8.3) |
 | `ValuesAccordion` | R0 | Radix Accordion; yellow +/– icons on dark; `aria-expanded` |
 | `WhyChooseCards` | R0 | — |
@@ -236,7 +236,7 @@ Sizes: `sm 32` (desktop dense tables only), `md 40`, `lg 48` px height. On touch
 
 ```
 HOME — R0 (desktop)
-┌ SkipLink (on focus) · UtilityBar: GST-registered supplier · ☎ · WhatsApp ─────────────┐
+┌ SkipLink (on focus) ──────────────────────────────────────────────────┐
 ├ Header: [LOGO]  About  Products  Distributorship  Awards  Contact  [GET A QUOTE] ┤
 ├══ 4px yellow rule ═══════════════════════════════════════════════════┤
 │ HERO (full-bleed photo, dark gradient scrim left)                    │
@@ -247,12 +247,13 @@ HOME — R0 (desktop)
 │   [GET A BULK QUOTE]  Explore our brands →                           │
 │   ⏸  ‹ 1 2 3 ━━ ›                                                    │
 ├ Category tiles (8, showcase → enquiry) ───────────────────────────────┤
-├ Brands we distribute (static logo grid) · View all brands ────────────┤
+├ Brands we distribute (infinite marquee) · View all brands ────────────┤
 ├ Why choose Mojo (4 cards) + Stats strip ──────────────────────────────┤
 ├ Testimonials (real only; hide section if none) ───────────────────────┤
 ├ CTA band: Buying in bulk? Get a quote [REQUEST A QUOTE] [WHATSAPP] ──┤
 ├ Visit us band (warehouse photo, address, hours, directions) ──────────┤
-└ Footer ───────────────────────────────────────────────────────────────┘
+├ Footer: trust strip · columns · address ──────────────────────────────┤
+└ MOJO TOOLS wordmark on ink → yellow gradient (header slides away here) ┘
                                             (WhatsApp FAB bottom-right)
 
 HOME — R1 additions
@@ -313,12 +314,13 @@ Tokens (use exactly):
 - Focus ring: 2px ink-900 with 2px offset on light; 2px yellow on dark. Show it.
 
 Global chrome — R0 (company site):
-- Skip link. Utility bar (ink-900, 32px): "GST-registered supplier" left; phone and
-  WhatsApp right. No language toggle yet.
+- Skip link. No utility bar (removed by the owner). No language toggle yet.
 - Header: logo left (links home); About, Products, Distributorship, Awards, Contact; yellow "GET A QUOTE" button. Mobile: hamburger on the LEFT of the logo, drawer slides from the left.
 - Footer: trust strip (Genuine brands, {N}+ years of trust, Bulk & trade quotes, Expert product
   advice), columns (Mojo Tools; Help: quote, contact, WhatsApp, call, support; Policies: terms,
-  privacy, cookies, refunds, accessibility, Cookie settings), address, GSTIN when supplied, legal bar.
+  privacy, cookies, refunds, accessibility, Cookie settings), address, GSTIN when supplied, then a
+  full-width MOJO TOOLS wordmark on an ink-to-yellow gradient (no legal bar). The sticky header
+  slides away while the wordmark is on screen.
 - Floating WhatsApp button bottom-right; cookie bar (Accept all / Reject non-essential /
   Manage) that never covers form fields.
 
@@ -386,7 +388,7 @@ References: Stanley hero (layout, corner flash), DeWalt hero (dark frame, heavy 
 Then R0 sections:
 1. Shop by category: 8 tiles with photo on steel-100 and label (R0: "Enquire" on hover;
    R1: item count, links to the shop).
-2. Brands we distribute: static logo grid (no marquee), "View all brands".
+2. Brands we distribute: infinite logo marquee (pauses on hover/focus), "View all brands".
 3. Why Mojo Tools: 4 icon cards (Genuine brands, Bulk & B2B quotes, GST invoices,
    Expert advice) + stats strip (Years in business, SKUs, Brands, Customers — "XX+").
 4. Testimonials slot (show as optional: hidden when there are no real testimonials).
