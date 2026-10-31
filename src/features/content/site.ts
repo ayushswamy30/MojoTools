@@ -215,11 +215,27 @@ export const heroSlides: HeroSlide[] = [
 export const stats: { value: string; label: string }[] = []
 
 export const whyChoose = [
-  { title: 'Genuine brands', body: 'Sourced from brand distributors, with proper billing.' },
-  { title: 'Bulk & B2B quotes', body: 'Send a list, get a priced quote within 1 working day.' },
-  { title: 'GST invoices', body: 'Correct GST billing for every business order.' },
-  { title: 'Expert advice', body: 'Talk to our team on call or WhatsApp before you buy.' },
-]
+  {
+    icon: 'seal',
+    title: 'Genuine brands, nothing else',
+    body: 'Every product comes through our official brand distributorships, with a proper bill.',
+  },
+  {
+    icon: 'crate',
+    title: 'Your list, priced in a day',
+    body: `Send a bulk or B2B list. Get a priced quote ${business.responsePromise}.`,
+  },
+  {
+    icon: 'invoice',
+    title: 'A GST invoice, every order',
+    body: 'Correct GST billing on every business purchase, so you can claim input credit.',
+  },
+  {
+    icon: 'advice',
+    title: 'Ask before you buy',
+    body: 'Not sure which tool fits? Our team will help on call or WhatsApp.',
+  },
+] as const
 
 // SEED (A4): placeholder copy, to be replaced with the owner's own words.
 export const about = {
@@ -239,13 +255,6 @@ export const about = {
     { year: 'YYYY', title: 'New brand partnerships', body: 'Placeholder milestone.' },
     { year: 'YYYY', title: 'Expanded B2B supply', body: 'Placeholder milestone.' },
     { year: 'YYYY', title: 'Going online', body: 'Placeholder milestone.' },
-  ],
-  whyChoose: [
-    { title: 'Wide reach', body: 'Placeholder.' },
-    { title: 'Diverse portfolio', body: 'Placeholder.' },
-    { title: 'Expert team', body: 'Placeholder.' },
-    { title: 'Customer focus', body: 'Placeholder.' },
-    { title: 'Quality assurance', body: 'Placeholder.' },
   ],
 }
 

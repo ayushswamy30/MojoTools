@@ -7,7 +7,6 @@ import { PlaceholderVisual } from '@/components/ui/placeholder-visual'
 import { SectionTitle } from '@/components/ui/section-title'
 import { BrandCard } from '@/components/marketing/brand-card'
 import { CtaBand } from '@/components/marketing/cta-band'
-import { FeatureCards } from '@/components/marketing/feature-cards'
 import { PageHero } from '@/components/marketing/page-hero'
 import { StatsStrip } from '@/components/marketing/stats-strip'
 import { ValuesAccordion } from '@/components/marketing/values-accordion'
@@ -78,13 +77,6 @@ export default async function AboutPage() {
               </li>
             ))}
           </ol>
-        </Container>
-      </section>
-
-      <section aria-labelledby="about-why-title" className="py-16">
-        <Container>
-          <SectionTitle id="about-why-title" title={a.whyTitle} />
-          <FeatureCards items={about.whyChoose} />
         </Container>
       </section>
 
