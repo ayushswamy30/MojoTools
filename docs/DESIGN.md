@@ -158,6 +158,7 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 | `SectionTitle` | R0 | Real heading level + yellow rule |
 | `CategoryTiles` | R0 / R1 | **R0:** showcase tiles; click opens the enquiry form pre-filled with the category. **R1:** link to `/shop/c/...` with item counts |
 | `BrandStrip` | R0 | **Infinite right-to-left marquee** (owner, 30 Oct 2026; replaces the earlier static-grid rule, CHANGELOG A-5). Pauses on hover and keyboard focus; still under reduced motion; repeat copies are `aria-hidden` + `inert`. 🟡 Open: touch screens have no way to pause it, so WCAG 2.2.2 is not fully met there; add a pause button before launch. |
+| `FeatureCards` | R0 | Home only (removed from About, owner 31 Oct 2026). Lead point as an ink card (yellow seal icon, Archivo 125% uppercase heading, hazard-tape bottom edge); the other three as ink rows (`ink-700` border) with a custom two-tone yellow icon on an `ink-700` block, numbered 01–04 in mono. All four cards are dark (owner, 1 Nov 2026). Hover: border to yellow, lift only without reduced motion |
 | `StatsStrip` | R0 | Count-up animation only without reduced motion; final values in the DOM (§8.3) |
 | `ValuesAccordion` | R0 | Radix Accordion; yellow +/– icons on dark; `aria-expanded` |
 | `WhyChooseCards` | R0 | — |
@@ -248,7 +249,7 @@ HOME — R0 (desktop)
 │   ⏸  ‹ 1 2 3 ━━ ›                                                    │
 ├ Category tiles (8, showcase → enquiry) ───────────────────────────────┤
 ├ Brands we distribute (infinite marquee) · View all brands ────────────┤
-├ Why choose Mojo (4 cards) + Stats strip ──────────────────────────────┤
+├ Why Mojo Tools (1 dark lead card + 3 stacked, custom icons) + Stats ──┤
 ├ Testimonials (real only; hide section if none) ───────────────────────┤
 ├ CTA band: Buying in bulk? Get a quote [REQUEST A QUOTE] [WHATSAPP] ──┤
 ├ Visit us band (warehouse photo, address, hours, directions) ──────────┤
@@ -414,9 +415,7 @@ was at 60% zoom — design at comfortable reading size) and khandelwalbusar.com.
    "Our Mission" (short paragraph), "Values" accordion with 5 items (one expanded),
    yellow + / – icons on ink, or ink icons on light. Show focus on an accordion header.
 4. Our story timeline: 5 milestones, horizontal on desktop, vertical on mobile.
-5. "Why choose Mojo Tools": 5 cards: Wide reach, Diverse portfolio, Expert team,
-   Customer focus, Quality assurance.
-6. Brands strip + CTA band to Contact.
+5. Brands strip + CTA band to Contact.
 ```
 
 ### Prompt 4 — Brands / Distributors
