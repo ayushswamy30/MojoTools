@@ -67,11 +67,11 @@ function FeatureIcon({ name, className }: { name: IconName; className?: string }
   )
 }
 
-// Hazard-tape edge, decorative: wipes in from the left while the card is hovered.
+// Hazard-tape edge, decorative: rises up from below the card edge while the card is hovered.
 const tape = (
   <span
     aria-hidden="true"
-    className="absolute inset-x-0 bottom-0 h-2 origin-left scale-x-0 bg-[repeating-linear-gradient(-45deg,var(--color-brand-yellow)_0_12px,var(--color-ink-900)_12px_24px)] group-hover:scale-x-100 motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-brand"
+    className="absolute inset-x-0 bottom-0 h-2 translate-y-full opacity-0 bg-[repeating-linear-gradient(-45deg,var(--color-brand-yellow)_0_12px,var(--color-ink-900)_12px_24px)] group-hover:translate-y-0 group-hover:opacity-100 motion-safe:transition-[translate,opacity] motion-safe:duration-500 motion-safe:ease-[cubic-bezier(0.22,1,0.36,1)]"
   />
 )
 
