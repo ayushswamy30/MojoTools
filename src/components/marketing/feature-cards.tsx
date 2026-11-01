@@ -67,6 +67,14 @@ function FeatureIcon({ name, className }: { name: IconName; className?: string }
   )
 }
 
+// Hazard-tape edge, decorative: wipes in from the left while the card is hovered.
+const tape = (
+  <span
+    aria-hidden="true"
+    className="absolute inset-x-0 bottom-0 h-2 origin-left scale-x-0 bg-[repeating-linear-gradient(-45deg,var(--color-brand-yellow)_0_12px,var(--color-ink-900)_12px_24px)] group-hover:scale-x-100 motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-brand"
+  />
+)
+
 /** Home "Why Mojo Tools": one large lead card, the other three stacked beside it; all on ink. */
 export function FeatureCards({
   items,
@@ -77,24 +85,19 @@ export function FeatureCards({
   if (!lead) return null
   return (
     <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-5 lg:grid-rows-3">
-      <li className="on-dark relative flex flex-col overflow-hidden rounded-md bg-ink-900 p-8 md:col-span-2 md:p-10 lg:row-span-3">
-        <span className="font-mono text-sm text-steel-400">01</span>
-        <FeatureIcon name={lead.icon} className="mt-8 size-28 text-brand-yellow md:size-36" />
+      <li className="on-dark group relative flex flex-col overflow-hidden rounded-md bg-ink-900 p-8 md:col-span-2 md:p-10 lg:row-span-3">
+        <FeatureIcon name={lead.icon} className="size-28 text-brand-yellow md:size-36" />
         <h3 className="mt-auto pt-10 text-2xl leading-tight font-extrabold text-white uppercase [font-stretch:125%] md:text-3xl">
           {lead.title}
         </h3>
         <p className="mt-4 max-w-sm text-lg text-steel-200">{lead.body}</p>
-        {/* Hazard-tape edge, decorative. */}
-        <span
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-2 bg-[repeating-linear-gradient(-45deg,var(--color-brand-yellow)_0_12px,var(--color-ink-900)_12px_24px)]"
-        />
+        {tape}
       </li>
       {rest.map((item, index) => (
         <li
           key={item.title}
           className={cn(
-            'on-dark flex items-center gap-4 rounded-md border border-ink-700 bg-ink-900 p-6 transition-[transform,border-color] duration-200 ease-brand md:gap-6 md:p-7 lg:col-span-3',
+            'on-dark group relative flex items-center gap-4 overflow-hidden rounded-md border border-ink-700 bg-ink-900 p-6 transition-[transform,border-color] duration-200 ease-brand md:gap-6 md:p-7 lg:col-span-3',
             'hover:border-brand-yellow motion-safe:hover:-translate-y-0.5',
             index === rest.length - 1 && 'md:col-span-2',
           )}
@@ -103,12 +106,12 @@ export function FeatureCards({
             <FeatureIcon name={item.icon} className="size-11 text-brand-yellow md:size-16" />
           </span>
           <div>
-            <span className="font-mono text-xs text-steel-400">0{index + 2}</span>
-            <h3 className="mt-1 text-xl leading-snug font-extrabold text-white [font-stretch:112%] md:text-2xl">
+            <h3 className="text-xl leading-snug font-extrabold text-white [font-stretch:112%] md:text-2xl">
               {item.title}
             </h3>
             <p className="mt-2 text-base text-steel-200">{item.body}</p>
           </div>
+          {tape}
         </li>
       ))}
     </ul>
