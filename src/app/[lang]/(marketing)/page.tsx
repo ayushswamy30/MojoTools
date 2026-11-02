@@ -85,27 +85,27 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      <section aria-labelledby="brands-title" className="bg-steel-50 py-16">
+      <section aria-labelledby="brands-title" className="on-dark bg-ink-900 py-16">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4">
-            <SectionTitle id="brands-title" title={dict.home.brandsTitle} className="mb-0" />
+            <SectionTitle id="brands-title" title={dict.home.brandsTitle} onDark className="mb-0" />
             <Link
               href="/distributorship"
-              className="inline-flex min-h-11 items-center font-semibold text-ink-900 underline underline-offset-4"
+              className="inline-flex min-h-11 items-center font-semibold text-white underline decoration-brand-yellow decoration-2 underline-offset-4 hover:text-brand-yellow"
             >
               {dict.home.viewAllBrands}
             </Link>
           </div>
         </Container>
-        {/* Pauses on hover/focus so the moving strip can be stopped (WCAG 2.2.2). */}
-        <div className="group mt-8 overflow-hidden">
+        {/* Pauses on hover/focus so the moving strip can be stopped (WCAG 2.2.2). Edges fade into the ink. */}
+        <div className="group mt-10 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] py-2">
           <div className="flex w-max animate-marquee group-focus-within:[animation-play-state:paused] group-hover:[animation-play-state:paused]">
             {/* 4 copies so half the track still spans wide screens; only the first is exposed to AT/keyboard. */}
             {[0, 1, 2, 3].map((copy) => (
               <ul key={copy} className="flex" aria-hidden={copy > 0 || undefined} inert={copy > 0}>
                 {featured.map((brand) => (
                   <li key={brand.slug} className="w-52 shrink-0 pr-4">
-                    <BrandCard brand={brand} />
+                    <BrandCard brand={brand} onDark />
                   </li>
                 ))}
               </ul>
