@@ -1,15 +1,21 @@
 import type { Metadata } from 'next'
-import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
-import Link from 'next/link'
-
-import { brandsForCategory, business, categories, whatsappHref } from '@/features/content/site'
-import { getDictionary, t } from '@/i18n/dictionary'
+import { Suspense } from 'react'
+import { business, categories, whatsappHref } from '@/features/content/site'
+import {
+  brandName,
+  findProduct,
+  isSampleCatalogue,
+  productsInCategory,
+} from '@/features/content/products'
+import { getDictionary, t, type Dictionary } from '@/i18n/dictionary'
 import en from '@/i18n/messages/en.json'
-import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
-import { CategoryIcon } from '@/components/marketing/category-icon'
+import { CategoryArt } from '@/components/marketing/category-art'
+import { CategoryStrip } from '@/components/marketing/category-strip'
 import { CtaBand } from '@/components/marketing/cta-band'
 import { PageHero } from '@/components/marketing/page-hero'
+import { ProductCard } from '@/components/marketing/product-card'
+import { ProductDialog } from '@/components/marketing/product-dialog'
 
 export const metadata: Metadata = {
   title: en.productsPage.metaTitle,
@@ -17,11 +23,105 @@ export const metadata: Metadata = {
   alternates: { canonical: '/products' },
 }
 
+const defaultCategory = categories[0]!
+
+const pick = (value: string | string[] | undefined) => (Array.isArray(value) ? value[0] : value)
+const categoryHref = (slug: string) => `/products?category=${slug}`
+
 /**
- * R0 Products page (DECISIONS P12): category overview with enquiry CTAs.
- * In R1 each category links into the shop listing (`/shop/c/[category]`).
+ * Products: one category at a time (Power Tools by default), switched from the strip via
+ * ?category=…; ?product=… opens the detail box over the listing. Prices exclude GST.
  */
-export default async function ProductsPage() {
+function Catalog({
+  dict,
+  categorySlug,
+  productSlug,
+}: {
+  dict: Dictionary
+  categorySlug?: string
+  productSlug?: string
+}) {
+  const p = dict.productsPage
+  const product = findProduct(productSlug)
+  const category =
+    categories.find((c) => c.slug === (product?.categorySlug ?? categorySlug)) ?? defaultCategory
+  const items = productsInCategory(category)
+  const labels = { sampleBadge: p.sampleBadge, plusGst: p.plusGst, off: p.off }
+
+  return (
+    <>
+      <CategoryStrip categories={categories} activeSlug={category.slug} label={p.categoriesLabel} />
+
+      <section aria-labelledby="category-title" className="mt-10">
+        <div className="flex items-center gap-4">
+          <CategoryArt name={category.icon} className="size-14 shrink-0 text-ink-900" />
+          <h2
+            id="category-title"
+            className="text-2xl leading-tight font-extrabold uppercase [font-stretch:125%] md:text-3xl"
+          >
+            {category.name}
+          </h2>
+        </div>
+        {isSampleCatalogue ? (
+          <p className="mt-4 rounded-sm border-l-4 border-brand-yellow bg-brand-yellow-soft px-4 py-2 text-sm text-ink-900">
+            {p.sampleNote}
+          </p>
+        ) : null}
+
+        {items.length > 0 ? (
+          <ul className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
+            {items.map((item) => (
+              <li key={item.slug}>
+                <ProductCard
+                  product={item}
+                  icon={category.icon}
+                  brand={brandName(item.brandSlug)}
+                  href={`${categoryHref(category.slug)}&product=${item.slug}`}
+                  labels={labels}
+                />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="mt-8">{p.empty}</p>
+        )}
+      </section>
+
+      {product ? (
+        <ProductDialog
+          key={product.slug}
+          product={product}
+          icon={category.icon}
+          brand={brandName(product.brandSlug)}
+          closeHref={categoryHref(category.slug)}
+          quoteHref={`/quote?${new URLSearchParams({
+            type: 'quote',
+            category: category.slug,
+            brand: product.brandSlug,
+            message: t(p.quoteMessage, { product: product.name, sku: product.sku }),
+          })}`}
+          whatsappHref={whatsappHref(`Hi, I'm looking for ${product.name} (${product.sku})`)}
+          labels={{ ...labels, ...p, opensNewTab: dict.chrome.opensNewTab }}
+        />
+      ) : null}
+    </>
+  )
+}
+
+async function CatalogFromUrl({
+  dict,
+  searchParams,
+}: {
+  dict: Dictionary
+  searchParams: PageProps<'/[lang]/products'>['searchParams']
+}) {
+  const params = await searchParams
+  return (
+    <Catalog dict={dict} categorySlug={pick(params.category)} productSlug={pick(params.product)} />
+  )
+}
+
+export default async function ProductsPage({ searchParams }: PageProps<'/[lang]/products'>) {
   const dict = await getDictionary()
   const p = dict.productsPage
   return (
@@ -33,86 +133,11 @@ export default async function ProductsPage() {
         breadcrumbLabel={dict.chrome.breadcrumb}
       />
 
-      <nav aria-label={p.jumpTo} className="border-b border-steel-200 bg-steel-50">
-        <Container>
-          <ul className="flex gap-2 overflow-x-auto py-3">
-            {categories.map((category) => (
-              <li key={category.slug} className="shrink-0">
-                <a
-                  href={`#${category.slug}`}
-                  className="inline-flex min-h-11 items-center gap-2 rounded-full border border-steel-400 bg-white px-4 text-sm font-semibold text-ink-900 hover:bg-steel-100"
-                >
-                  <CategoryIcon name={category.icon} className="size-4" />
-                  {category.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </nav>
-
-      <Container className="py-12">
-        <ul className="grid gap-6 md:grid-cols-2">
-          {categories.map((category) => {
-            const categoryBrands = brandsForCategory(category)
-            return (
-              <li key={category.slug} id={category.slug} className="scroll-mt-32">
-                <article
-                  aria-labelledby={`${category.slug}-title`}
-                  className="flex h-full flex-col rounded-md border border-steel-200 bg-white p-6 shadow-card"
-                >
-                  <div className="flex items-center gap-4">
-                    <span className="flex size-14 shrink-0 items-center justify-center rounded-md bg-steel-100">
-                      <CategoryIcon name={category.icon} className="size-7 text-ink-900" />
-                    </span>
-                    <h2 id={`${category.slug}-title`} className="text-2xl font-bold">
-                      {category.name}
-                    </h2>
-                  </div>
-                  <p className="mt-4">{category.description}</p>
-                  <div className="mt-4">
-                    <h3 className="font-sans text-sm font-semibold tracking-wide text-steel-500 uppercase">
-                      {p.brandsLabel}
-                    </h3>
-                    {categoryBrands.length > 0 ? (
-                      <ul className="mt-2 flex flex-wrap gap-2">
-                        {categoryBrands.map((brand) => (
-                          <li key={brand.slug}>
-                            <Link
-                              href={`/distributorship/${brand.slug}`}
-                              className="inline-flex min-h-11 items-center rounded-sm bg-steel-100 px-3 text-sm font-semibold text-ink-900 underline-offset-4 hover:underline"
-                            >
-                              {brand.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p className="mt-2 text-sm">{p.anyBrand}</p>
-                    )}
-                  </div>
-                  <div className="mt-auto flex flex-wrap gap-3 pt-6">
-                    <Link
-                      href={`/quote?type=quote&category=${category.slug}`}
-                      className={buttonVariants({ variant: 'primary' })}
-                    >
-                      {t(p.enquire, { category: category.name })}
-                    </Link>
-                    <a
-                      href={whatsappHref(`Hi, I'm looking for ${category.name}`)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={buttonVariants({ variant: 'outline' })}
-                    >
-                      <WhatsAppIcon className="size-4" /> {p.whatsapp}
-                      <span className="sr-only"> {dict.chrome.opensNewTab}</span>
-                    </a>
-                  </div>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
+      <Container className="py-8 md:py-12">
+        {/* The static shell shows the default category; the URL's choice streams in over it. */}
+        <Suspense fallback={<Catalog dict={dict} />}>
+          <CatalogFromUrl dict={dict} searchParams={searchParams} />
+        </Suspense>
       </Container>
 
       <CtaBand

@@ -137,7 +137,7 @@
     "ctaWhatsapp": "Chat on WhatsApp",
     "visitTitle": "Visit our store",
     "visitLink": "Contact & directions",
-    "viewAllProducts": "View all products"
+    "viewAllProducts": "View all categories"
   },
   "about": {
     "metaTitle": "About us",
@@ -181,14 +181,23 @@
   },
   "productsPage": {
     "metaTitle": "Products",
-    "metaDescription": "Tools, machinery and hardware categories supplied by Mojo Tools.",
+    "metaDescription": "Power tools, hand tools, machinery, measuring, abrasives, fasteners, safety and welding products from Mojo Tools.",
     "title": "Products",
-    "subtitle": "Browse what we supply. Our online catalogue opens with the shop; until then, send an enquiry for prices and availability.",
-    "jumpTo": "Jump to a category",
-    "brandsLabel": "Brands",
-    "anyBrand": "Many brands — ask us for options.",
-    "enquire": "Enquire about {category}",
-    "whatsapp": "Ask on WhatsApp"
+    "subtitle": "Pick a category to see what we stock. Prices exclude GST.",
+    "categoriesLabel": "Product categories",
+    "sampleNote": "Sample products and prices, shown to preview the layout. Our real catalogue is on its way.",
+    "sampleBadge": "Sample",
+    "plusGst": "+ GST",
+    "exclGst": "Price excludes GST",
+    "off": "{amount} off",
+    "itemCode": "Item code",
+    "brand": "Brand",
+    "specs": "Specifications",
+    "getQuote": "Get a quote",
+    "whatsapp": "Ask on WhatsApp",
+    "close": "Close",
+    "empty": "No products listed here yet. Ask us and we will find it for you.",
+    "quoteMessage": "I would like a quote for {product} ({sku})."
   },
   "awardsPage": {
     "metaTitle": "Awards & recognition",

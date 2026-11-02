@@ -409,6 +409,7 @@ Supports the launch campaign targets in [`LAUNCH-PLAN.md`](LAUNCH-PLAN.md).
 | Piece | R0 use |
 |---|---|
 | `(marketing)` route group | Home, About, Brands, `/brands/[brand]`, Contact, `/policies/{terms,privacy,accessibility}` |
+| `/products` | One category at a time: `?category=<slug>` (default Power Tools) switches the listing from a horizontal strip; `?product=<slug>` opens the product detail as a dialog over it. Sample products live in `src/features/content/products.ts` (`// SEED`, prices in paise, excluding GST) until the owner list moves to the R1 `products` table |
 | Tables | `brands`, `categories` (top level, `is_active`), `enquiries`, `newsletter_subscribers` |
 | Buckets | `public-media`, `enquiry-attachments` |
 | Features | `enquiries`, `content`, `analytics` |
