@@ -23,8 +23,9 @@ export function SectionTitle({
       <Heading
         id={id}
         className={cn(
-          'text-2xl font-bold md:text-3xl',
-          Heading === 'h1' && 'text-3xl font-extrabold uppercase [font-stretch:125%] md:text-4xl',
+          // Same face as the wordmark: Archivo extrabold, uppercase, 125% width.
+          'text-2xl leading-tight font-extrabold uppercase [font-stretch:125%] md:text-3xl',
+          Heading === 'h1' && 'text-3xl md:text-4xl',
           onDark && 'text-white',
         )}
       >
