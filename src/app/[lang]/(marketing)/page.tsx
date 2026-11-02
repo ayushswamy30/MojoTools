@@ -12,7 +12,9 @@ import {
   whyChoose,
 } from '@/features/content/site'
 import { getDictionary, t } from '@/i18n/dictionary'
+import { cn } from '@/lib/cn'
 import { publicEnv } from '@/lib/public-env'
+import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { PlaceholderVisual } from '@/components/ui/placeholder-visual'
 import { SectionTitle } from '@/components/ui/section-title'
@@ -78,7 +80,10 @@ export default async function HomePage() {
           <CategoryTiles categories={categories} enquireLabel={dict.home.enquire} />
           <Link
             href="/products"
-            className="mt-6 inline-flex min-h-11 items-center font-semibold text-ink-900 underline underline-offset-4"
+            className={cn(
+              buttonVariants({ variant: 'outline', size: 'lg' }),
+              'mx-auto mt-10 flex w-full max-w-md tracking-[0.02em] uppercase',
+            )}
           >
             {dict.home.viewAllProducts}
           </Link>

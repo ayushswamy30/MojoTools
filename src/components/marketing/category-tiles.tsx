@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import type { Category } from '@/features/content/site'
-import { CategoryIcon } from './category-icon'
+import { CategoryArt } from './category-art'
 
-/** R0: showcase tiles that open the enquiry form pre-filled (DECISIONS P10). R1 links to the shop. */
+/**
+ * Picture-first category grid: a recognisable product drawing over a plain name, no card chrome,
+ * so buyers who don't know the trade names can still find their way.
+ * R0: tiles open the enquiry form pre-filled (DECISIONS P10). R1 links to the shop.
+ */
 export function CategoryTiles({
   categories,
   enquireLabel,
@@ -11,24 +15,22 @@ export function CategoryTiles({
   enquireLabel: string
 }) {
   return (
-    <ul className="grid grid-cols-2 gap-4 md:grid-cols-4">
+    <ul className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4">
       {categories.map((category) => (
         <li key={category.slug}>
           <Link
             href={`/quote?type=quote&category=${category.slug}`}
-            className="group flex h-full flex-col rounded-md border border-steel-200 bg-steel-100 p-5 transition-shadow duration-150 hover:shadow-hover"
+            className="group flex h-full flex-col items-center rounded-md px-2 py-3 text-center"
           >
-            <span className="flex size-14 items-center justify-center rounded-md bg-white">
-              <CategoryIcon name={category.icon} className="size-7 text-ink-900" />
-            </span>
-            <span className="mt-4 font-display text-lg font-bold text-ink-900">
+            <CategoryArt
+              name={category.icon}
+              className="size-24 text-ink-900 transition-transform duration-200 ease-brand motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:scale-105 md:size-28"
+            />
+            <span className="mt-4 text-base font-semibold text-ink-900 underline-offset-4 group-hover:underline">
+              <span className="sr-only">{enquireLabel}: </span>
               {category.name}
             </span>
-            <span className="mt-1 text-sm text-steel-600">{category.blurb}</span>
-            <span className="mt-3 text-sm font-semibold text-ink-900 underline-offset-4 group-hover:underline">
-              {enquireLabel}
-              <span className="sr-only">: {category.name}</span>
-            </span>
+            <span className="mt-1 text-sm text-steel-500">{category.blurb}</span>
           </Link>
         </li>
       ))}

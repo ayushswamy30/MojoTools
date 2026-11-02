@@ -5,6 +5,7 @@ const pages = [
   '/',
   '/about',
   '/products',
+  '/products?category=welding&product=welding-electrodes-3-15-mm-5-kg',
   '/awards',
   '/distributorship',
   '/distributorship/brand-a',
@@ -89,12 +90,34 @@ test('main menu: no Home link, About · Products · Distributorship · Awards ·
   await expect(page).toHaveURL(/\/$/)
 })
 
-test('products page lists categories with enquiry links', async ({ page }) => {
+test('products page: Power Tools by default, strip switches category, product opens a detail box', async ({
+  page,
+}) => {
   await page.goto('/products')
   await expect(page.getByRole('heading', { level: 2, name: 'Power Tools' })).toBeVisible()
-  await page.getByRole('link', { name: 'Enquire about Power Tools' }).click()
-  await expect(page).toHaveURL(/\/quote\?type=quote&category=power-tools$/)
-  await expect(page.getByLabel(/^Category/)).toHaveValue('power-tools')
+  const strip = page.getByRole('navigation', { name: 'Product categories' })
+  await expect(strip.getByRole('link', { name: 'Power Tools' })).toHaveAttribute(
+    'aria-current',
+    'page',
+  )
+
+  await strip.getByRole('link', { name: 'Welding' }).click()
+  await expect(page).toHaveURL(/\/products\?category=welding$/)
+  await expect(page.getByRole('heading', { level: 2, name: 'Welding' })).toBeVisible()
+
+  await page.getByRole('link', { name: /Welding Electrodes/ }).click()
+  const dialog = page.getByRole('dialog', { name: /Welding Electrodes/ })
+  await expect(dialog).toBeVisible()
+  await expect(page).toHaveURL(/product=welding-electrodes-3-15-mm-5-kg/)
+
+  await page.keyboard.press('Escape')
+  await expect(dialog).toBeHidden()
+  await expect(page).toHaveURL(/\/products\?category=welding$/)
+
+  await page.getByRole('link', { name: /Welding Electrodes/ }).click()
+  await page.getByRole('dialog').getByRole('link', { name: 'Get a quote' }).click()
+  await expect(page).toHaveURL(/\/quote\?type=quote&category=welding/)
+  await expect(page.getByLabel(/^Category/)).toHaveValue('welding')
 })
 
 test('old /brands links redirect to Distributorship', async ({ page }) => {

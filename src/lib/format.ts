@@ -10,6 +10,19 @@ export function formatInr(paise: number): string {
   return inrFormatter.format(paise / 100)
 }
 
+const priceFormatter = new Intl.NumberFormat('en-IN', {
+  style: 'currency',
+  currency: 'INR',
+  minimumFractionDigits: 2,
+  trailingZeroDisplay: 'stripIfInteger',
+})
+
+/** Shop display price: whole rupees drop the ".00" (₹1,599), paise still show (₹1,599.50). */
+export function formatPrice(paise: number): string {
+  if (!Number.isInteger(paise)) throw new Error('formatPrice expects integer paise')
+  return priceFormatter.format(paise / 100)
+}
+
 const dateFormatter = new Intl.DateTimeFormat('en-GB', {
   day: '2-digit',
   month: 'short',

@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { formatDate, formatIndianPhone, formatInr, normaliseIndianMobile, telHref } from './format'
+import {
+  formatDate,
+  formatIndianPhone,
+  formatInr,
+  formatPrice,
+  normaliseIndianMobile,
+  telHref,
+} from './format'
 
 describe('formatInr', () => {
   it('formats paise with Indian grouping', () => {
@@ -7,6 +14,13 @@ describe('formatInr', () => {
   })
   it('rejects non-integer paise', () => {
     expect(() => formatInr(10.5)).toThrow()
+  })
+})
+
+describe('formatPrice', () => {
+  it('drops .00 on whole rupees and keeps paise otherwise', () => {
+    expect(formatPrice(159900)).toBe('₹1,599')
+    expect(formatPrice(159950)).toBe('₹1,599.50')
   })
 })
 
