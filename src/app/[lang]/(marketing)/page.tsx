@@ -98,7 +98,7 @@ export default async function HomePage() {
           </div>
         </Container>
         {/* Pauses on hover/focus so the moving strip can be stopped (WCAG 2.2.2). Edges fade into the ink. */}
-        <div className="group mt-10 overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div className="group mt-10 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] py-2">
           <div className="flex w-max animate-marquee group-focus-within:[animation-play-state:paused] group-hover:[animation-play-state:paused]">
             {/* 4 copies so half the track still spans wide screens; only the first is exposed to AT/keyboard. */}
             {[0, 1, 2, 3].map((copy) => (
