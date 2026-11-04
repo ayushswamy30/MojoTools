@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { MapPin } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import {
   brands,
   business,
@@ -7,6 +7,7 @@ import {
   heroSlides,
   isDemoContent,
   stats,
+  storeGallery,
   testimonials,
   whatsappHref,
   whyChoose,
@@ -24,6 +25,7 @@ import { CtaBand } from '@/components/marketing/cta-band'
 import { FeatureCards } from '@/components/marketing/feature-cards'
 import { HeroCarousel } from '@/components/marketing/hero-carousel'
 import { StatsStrip } from '@/components/marketing/stats-strip'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -161,30 +163,73 @@ export default async function HomePage() {
       />
 
       <section aria-labelledby="visit-title" className="py-16">
-        <Container className="grid items-center gap-8 md:grid-cols-2">
-          <PlaceholderVisual
-            tone="warehouse"
-            label="Placeholder: warehouse photo"
-            className="aspect-[4/3] rounded-md"
+        <Container>
+          <SectionTitle
+            id="visit-title"
+            title={dict.home.visitTitle}
+            subtitle={dict.home.visitSubtitle}
           />
-          <div>
-            <SectionTitle id="visit-title" title={dict.home.visitTitle} />
-            <p className="flex gap-3">
-              <MapPin aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-ink-900" />
-              <span>
-                {business.address.line1}, {business.address.city}, {business.address.state}{' '}
-                {business.address.pincode}
-                <br />
-                {business.hours}
-              </span>
-            </p>
-            <Link
-              href="/contact"
-              className="mt-6 inline-flex min-h-11 items-center font-semibold text-ink-900 underline underline-offset-4"
-            >
-              {dict.home.visitLink}
-            </Link>
-          </div>
+          {/* Mosaic: first photo is the large feature tile; spans fill a 4×2 grid on desktop. */}
+          <ul className="grid auto-rows-[200px] grid-cols-2 gap-3 md:auto-rows-[240px] md:gap-4 lg:grid-cols-4">
+            {storeGallery.map((item, i) => (
+              <li
+                key={item.caption}
+                className={cn(
+                  i === 0 && 'col-span-2 md:row-span-2',
+                  i === 1 && 'lg:col-span-2',
+                  i === 3 && 'col-span-2 lg:col-span-1',
+                )}
+              >
+                <figure className="group relative h-full overflow-hidden rounded-md bg-ink-900">
+                  <div className="absolute inset-0 transition-transform duration-500 ease-brand motion-safe:group-hover:scale-105">
+                    {item.src ? (
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        fill
+                        sizes={i === 0 ? '(min-width: 1024px) 50vw, 100vw' : '(min-width: 1024px) 25vw, 50vw'}
+                        className="object-cover"
+                      />
+                    ) : (
+                      <PlaceholderVisual tone={item.tone} className="absolute inset-0" />
+                    )}
+                  </div>
+                  {/* Scrim keeps the caption readable over any photo. */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent"
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 flex flex-col gap-1 p-4 md:p-5">
+                    <span className="font-mono text-xs text-brand-yellow md:text-sm">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span
+                      className={cn(
+                        'font-display leading-tight font-extrabold text-white uppercase [font-stretch:125%]',
+                        i === 0 ? 'text-xl md:text-2xl' : 'text-sm md:text-lg',
+                      )}
+                    >
+                      {item.caption}
+                    </span>
+                  </figcaption>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-brand-yellow transition-transform duration-300 ease-brand group-hover:scale-x-100"
+                  />
+                </figure>
+              </li>
+            ))}
+          </ul>
+          <Link
+            href="/contact"
+            className="group mt-8 inline-flex min-h-11 items-center gap-2 font-semibold text-ink-900 underline decoration-brand-yellow decoration-2 underline-offset-4"
+          >
+            {dict.home.visitLink}
+            <ArrowRight
+              aria-hidden="true"
+              className="size-4 transition-transform duration-200 ease-brand motion-safe:group-hover:translate-x-1"
+            />
+          </Link>
         </Container>
       </section>
     </>
