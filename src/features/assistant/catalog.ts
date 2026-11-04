@@ -70,7 +70,7 @@ export const sitePages = {
   products: { label: 'Products', href: '/products' },
   distributorship: { label: 'Distributorship (our brands)', href: '/distributorship' },
   awards: { label: 'Awards', href: '/awards' },
-  contact: { label: 'Contact & directions', href: '/contact' },
+  contact: { label: 'Contact and Visit Us', href: '/contact' },
   quote: { label: 'Get a quote', href: '/quote' },
   privacy: { label: 'Privacy policy', href: '/policies/privacy' },
 } as const

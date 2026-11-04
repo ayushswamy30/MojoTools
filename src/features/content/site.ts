@@ -258,6 +258,22 @@ export const about = {
   ],
 }
 
+/**
+ * Home "Visit our store" gallery. Real photos only (A8): set `src` (a file in public/,
+ * e.g. '/media/shop-front.jpg') and that tile shows the photo instead of the placeholder.
+ */
+export const storeGallery: {
+  caption: string
+  alt: string
+  src?: string
+  tone: 'workbench' | 'warehouse' | 'jobsite'
+}[] = [
+  { caption: 'Our shop', alt: 'Mojo Tools shop front', tone: 'warehouse' },
+  { caption: 'Tools in stock', alt: 'Power tools on the shop shelves', tone: 'workbench' },
+  { caption: 'Warehouse', alt: 'Stock racks in the Mojo Tools warehouse', tone: 'jobsite' },
+  { caption: 'Our office', alt: 'The Mojo Tools office and sales counter', tone: 'warehouse' },
+]
+
 /** Real testimonials only (RULES §11). The home-page section is hidden while this is empty. */
 export const testimonials: { quote: string; name: string; company: string }[] = []
 
