@@ -67,11 +67,11 @@ function FeatureIcon({ name, className }: { name: IconName; className?: string }
   )
 }
 
-// Hazard-tape edge, decorative: rises up from below the card edge while the card is hovered.
-const tape = (
+// Yellow edge, decorative: sweeps left to right along the bottom while hovered (same as the store gallery tiles).
+const edge = (
   <span
     aria-hidden="true"
-    className="absolute inset-x-0 bottom-0 h-2 translate-y-full bg-[repeating-linear-gradient(-45deg,var(--color-brand-yellow)_0_12px,var(--color-ink-900)_12px_24px)] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 motion-safe:transition-[translate,opacity] motion-safe:duration-500 motion-safe:ease-[cubic-bezier(0.22,1,0.36,1)]"
+    className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-brand-yellow transition-transform duration-300 ease-brand group-hover:scale-x-100"
   />
 )
 
@@ -91,7 +91,7 @@ export function FeatureCards({
           {lead.title}
         </h3>
         <p className="mt-4 max-w-sm text-lg text-steel-200">{lead.body}</p>
-        {tape}
+        {edge}
       </li>
       {rest.map((item, index) => (
         <li
@@ -111,7 +111,7 @@ export function FeatureCards({
             </h3>
             <p className="mt-2 text-base text-steel-200">{item.body}</p>
           </div>
-          {tape}
+          {edge}
         </li>
       ))}
     </ul>
