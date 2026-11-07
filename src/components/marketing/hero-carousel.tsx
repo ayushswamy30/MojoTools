@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Pause, Play } from 'lucide-react'
 import type { HeroSlide } from '@/features/content/site'
@@ -93,11 +94,22 @@ export function HeroCarousel({ slides, labels }: { slides: HeroSlide[]; labels: 
                   active ? 'opacity-100' : 'pointer-events-none opacity-0',
                 )}
               >
-                <PlaceholderVisual
-                  tone={slide.tone}
-                  label="Placeholder photo"
-                  className="absolute inset-0"
-                />
+                {slide.src ? (
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt ?? ''}
+                    fill
+                    priority={i === 0}
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <PlaceholderVisual
+                    tone={slide.tone}
+                    label="Placeholder photo"
+                    className="absolute inset-0"
+                  />
+                )}
                 {/* Scrim keeps white text ≥ 4.5:1 on any photo (DESIGN §8.2). */}
                 <div
                   aria-hidden="true"
