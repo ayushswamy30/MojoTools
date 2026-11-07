@@ -183,27 +183,37 @@ export type HeroSlide = {
   id: string
   headline: [string, string]
   copy: string
-  /** Placeholder visual until real photos arrive (A8). */
+  /** Photo in public/; the placeholder visual shows while it is unset. */
+  src?: string
+  alt?: string
   tone: 'workbench' | 'warehouse' | 'jobsite'
 }
 
+// shortcut: free Unsplash stock photos (no credit required) until the owner's own photos arrive (A8).
+// Sources: unsplash.com/photos/VLPUm5wP5Z0, /Huia4a1GzKM, /OnbSOhz0oig
 export const heroSlides: HeroSlide[] = [
   {
     id: 'jobsite',
     headline: ['Built for the', 'jobsite.'],
     copy: 'Genuine tools and machinery from trusted brands, for contractors, workshops and factories.',
+    src: '/images/hero/jobsite-crew.webp',
+    alt: 'Worker in a hard hat and safety vest measuring timber at a jobsite bench full of power tools',
     tone: 'workbench',
   },
   {
     id: 'one-quote',
     headline: ['Every brand.', 'One quote away.'],
     copy: 'Send us your list and get a priced quote within 1 working day.',
+    src: '/images/hero/tool-wall.webp',
+    alt: 'Pegboard wall of hand and power tools from many brands',
     tone: 'warehouse',
   },
   {
     id: 'trade',
     headline: ['Trade supply,', 'done right.'],
     copy: 'Bulk orders, GST invoices and expert advice from our team.',
+    src: '/images/hero/trade-warehouse.webp',
+    alt: 'Warehouse aisle with tall racks of stocked pallets and a yellow forklift',
     tone: 'jobsite',
   },
 ]
