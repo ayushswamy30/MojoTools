@@ -15,7 +15,6 @@
     "distributorship": "Distributorship",
     "awards": "Awards",
     "contact": "Contact",
-    "whatsappFab": "Chat with us on WhatsApp (opens in a new tab)",
     "opensNewTab": "(opens in a new tab)",
     "logoHome": "home",
     "brandsShort": "Brands"
@@ -233,8 +232,7 @@
     "quickDealer": "Become a dealer",
     "quickDealerPrompt": "How can I become a dealer for Mojo Tools?",
     "quickPerson": "Talk to a person",
-    "quickPersonPrompt": "I'd like to talk to someone from the team.",
-    "whatsappFab": "WhatsApp us"
+    "quickPersonPrompt": "I'd like to talk to someone from the team."
   },
   "policyPage": {
     "lastUpdated": "Last updated: {date}",

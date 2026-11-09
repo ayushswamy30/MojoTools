@@ -147,7 +147,7 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 | `Footer` | R0 / R1 | Trust strip · columns (**R0:** Mojo Tools, Help, Policies; **R1 adds** Shop, My Account) · address · socials · GST badge · payment icons (R1) · full-width **MOJO TOOLS** sign-off wordmark (Archivo Expanded 800, `ink-900`, decorative) on an `ink-800` → `brand-yellow` gradient. From `lg` the gradient spans the whole footer, starting at 35% so link text keeps ≥ 4.5:1; below `lg` it sits behind the wordmark only. No legal bar in R0 (owner, 30 Oct 2026). |
 | `SideWidget` | R2 | Desktop right edge: Recently viewed · Saved list · Cart (count) |
 | `WhatsAppFab` | R0 | Bottom-right, `--whatsapp` fill, 56 px; accessible name "Chat with us on WhatsApp (opens in new tab)"; prefilled message with page/brand; on mobile with the R1 bottom bar it sits above the bar; hidden on PDP mobile when the sticky Add-to-cart bar shows (WhatsApp moves into that bar) |
-| `FloatingActions` | R0 | Bottom-right stack: **WhatsApp** button (WhatsApp logo + "WhatsApp us" label on desktop, `--whatsapp-dark`) above the yellow **"Ask Mojo Mitra"** launcher. WhatsApp hides while the chat is open. |
+| `FloatingActions` | R0 | Bottom-right **Mojo Mitra seal** only (owner, 9 Nov 2026; the floating WhatsApp button was removed, P20). Ink scalloped seal (20 scallops) with a 1.5px yellow edge so it shows on light and dark sections; yellow "ASK MITRA • ASK MITRA •" ring (Archivo extrabold) turning once per 24s; logo wedge fixed in the centre, ✕ while the chat is open. 88px desktop, 72px phone. Hover: grows 5%, ring speeds up (an extra 4s spin layer, so no jump), and an "Ask Mojo Mitra" pill slides out to the left (also on keyboard focus). Reduced motion: no spin. Accessible name comes from a visually hidden label; the art is `aria-hidden`. |
 | `AssistantPanel` (Mojo Mitra) | R0 | 380 px panel (full-width sheet on mobile): header with name, "AI assistant · can make mistakes" and a call button; polite live message log; suggestion chips; tool results as yellow link chips; textarea (Enter sends, Shift+Enter new line); privacy note naming the provider. Offline/preview state shows quick links. |
 | `CookieBanner` | R0 | Bottom bar, **not modal**: Accept all · Reject non-essential (equal prominence) · Manage. Built in-house (no third-party script). Content gets bottom padding while it's shown. |
 
@@ -155,10 +155,11 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 | Component | Rel | Notes |
 |---|---|---|
 | `HeroCarousel` | R0 | See §8.2 for the full accessibility spec |
-| `SectionTitle` | R0 | Real heading level + yellow rule |
+| `SectionTitle` | R0 | Real heading level in the wordmark face (Archivo extrabold, uppercase, 125% width; owner, 2 Nov 2026) + 4px yellow rule |
 | `CategoryTiles` | R0 / R1 | **R0:** showcase tiles; click opens the enquiry form pre-filled with the category. **R1:** link to `/shop/c/...` with item counts |
 | `BrandStrip` | R0 | **Infinite right-to-left marquee** (owner, 30 Oct 2026; replaces the earlier static-grid rule, CHANGELOG A-5). Pauses on hover and keyboard focus; still under reduced motion; repeat copies are `aria-hidden` + `inert`. 🟡 Open: touch screens have no way to pause it, so WCAG 2.2.2 is not fully met there; add a pause button before launch. |
-| `FeatureCards` | R0 | Home only (removed from About, owner 31 Oct 2026). Lead point as an ink card (yellow seal icon, Archivo 125% uppercase heading, hazard-tape bottom edge); the other three as ink rows (`ink-700` border) with a custom two-tone yellow icon on an `ink-700` block, numbered 01–04 in mono. All four cards are dark (owner, 1 Nov 2026). Hover: border to yellow, lift only without reduced motion |
+| `FeatureCards` | R0 | Home only (removed from About, owner 31 Oct 2026). Lead point as an ink card (yellow seal icon, Archivo 125% uppercase heading); the other three as ink rows (`ink-700` border) with a custom two-tone yellow icon on an `ink-700` block, numbered 01–04 in mono. All four cards are dark (owner, 1 Nov 2026). Hover: border to yellow, a yellow bar sweeps left to right along the bottom edge (owner, 8 Nov 2026; replaces the hazard tape), lift only without reduced motion |
+| `StoreGallery` | R0 | Home "Visit our store" (owner, 4 Nov 2026): 4-tile mosaic (shop as the large feature tile, tools in stock, warehouse, office) with mono-numbered captions over a dark scrim; on hover the photo zooms slightly (only without reduced motion) and a yellow bar sweeps along the bottom. Data: `storeGallery` in `site.ts`; tiles show `PlaceholderVisual` until a `src` is set. Followed by a "Contact and Visit Us" link |
 | `StatsStrip` | R0 | Count-up animation only without reduced motion; final values in the DOM (§8.3) |
 | `ValuesAccordion` | R0 | Radix Accordion; yellow +/– icons on dark; `aria-expanded` |
 | `WhyChooseCards` | R0 | — |
@@ -252,7 +253,7 @@ HOME — R0 (desktop)
 ├ Why Mojo Tools (1 dark lead card + 3 stacked, custom icons) + Stats ──┤
 ├ Testimonials (real only; hide section if none) ───────────────────────┤
 ├ CTA band: Buying in bulk? Get a quote [REQUEST A QUOTE] [WHATSAPP] ──┤
-├ Visit us band (warehouse photo, address, hours, directions) ──────────┤
+├ Visit our store: 4-photo gallery mosaic · Contact and Visit Us → ──────┤
 ├ Footer: trust strip · columns · address ──────────────────────────────┤
 └ MOJO TOOLS wordmark on ink → yellow gradient (header slides away here) ┘
                                             (WhatsApp FAB bottom-right)

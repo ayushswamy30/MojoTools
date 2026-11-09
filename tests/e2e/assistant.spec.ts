@@ -16,8 +16,6 @@ test.describe('Mojo Mitra (no AI key: preview mode)', () => {
     await expect(panel).toBeVisible()
     await expect(panel).toContainText("I'm not switched on in this preview yet")
     await expect(panel.getByRole('link', { name: 'Get a quote' })).toBeVisible()
-    // WhatsApp button hides while the panel is open (the panel offers WhatsApp itself).
-    await expect(page.getByRole('link', { name: /WhatsApp us/ })).toBeHidden()
 
     const results = await new AxeBuilder({ page })
       .include('[role="dialog"]')
@@ -32,10 +30,10 @@ test.describe('Mojo Mitra (no AI key: preview mode)', () => {
     await expect(page.getByRole('button', { name: 'Ask Mojo Mitra' })).toBeFocused()
   })
 
-  test('WhatsApp button is labelled and links to WhatsApp', async ({ page }) => {
+  test('seal launcher is the only floating action (no WhatsApp bubble)', async ({ page }) => {
     await page.goto('/')
-    const wa = page.getByRole('link', { name: /WhatsApp us/ })
-    await expect(wa).toHaveAttribute('href', /^https:\/\/wa\.me\//)
+    await expect(page.getByRole('button', { name: 'Ask Mojo Mitra' })).toBeVisible()
+    await expect(page.getByRole('link', { name: /WhatsApp us/ })).toHaveCount(0)
   })
 
   test('chat API reports when the assistant is not configured', async ({ request }) => {
