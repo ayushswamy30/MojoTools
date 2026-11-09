@@ -14,7 +14,7 @@
 
 # Part A — R0: Company site
 
-> **Progress (10 Oct 2026):** Phases 1–4 built with demo content on branch `pre-mojo` (see notes on each task). Open: owner inputs (Phase 0), accounts/deploy (T1.10), real content (Phase 5).
+> **Progress (09 Nov 2026):** Phases 1–4 built with demo content and merged to `main`; owner feedback rounds 3–5 applied (T4.14–T4.16). A preview runs at [mojotools.vercel.app](https://mojotools.vercel.app) (`noindex`). Open: owner inputs (Phase 0), owner's own accounts (T1.10), real content (Phase 5).
 
 ## Phase 0 — Inputs & decisions for R0 (owner)
 - [ ] **T0.1** Confirm R0 defaults: stack (Next.js + Supabase + Vercel), English only, enquiries by email + database (no admin inbox), hero slides in code. → [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md)
@@ -70,12 +70,15 @@
 - [x] **T4.5** Reuse `EnquiryForm` as a "Get a Quote" dialog/page reachable from the header and every CTA. [PS-8] ✅ as a `/quote` page (pre-filled via `?type=&brand=&category=`) rather than a dialog
 - [x] **T4.6** Policy pages from MDX: terms, privacy (DPDP: consent, data requests contact), accessibility statement. [PS-6, GL-9] ✅ (draft text — owner/legal review in T5.1)
 - [x] **T4.7** SEO: metadata, `Organization` + `LocalBusiness` JSON-LD, `BreadcrumbList` on brand pages, OG images, `sitemap.ts` (pages + brands), `robots.ts`. ✅
-- [x] **T4.8** E2E: all R0 pages render and pass axe; enquiry happy path, validation errors, attachment; consent gates GA4. ✅ 54 Playwright tests (desktop + mobile)
-- [x] **T4.9** Products page (`/products`): category cards with description, matching brands, Enquire + WhatsApp CTAs, jump links; added to the menu between About and Brands; Home link removed from the menu (logo goes home). [PS-9] ✅
+- [x] **T4.8** E2E: all R0 pages render and pass axe; enquiry happy path, validation errors, attachment; consent gates GA4. ✅ now 72 Playwright tests (desktop + mobile)
+- [x] **T4.9** Products page (`/products`): category cards with description, matching brands, Enquire + WhatsApp CTAs, jump links; added to the menu between About and Brands; Home link removed from the menu (logo goes home). [PS-9] ✅ (rebuilt with sample products in T4.15)
 - [x] **T4.10** Mobile hamburger moved to the left; drawer slides from the left. [GL-1] ✅
 - [x] **T4.11** Brands renamed to **Distributorship** (`/distributorship`, redirects from `/brands`), "Official distributor" wording and badge. [PS-4] ✅
 - [x] **T4.12** **Awards** page (`/awards`) with placeholder cards. [PS-10] ✅
 - [x] **T4.13** **Mojo Mitra** AI assistant (Gemini/Groq) + labelled WhatsApp button; tests with a mock model; preview mode without keys. [GL-10] ✅
+- [x] **T4.14** Owner round 3 (29–30 Oct): hero keeps rotating on mouse use; infinite brand marquee; footer MOJO TOOLS wordmark on a gradient; header hides over the wordmark; utility strip, legal bar and preview banner removed. ✅ PRs #4–#9
+- [x] **T4.15** Owner round 4 (31 Oct–3 Nov): "Why Mojo Tools" redesign (four dark cards, custom icons); dark brand strip; wordmark-style headings; picture category grid; **Products page with sample products, prices excl. GST and a detail dialog** (P18). Next.js 16.4.3 security upgrade. ✅ PRs #11–#15
+- [x] **T4.16** Owner round 5 (4–8 Nov): "Visit our store" gallery mosaic (P19); yellow sweep hover on store tiles and "Why" cards. ✅ PR #16
 
 **Exit:** company site complete with seed content, responsive, axe clean, enquiries arrive by email and in the database.
 

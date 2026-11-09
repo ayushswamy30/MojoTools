@@ -155,10 +155,11 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 | Component | Rel | Notes |
 |---|---|---|
 | `HeroCarousel` | R0 | See §8.2 for the full accessibility spec |
-| `SectionTitle` | R0 | Real heading level + yellow rule |
+| `SectionTitle` | R0 | Real heading level in the wordmark face (Archivo extrabold, uppercase, 125% width; owner, 2 Nov 2026) + 4px yellow rule |
 | `CategoryTiles` | R0 / R1 | **R0:** showcase tiles; click opens the enquiry form pre-filled with the category. **R1:** link to `/shop/c/...` with item counts |
 | `BrandStrip` | R0 | **Infinite right-to-left marquee** (owner, 30 Oct 2026; replaces the earlier static-grid rule, CHANGELOG A-5). Pauses on hover and keyboard focus; still under reduced motion; repeat copies are `aria-hidden` + `inert`. 🟡 Open: touch screens have no way to pause it, so WCAG 2.2.2 is not fully met there; add a pause button before launch. |
-| `FeatureCards` | R0 | Home only (removed from About, owner 31 Oct 2026). Lead point as an ink card (yellow seal icon, Archivo 125% uppercase heading, hazard-tape bottom edge); the other three as ink rows (`ink-700` border) with a custom two-tone yellow icon on an `ink-700` block, numbered 01–04 in mono. All four cards are dark (owner, 1 Nov 2026). Hover: border to yellow, lift only without reduced motion |
+| `FeatureCards` | R0 | Home only (removed from About, owner 31 Oct 2026). Lead point as an ink card (yellow seal icon, Archivo 125% uppercase heading); the other three as ink rows (`ink-700` border) with a custom two-tone yellow icon on an `ink-700` block, numbered 01–04 in mono. All four cards are dark (owner, 1 Nov 2026). Hover: border to yellow, a yellow bar sweeps left to right along the bottom edge (owner, 8 Nov 2026; replaces the hazard tape), lift only without reduced motion |
+| `StoreGallery` | R0 | Home "Visit our store" (owner, 4 Nov 2026): 4-tile mosaic (shop as the large feature tile, tools in stock, warehouse, office) with mono-numbered captions over a dark scrim; on hover the photo zooms slightly (only without reduced motion) and a yellow bar sweeps along the bottom. Data: `storeGallery` in `site.ts`; tiles show `PlaceholderVisual` until a `src` is set. Followed by a "Contact and Visit Us" link |
 | `StatsStrip` | R0 | Count-up animation only without reduced motion; final values in the DOM (§8.3) |
 | `ValuesAccordion` | R0 | Radix Accordion; yellow +/– icons on dark; `aria-expanded` |
 | `WhyChooseCards` | R0 | — |
@@ -252,7 +253,7 @@ HOME — R0 (desktop)
 ├ Why Mojo Tools (1 dark lead card + 3 stacked, custom icons) + Stats ──┤
 ├ Testimonials (real only; hide section if none) ───────────────────────┤
 ├ CTA band: Buying in bulk? Get a quote [REQUEST A QUOTE] [WHATSAPP] ──┤
-├ Visit us band (warehouse photo, address, hours, directions) ──────────┤
+├ Visit our store: 4-photo gallery mosaic · Contact and Visit Us → ──────┤
 ├ Footer: trust strip · columns · address ──────────────────────────────┤
 └ MOJO TOOLS wordmark on ink → yellow gradient (header slides away here) ┘
                                             (WhatsApp FAB bottom-right)

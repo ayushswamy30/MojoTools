@@ -2,7 +2,7 @@
 
 Mojo Tools trades **tools, machinery and hardware materials**, mostly to B2B buyers (contractors, workshops, factories, resellers) with a smaller B2C walk-in segment. All sales are offline today. This project builds **one website that is both the company site and an e-commerce store**, plus an admin panel.
 
-**Current release: ▶️ R0, the company site** — **built with demo content** (see TASKS Part A progress); waiting on real business details from the owner.
+**Current release: ▶️ R0, the company site** — **built with demo content** and refined through five rounds of owner feedback (see [`PROGRESS.md`](PROGRESS.md)); preview at [mojotools.vercel.app](https://mojotools.vercel.app). Waiting on real business details from the owner.
 
 **Release plan:** R0, the company site, built first and reviewed on a private preview. **The site goes public once, together with the online shop (R1)**, with a target **within 3 months (by early January 2027)**.
 
@@ -34,4 +34,4 @@ Mojo Tools trades **tools, machinery and hardware materials**, mostly to B2B buy
 
 ## Starting a new chat or coding session
 
-> "Continue the Mojo Tools project on branch `pre-mojo`. Read `docs/README.md` first, then `docs/RULES.md`."
+> "Continue the Mojo Tools project. Branch from `main`, read `docs/README.md` first, then `docs/RULES.md`."
