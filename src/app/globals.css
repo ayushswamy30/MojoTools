@@ -51,6 +51,14 @@
   }
 
   /* Brand strip: the list is rendered 4×, so -50% lands exactly on the 3rd copy's start. */
+  /* Mojo Mitra seal: ring text turns once every 24s. */
+  --animate-seal-spin: seal-spin 24s linear infinite;
+  @keyframes seal-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   --animate-marquee: marquee 30s linear infinite;
   @keyframes marquee {
     to {

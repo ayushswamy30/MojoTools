@@ -19,6 +19,7 @@
 - **03 Nov 2026**: CI pinned to `ubuntu-24.04`: `ubuntu-latest` moved to 26.04, where Playwright 1.56 can't install Chromium. Unpin after upgrading Playwright.
 - **04 Nov 2026**: Owner feedback round 5 (PR #16). Home "Visit our store" is now a **store gallery mosaic** (shop, tools in stock, warehouse, office) with captions over the photos and a yellow bar that sweeps along the bottom on hover; the address block was replaced by a "Contact and Visit Us" link (also in Mojo Mitra's page list). Photos come from `storeGallery` in `site.ts` and show the placeholder until a real `src` is set (P19).
 - **08 Nov 2026**: "Why Mojo Tools" cards use the same yellow sweep hover as the store gallery instead of the rising hazard tape.
+- **09 Nov 2026** (later): Owner feedback round 6. Floating WhatsApp button removed (P20); Mojo Mitra launcher is now a turning **seal badge** (ink scalloped seal, yellow "ASK MITRA" ring, logo wedge centre, hover tooltip), 88px desktop / 72px phone. DESIGN `FloatingActions` updated; e2e test for the old WhatsApp bubble replaced.
 - **09 Nov 2026**: Docs brought up to date: README, `PROGRESS.md` (rewritten), `TASKS.md` progress notes, DESIGN `FeatureCards` / `StoreGallery` / `SectionTitle` / home wireframe, DECISIONS P19. 25 unit + 72 e2e tests.
 
 ## Consolidation log (08 Oct 2026)

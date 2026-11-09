@@ -20,8 +20,8 @@ type Labels = {
 
 /**
  * In-house, non-modal consent bar (DECISIONS D13): Accept / Reject non-essential / Manage
- * with equal prominence. While visible it publishes its height so content and the WhatsApp
- * button move up and nothing focused is hidden behind it (WCAG 2.4.11).
+ * with equal prominence. While visible it publishes its height so content and the Mojo Mitra
+ * launcher move up and nothing focused is hidden behind it (WCAG 2.4.11).
  * "Cookie settings" links reopen it in Manage mode, so consent can be changed or withdrawn
  * as easily as it was given (DPDP Act 2023 s.6(4)).
  */

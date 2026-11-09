@@ -3,11 +3,10 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useChat } from '@ai-sdk/react'
-import { Bot, Phone, Send, Square, X } from 'lucide-react'
+import { Bot, Phone, Send, Square } from 'lucide-react'
 import { trackEvent } from '@/features/analytics/events'
 import { MAX_MESSAGE_CHARS, type AssistantLink } from '@/features/assistant/config'
 import type { Dictionary } from '@/i18n/dictionary'
-import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
 import { cn } from '@/lib/cn'
 
 type Props = {
@@ -20,10 +19,9 @@ type Props = {
 }
 
 /**
- * Bottom-right actions: WhatsApp button stacked above the Mojo Mitra launcher.
+ * Bottom-right Mojo Mitra launcher (a turning seal badge; WhatsApp lives in page content).
  * The chat panel is a non-modal dialog (Esc closes, focus returns to the launcher);
- * messages are announced through a polite live log. WhatsApp hides while the panel is
- * open because the panel offers the same hand-off.
+ * messages are announced through a polite live log.
  */
 export function FloatingActions({
   labels,
@@ -54,36 +52,95 @@ export function FloatingActions({
           newTabLabel={newTabLabel}
           onClose={() => toggle(false)}
         />
-      ) : (
-        <a
-          href={whatsappHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => trackEvent('whatsapp_click', { placement: 'fab' })}
-          className="inline-flex h-12 items-center gap-2 rounded-full bg-whatsapp-dark px-3.5 font-semibold text-white shadow-overlay hover:bg-ink-900 sm:pr-5"
-        >
-          <WhatsAppIcon className="size-6" />
-          <span className="sr-only sm:not-sr-only">{labels.whatsappFab}</span>
-          <span className="sr-only"> {newTabLabel}</span>
-        </a>
-      )}
+      ) : null}
       <button
         ref={launcherRef}
         type="button"
         aria-expanded={open}
         onClick={() => toggle(!open)}
-        className="inline-flex h-14 items-center gap-2 rounded-full bg-brand-yellow px-4 font-semibold text-ink-900 shadow-overlay hover:bg-brand-yellow-hover sm:pr-6"
+        className="group relative size-[72px] rounded-full drop-shadow-[0_6px_12px_rgb(17_19_21/0.25)] transition-transform duration-200 ease-brand hover:scale-105 sm:size-[88px]"
       >
-        {open ? (
-          <X aria-hidden="true" className="size-6" />
-        ) : (
-          <Bot aria-hidden="true" className="size-6" />
+        <SealBadge open={open} />
+        <span className="sr-only">{open ? labels.close : labels.launcher}</span>
+        {open ? null : (
+          // Visual repeat of the accessible name for people who can't read the turning ring.
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute top-1/2 right-full mr-3 translate-x-1 -translate-y-1/2 rounded-full bg-ink-900 px-3 py-1.5 text-sm font-semibold whitespace-nowrap text-white opacity-0 ring-1 ring-brand-yellow/60 transition duration-200 ease-brand group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100"
+          >
+            {labels.launcher}
+          </span>
         )}
-        <span className={cn(open ? 'sr-only' : 'sr-only sm:not-sr-only')}>
-          {open ? labels.close : labels.launcher}
-        </span>
       </button>
     </div>
+  )
+}
+
+// Scalloped seal edge: 20 outward semicircles between points on a circle (viewBox 0 0 100 100).
+const SEAL_PATH = (() => {
+  const n = 20
+  const r = 43.7
+  const bump = r * Math.sin(Math.PI / n)
+  const pt = (i: number) => {
+    const a = (2 * Math.PI * i) / n
+    return `${(50 + r * Math.sin(a)).toFixed(2)} ${(50 - r * Math.cos(a)).toFixed(2)}`
+  }
+  let d = `M${pt(0)}`
+  for (let i = 1; i <= n; i++) d += ` A${bump.toFixed(2)} ${bump.toFixed(2)} 0 0 1 ${pt(i)}`
+  return `${d}Z`
+})()
+// Text sits outside its baseline circle, so cap tops land near r≈39, clear of the edge.
+const RING_RADIUS = 32.5
+
+/**
+ * Decorative launcher art: ink seal with a yellow edge (visible on light and dark sections),
+ * "ASK MITRA" ring turning once per 24s, plus an extra hover spin layered on top so the speed-up
+ * never jumps. Reduced motion stops both (motion-safe + the global rule).
+ */
+function SealBadge({ open }: { open: boolean }) {
+  const ringId = useId()
+  return (
+    <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false" className="size-full">
+      <path d={SEAL_PATH} className="fill-ink-900 stroke-brand-yellow" strokeWidth="1.5" />
+      <circle
+        cx="50"
+        cy="50"
+        r="26"
+        fill="none"
+        strokeWidth="0.9"
+        strokeDasharray="2.2 2.2"
+        className="stroke-brand-yellow opacity-70"
+      />
+      <g className="origin-center [transform-box:view-box] motion-safe:animate-seal-spin">
+        <g className="origin-center [transform-box:view-box] motion-safe:animate-[seal-spin_4s_linear_infinite_paused] motion-safe:group-hover:[animation-play-state:running]">
+          <path
+            id={ringId}
+            d={`M50 50m-${RING_RADIUS} 0a${RING_RADIUS} ${RING_RADIUS} 0 1 1 ${2 * RING_RADIUS} 0a${RING_RADIUS} ${RING_RADIUS} 0 1 1 -${2 * RING_RADIUS} 0`}
+            fill="none"
+          />
+          <text className="fill-brand-yellow font-display text-[8.5px] font-extrabold tracking-wider uppercase">
+            <textPath
+              href={`#${ringId}`}
+              textLength={(2 * Math.PI * RING_RADIUS).toFixed(2)}
+              lengthAdjust="spacing"
+            >
+              Ask Mitra • Ask Mitra •{' '}
+            </textPath>
+          </text>
+        </g>
+      </g>
+      {open ? (
+        <path
+          d="M42 42l16 16M58 42L42 58"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          className="stroke-brand-yellow"
+        />
+      ) : (
+        // Logo wedge (same right-angle triangle as the header logo).
+        <path d="M43 43h20L43 63Z" className="fill-brand-yellow" />
+      )}
+    </svg>
   )
 }
 

@@ -57,12 +57,13 @@ All decisions are listed in [`DECISIONS.md`](DECISIONS.md).
 - **Section headings** use the same face as the wordmark (wide, extra-bold, uppercase).
 - **Hero slideshow** keeps rotating when the mouse is used; only keyboard focus or the pause button stops it.
 - **Brand strip** scrolls endlessly and pauses on hover or focus. A pause button for touch screens is still to do before launch.
+- **Mojo Mitra launcher** is a small turning "Ask Mitra" seal (ink with a yellow edge) that no longer covers content (9 Nov).
 - **Hover effect**: a yellow bar sweeps along the bottom of the "Why Mojo Tools" cards and store photos.
 
 ### Features
 - **Enquiry form**: types (product enquiry, bulk quote, price list, become a dealer, support); checks the mobile number and GSTIN; accepts an attached list up to 10 MB; gives an enquiry number. Once keys are added it emails sales (with the attachment) and sends the customer an auto-reply.
 - **Spam protection**: Cloudflare captcha (once keys are added) plus a rate limit.
-- **WhatsApp button** on every page with a pre-written message saying which page the visitor came from.
+- **WhatsApp links** in page content (Contact page, footer, quote bands, product and brand pages) with a pre-written message saying what the visitor was looking at. The floating WhatsApp button was removed on 9 Nov (P20).
 - **Mojo Mitra, the AI assistant**: finds categories and brands, links to the right page, prepares a pre-filled quote form, and hands off to WhatsApp or phone. It never quotes prices or invents facts. Without an API key it shows quick links; the real model is untested until a key is added.
 - **Cookie banner** with Accept / Reject / Manage. Google Analytics and campaign tracking load only after consent; withdrawing consent deletes their cookies.
 - **Search engines**: page titles, descriptions and structured data are in place. The preview is hidden from Google until launch.
