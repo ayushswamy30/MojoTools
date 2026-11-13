@@ -15,7 +15,8 @@ export function CategoryStrip({
 }) {
   return (
     <nav aria-label={label}>
-      <ul className="-mx-4 flex snap-x [scrollbar-width:thin] gap-2 overflow-x-auto px-4 pb-2">
+      {/* centre only from xl, where all 8 fit; below that it scrolls from the start (centring an overflowing row clips the first item) */}
+      <ul className="-mx-4 flex snap-x scroll-px-4 [scrollbar-width:thin] gap-3 overflow-x-auto px-4 pb-2 md:gap-4 xl:justify-center xl:gap-6 2xl:gap-8">
         {categories.map((category) => {
           const active = category.slug === activeSlug
           return (
