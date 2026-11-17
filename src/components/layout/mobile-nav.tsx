@@ -37,7 +37,7 @@ export function MobileNav({ items, labels, telHref, whatsappHref }: Props) {
         <Dialog.Overlay className="fixed inset-0 z-[var(--z-sheet)] bg-black/60" />
         <Dialog.Content className="on-dark fixed inset-y-0 left-0 z-[var(--z-sheet)] flex w-[min(22rem,100%)] flex-col bg-ink-900 p-6 text-white shadow-overlay">
           <div className="flex items-center justify-between">
-            <Dialog.Title className="font-display text-lg font-bold text-white">
+            <Dialog.Title className="font-subhead text-lg font-bold text-white">
               {labels.menu}
             </Dialog.Title>
             <Dialog.Close className="inline-flex size-11 items-center justify-center rounded-sm">

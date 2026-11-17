@@ -83,7 +83,7 @@ export function EnquiryForm(props: Props) {
         <div className="flex gap-3">
           <CheckCircle2 aria-hidden="true" className="size-6 shrink-0 text-success" />
           <div>
-            <p className="font-display text-xl font-bold text-ink-900">
+            <p className="font-subhead text-xl font-bold text-ink-900">
               {labels.successTitle.replace('{name}', state.name)}
             </p>
             <p className="mt-2">

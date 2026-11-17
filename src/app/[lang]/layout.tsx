@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { lang } from 'next/root-params'
-import { Archivo, Inter, JetBrains_Mono } from 'next/font/google'
+import { Archivo, Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import { business, whatsappHref } from '@/features/content/site'
 import { getDictionary } from '@/i18n/dictionary'
 import { locales } from '@/i18n/config'
@@ -17,6 +17,8 @@ import '../globals.css'
 
 const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-archivo' })
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+// Sub-headings (h3/h4, card titles): between Archivo Expanded and Inter (owner, 16 Nov 2026).
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' })
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains-mono' })
 
 export const metadata: Metadata = {
@@ -41,7 +43,7 @@ export default async function RootLayout({ children }: LayoutProps<'/[lang]'>) {
   return (
     <html
       lang={locale}
-      className={`${archivo.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${archivo.variable} ${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
       <body className="flex min-h-dvh flex-col antialiased">
         <SkipLink label={c.skipToContent} />

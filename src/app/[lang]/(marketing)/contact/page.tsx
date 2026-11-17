@@ -43,7 +43,7 @@ export default async function ContactPage() {
           />
         </div>
         <section aria-labelledby="contact-form-title">
-          <h2 id="contact-form-title" className="mb-6 text-2xl font-bold">
+          <h2 id="contact-form-title" className="mb-6 font-subhead text-2xl font-bold">
             {p.formTitle}
           </h2>
           <EnquirySection dict={dict} defaults={{ type: 'contact' }} sourcePage="/contact" />
@@ -51,7 +51,7 @@ export default async function ContactPage() {
       </Container>
       <Container className="grid gap-6 pb-16 md:grid-cols-2">
         <section aria-labelledby="help-title" className="rounded-md bg-brand-yellow p-6 md:p-8">
-          <h2 id="help-title" className="text-2xl font-bold">
+          <h2 id="help-title" className="font-subhead text-2xl font-bold">
             {p.helpTitle}
           </h2>
           <p className="mt-2 text-ink-900">{p.helpBody}</p>
@@ -77,7 +77,7 @@ export default async function ContactPage() {
           aria-labelledby="newsletter-title"
           className="rounded-md border border-steel-200 p-6 md:p-8"
         >
-          <h2 id="newsletter-title" className="text-2xl font-bold">
+          <h2 id="newsletter-title" className="font-subhead text-2xl font-bold">
             {dict.newsletter.title}
           </h2>
           <p className="mt-2 mb-4">{dict.newsletter.body}</p>

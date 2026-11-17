@@ -1,15 +1,14 @@
 import type { Metadata } from 'next'
-import { about, brands, business, stats, whatsappHref } from '@/features/content/site'
-import { getDictionary } from '@/i18n/dictionary'
+import { about, expert, stats, whatsappHref } from '@/features/content/site'
+import { getDictionary, t } from '@/i18n/dictionary'
 import en from '@/i18n/messages/en.json'
 import { Container } from '@/components/ui/container'
 import { PlaceholderVisual } from '@/components/ui/placeholder-visual'
 import { SectionTitle } from '@/components/ui/section-title'
-import { BrandCard } from '@/components/marketing/brand-card'
-import { CtaBand } from '@/components/marketing/cta-band'
+import { ExpertCard } from '@/components/marketing/expert-card'
+import { Milestones } from '@/components/marketing/milestones'
 import { PageHero } from '@/components/marketing/page-hero'
 import { StatsStrip } from '@/components/marketing/stats-strip'
-import { ValuesAccordion } from '@/components/marketing/values-accordion'
 
 export const metadata: Metadata = {
   title: en.about.metaTitle,
@@ -35,72 +34,76 @@ export default async function AboutPage() {
         </Container>
       ) : null}
 
-      <section aria-labelledby="purpose-title" className="py-16">
-        <Container className="grid gap-10 md:grid-cols-2">
-          <PlaceholderVisual
-            tone="warehouse"
-            label="Placeholder: team / warehouse photo"
-            className="aspect-[4/5] rounded-md"
+      {/* Background shifts white → ink as Our story scrolls in (globals.css .scroll-dusk). */}
+      <div className="scroll-dusk">
+        <section aria-labelledby="purpose-title" className="py-16 md:py-24">
+          <Container>
+            <SectionTitle id="purpose-title" title={a.whyTitle} />
+            <div className="grid gap-10 md:grid-cols-12 md:gap-12">
+              {/* The one loud element: the purpose, set like the wordmark. */}
+              <p className="font-display text-3xl leading-[1.1] font-extrabold text-ink-900 uppercase [font-stretch:125%] md:col-span-5 md:text-4xl lg:text-5xl">
+                {about.purpose}
+              </p>
+              <div className="grid content-start gap-8 border-l-4 border-brand-yellow pl-6 md:col-span-7 md:pl-10">
+                <div>
+                  <h3 className="text-xl font-semibold">{a.philosophyTitle}</h3>
+                  <p className="mt-2 text-lg">{about.philosophy}</p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">{a.missionTitle}</h3>
+                  <p className="mt-2">{about.mission}</p>
+                </div>
+              </div>
+            </div>
+            <PlaceholderVisual
+              tone="warehouse"
+              label="Placeholder: team / warehouse photo"
+              className="mt-14 aspect-[16/9] rounded-md md:aspect-[21/9]"
+            />
+          </Container>
+        </section>
+        <section aria-labelledby="values-title" className="pb-4">
+          <Container>
+            <SectionTitle id="values-title" title={a.valuesTitle} />
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {about.values.map((value) => (
+                // Same hover as the home "Why Mojo Tools" cards: yellow border, lift, bottom sweep.
+                <li
+                  key={value.title}
+                  className="group relative overflow-hidden rounded-md border border-steel-200 bg-white p-6 transition-[transform,border-color] duration-200 ease-brand hover:border-brand-yellow motion-safe:hover:-translate-y-0.5"
+                >
+                  <h3 className="text-lg leading-snug font-semibold">{value.title}</h3>
+                  <p className="mt-2 text-sm">{value.body}</p>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-brand-yellow transition-transform duration-300 ease-brand group-hover:scale-x-100"
+                  />
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </section>
+
+        {expert ? (
+          <ExpertCard
+            {...expert}
+            title={a.expertTitle}
+            body={t(a.expertBody, { name: expert.name })}
+            ctaLabel={t(a.expertCta, { name: expert.name })}
+            href={whatsappHref(t(a.expertMessage, { name: expert.name }))}
+            newTabLabel={dict.chrome.opensNewTab}
           />
-          <div>
-            <h2
-              id="purpose-title"
-              className="font-sans text-sm font-semibold tracking-wide text-steel-500 uppercase"
-            >
-              {a.purposeTitle}
-            </h2>
-            <p className="mt-2 font-display text-2xl font-bold text-ink-900">{about.purpose}</p>
-            <h2 className="mt-8 font-sans text-sm font-semibold tracking-wide text-steel-500 uppercase">
-              {a.missionTitle}
-            </h2>
-            <p className="mt-2">{about.mission}</p>
-            <h2 className="mt-8 mb-3 font-sans text-sm font-semibold tracking-wide text-steel-500 uppercase">
-              {a.valuesTitle}
-            </h2>
-            <ValuesAccordion items={about.values} />
-          </div>
-        </Container>
-      </section>
+        ) : null}
 
-      <section aria-labelledby="story-title" className="bg-steel-50 py-16">
-        <Container>
-          <SectionTitle id="story-title" title={a.storyTitle} />
-          <ol className="grid gap-6 md:grid-cols-5">
-            {about.timeline.map((item, index) => (
-              <li
-                key={`${item.title}-${index}`}
-                className="border-t-4 border-brand-yellow bg-white p-5 shadow-card"
-              >
-                <p className="font-mono text-sm text-steel-500">{item.year}</p>
-                <h3 className="mt-1 text-lg font-bold">{item.title}</h3>
-                <p className="mt-2 text-sm">{item.body}</p>
-              </li>
-            ))}
-          </ol>
-        </Container>
-      </section>
-
-      <section aria-labelledby="about-brands-title" className="bg-steel-50 py-16">
-        <Container>
-          <SectionTitle id="about-brands-title" title={a.brandsTitle} />
-          <ul className="grid grid-cols-2 gap-4 md:grid-cols-4">
-            {brands.slice(0, 4).map((brand) => (
-              <li key={brand.slug}>
-                <BrandCard brand={brand} />
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-
-      <CtaBand
-        title={a.ctaTitle}
-        body={a.ctaBody}
-        quoteLabel={dict.home.ctaQuote}
-        whatsappLabel={dict.home.ctaWhatsapp}
-        whatsappHref={whatsappHref(`Hi ${business.name}, I have an enquiry`)}
-        newTabLabel={dict.chrome.opensNewTab}
-      />
+        {about.timeline.length > 0 ? (
+          <Milestones
+            items={about.timeline}
+            title={a.storyTitle}
+            yearsLabel={a.storyYears}
+            skipLabel={a.storySkip}
+          />
+        ) : null}
+      </div>
     </>
   )
 }

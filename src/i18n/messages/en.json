@@ -143,13 +143,17 @@
     "metaTitle": "About us",
     "metaDescription": "The story, purpose and values behind Mojo Tools.",
     "title": "About Mojo Tools",
-    "purposeTitle": "Core purpose",
+    "philosophyTitle": "Our philosophy",
     "missionTitle": "Our mission",
     "valuesTitle": "Values",
+    "whyTitle": "Why we're here",
     "storyTitle": "Our story",
-    "brandsTitle": "Brands we work with",
-    "ctaTitle": "Let's talk about your next order",
-    "ctaBody": "Call, WhatsApp or send us your list."
+    "storyYears": "Choose a year",
+    "storySkip": "Skip the timeline",
+    "expertTitle": "Ask our tools expert",
+    "expertBody": "Not sure which tool fits the job? {name} will help you choose.",
+    "expertCta": "Chat with {name} on WhatsApp",
+    "expertMessage": "Hi {name}, I need help choosing a tool"
   },
   "brandsPage": {
     "metaTitle": "Distributorship — official brand distributor",

@@ -86,7 +86,7 @@ Two modes of the same system:
 | Display (hero) | **Archivo** (`wdth` 125, Expanded) | 800, UPPERCASE, tracking −1 % | 64/68 → 36/40 |
 | H1 | Archivo Expanded | 800 uppercase | 40/44 → 28/32 |
 | H2 | Archivo | 700 | 28/34 → 22/28 |
-| H3 | Archivo | 700 | 20/26 → 18/24 |
+| H3 / sub-headings | **Space Grotesk** (`--font-subhead`) | 600 | 20/26 → 18/24 |
 | Body | **Inter** | 400 / 500 | 16/24 (shop dense: 14/20) |
 | Small / meta | Inter | 400 | 13/18 (minimum size for meaningful text) |
 | Label / button | Inter | 600, UPPERCASE for primary CTA, tracking +2 % | 14/16 |
@@ -158,10 +158,9 @@ Uppercase is for display, H1 and primary buttons only. Body text, labels and err
 | `SectionTitle` | R0 | Real heading level in the wordmark face (Archivo extrabold, uppercase, 125% width; owner, 2 Nov 2026) + 4px yellow rule |
 | `CategoryTiles` | R0 / R1 | **R0:** showcase tiles; click opens the enquiry form pre-filled with the category. **R1:** link to `/shop/c/...` with item counts |
 | `BrandStrip` | R0 | **Infinite right-to-left marquee** (owner, 30 Oct 2026; replaces the earlier static-grid rule, CHANGELOG A-5). Pauses on hover and keyboard focus; still under reduced motion; repeat copies are `aria-hidden` + `inert`. 🟡 Open: touch screens have no way to pause it, so WCAG 2.2.2 is not fully met there; add a pause button before launch. |
-| `FeatureCards` | R0 | Home only (removed from About, owner 31 Oct 2026). Lead point as an ink card (yellow seal icon, Archivo 125% uppercase heading); the other three as ink rows (`ink-700` border) with a custom two-tone yellow icon on an `ink-700` block, numbered 01–04 in mono. All four cards are dark (owner, 1 Nov 2026). Hover: border to yellow, a yellow bar sweeps left to right along the bottom edge (owner, 8 Nov 2026; replaces the hazard tape), lift only without reduced motion |
+| `FeatureCards` | R0 | Home only (removed from About, owner 31 Oct 2026). Lead point as an ink card (yellow seal icon, Space Grotesk uppercase heading); the other three as ink rows (`ink-700` border) with a custom two-tone yellow icon on an `ink-700` block, numbered 01–04 in mono. All four cards are dark (owner, 1 Nov 2026). Hover: border to yellow, a yellow bar sweeps left to right along the bottom edge (owner, 8 Nov 2026; replaces the hazard tape), lift only without reduced motion |
 | `StoreGallery` | R0 | Home "Visit our store" (owner, 4 Nov 2026): 4-tile mosaic (shop as the large feature tile, tools in stock, warehouse, office) with mono-numbered captions over a dark scrim; on hover the photo zooms slightly (only without reduced motion) and a yellow bar sweeps along the bottom. Data: `storeGallery` in `site.ts`; tiles show `PlaceholderVisual` until a `src` is set. Followed by a "Contact and Visit Us" link |
 | `StatsStrip` | R0 | Count-up animation only without reduced motion; final values in the DOM (§8.3) |
-| `ValuesAccordion` | R0 | Radix Accordion; yellow +/– icons on dark; `aria-expanded` |
 | `WhyChooseCards` | R0 | — |
 | `BrandGrid` + `FilterChips` | R0 | Chips are toggle buttons (`aria-pressed`); result count announced politely |
 | `ContactInfoCard` | R0 | Address, hours, phone (`tel:`), WhatsApp, email, GSTIN |
@@ -306,7 +305,7 @@ Tokens (use exactly):
   steel-200 #D9DCE0 (decorative borders), steel-100 #EEF0F2, steel-50 #F7F8F9 (shop bg),
   success #188038, warning #9A5B00, danger #D93025 (clearance, % off),
   info #1A5FB4 (links, underlined), economy #0E7C7B, whatsapp #128C7E (white glyph).
-- Type: Archivo Expanded 800 UPPERCASE for display/H1; Archivo 700 for H2/H3;
+- Type: Archivo Expanded 800 UPPERCASE for display/H1/section titles; Space Grotesk 600 for H3 and card titles;
   Inter 400/500/600 for UI and body (sentence case); JetBrains Mono 500 for SKUs.
   Tabular numbers for prices. Minimum text size 13px.
 - Radius 2px buttons/inputs, 4px cards, 8px modals. 4/8-pt spacing. Container 1320px.
@@ -412,11 +411,9 @@ was at 60% zoom — design at comfortable reading size) and khandelwalbusar.com.
    breadcrumb.
 2. Floating stats card overlapping the hero bottom: 4 stats with icons
    (Products, Brands, Customers, Years) — "XX+" placeholders.
-3. Two-column: large team/warehouse photo left (4:5); right: "Core Purpose" (one line),
-   "Our Mission" (short paragraph), "Values" accordion with 5 items (one expanded),
-   yellow + / – icons on ink, or ink icons on light. Show focus on an accordion header.
-4. Our story timeline: 5 milestones, horizontal on desktop, vertical on mobile.
-5. Brands strip + CTA band to Contact.
+3. "Why we're here": purpose as a large wordmark-style statement (5 cols) beside "Our philosophy" + "Our mission" (7 cols, yellow left rule left of centre); wide 21:9 photo below. Then "Values" on white: 5 cards (no numbers) with the home card hover (yellow border, lift, bottom sweep).
+4. Our story timeline: the page below the hero turns white → ink-900 as it scrolls in, titles and story content fading with it (CSS scroll timeline, reverses on scroll up; static ink under reduced motion). 5 milestones. Desktop: light Archivo year rail that magnifies the year under the scroll position, a sliding yellow marker, cross-fading milestone panel, scroll-driven sticky track (one screen per year, DECISIONS D33), static click/arrow-key tabs under reduced motion. Mobile: vertical list.
+5. No brands strip or CTA band (owner, 16 Nov 2026): the story runs straight into the footer.
 ```
 
 ### Prompt 4 — Brands / Distributors

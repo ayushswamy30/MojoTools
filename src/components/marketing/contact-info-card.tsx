@@ -27,7 +27,7 @@ export function ContactInfoCard({ title, newTabLabel }: { title: string; newTabL
       aria-labelledby="contact-info-title"
       className="rounded-md bg-brand-yellow-soft p-6 md:p-8"
     >
-      <h2 id="contact-info-title" className="text-2xl font-bold">
+      <h2 id="contact-info-title" className="font-subhead text-2xl font-bold">
         {title}
       </h2>
       <dl className="mt-6 space-y-5">

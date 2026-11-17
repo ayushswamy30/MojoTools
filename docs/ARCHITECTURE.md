@@ -150,7 +150,7 @@ mojo-tools/
 │  │  ├─ ui/                  shadcn primitives (Button, Input, Dialog …)
 │  │  ├─ layout/              UtilityBar, Header, MainNav, MegaMenu, MobileNav, Footer,
 │  │  │                       SideWidget, WhatsAppFab, CookieBanner, SkipLink
-│  │  ├─ marketing/           HeroCarousel, StatsStrip, ValuesAccordion, BrandGrid,
+│  │  ├─ marketing/           HeroCarousel, StatsStrip, Milestones, BrandGrid,
 │  │  │                       EnquiryForm, ContactInfoCard, CTABand …
 │  │  ├─ shop/                ProductCard, ProductRail, FilterSidebar, CategorySection,
 │  │  │                       PriceBlock, QtyStepper, CartDrawer, QuickOrderTable …

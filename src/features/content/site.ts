@@ -259,14 +259,33 @@ export const about = {
     { title: 'Reliable supply', body: 'Placeholder value description.' },
     { title: 'Long-term relationships', body: 'Placeholder value description.' },
   ],
+  philosophy: 'Placeholder: one or two lines on how Mojo Tools works with its buyers.',
   timeline: [
-    { year: 'YYYY', title: 'Founded', body: 'Placeholder milestone.' },
-    { year: 'YYYY', title: 'First warehouse', body: 'Placeholder milestone.' },
-    { year: 'YYYY', title: 'New brand partnerships', body: 'Placeholder milestone.' },
-    { year: 'YYYY', title: 'Expanded B2B supply', body: 'Placeholder milestone.' },
-    { year: 'YYYY', title: 'Going online', body: 'Placeholder milestone.' },
-  ],
+    // Real: from the owner's company profile deck (Sept 2026), "incorporated in the year 2021".
+    {
+      year: '2021',
+      title: 'Incorporated',
+      body: [
+        'Mojo Tools is incorporated as a private limited company.',
+        'Holds agency and distribution rights for established tool makers.',
+      ],
+      facts: ['Pvt Ltd', 'Authorised distributor'],
+    },
+    { year: 'YYYY', title: 'First warehouse', body: ['Placeholder milestone.'] },
+    { year: 'YYYY', title: 'New brand partnerships', body: ['Placeholder milestone.'] },
+    { year: 'YYYY', title: 'Expanded B2B supply', body: ['Placeholder milestone.'] },
+    { year: 'YYYY', title: 'Going online', body: ['Placeholder milestone.'] },
+  ] satisfies Milestone[],
 }
+
+/** One About-page milestone: a short title, 1–3 bullets, optional fact chips ("+12 brands"). */
+export type Milestone = { year: string; title: string; body: string[]; facts?: string[] }
+
+/**
+ * "Ask our expert" block on About. A real staff member only (RULES §0.5, §11):
+ * the block stays hidden while this is null. `photo` is a file in public/.
+ */
+export const expert: { name: string; role: string; photo: string; photoAlt: string } | null = null
 
 /**
  * Home "Visit our store" gallery. Real photos only (A8): set `src` (a file in public/,
