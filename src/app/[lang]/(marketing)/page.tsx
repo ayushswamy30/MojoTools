@@ -79,7 +79,7 @@ export default async function HomePage() {
             title={dict.home.categoriesTitle}
             subtitle={dict.home.categoriesSubtitle}
           />
-          <CategoryTiles categories={categories} enquireLabel={dict.home.enquire} />
+          <CategoryTiles categories={categories} />
           <Link
             href="/products"
             className={cn(

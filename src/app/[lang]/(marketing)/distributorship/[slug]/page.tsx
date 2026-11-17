@@ -110,7 +110,7 @@ export default async function BrandPage({ params }: PageProps<'/[lang]/distribut
         <section aria-labelledby="brand-range-title" className="bg-steel-50 py-12">
           <Container>
             <SectionTitle id="brand-range-title" title={dict.brands.productRange} />
-            <CategoryTiles categories={range} enquireLabel={dict.home.enquire} />
+            <CategoryTiles categories={range} />
           </Container>
         </section>
       ) : null}
