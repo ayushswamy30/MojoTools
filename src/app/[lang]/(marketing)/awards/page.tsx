@@ -34,7 +34,7 @@ export default async function AwardsPage() {
                     <AwardIcon aria-hidden="true" className="size-7 text-brand-yellow" />
                   </span>
                   <p className="mt-4 font-mono text-sm text-steel-500">{award.year}</p>
-                  <h2 className="mt-1 text-xl font-bold">{award.title}</h2>
+                  <h2 className="mt-1 font-subhead text-xl font-bold">{award.title}</h2>
                   <p className="mt-2 text-sm">
                     <span className="font-semibold text-ink-900">{a.awardedBy}:</span>{' '}
                     {award.awardedBy}

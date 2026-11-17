@@ -87,7 +87,7 @@ export function FeatureCards({
     <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-5 lg:grid-rows-3">
       <li className="on-dark group relative flex flex-col overflow-hidden rounded-md bg-ink-900 p-8 md:col-span-2 md:p-10 lg:row-span-3">
         <FeatureIcon name={lead.icon} className="size-28 text-brand-yellow md:size-36" />
-        <h3 className="mt-auto pt-10 text-2xl leading-tight font-extrabold text-white uppercase [font-stretch:125%] md:text-3xl">
+        <h3 className="mt-auto pt-10 text-2xl leading-tight font-bold text-white uppercase md:text-3xl">
           {lead.title}
         </h3>
         <p className="mt-4 max-w-sm text-lg text-steel-200">{lead.body}</p>
@@ -106,9 +106,7 @@ export function FeatureCards({
             <FeatureIcon name={item.icon} className="size-11 text-brand-yellow md:size-16" />
           </span>
           <div>
-            <h3 className="text-xl leading-snug font-extrabold text-white [font-stretch:112%] md:text-2xl">
-              {item.title}
-            </h3>
+            <h3 className="text-xl leading-snug font-bold text-white md:text-2xl">{item.title}</h3>
             <p className="mt-2 text-base text-steel-200">{item.body}</p>
           </div>
           {edge}

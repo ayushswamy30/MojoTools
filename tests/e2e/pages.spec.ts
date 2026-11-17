@@ -176,3 +176,62 @@ test('no placeholder stats, awards or structured data are published', async ({ p
   await page.goto('/awards')
   await expect(page.getByText('Our awards will appear here soon.')).toBeVisible()
 })
+
+test.describe('About milestones', () => {
+  const titles = [
+    'Incorporated',
+    'First warehouse',
+    'New brand partnerships',
+    'Expanded B2B supply',
+    'Going online',
+  ]
+
+  test('desktop: scrolling the track and clicking a year both change the milestone', async ({
+    page,
+    isMobile,
+  }) => {
+    test.skip(isMobile)
+    await page.goto('/about')
+    const years = page.getByRole('toolbar', { name: 'Choose a year' }).getByRole('button')
+    await expect(years.first()).toHaveAttribute('aria-current', 'step')
+    const box = await page.locator('section[aria-labelledby="story-title"]').boundingBox()
+    // One screen per year: the section is a tall scroll track.
+    expect(box!.height).toBeGreaterThan(titles.length * 700)
+    await page.mouse.wheel(0, box!.y + 2.5 * 720)
+    await expect(years.first()).not.toHaveAttribute('aria-current', 'step')
+    await years.nth(2).click()
+    await expect(years.nth(2)).toHaveAttribute('aria-current', 'step')
+    await expect(page.getByRole('heading', { name: titles[2] })).toBeVisible()
+    await expect(page.getByRole('heading', { name: titles[0] })).toBeHidden()
+    await years.nth(2).press('End')
+    await expect(years.last()).toBeFocused()
+    await expect(page.getByRole('heading', { name: titles[4] })).toBeVisible()
+  })
+
+  test('reduced motion: no scroll track, years still switch', async ({ page, isMobile }) => {
+    test.skip(isMobile)
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    await page.goto('/about')
+    const box = await page.locator('section[aria-labelledby="story-title"]').boundingBox()
+    expect(box!.height).toBeLessThan(900)
+    const years = page.getByRole('toolbar', { name: 'Choose a year' }).getByRole('button')
+    await years.nth(1).click()
+    await expect(page.getByRole('heading', { name: titles[1] })).toBeVisible()
+  })
+
+  test('skip link jumps past the timeline', async ({ page, isMobile }) => {
+    test.skip(isMobile)
+    await page.goto('/about')
+    await page.getByRole('link', { name: 'Skip the timeline' }).focus()
+    await page.keyboard.press('Enter')
+    await expect(page).toHaveURL(/#after-story$/)
+  })
+
+  test('phone: every milestone is listed, no year buttons', async ({ page, isMobile }) => {
+    test.skip(!isMobile)
+    await page.goto('/about')
+    for (const title of titles)
+      await expect(page.getByRole('heading', { name: title })).toBeVisible()
+    await expect(page.getByRole('toolbar', { name: 'Choose a year' })).toBeHidden()
+  })
+})

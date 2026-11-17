@@ -70,7 +70,7 @@ export default async function BrandPage({ params }: PageProps<'/[lang]/distribut
       <section aria-labelledby="brand-about-title" className="py-12">
         <Container className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div>
-            <h2 id="brand-about-title" className="text-2xl font-bold">
+            <h2 id="brand-about-title" className="font-subhead text-2xl font-bold">
               {t(dict.brandsPage.aboutBrand, { brand: brand.name })}
             </h2>
             {brand.isAuthorised ? (

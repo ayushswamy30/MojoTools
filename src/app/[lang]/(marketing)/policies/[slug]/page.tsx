@@ -105,7 +105,7 @@ export default async function PolicyPage({ params }: PageProps<'/[lang]/policies
         ) : null}
         {policy.sections.map((section) => (
           <section key={section.id} aria-labelledby={section.id} className="mt-10">
-            <h2 id={section.id} className="text-xl font-bold">
+            <h2 id={section.id} className="font-subhead text-xl font-bold">
               {section.heading}
             </h2>
             {section.body.map((block, index) => (

@@ -26,6 +26,7 @@
   --color-whatsapp-dark: #075e54; /* buttons with white text (7.67:1) */
 
   --font-display: var(--font-archivo), 'Arial Narrow', sans-serif;
+  --font-subhead: var(--font-space-grotesk), system-ui, sans-serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 
@@ -100,6 +101,11 @@
     text-wrap: balance;
   }
 
+  /* Sub-headings: Space Grotesk; section titles stay in the Archivo wordmark face. */
+  :where(h3, h4) {
+    font-family: var(--font-subhead);
+  }
+
   /* Visible focus everywhere: ink on light, yellow on dark sections (DESIGN §2.1). */
   :focus-visible {
     outline: 2px solid var(--color-ink-900);
@@ -118,5 +124,56 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * About: the background turns white → ink as "Our story" scrolls in, and back
+ * on the way up (owner, 16 Nov 2026). Pure CSS scroll timeline; without support or with
+ * reduced motion the section is simply ink (its bg-ink-900 class).
+ */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    /* The wrapper (everything below the hero) changes colour, so the whole screen shifts. */
+    .scroll-dusk {
+      timeline-scope: --story;
+      animation: scroll-dusk linear both;
+      animation-timeline: --story;
+      animation-range: entry 0% entry 55%;
+    }
+    /* Light-section titles follow the background so they stay readable as it darkens. */
+    .scroll-dusk h2:not(.on-dark h2) {
+      color: var(--dusk-ink);
+    }
+    .scroll-dusk-subject {
+      view-timeline-name: --story;
+      background-color: transparent;
+    }
+    /* Light story text fades in as the background darkens, so it is never light-on-light. */
+    .scroll-dusk-subject > div {
+      animation: dusk-reveal linear both;
+      animation-timeline: --story;
+      animation-range: entry 20% entry 55%;
+    }
+  }
+}
+@property --dusk-ink {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #141414; /* = --color-ink-900; @property cannot read var() */
+}
+@keyframes dusk-reveal {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes scroll-dusk {
+  from {
+    background-color: var(--color-white, #fff);
+    --dusk-ink: var(--color-ink-900);
+  }
+  to {
+    background-color: var(--color-ink-900);
+    --dusk-ink: var(--color-white, #fff);
   }
 }

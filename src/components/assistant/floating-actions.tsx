@@ -213,7 +213,7 @@ function ChatPanel({
             <Bot aria-hidden="true" className="size-5 text-ink-900" />
           </span>
           <div>
-            <h2 id={titleId} className="font-display text-base font-bold text-white">
+            <h2 id={titleId} className="font-subhead text-base font-bold text-white">
               {labels.title}
             </h2>
             <p className="text-[13px] text-steel-200">{labels.subtitle}</p>
