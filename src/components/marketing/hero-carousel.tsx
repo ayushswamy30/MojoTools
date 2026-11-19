@@ -10,7 +10,7 @@ import { Container } from '@/components/ui/container'
 import { PlaceholderVisual } from '@/components/ui/placeholder-visual'
 import { cn } from '@/lib/cn'
 
-const SLIDE_MS = 7000
+const SLIDE_MS = 4000
 
 type Labels = {
   region: string
