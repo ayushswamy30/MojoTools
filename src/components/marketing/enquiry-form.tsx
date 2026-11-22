@@ -21,6 +21,8 @@ type Props = {
   categories: Option[]
   defaults: { type?: string; brand?: string; category?: string; message?: string }
   sourcePage: string
+  /** Contact page: leaves out company, GSTIN, brand and category (owner, 23 Nov 2026). */
+  compact?: boolean
   responsePromise: string
   turnstileSiteKey?: string
 }
@@ -146,13 +148,7 @@ export function EnquiryForm(props: Props) {
     ) : null
 
   return (
-    <form
-      key={state.attempt}
-      action={formAction}
-      noValidate
-      className="space-y-5"
-      encType="multipart/form-data"
-    >
+    <form key={state.attempt} action={formAction} noValidate className="space-y-5">
       {summaryErrors.length > 0 || generalError ? (
         <div
           ref={summaryRef}
@@ -218,9 +214,6 @@ export function EnquiryForm(props: Props) {
         </div>
         <div>
           {renderLabel('mobile', labels.mobile)}
-          <p id={`${fieldId('mobile')}-hint`} className="text-sm text-steel-500">
-            {labels.mobileHint}
-          </p>
           <input
             id={fieldId('mobile')}
             name="mobile"
@@ -233,9 +226,12 @@ export function EnquiryForm(props: Props) {
             aria-describedby={describedBy('mobile', true)}
             className={inputClass}
           />
+          <p id={`${fieldId('mobile')}-hint`} className="mt-1 text-sm text-steel-500">
+            {labels.mobileHint}
+          </p>
           {renderError('mobile')}
         </div>
-        <div>
+        <div className={props.compact ? 'sm:col-span-2' : undefined}>
           {renderLabel('email', labels.email, true)}
           <input
             id={fieldId('email')}
@@ -249,73 +245,77 @@ export function EnquiryForm(props: Props) {
           />
           {renderError('email')}
         </div>
-        <div>
-          {renderLabel('company', labels.company, true)}
-          <input
-            id={fieldId('company')}
-            name="company"
-            type="text"
-            autoComplete="organization"
-            defaultValue={value('company')}
-            aria-invalid={Boolean(errorFor('company'))}
-            aria-describedby={describedBy('company')}
-            className={inputClass}
-          />
-          {renderError('company')}
-        </div>
-        <div>
-          {renderLabel('gstin', labels.gstin, true)}
-          <input
-            id={fieldId('gstin')}
-            name="gstin"
-            type="text"
-            autoCapitalize="characters"
-            maxLength={15}
-            defaultValue={value('gstin')}
-            aria-invalid={Boolean(errorFor('gstin'))}
-            aria-describedby={describedBy('gstin')}
-            className={cn(inputClass, 'font-mono uppercase')}
-          />
-          {renderError('gstin')}
-        </div>
-        <div>
-          {renderLabel('brand', labels.brand, true)}
-          <select
-            id={fieldId('brand')}
-            name="brand"
-            defaultValue={value('brand', props.defaults.brand ?? '')}
-            aria-invalid={Boolean(errorFor('brand'))}
-            aria-describedby={describedBy('brand')}
-            className={inputClass}
-          >
-            <option value="">{labels.brandAny}</option>
-            {props.brands.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          {renderError('brand')}
-        </div>
-        <div className="sm:col-span-2">
-          {renderLabel('category', labels.category, true)}
-          <select
-            id={fieldId('category')}
-            name="category"
-            defaultValue={value('category', props.defaults.category ?? '')}
-            aria-invalid={Boolean(errorFor('category'))}
-            aria-describedby={describedBy('category')}
-            className={inputClass}
-          >
-            <option value="">{labels.categoryAny}</option>
-            {props.categories.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          {renderError('category')}
-        </div>
+        {props.compact ? null : (
+          <>
+            <div>
+              {renderLabel('company', labels.company, true)}
+              <input
+                id={fieldId('company')}
+                name="company"
+                type="text"
+                autoComplete="organization"
+                defaultValue={value('company')}
+                aria-invalid={Boolean(errorFor('company'))}
+                aria-describedby={describedBy('company')}
+                className={inputClass}
+              />
+              {renderError('company')}
+            </div>
+            <div>
+              {renderLabel('gstin', labels.gstin, true)}
+              <input
+                id={fieldId('gstin')}
+                name="gstin"
+                type="text"
+                autoCapitalize="characters"
+                maxLength={15}
+                defaultValue={value('gstin')}
+                aria-invalid={Boolean(errorFor('gstin'))}
+                aria-describedby={describedBy('gstin')}
+                className={cn(inputClass, 'font-mono uppercase')}
+              />
+              {renderError('gstin')}
+            </div>
+            <div>
+              {renderLabel('brand', labels.brand, true)}
+              <select
+                id={fieldId('brand')}
+                name="brand"
+                defaultValue={value('brand', props.defaults.brand ?? '')}
+                aria-invalid={Boolean(errorFor('brand'))}
+                aria-describedby={describedBy('brand')}
+                className={inputClass}
+              >
+                <option value="">{labels.brandAny}</option>
+                {props.brands.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              {renderError('brand')}
+            </div>
+            <div className="sm:col-span-2">
+              {renderLabel('category', labels.category, true)}
+              <select
+                id={fieldId('category')}
+                name="category"
+                defaultValue={value('category', props.defaults.category ?? '')}
+                aria-invalid={Boolean(errorFor('category'))}
+                aria-describedby={describedBy('category')}
+                className={inputClass}
+              >
+                <option value="">{labels.categoryAny}</option>
+                {props.categories.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              {renderError('category')}
+            </div>
+          </>
+        )}
       </div>
 
       <div>

@@ -16,18 +16,23 @@ export const business = {
   description:
     'Mojo Tools supplies tools, machinery and hardware materials to contractors, workshops, factories and resellers, with genuine brands and GST invoices.',
   address: {
-    line1: 'Unit 00, Placeholder Industrial Estate', // SEED (A6)
-    city: 'Your City',
-    state: 'State',
-    pincode: '000000',
+    // Owner's Google Maps listing (23 Nov 2026).
+    line1: 'Anjana Tower, NH-8, Hero Honda Chowk Flyover, Pace City I, Sector 37',
+    city: 'Gurugram',
+    state: 'Haryana',
+    pincode: '122004',
   },
   hours: 'Mon–Sat, 9:30 am – 7:00 pm', // SEED (A6)
   phone: '+91 90000 00000', // SEED (A6) — demo number, not in service
   whatsapp: '+91 90000 00000', // SEED (A6)
   email: 'sales@example.com', // SEED (A6) — example.com is reserved for documentation
   gstin: null as string | null, // SEED (A6): shown only when supplied
-  mapEmbedUrl: null as string | null, // SEED: Google Maps embed URL once the address is final
-  directionsUrl: null as string | null,
+  mapEmbedUrl:
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508!2d77.0131118!3d28.4400333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d191aa94e98f5%3A0x5ce3d2e91144bb61!2sMOJO%20TOOLS%20AND%20TRADING%20INDIA%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin' as
+      string | null,
+  directionsUrl:
+    'https://www.google.com/maps/dir/?api=1&destination=MOJO%20TOOLS%20AND%20TRADING%20INDIA%20PRIVATE%20LIMITED%2C%20Anjana%20Tower%2C%20Sector%2037%2C%20Gurugram%2C%20Haryana%20122004' as
+      string | null,
   responsePromise: 'within 1 working day', // ✅ owner-confirmed (DECISIONS P9)
   social: [] as { label: string; href: string }[], // SEED: no social pages yet (C6)
   /** 🟡 Owner said "5+ years of trust" (11 Oct 2026); confirm the founding year (A11). */

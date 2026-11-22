@@ -8,10 +8,12 @@ export function EnquirySection({
   dict,
   defaults,
   sourcePage,
+  compact,
 }: {
   dict: Dictionary
   defaults: { type?: string; brand?: string; category?: string; message?: string }
   sourcePage: string
+  compact?: boolean
 }) {
   return (
     <EnquiryForm
@@ -21,6 +23,7 @@ export function EnquirySection({
       categories={categories.map((category) => ({ value: category.slug, label: category.name }))}
       defaults={defaults}
       sourcePage={sourcePage}
+      compact={compact}
       responsePromise={business.responsePromise}
       turnstileSiteKey={publicEnv.turnstileSiteKey}
     />

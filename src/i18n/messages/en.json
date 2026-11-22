@@ -164,11 +164,14 @@
     "aboutBrand": "About {brand}"
   },
   "contactPage": {
-    "metaTitle": "Contact us",
-    "metaDescription": "Call, WhatsApp or send an enquiry to Mojo Tools.",
-    "title": "Contact us",
+    "metaTitle": "Contact us in Gurugram",
+    "metaDescription": "Call, WhatsApp, send an enquiry or visit Mojo Tools at Anjana Tower, Sector 37, Gurugram.",
+    "title": "Contact Mojo Tools",
+    "subtitle": "Call or WhatsApp for anything urgent. Send your list and we'll reply {promise}.",
+    "storeTitle": "Visit our store",
     "infoTitle": "Contact details",
-    "formTitle": "Get in touch",
+    "formTitle": "Send an enquiry",
+    "sendEnquiry": "Send enquiry",
     "helpTitle": "Need help choosing the right tool?",
     "helpBody": "Talk to our team before you buy.",
     "supportRequest": "Raise a support request",

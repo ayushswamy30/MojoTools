@@ -31,14 +31,14 @@
 
 | # | Item | Why |
 |---|---|---|
-| A6 | Legal name, full address, GSTIN, phone, email | E-Commerce Rules r.4(2); invoices; currently placeholders |
+| A6 | Legal name, GSTIN, phone, email (address added from the Google Maps listing, 23 Nov 2026) | E-Commerce Rules r.4(2); invoices; the rest are still placeholders |
 | A12 | **Grievance officer** name, designation, email, phone | Required by law |
 | A11 | Founding year | Backs the "5+ years of trust" claim |
 | A13 | Policy defaults (7-day reporting, 7-working-day refunds, 3-year enquiry retention, 30-day privacy replies, return exclusions) | Business decisions written into the policies |
 | A14 | Paid Gemini key, or Groq only | Gemini's free tier lets Google use chat content to improve its products |
 | C5 | Which brands Mojo **officially** distributes, with proof (letter/certificate) | "Official distributor" is a factual claim |
 | A1, A8 | Brand logos and product photos **with permission** | Copyright and trademark (see §5) |
-| — | A lawyer's review of all five policy pages | Final wording |
+| — | A lawyer's review of all five policy pages, including the **Gurugram** courts clause that now follows from the store address | Final wording |
 
 ## 4. Launch set-up checklist (T17)
 
@@ -61,12 +61,13 @@ Rules for every image added later:
 3. **Stock photos:** only from a licence that allows commercial use (e.g. a paid licence, Unsplash or Pexels), recorded in a credits list.
 4. **Never** AI-generate a fake product image or a fake "real" photo of the shop or people.
 5. Every meaningful image needs `alt` text; decorative ones get `alt=""`.
+6. **Google Maps images:** use only a photo the owner took or holds the rights to. Don't copy Street View or other people's listing photos onto the site.
 
 ## 6. Risk register
 
 | Risk | Likelihood | Impact | Mitigation | Status |
 |---|---|---|---|---|
-| Placeholder details (address, phone, email) go live | Medium | High (misleading, E-Com Rules breach) | Preview stays `noindex`; T5.1 replaces every `SEED`; `isDemoContent` banner | Open until A6 |
+| Placeholder details (phone, WhatsApp, email, hours) go live | Medium | High (misleading, E-Com Rules breach) | Preview stays `noindex`; T5.1 replaces every `SEED`; `isDemoContent` banner | Open until A6 |
 | No named grievance officer | High if not supplied | High | Placeholder in policies; launch blocked on A12 | Open |
 | Unsupported claims ("official distributor", "5+ years", "genuine") | Medium | Medium–High (CCPA, trademark) | Owner confirms C5 and A11; keep proof on file | Open |
 | Brand logos or product photos used without permission | Medium | Medium (takedown, infringement) | §5 rules; only official assets | Open (R1) |
