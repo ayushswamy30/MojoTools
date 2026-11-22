@@ -22,7 +22,7 @@ export function MapCard({ labels, name, address, embedUrl, directionsUrl, newTab
   return (
     <section
       aria-labelledby="map-title"
-      className="overflow-hidden rounded-md border border-steel-200"
+      className="flex flex-col overflow-hidden rounded-md border border-steel-200"
     >
       {embedUrl && showMap ? (
         <iframe
@@ -30,10 +30,10 @@ export function MapCard({ labels, name, address, embedUrl, directionsUrl, newTab
           src={embedUrl}
           loading="lazy"
           referrerPolicy="strict-origin-when-cross-origin"
-          className="h-72 w-full border-0"
+          className="min-h-72 w-full flex-1 border-0"
         />
       ) : (
-        <div className="flex h-72 flex-col items-center justify-center gap-4 bg-steel-100 p-6 text-center text-sm text-steel-600">
+        <div className="flex min-h-72 flex-1 flex-col items-center justify-center gap-4 bg-steel-100 p-6 text-center text-sm text-steel-600">
           {embedUrl ? (
             <>
               <p className="max-w-sm">{labels.notice}</p>
@@ -54,9 +54,9 @@ export function MapCard({ labels, name, address, embedUrl, directionsUrl, newTab
         <div className="flex gap-3">
           <MapPin aria-hidden="true" className="mt-0.5 size-5 text-ink-900" />
           <div>
-            <h2 id="map-title" className="font-sans text-base font-semibold">
+            <h3 id="map-title" className="text-lg font-bold">
               {labels.title}
-            </h2>
+            </h3>
             <p className="text-sm">{address}</p>
           </div>
         </div>
@@ -65,7 +65,7 @@ export function MapCard({ labels, name, address, embedUrl, directionsUrl, newTab
             href={directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-info underline underline-offset-4"
+            className="inline-flex min-h-11 items-center gap-1 font-semibold text-info underline underline-offset-4"
           >
             {labels.directions} <span className="sr-only">{newTabLabel}</span>
           </a>

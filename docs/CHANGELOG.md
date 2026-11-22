@@ -21,6 +21,7 @@
 - **08 Nov 2026**: "Why Mojo Tools" cards use the same yellow sweep hover as the store gallery instead of the rising hazard tape.
 - **09 Nov 2026** (later): Owner feedback round 6. Floating WhatsApp button removed (P20); Mojo Mitra launcher is now a turning **seal badge** (ink scalloped seal, yellow "ASK MITRA" ring, logo wedge centre, hover tooltip), 88px desktop / 72px phone. DESIGN `FloatingActions` updated; e2e test for the old WhatsApp bubble replaced.
 - **09 Nov 2026**: Docs brought up to date: README, `PROGRESS.md` (rewritten), `TASKS.md` progress notes, DESIGN `FeatureCards` / `StoreGallery` / `SectionTitle` / home wireframe, DECISIONS P19. 25 unit + 72 e2e tests.
+- **23 Nov 2026**: Contact page reworked after the UX audit (P21): quick actions in the hero, map beside contact details, shorter Contact form, newsletter moved to the footer. Real store address, map embed and directions added. Removed the form's `encType`, which caused a React hydration error. PRD PS-5, DESIGN, TASKS, LEGAL, OPEN-QUESTIONS and PROGRESS updated. Last local run: 25 unit tests passed; browser tests 72 passed, 2 failed (Mojo Mitra launcher on mobile, cause not yet found), 6 skipped.
 
 ## Consolidation log (08 Oct 2026)
 

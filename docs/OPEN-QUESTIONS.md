@@ -32,7 +32,7 @@ Legend: 🟡 a default is in place and work can proceed (please confirm) · ❓ 
 | A1 | Brand list + logos (PNG/SVG) + product types per brand | ❓ |
 | A4 | Company content: story, purpose, mission, values, timeline, real stats, photos, real testimonials | ❓ |
 | A5 | Mojo Tools logo + brand colours (until then: yellow + charcoal tokens) | ❓ |
-| A6 | Business details: legal name, address, GSTIN, hours, phone, WhatsApp, email | ❓ |
+| A6 | Business details: ~~address~~ ✅ (Google Maps listing, 23 Nov 2026). Still needed: legal name, GSTIN, weekly hours (listing shows only Monday, 9 AM–8 PM), phone and WhatsApp (confirm whether the listing's 098105 65271 should be used), email, and a store photo the owner holds the rights to | ❓ |
 | A8 | Top-level categories with one image each; hero images / slogans | ❓ |
 | A9 | Awards and certificates: title, who gave it, year, one-line description, photo/scan if available (page shows "coming soon" until then) | ❓ |
 | A10 | Real stats (years, products, brands, customers): the stats strips stay hidden until supplied | ❓ |

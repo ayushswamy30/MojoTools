@@ -1,6 +1,6 @@
 # Mojo Tools — Progress Report
 
-**As of 09 Nov 2026 · branch `main` · preview at [mojotools.vercel.app](https://mojotools.vercel.app)**
+**As of 23 Nov 2026 · `main` plus the Contact page update (P21) · preview at [mojotools.vercel.app](https://mojotools.vercel.app)**
 
 This is a plain-language summary of everything done so far. Details live in the linked docs.
 
@@ -10,10 +10,10 @@ This is a plain-language summary of everything done so far. Details live in the 
 |---|---|
 | Planning documents (PRD, architecture, design, rules, tasks) | ✅ Consolidated and corrected (v0.2), kept up to date as the owner gives feedback |
 | Launch marketing plan | ✅ Drafted; budget not decided |
-| Company site (R0) | ✅ **Built with demo content** and refined through 5 rounds of owner feedback |
+| Company site (R0) | ✅ **Built with demo content** and refined through owner feedback. The store address and map are now real |
 | Preview | ✅ Online at mojotools.vercel.app, hidden from search engines (`noindex`) |
 | Legal pages (terms, privacy, cookies, refunds, accessibility) | ✅ Drafted; need owner / legal review |
-| Real business content | ⏳ Waiting on the owner |
+| Real business content | 🟡 Store address and map added. Hours, phone, WhatsApp, email, GSTIN, photos and the rest are still waiting on the owner |
 | Owner's own accounts (Supabase, email, analytics, Sentry) | ⏳ Needs the owner's accounts |
 | Online shop (R1) | ⏳ Not started; next phase |
 | Public launch | 🎯 Whole site (company site + shop) together, within 3 months (by early Jan 2027) |
@@ -34,6 +34,9 @@ This is a plain-language summary of everything done so far. Details live in the 
 - An AI assistant, **Mojo Mitra**, sits at the bottom right (Gemini or Groq).
 - **The Products page shows sample products with prices excluding GST** (P18) until the real list arrives.
 - Home "Visit our store" shows a **4-photo gallery** instead of the address (P19).
+- Sub-headings use **Space Grotesk**; H1 and section titles stay in the wordmark face (D34).
+- Category tiles open that category on the **Products** page (D35).
+- **Contact page reworked** after a UX audit (P21): one store, quick actions first, map beside the contact details, shorter form, newsletter in the footer only.
 
 All decisions are listed in [`DECISIONS.md`](DECISIONS.md).
 
@@ -43,11 +46,11 @@ All decisions are listed in [`DECISIONS.md`](DECISIONS.md).
 | Page | What it does |
 |---|---|
 | **Home** | Slideshow banner (pausable, keyboard-friendly), picture grid of categories, scrolling brand strip on dark, four dark "Why Mojo Tools" cards with custom icons, bulk-quote banner, "Visit our store" photo gallery |
-| **About** | Company story, purpose, mission, values (expandable list), timeline, brands |
+| **About** | Company story, purpose, mission, values (expandable list), scroll-driven timeline on desktop (D33), brands |
 | **Products** | A strip of category pictures; a grid of sample products (picture, name, brand, price excluding GST, "Sample" badge); clicking a product opens its details over the page. Links can be shared (`?category=` / `?product=`) |
 | **Distributorship** | Brands Mojo Tools officially distributes, with filter buttons by product type; a page for each brand with Enquire, Request price list and WhatsApp. Old `/brands` links redirect here |
 | **Awards** | Awards and certificates (placeholders, hidden until real ones arrive) |
-| **Contact** | Contact details, enquiry form, click-to-load map, help banner, newsletter sign-up |
+| **Contact** | Quick actions, real store address with click-to-load map and directions, contact details, short enquiry form, help and quote blocks. Newsletter sign-up is in the footer |
 | **Get a Quote** | Enquiry form that pre-fills from wherever the visitor clicked (brand, category, price list) |
 | **Policies** | Draft Terms, Privacy, Cookies, Refunds and returns, Accessibility (with a grievance officer section) |
 | **404 page** | Friendly "page not found" with links back |
@@ -70,14 +73,15 @@ All decisions are listed in [`DECISIONS.md`](DECISIONS.md).
 
 ### Behind the scenes
 - **Database** (Supabase): brands, categories, enquiries and newsletter tables with security rules, tested on Postgres.
-- **Automatic checks** on every change (GitHub Actions): type check, code style, **25 unit tests** and **72 browser tests on desktop and mobile, including accessibility scans**.
+- **Automatic checks** on every change (GitHub Actions): type check, code style, unit tests and browser tests on desktop and mobile, including accessibility scans.
+- **Latest local test run (23 Nov, Contact update):** type check and lint pass, 25 of 25 unit tests pass. Of 80 browser tests, 72 pass, 6 are skipped and **2 fail** (Mojo Mitra launcher on mobile, cause not yet found). The finished Contact page still needs a visual check on desktop and mobile.
 - **Security**: Next.js upgraded to 16.4.3 on 1 Nov for three published vulnerabilities (one critical).
 
 ## 4. Demo / placeholder content (to replace)
 
 | What | Currently | Where to change |
 |---|---|---|
-| Business details (address, phone, email, hours, GSTIN) | Placeholders (`+91 90000 00000`, `sales@example.com`) | `src/features/content/site.ts` |
+| Business details (phone, WhatsApp, email, hours, GSTIN, legal name) | Placeholders (`+91 90000 00000`, `sales@example.com`). Address and map are real | `src/features/content/site.ts` |
 | Brands | "Brand A–H", no logos, none marked authorised | `site.ts` + `supabase/seed.sql` |
 | Categories | 8 standard categories with drawings and sample descriptions | `site.ts` + `supabase/seed.sql` |
 | Products and prices | Sample products with made-up prices, badged "Sample" | `src/features/content/products.ts` |
@@ -92,14 +96,15 @@ All decisions are listed in [`DECISIONS.md`](DECISIONS.md).
 ## 5. What's next
 
 **Waiting on the owner** (full list in [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md)):
-1. Business details, logo, brand list (and which brands Mojo is authorised for), About Us content.
-2. **Photos**: shop, tools in stock, warehouse, office (store gallery), plus team and hero images.
+1. Business details (weekly hours, and whether to use the listing's phone 098105 65271 for Call and WhatsApp), logo, brand list (and which brands Mojo is authorised for), About Us content.
+2. **Photos** the owner holds the rights to: shop, tools in stock, warehouse, office (store gallery), plus team and hero images.
 3. The real product list with prices, to replace the sample products.
 4. Domain and business email; who receives enquiry alerts; awards/certificates.
 5. A Gemini or Groq API key for Mojo Mitra, and whether chat logs should be kept.
 6. Accounts: Supabase, Resend, Cloudflare, Google Analytics, Sentry.
 
 **Next build steps:**
-1. Add a pause button to the brand strip for touch screens (WCAG 2.2.2) before launch.
-2. Swap in real content as it arrives; owner walkthrough and sign-off on the preview (TASKS Phase 5).
-3. Start the shop (R1): product database, catalogue import, product pages, search, cart and checkout ([`TASKS.md`](TASKS.md) Part B).
+1. Fix the 2 failing Mojo Mitra mobile tests and check the new Contact page on desktop and mobile.
+2. Add a pause button to the brand strip for touch screens (WCAG 2.2.2) before launch.
+3. Swap in real content as it arrives; owner walkthrough and sign-off on the preview (TASKS Phase 5).
+4. Start the shop (R1): product database, catalogue import, product pages, search, cart and checkout ([`TASKS.md`](TASKS.md) Part B).
