@@ -20,7 +20,7 @@ Legend: 🟡 a default is in place and work can proceed (please confirm) · ❓ 
 | C2 | Marketing budget tier: Lean (₹0 media) / Starter (~₹40k) / Growth (~₹1.2L) over 8 weeks | Not decided yet (owner, 09 Oct); Starter recommended | ❓ | Launch plan §8 |
 | C3 | Confirm targets (150 enquiries in 8 weeks, 25 Google reviews, first-orders target), or share past enquiry volumes | As stated | 🟡 | Launch plan §7 |
 | C4 | ~~Response-time promise~~ ✅ **within 1 working day**. Still open: **who receives enquiry alerts** (names / email / WhatsApp)? | — | ❓ | T4.4 |
-| C5 | **Which brands does Mojo officially distribute?** Every brand on the Distributorship page is shown as an official distributor. | Demo brands A–H until the list arrives | ❓ | Distributorship page |
+| C5 | **Which brands does Mojo officially distribute?** Every brand on the Distributorship page is shown as an official distributor. | Owner confirmed all 102 brands in the company profile are authorised (23 Nov 2026) | ✅ | Distributorship page |
 | C7 | **AI assistant:** which provider (Gemini or Groq) and who holds the API key? Should chat logs be stored (and for how long)? | Works with either key; logs not stored | ❓ | Mojo Mitra go-live |
 | C8 | Is "Mojo Mitra" the right name for the assistant? | Mojo Mitra | 🟡 | — |
 | C6 | Existing Google Business Profile / IndiaMART listing? | ✅ Both exist; no WhatsApp Business or social pages yet | ✅ | — |
@@ -29,7 +29,7 @@ Legend: 🟡 a default is in place and work can proceed (please confirm) · ❓ 
 
 | # | Item | Status |
 |---|------|--------|
-| A1 | Brand list + logos (PNG/SVG) + product types per brand | ❓ |
+| A1 | Brand list + logos (PNG/SVG) + product types per brand. From the company profile; owner confirmed permission to use logos and photos (23 Nov 2026) | ✅ |
 | A4 | Company content: story, purpose, mission, values, timeline, real stats, photos, real testimonials | ❓ |
 | A5 | Mojo Tools logo + brand colours (until then: yellow + charcoal tokens) | ❓ |
 | A6 | Business details: ~~address~~ ✅ (Google Maps listing, 23 Nov 2026). Still needed: legal name, GSTIN, weekly hours (listing shows only Monday, 9 AM–8 PM), phone and WhatsApp (confirm whether the listing's 098105 65271 should be used), email, and a store photo the owner holds the rights to | ❓ |

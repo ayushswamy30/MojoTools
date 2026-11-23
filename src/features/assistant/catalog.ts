@@ -46,7 +46,7 @@ export function searchCatalog(query: string) {
   return {
     categories: matchedCategories,
     brands: matchedBrands,
-    note: 'Product-level details (models, prices, stock) are not online yet; offer a quote for exact prices.',
+    note: 'The Products page lists our range without prices. Exact models, prices and stock are confirmed by quote.',
   }
 }
 

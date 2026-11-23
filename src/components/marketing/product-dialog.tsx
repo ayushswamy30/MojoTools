@@ -64,7 +64,7 @@ export function ProductDialog({
             <ProductVisual
               product={product}
               icon={icon}
-              sampleBadge={labels.sampleBadge}
+              sizes="(min-width: 768px) 512px, 100vw"
               className="aspect-square rounded-none md:aspect-auto md:min-h-[32rem]"
             />
             <div className="flex flex-col p-6 md:p-10">
@@ -79,7 +79,9 @@ export function ProductDialog({
               </p>
               <div className="mt-6">
                 <Price product={product} labels={labels} size="lg" />
-                <p className="mt-1 text-xs text-steel-500">{labels.exclGst}</p>
+                {product.pricePaise === undefined ? null : (
+                  <p className="mt-1 text-xs text-steel-500">{labels.exclGst}</p>
+                )}
               </div>
               <Dialog.Description className="mt-6 text-base">
                 {product.description}

@@ -14,9 +14,9 @@ test.describe('enquiry form (demo mode)', () => {
   })
 
   test('submits a valid enquiry and announces the enquiry number', async ({ page }) => {
-    await page.goto('/quote?type=price_list&brand=brand-b', { waitUntil: 'networkidle' })
+    await page.goto('/quote?type=price_list&brand=makita', { waitUntil: 'networkidle' })
     await expect(page.getByLabel(/What do you need/)).toHaveValue('price_list')
-    await expect(page.getByLabel(/^Brand/)).toHaveValue('brand-b')
+    await expect(page.getByLabel(/^Brand/)).toHaveValue('makita')
     await page.getByLabel(/Your name/).fill('Asha Patel')
     await page.getByLabel(/Mobile number/).fill('98765 43210')
     await page.getByLabel(/^Message/).fill('Please send the latest price list.')

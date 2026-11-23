@@ -80,6 +80,35 @@ const art: Record<ArtName, ReactNode> = {
       <circle cx="45" cy="38" r="5" className="fill-white" />
     </>
   ),
+  // Gate valve with a handwheel
+  valve: (
+    <>
+      <path d="M4 31h9v18H4zM51 31h9v18h-9z" className="fill-ink-900" />
+      <path
+        d="M13 35h9a10 10 0 0 1 20 0h9v10h-9a10 10 0 0 1-20 0h-9z"
+        className="fill-brand-yellow"
+      />
+      <path d="M29 25V12h6v13" className="fill-white" />
+      <rect x="15" y="6" width="34" height="6" rx="3" className="fill-brand-yellow" />
+    </>
+  ),
+  // Mains plug with its cable
+  plug: (
+    <>
+      <path d="M24 5v13M40 5v13" strokeWidth="3.5" />
+      <path d="M16 18h32v10a16 16 0 0 1-32 0z" className="fill-brand-yellow" />
+      <path d="M33 23l-5 9h8l-5 8" />
+      <path d="M32 44v6a8 8 0 0 0 8 8h17" strokeWidth="3" />
+    </>
+  ),
+  // Stacked sheets of material
+  layers: (
+    <>
+      <path d="M6 46l26-12 26 12-26 12z" className="fill-ink-900" />
+      <path d="M6 36l26-12 26 12-26 12z" className="fill-white" />
+      <path d="M6 26l26-12 26 12-26 12z" className="fill-brand-yellow" />
+    </>
+  ),
   // Hard hat and safety glasses
   'hard-hat': (
     <>

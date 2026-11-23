@@ -1,0 +1,712 @@
+[
+  {
+    "slug": "acme",
+    "name": "Acme",
+    "productTypes": ["Safety"],
+    "logo": "/images/brands/acme.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "addison",
+    "name": "Addison",
+    "productTypes": [],
+    "logo": "/images/brands/addison.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "almonard",
+    "name": "Almonard",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/almonard.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "baumer",
+    "name": "Baumer",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/baumer.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "bds",
+    "name": "BDS Maschinen",
+    "productTypes": ["Machinery", "Cutting & Abrasives"],
+    "logo": "/images/brands/bds.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "berger",
+    "name": "Berger",
+    "productTypes": ["Industrial Materials"],
+    "logo": "/images/brands/berger.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "bipico",
+    "name": "Bipico",
+    "productTypes": ["Cutting & Abrasives"],
+    "logo": "/images/brands/bipico.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "bosch",
+    "name": "Bosch",
+    "productTypes": ["Machinery", "Power Tools"],
+    "logo": "/images/brands/bosch.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "boss-hydraulics",
+    "name": "Boss Hydraulics",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/boss-hydraulics.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "british-paints",
+    "name": "British Paints",
+    "productTypes": ["Industrial Materials"],
+    "isFeatured": false
+  },
+  {
+    "slug": "checkmate",
+    "name": "Checkmate",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/checkmate.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "crompton",
+    "name": "Crompton",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/crompton.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "cumi",
+    "name": "CUMI",
+    "productTypes": ["Cutting & Abrasives"],
+    "logo": "/images/brands/cumi.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "danfoss",
+    "name": "Danfoss",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/danfoss.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "de-neers",
+    "name": "De Neers",
+    "productTypes": [],
+    "logo": "/images/brands/de-neers.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "dewalt",
+    "name": "DeWalt",
+    "productTypes": ["Power Tools", "Machinery", "Cutting & Abrasives"],
+    "logo": "/images/brands/dewalt.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "drebon",
+    "name": "DreBon",
+    "productTypes": ["Power Tools", "Hand Tools"],
+    "logo": "/images/brands/drebon.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "electra",
+    "name": "Electra",
+    "productTypes": ["Welding"],
+    "logo": "/images/brands/electra.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "esdee",
+    "name": "Esdee",
+    "productTypes": ["Industrial Materials"],
+    "logo": "/images/brands/esdee.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "fenner",
+    "name": "Fenner",
+    "productTypes": [],
+    "logo": "/images/brands/fenner.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "festo",
+    "name": "Festo",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/festo.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "fkd",
+    "name": "FKD",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/fkd.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "fluke",
+    "name": "Fluke",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/fluke.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "groz",
+    "name": "Groz",
+    "productTypes": [],
+    "logo": "/images/brands/groz.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "grundfos",
+    "name": "Grundfos",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/grundfos.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "guru",
+    "name": "Guru",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/guru.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "hikoki",
+    "name": "HiKOKI",
+    "productTypes": ["Power Tools", "Machinery"],
+    "logo": "/images/brands/hikoki.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "hilti",
+    "name": "Hilti",
+    "productTypes": ["Fasteners & Hardware"],
+    "logo": "/images/brands/hilti.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "hiwin",
+    "name": "Hiwin",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/hiwin.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "honeywell",
+    "name": "Honeywell",
+    "productTypes": ["Safety"],
+    "logo": "/images/brands/honeywell.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "htc",
+    "name": "HTC Instruments",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/htc.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "imada",
+    "name": "Imada",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/imada.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "indfos",
+    "name": "Indfos",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/indfos.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "insize",
+    "name": "Insize",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/insize.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "jainson",
+    "name": "Jainson",
+    "productTypes": ["Electricals", "Hand Tools"],
+    "logo": "/images/brands/jainson.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "janatics",
+    "name": "Janatics",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/janatics.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "jigo",
+    "name": "JiGo",
+    "productTypes": ["Electricals"],
+    "logo": "/images/brands/jigo.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "jk-files",
+    "name": "JK Files & Tools",
+    "productTypes": ["Hand Tools"],
+    "logo": "/images/brands/jk-files.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "kains",
+    "name": "Kains",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/kains.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "karcher",
+    "name": "Kärcher",
+    "productTypes": [],
+    "logo": "/images/brands/karcher.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "kartar",
+    "name": "Kartar",
+    "productTypes": ["Safety", "Valves & Piping"],
+    "logo": "/images/brands/kartar.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "kirloskar",
+    "name": "Kirloskar",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/kirloskar.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "kluber",
+    "name": "Klüber Lubrication",
+    "productTypes": [],
+    "logo": "/images/brands/kluber.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "kristeel-shinwa",
+    "name": "Kristeel-Shinwa",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/kristeel-shinwa.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "ksb",
+    "name": "KSB",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/ksb.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "ktr",
+    "name": "KTR",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/ktr.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "legris",
+    "name": "Legris",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/legris.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "loctite",
+    "name": "Loctite",
+    "productTypes": ["Industrial Materials"],
+    "logo": "/images/brands/loctite.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "lovejoy",
+    "name": "Lovejoy",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/lovejoy.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "magnaflux",
+    "name": "Magnaflux",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/magnaflux.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "makita",
+    "name": "Makita",
+    "productTypes": ["Power Tools"],
+    "logo": "/images/brands/makita.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "mangalam",
+    "name": "Mangalam",
+    "productTypes": ["Welding"],
+    "logo": "/images/brands/mangalam.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "meco",
+    "name": "Meco",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/meco.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "metrix",
+    "name": "Metrix+",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/metrix.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "miles",
+    "name": "Miles",
+    "productTypes": ["Hand Tools", "Power Tools", "Fasteners & Hardware"],
+    "logo": "/images/brands/miles.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "miranda",
+    "name": "Miranda",
+    "productTypes": ["Cutting & Abrasives"],
+    "logo": "/images/brands/miranda.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "mittal",
+    "name": "Mittal",
+    "productTypes": ["Hand Tools"],
+    "logo": "/images/brands/mittal.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "mitutoyo",
+    "name": "Mitutoyo",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/mitutoyo.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "motwane",
+    "name": "Motwane",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/motwane.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "nachi",
+    "name": "Nachi",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/nachi.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "niigata-seiki",
+    "name": "Niigata Seiki",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/niigata-seiki.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "ntn",
+    "name": "NTN",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/ntn.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "oks",
+    "name": "OKS",
+    "productTypes": ["Industrial Materials"],
+    "logo": "/images/brands/oks.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "omron",
+    "name": "Omron",
+    "productTypes": [],
+    "logo": "/images/brands/omron.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "ozar",
+    "name": "Ozar",
+    "productTypes": [],
+    "logo": "/images/brands/ozar.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "p-tech",
+    "name": "P-Tech",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/p-tech.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "pawan",
+    "name": "Pawan",
+    "productTypes": ["Machinery"],
+    "isFeatured": false
+  },
+  {
+    "slug": "peacock",
+    "name": "Peacock",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/peacock.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "pidilite",
+    "name": "Pidilite",
+    "productTypes": ["Industrial Materials"],
+    "logo": "/images/brands/pidilite.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "polycab",
+    "name": "Polycab",
+    "productTypes": ["Electricals"],
+    "logo": "/images/brands/polycab.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "prince",
+    "name": "Prince Piping Systems",
+    "productTypes": ["Valves & Piping"],
+    "logo": "/images/brands/prince.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "recoil",
+    "name": "Recoil",
+    "productTypes": ["Fasteners & Hardware"],
+    "logo": "/images/brands/recoil.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "rexroth",
+    "name": "Rexroth",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/rexroth.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "sant",
+    "name": "Sant Valves",
+    "productTypes": ["Valves & Piping"],
+    "logo": "/images/brands/sant.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "schneider",
+    "name": "Schneider Electric",
+    "productTypes": ["Electricals"],
+    "logo": "/images/brands/schneider.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "selec",
+    "name": "Selec",
+    "productTypes": ["Electricals"],
+    "logo": "/images/brands/selec.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "sibass",
+    "name": "Sibass",
+    "productTypes": ["Electricals"],
+    "logo": "/images/brands/sibass.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "skf",
+    "name": "SKF",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/skf.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "spac",
+    "name": "SPAC Pneumatic",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/spac.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "stanley",
+    "name": "Stanley",
+    "productTypes": ["Hand Tools", "Measuring", "Power Tools"],
+    "logo": "/images/brands/stanley.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "steel-smith",
+    "name": "Steel-Smith",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/steel-smith.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "sudong",
+    "name": "Sudong",
+    "productTypes": ["Power Tools"],
+    "logo": "/images/brands/sudong.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "taparia",
+    "name": "Taparia",
+    "productTypes": ["Hand Tools", "Cutting & Abrasives"],
+    "logo": "/images/brands/taparia.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "tohnichi",
+    "name": "Tohnichi",
+    "productTypes": [],
+    "logo": "/images/brands/tohnichi.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "toku",
+    "name": "Toku",
+    "productTypes": ["Power Tools", "Machinery"],
+    "logo": "/images/brands/toku.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "toolfast",
+    "name": "ToolFast",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/toolfast.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "toptul",
+    "name": "Toptul",
+    "productTypes": ["Hand Tools", "Power Tools"],
+    "logo": "/images/brands/toptul.webp",
+    "isFeatured": true
+  },
+  {
+    "slug": "totem",
+    "name": "Totem",
+    "productTypes": ["Cutting & Abrasives"],
+    "logo": "/images/brands/totem.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "truthread",
+    "name": "TruThread",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/truthread.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "ultra",
+    "name": "Ultra",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/ultra.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "unbrako",
+    "name": "Unbrako",
+    "productTypes": ["Fasteners & Hardware"],
+    "logo": "/images/brands/unbrako.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "unik",
+    "name": "Unik",
+    "productTypes": ["Valves & Piping"],
+    "logo": "/images/brands/unik.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "vertex",
+    "name": "Vertex",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/vertex.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "victor",
+    "name": "Victor",
+    "productTypes": ["Welding"],
+    "logo": "/images/brands/victor.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "wd-40",
+    "name": "WD-40",
+    "productTypes": ["Industrial Materials"],
+    "isFeatured": false
+  },
+  {
+    "slug": "wesaf",
+    "name": "Wesaf",
+    "productTypes": ["Industrial Materials"],
+    "isFeatured": false
+  },
+  {
+    "slug": "wika",
+    "name": "WIKA",
+    "productTypes": ["Measuring"],
+    "logo": "/images/brands/wika.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "wilo",
+    "name": "Wilo",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/wilo.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "wolcut",
+    "name": "WolCut",
+    "productTypes": ["Cutting & Abrasives"],
+    "logo": "/images/brands/wolcut.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "yato",
+    "name": "Yato",
+    "productTypes": [],
+    "logo": "/images/brands/yato.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "yuken",
+    "name": "Yuken",
+    "productTypes": ["Machinery"],
+    "logo": "/images/brands/yuken.webp",
+    "isFeatured": false
+  },
+  {
+    "slug": "zoloto",
+    "name": "Zoloto",
+    "productTypes": ["Valves & Piping"],
+    "logo": "/images/brands/zoloto.webp",
+    "isFeatured": false
+  }
+]

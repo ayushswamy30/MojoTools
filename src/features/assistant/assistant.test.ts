@@ -13,7 +13,7 @@ describe('catalog helpers', () => {
   it('finds categories and their brands from plain language', () => {
     const result = searchCatalog('I need an angle grinder')
     expect(result.categories[0]?.name).toBe('Power Tools')
-    expect(result.categories[0]?.brands).toContain('Brand A')
+    expect(result.categories[0]?.brands).toContain('DeWalt')
     expect(result.categories[0]?.page).toBe('/products#power-tools')
   })
 
