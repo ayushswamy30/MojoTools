@@ -5,10 +5,10 @@ const pages = [
   '/',
   '/about',
   '/products',
-  '/products?category=welding&product=welding-electrodes-3-15-mm-5-kg',
+  '/products?category=welding&product=mangalam-welding-electrodes',
   '/awards',
   '/distributorship',
-  '/distributorship/brand-a',
+  '/distributorship/dewalt',
   '/contact',
   '/quote',
   '/policies/terms',
@@ -105,24 +105,24 @@ test('products page: Power Tools by default, strip switches category, product op
   await expect(page).toHaveURL(/\/products\?category=welding$/)
   await expect(page.getByRole('heading', { level: 2, name: 'Welding' })).toBeVisible()
 
-  await page.getByRole('link', { name: /Welding Electrodes/ }).click()
-  const dialog = page.getByRole('dialog', { name: /Welding Electrodes/ })
+  await page.getByRole('link', { name: /Mangalam Welding Electrodes/ }).click()
+  const dialog = page.getByRole('dialog', { name: /Mangalam Welding Electrodes/ })
   await expect(dialog).toBeVisible()
-  await expect(page).toHaveURL(/product=welding-electrodes-3-15-mm-5-kg/)
+  await expect(page).toHaveURL(/product=mangalam-welding-electrodes/)
 
   await page.keyboard.press('Escape')
   await expect(dialog).toBeHidden()
   await expect(page).toHaveURL(/\/products\?category=welding$/)
 
-  await page.getByRole('link', { name: /Welding Electrodes/ }).click()
+  await page.getByRole('link', { name: /Mangalam Welding Electrodes/ }).click()
   await page.getByRole('dialog').getByRole('link', { name: 'Get a quote' }).click()
   await expect(page).toHaveURL(/\/quote\?type=quote&category=welding/)
   await expect(page.getByLabel(/^Category/)).toHaveValue('welding')
 })
 
 test('old /brands links redirect to Distributorship', async ({ page }) => {
-  await page.goto('/brands/brand-a')
-  await expect(page).toHaveURL(/\/distributorship\/brand-a$/)
+  await page.goto('/brands/dewalt')
+  await expect(page).toHaveURL(/\/distributorship\/dewalt$/)
   await expect(page.getByText('Official distributor').first()).toBeVisible()
 })
 

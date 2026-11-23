@@ -8,7 +8,7 @@ const valid = {
   email: '',
   company: '',
   gstin: '',
-  brand: 'brand-a',
+  brand: 'dewalt',
   category: '',
   message: 'Need 20 angle grinders',
   consent: 'on',
@@ -20,7 +20,7 @@ describe('enquirySchema', () => {
     const result = enquirySchema.parse(valid)
     expect(result.mobile).toBe('9876543210')
     expect(result.email).toBeUndefined()
-    expect(result.brand).toBe('brand-a')
+    expect(result.brand).toBe('dewalt')
   })
 
   it('explains how to fix each error', () => {

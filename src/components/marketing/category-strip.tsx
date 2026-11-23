@@ -15,8 +15,8 @@ export function CategoryStrip({
 }) {
   return (
     <nav aria-label={label}>
-      {/* centre only from xl, where all 8 fit; below that it scrolls from the start (centring an overflowing row clips the first item) */}
-      <ul className="-mx-4 flex snap-x scroll-px-4 [scrollbar-width:thin] gap-3 overflow-x-auto px-4 pb-2 md:gap-4 xl:justify-center xl:gap-6 2xl:gap-8">
+      {/* centre only from xl, where all 11 fit; below that it scrolls from the start (centring an overflowing row clips the first item) */}
+      <ul className="-mx-4 flex snap-x scroll-px-4 [scrollbar-width:thin] gap-3 overflow-x-auto px-4 pb-2 md:gap-4 xl:justify-center xl:gap-2 2xl:gap-4">
         {categories.map((category) => {
           const active = category.slug === activeSlug
           return (
@@ -26,7 +26,7 @@ export function CategoryStrip({
                 scroll={false}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'group relative flex w-28 flex-col items-center gap-2 rounded-md px-2 pt-3 pb-4 text-center md:w-32',
+                  'group relative flex w-28 flex-col items-center gap-2 rounded-md px-2 pt-3 pb-4 text-center md:w-32 xl:w-24 xl:px-1',
                   active ? 'bg-steel-100' : 'hover:bg-steel-50',
                 )}
               >

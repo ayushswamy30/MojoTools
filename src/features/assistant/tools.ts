@@ -49,7 +49,7 @@ export const assistantTools = {
         .enum(typeValues)
         .describe('quote for prices/bulk, price_list, dealer, support, or contact'),
       category: z.string().optional().describe('Category slug, e.g. power-tools'),
-      brand: z.string().optional().describe('Brand slug, e.g. brand-a'),
+      brand: z.string().optional().describe('Brand slug, e.g. dewalt'),
       summary: z
         .string()
         .max(500)

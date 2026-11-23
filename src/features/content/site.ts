@@ -1,3 +1,5 @@
+import brandData from './brands.json'
+
 /**
  * SEED — demo / placeholder content for the R0 company site.
  *
@@ -16,22 +18,23 @@ export const business = {
   description:
     'Mojo Tools supplies tools, machinery and hardware materials to contractors, workshops, factories and resellers, with genuine brands and GST invoices.',
   address: {
-    // Owner's Google Maps listing (23 Nov 2026).
-    line1: 'Anjana Tower, NH-8, Hero Honda Chowk Flyover, Pace City I, Sector 37',
+    // Owner's company profile (Sept 2026); pincode confirmed by the owner (23 Nov 2026).
+    line1: '2nd Floor, Anjana Tower, NH-8, Hero Honda Chowk Flyover, Pace City I, Sector 37',
     city: 'Gurugram',
     state: 'Haryana',
-    pincode: '122004',
+    pincode: '122001',
   },
   hours: 'Mon–Sat, 9:30 am – 7:00 pm', // SEED (A6)
-  phone: '+91 90000 00000', // SEED (A6) — demo number, not in service
-  whatsapp: '+91 90000 00000', // SEED (A6)
-  email: 'sales@example.com', // SEED (A6) — example.com is reserved for documentation
+  // shortcut: WhatsApp assumed to be the mobile number; owner will test these before launch (A6).
+  phone: '+91 98105 65271',
+  whatsapp: '+91 98105 65271',
+  email: 'mojotoolsindia@gmail.com',
   gstin: null as string | null, // SEED (A6): shown only when supplied
   mapEmbedUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508!2d77.0131118!3d28.4400333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d191aa94e98f5%3A0x5ce3d2e91144bb61!2sMOJO%20TOOLS%20AND%20TRADING%20INDIA%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin' as
       string | null,
   directionsUrl:
-    'https://www.google.com/maps/dir/?api=1&destination=MOJO%20TOOLS%20AND%20TRADING%20INDIA%20PRIVATE%20LIMITED%2C%20Anjana%20Tower%2C%20Sector%2037%2C%20Gurugram%2C%20Haryana%20122004' as
+    'https://www.google.com/maps/dir/?api=1&destination=MOJO%20TOOLS%20AND%20TRADING%20INDIA%20PRIVATE%20LIMITED%2C%20Anjana%20Tower%2C%20Sector%2037%2C%20Gurugram%2C%20Haryana%20122001' as
       string | null,
   responsePromise: 'within 1 working day', // ✅ owner-confirmed (DECISIONS P9)
   social: [] as { label: string; href: string }[], // SEED: no social pages yet (C6)
@@ -52,51 +55,66 @@ export const business = {
 }
 
 export type ProductType =
-  'Power Tools' | 'Hand Tools' | 'Machinery' | 'Measuring' | 'Safety' | 'Fasteners & Hardware'
+  | 'Power Tools'
+  | 'Hand Tools'
+  | 'Machinery'
+  | 'Measuring'
+  | 'Cutting & Abrasives'
+  | 'Fasteners & Hardware'
+  | 'Valves & Piping'
+  | 'Electricals'
+  | 'Industrial Materials'
+  | 'Safety'
+  | 'Welding'
 
 export const productTypes: ProductType[] = [
   'Power Tools',
   'Hand Tools',
   'Machinery',
   'Measuring',
-  'Safety',
+  'Cutting & Abrasives',
   'Fasteners & Hardware',
+  'Valves & Piping',
+  'Electricals',
+  'Industrial Materials',
+  'Safety',
+  'Welding',
 ]
 
 export type Brand = {
   slug: string
   name: string
   productTypes: ProductType[]
+  /** Logo in public/; the brand name shows while it is unset. */
+  logo?: string
   description: string
   /** Only true for brands the owner confirms Mojo is formally authorised for (C5). */
   isAuthorised: boolean
   isFeatured: boolean
 }
 
-const demoBrand = (letter: string, productTypes: ProductType[], isFeatured = true): Brand => ({
-  slug: `brand-${letter.toLowerCase()}`,
-  name: `Brand ${letter}`,
-  productTypes,
-  description: `Placeholder description for Brand ${letter}. The real brand list, logos and product ranges come from the owner (A1).`,
-  // Brands on the Distributorship page are the ones Mojo officially distributes (DECISIONS P14).
-  isAuthorised: true,
-  isFeatured,
-})
-
-// SEED (A1): eight demo brands; no real logos or names until the owner confirms them.
-export const brands: Brand[] = [
-  demoBrand('A', ['Power Tools', 'Hand Tools']),
-  demoBrand('B', ['Power Tools', 'Measuring']),
-  demoBrand('C', ['Hand Tools', 'Fasteners & Hardware']),
-  demoBrand('D', ['Machinery']),
-  demoBrand('E', ['Safety']),
-  demoBrand('F', ['Measuring', 'Hand Tools']),
-  demoBrand('G', ['Fasteners & Hardware'], false),
-  demoBrand('H', ['Machinery', 'Power Tools'], false),
-]
+// Source: the owner's company profile deck (Sept 2026). The owner confirmed every brand in it is
+// authorised (C5, 23 Nov 2026).
+export const brands: Brand[] = (brandData as Omit<Brand, 'description' | 'isAuthorised'>[]).map(
+  (brand) => ({
+    ...brand,
+    description: `Mojo Tools is an official distributor of ${brand.name}. Ask us for the current range, availability and price.`,
+    isAuthorised: true,
+  }),
+)
 
 export type CategoryIcon =
-  'drill' | 'wrench' | 'factory' | 'ruler' | 'disc' | 'nut' | 'hard-hat' | 'flame'
+  | 'drill'
+  | 'wrench'
+  | 'factory'
+  | 'ruler'
+  | 'disc'
+  | 'nut'
+  | 'valve'
+  | 'plug'
+  | 'layers'
+  | 'hard-hat'
+  | 'flame'
 
 export type Category = {
   slug: string
@@ -109,14 +127,15 @@ export type Category = {
   productType?: ProductType
 }
 
-// SEED (A8): top-level categories from DESIGN.md Prompt 1; to be replaced by the owner's list.
+// Top-level categories, extended with the owner's split of Fasteners & Hardware (23 Nov 2026).
 export const categories: Category[] = [
   {
     slug: 'power-tools',
     name: 'Power Tools',
     icon: 'drill',
     blurb: 'Drills, grinders, saws',
-    description: 'Corded and cordless drills, angle grinders, saws, hammers and accessories.',
+    description:
+      'Corded, cordless and air tools: drills, angle grinders, saws, hammers, impact wrenches and sanders.',
     productType: 'Power Tools',
   },
   {
@@ -124,15 +143,17 @@ export const categories: Category[] = [
     name: 'Hand Tools',
     icon: 'wrench',
     blurb: 'Spanners, pliers, sets',
-    description: 'Spanners, sockets, pliers, screwdrivers, hammers and complete tool kits.',
+    description:
+      'Spanners, sockets, torque wrenches, screwdrivers, files, crimping tools, tool kits, boxes and trolleys.',
     productType: 'Hand Tools',
   },
   {
     slug: 'machinery',
     name: 'Machinery',
     icon: 'factory',
-    blurb: 'Workshop machines',
-    description: 'Workshop and site machines: drilling, cutting, compressors and more.',
+    blurb: 'Machines, pumps, bearings',
+    description:
+      'Workshop machines, machine tooling, pumps, hydraulics, pneumatics, bearings, couplings, fans, hoists and material handling.',
     productType: 'Machinery',
   },
   {
@@ -140,7 +161,8 @@ export const categories: Category[] = [
     name: 'Measuring & Testing',
     icon: 'ruler',
     blurb: 'Gauges, meters',
-    description: 'Measuring tapes, levels, gauges, calipers and electrical testers.',
+    description:
+      'Calipers, micrometers, gauges, pressure instruments, multimeters, clamp meters, testers and NDT sprays.',
     productType: 'Measuring',
   },
   {
@@ -148,22 +170,53 @@ export const categories: Category[] = [
     name: 'Cutting & Abrasives',
     icon: 'disc',
     blurb: 'Discs, blades, wheels',
-    description: 'Cutting and grinding discs, saw blades, flap wheels and sanding products.',
+    description:
+      'Cutting and grinding discs, saw blades, taps and dies, milling and annular cutters, flap wheels and sanding products.',
+    productType: 'Cutting & Abrasives',
   },
   {
     slug: 'fasteners-hardware',
     name: 'Fasteners & Hardware',
     icon: 'nut',
     blurb: 'Bolts, anchors, fixings',
-    description: 'Bolts, screws, anchors, fixings and general hardware.',
+    description:
+      'Bolts, screws, anchors, chemical fixings, T-nuts, thread inserts, staples and nails.',
     productType: 'Fasteners & Hardware',
+  },
+  {
+    slug: 'valves-piping',
+    name: 'Valves & Piping',
+    icon: 'valve',
+    blurb: 'Valves, pipes, fittings',
+    description:
+      'Ball, gate, globe, check and butterfly valves, strainers, GI, MS, SS, CPVC and UPVC pipes, fittings and flanges.',
+    productType: 'Valves & Piping',
+  },
+  {
+    slug: 'electricals',
+    name: 'Electricals',
+    icon: 'plug',
+    blurb: 'Switchgear, cables, controls',
+    description:
+      'Contactors, circuit breakers, relays, wires and cables, plugs and sockets, push buttons, sensors, drives, controllers and cable lugs.',
+    productType: 'Electricals',
+  },
+  {
+    slug: 'industrial-materials',
+    name: 'Industrial Materials',
+    icon: 'layers',
+    blurb: 'Adhesives, paints, sheets',
+    description:
+      'Adhesives, lubricants, sprays, paints, packing material, rubber, engineering plastics, aluminium profiles and metal sheets and bars.',
+    productType: 'Industrial Materials',
   },
   {
     slug: 'safety-ppe',
     name: 'Safety & PPE',
     icon: 'hard-hat',
     blurb: 'Helmets, gloves, eyewear',
-    description: 'Helmets, gloves, eyewear, ear protection, safety shoes and harnesses.',
+    description:
+      'Helmets, gloves, eyewear, safety shoes, harnesses, antistatic wear, road safety and fire safety equipment.',
     productType: 'Safety',
   },
   {
@@ -172,6 +225,7 @@ export const categories: Category[] = [
     icon: 'flame',
     blurb: 'Machines, rods, accessories',
     description: 'Welding machines, electrodes, torches and welding safety gear.',
+    productType: 'Welding',
   },
 ]
 

@@ -1,0 +1,3471 @@
+[
+  {
+    "name": "Bipico Hole Saw Cutter",
+    "type": "Hole saw",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bipico",
+    "image": "/images/products/bipico-hole-saw-cutter.webp"
+  },
+  {
+    "name": "Bipico Hacksaw Blades",
+    "type": "Hacksaw blade",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bipico",
+    "image": "/images/products/bipico-hacksaw-blades.webp"
+  },
+  {
+    "name": "Bipico HSS Annular Cutter",
+    "type": "Annular cutter",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bipico",
+    "image": "/images/products/bipico-hss-annular-cutter.webp"
+  },
+  {
+    "name": "Bipico Band Saw Blades",
+    "type": "Band saw blade",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bipico",
+    "image": "/images/products/bipico-band-saw-blades.webp"
+  },
+  {
+    "name": "Bipico Grinding Wheels",
+    "type": "Grinding wheel",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bipico",
+    "image": "/images/products/bipico-grinding-wheels.webp"
+  },
+  {
+    "name": "Bipico Cutting Wheels",
+    "type": "Cutting wheel",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bipico",
+    "image": "/images/products/bipico-cutting-wheels.webp"
+  },
+  {
+    "name": "Bipico Bi-Metal Blades",
+    "type": "Saw blade",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bipico",
+    "image": "/images/products/bipico-bi-metal-blades.webp"
+  },
+  {
+    "name": "Bipico Flap Disc",
+    "type": "Flap disc",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bipico",
+    "image": "/images/products/bipico-flap-disc.webp"
+  },
+  {
+    "name": "HiKOKI Electric Angle Grinder",
+    "type": "Angle grinder",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-electric-angle-grinder.webp"
+  },
+  {
+    "name": "HiKOKI Die Grinder",
+    "type": "Die grinder",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-die-grinder.webp"
+  },
+  {
+    "name": "HiKOKI High Speed Cutter",
+    "type": "Marble cutter",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-high-speed-cutter.webp"
+  },
+  {
+    "name": "HiKOKI Cut-Off Machine",
+    "type": "Chop saw",
+    "categorySlug": "machinery",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-cut-off-machine.webp"
+  },
+  {
+    "name": "HiKOKI Cordless Power Tools Range",
+    "type": "Cordless range",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-cordless-power-tools-range.webp"
+  },
+  {
+    "name": "HiKOKI Cordless Impact Driver",
+    "type": "Impact driver",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-cordless-impact-driver.webp"
+  },
+  {
+    "name": "HiKOKI Cordless Impact Wrench",
+    "type": "Impact wrench",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-cordless-impact-wrench.webp"
+  },
+  {
+    "name": "HiKOKI Drill Machine",
+    "type": "Drill",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-drill-machine.webp"
+  },
+  {
+    "name": "HiKOKI Heavy Duty Drill",
+    "type": "Heavy duty drill",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-heavy-duty-drill.webp"
+  },
+  {
+    "name": "HiKOKI Rotary Hammer",
+    "type": "Rotary hammer",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-rotary-hammer.webp"
+  },
+  {
+    "name": "HiKOKI Demolition Hammer",
+    "type": "Demolition hammer",
+    "categorySlug": "power-tools",
+    "brandSlug": "hikoki",
+    "image": "/images/products/hikoki-demolition-hammer.webp"
+  },
+  {
+    "name": "DeWalt Cordless Impact Wrench",
+    "type": "Impact wrench",
+    "categorySlug": "power-tools",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-cordless-impact-wrench.webp"
+  },
+  {
+    "name": "DeWalt 12V Cordless Drill Driver",
+    "type": "Cordless drill",
+    "categorySlug": "power-tools",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-12v-cordless-drill-driver.webp"
+  },
+  {
+    "name": "DeWalt Angle Grinder",
+    "type": "Angle grinder",
+    "categorySlug": "power-tools",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-angle-grinder.webp"
+  },
+  {
+    "name": "DeWalt Breaker",
+    "type": "Breaker",
+    "categorySlug": "power-tools",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-breaker.webp"
+  },
+  {
+    "name": "DeWalt Hammer Drill",
+    "type": "Hammer drill",
+    "categorySlug": "power-tools",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-hammer-drill.webp"
+  },
+  {
+    "name": "DeWalt Power Tools Range",
+    "type": "Cordless range",
+    "categorySlug": "power-tools",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-power-tools-range.webp"
+  },
+  {
+    "name": "DeWalt Cordless Combo Kit",
+    "type": "Combo kit",
+    "categorySlug": "power-tools",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-cordless-combo-kit.webp"
+  },
+  {
+    "name": "DeWalt Chop Saw Cutter",
+    "type": "Chop saw",
+    "categorySlug": "machinery",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-chop-saw-cutter.webp"
+  },
+  {
+    "name": "DeWalt Rotary Breaker",
+    "type": "Rotary hammer",
+    "categorySlug": "power-tools",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-rotary-breaker.webp"
+  },
+  {
+    "name": "DeWalt Abrasives",
+    "type": "Abrasive wheels",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-abrasives.webp"
+  },
+  {
+    "name": "DeWalt Drill Machine",
+    "type": "Drill",
+    "categorySlug": "power-tools",
+    "brandSlug": "dewalt",
+    "image": "/images/products/dewalt-drill-machine.webp"
+  },
+  {
+    "name": "Makita 18V Cordless Drill",
+    "type": "Cordless drill",
+    "categorySlug": "power-tools",
+    "brandSlug": "makita",
+    "image": "/images/products/makita-18v-cordless-drill.webp"
+  },
+  {
+    "name": "Makita 40V Cordless Drill",
+    "type": "Cordless drill",
+    "categorySlug": "power-tools",
+    "brandSlug": "makita",
+    "image": "/images/products/makita-40v-cordless-drill.webp"
+  },
+  {
+    "name": "Makita Power Tools Range",
+    "type": "Cordless range",
+    "categorySlug": "power-tools",
+    "brandSlug": "makita",
+    "image": "/images/products/makita-power-tools-range.webp"
+  },
+  {
+    "name": "Makita Cordless Impact Wrench Kit",
+    "type": "Impact wrench",
+    "categorySlug": "power-tools",
+    "brandSlug": "makita",
+    "image": "/images/products/makita-cordless-impact-wrench-kit.webp"
+  },
+  {
+    "name": "Makita Heat Gun",
+    "type": "Heat gun",
+    "categorySlug": "power-tools",
+    "brandSlug": "makita",
+    "image": "/images/products/makita-heat-gun.webp"
+  },
+  {
+    "name": "Makita Jig Saw Machine",
+    "type": "Jigsaw",
+    "categorySlug": "power-tools",
+    "brandSlug": "makita",
+    "image": "/images/products/makita-jig-saw-machine.webp"
+  },
+  {
+    "name": "Makita Angle Grinder",
+    "type": "Angle grinder",
+    "categorySlug": "power-tools",
+    "brandSlug": "makita",
+    "image": "/images/products/makita-angle-grinder.webp"
+  },
+  {
+    "name": "Bosch Easy Aquatak 100 Car Washer",
+    "type": "Pressure washer",
+    "categorySlug": "machinery",
+    "brandSlug": "bosch",
+    "image": "/images/products/bosch-easy-aquatak-100-car-washer.webp"
+  },
+  {
+    "name": "Bosch Cordless Power Tools",
+    "type": "Cordless range",
+    "categorySlug": "power-tools",
+    "brandSlug": "bosch",
+    "image": "/images/products/bosch-cordless-power-tools.webp"
+  },
+  {
+    "name": "Toptul Hand Tool Set",
+    "type": "Tool set",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-hand-tool-set.webp"
+  },
+  {
+    "name": "Toptul Magnetic Flexible Handle",
+    "type": "Pick-up tool",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-magnetic-flexible-handle.webp"
+  },
+  {
+    "name": "Toptul Tool Trolley",
+    "type": "Tool trolley",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-tool-trolley.webp"
+  },
+  {
+    "name": "Toptul Allen Key Set",
+    "type": "Allen keys",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-allen-key-set.webp"
+  },
+  {
+    "name": "Toptul Digital Torque Wrench DT-030S2 / DT-085S3",
+    "type": "Digital torque wrench",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-digital-torque-wrench-dt-030s2-dt-085s3.webp"
+  },
+  {
+    "name": "Toptul Digital Torque Wrenches",
+    "type": "Digital torque wrench",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-digital-torque-wrenches.webp"
+  },
+  {
+    "name": "Toptul Torque Wrench",
+    "type": "Torque wrench",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-torque-wrench.webp"
+  },
+  {
+    "name": "Toptul Impact Sockets",
+    "type": "Impact socket",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-impact-sockets.webp"
+  },
+  {
+    "name": "Toptul Auto Tools",
+    "type": "Auto tool",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-auto-tools.webp"
+  },
+  {
+    "name": "Toptul Hand Tools Kit",
+    "type": "Tool kit",
+    "categorySlug": "hand-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-hand-tools-kit.webp"
+  },
+  {
+    "name": "Toptul Cordless Rivet Tool",
+    "type": "Rivet tool",
+    "categorySlug": "power-tools",
+    "brandSlug": "toptul",
+    "image": "/images/products/toptul-cordless-rivet-tool.webp"
+  },
+  {
+    "name": "DreBon Air Die Grinder",
+    "type": "Air die grinder",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-air-die-grinder.webp"
+  },
+  {
+    "name": "DreBon Air Screwdriver DB-SD-40A",
+    "type": "Air screwdriver",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-air-screwdriver-db-sd-40a.webp"
+  },
+  {
+    "name": "DreBon Pneumatic Stapler",
+    "type": "Air stapler",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-pneumatic-stapler.webp"
+  },
+  {
+    "name": "DreBon Air Drill",
+    "type": "Air drill",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-air-drill.webp"
+  },
+  {
+    "name": "DreBon Heavy Duty Air Impact Wrench",
+    "type": "Air impact wrench",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-heavy-duty-air-impact-wrench.webp"
+  },
+  {
+    "name": "DreBon Air Riveter",
+    "type": "Air riveter",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-air-riveter.webp"
+  },
+  {
+    "name": "DreBon Air Screwdriver",
+    "type": "Air screwdriver",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-air-screwdriver.webp"
+  },
+  {
+    "name": "DreBon Air Impact Wrench",
+    "type": "Air impact wrench",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-air-impact-wrench.webp"
+  },
+  {
+    "name": "DreBon Screwdriver Bits",
+    "type": "Screwdriver bits",
+    "categorySlug": "hand-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-screwdriver-bits.webp"
+  },
+  {
+    "name": "DreBon Orbital Sander",
+    "type": "Air sander",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-orbital-sander.webp"
+  },
+  {
+    "name": "DreBon Nut Insert Tool",
+    "type": "Nut inserter",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-nut-insert-tool.webp"
+  },
+  {
+    "name": "DreBon Air Angle Grinder",
+    "type": "Air angle grinder",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-air-angle-grinder.webp"
+  },
+  {
+    "name": "DreBon Air Blow Gun",
+    "type": "Air blow gun",
+    "categorySlug": "power-tools",
+    "brandSlug": "drebon",
+    "image": "/images/products/drebon-air-blow-gun.webp"
+  },
+  {
+    "name": "Sudong Electric Screwdriver (Green)",
+    "type": "Electric screwdriver",
+    "categorySlug": "power-tools",
+    "brandSlug": "sudong",
+    "image": "/images/products/sudong-electric-screwdriver-green.webp"
+  },
+  {
+    "name": "Sudong Electric Screwdriver (Orange)",
+    "type": "Electric screwdriver",
+    "categorySlug": "power-tools",
+    "brandSlug": "sudong",
+    "image": "/images/products/sudong-electric-screwdriver-orange.webp"
+  },
+  {
+    "name": "Toku Air Impact Wrench",
+    "type": "Air impact wrench",
+    "categorySlug": "power-tools",
+    "brandSlug": "toku",
+    "image": "/images/products/toku-air-impact-wrench.webp"
+  },
+  {
+    "name": "Toku Air Orbital Sander",
+    "type": "Air sander",
+    "categorySlug": "power-tools",
+    "brandSlug": "toku",
+    "image": "/images/products/toku-air-orbital-sander.webp"
+  },
+  {
+    "name": "Toku Air Die Grinder",
+    "type": "Air die grinder",
+    "categorySlug": "power-tools",
+    "brandSlug": "toku",
+    "image": "/images/products/toku-air-die-grinder.webp"
+  },
+  {
+    "name": "Toku Air Angle Die Grinder",
+    "type": "Air die grinder",
+    "categorySlug": "power-tools",
+    "brandSlug": "toku",
+    "image": "/images/products/toku-air-angle-die-grinder.webp"
+  },
+  {
+    "name": "Toku Air Angle Grinder",
+    "type": "Air angle grinder",
+    "categorySlug": "power-tools",
+    "brandSlug": "toku",
+    "image": "/images/products/toku-air-angle-grinder.webp"
+  },
+  {
+    "name": "Toku Air Hammer",
+    "type": "Air hammer",
+    "categorySlug": "power-tools",
+    "brandSlug": "toku",
+    "image": "/images/products/toku-air-hammer.webp"
+  },
+  {
+    "name": "Toku Ratchet Wrench",
+    "type": "Air ratchet",
+    "categorySlug": "power-tools",
+    "brandSlug": "toku",
+    "image": "/images/products/toku-ratchet-wrench.webp"
+  },
+  {
+    "name": "Toku Air Hoist",
+    "type": "Air hoist",
+    "categorySlug": "machinery",
+    "brandSlug": "toku",
+    "image": "/images/products/toku-air-hoist.webp"
+  },
+  {
+    "name": "Non-Sparking Hand Tools Range",
+    "type": "Non-sparking tools",
+    "categorySlug": "hand-tools",
+    "image": "/images/products/non-sparking-hand-tools-range.webp"
+  },
+  {
+    "name": "Taparia Hand Tools",
+    "type": "Hand tools",
+    "categorySlug": "hand-tools",
+    "brandSlug": "taparia",
+    "image": "/images/products/taparia-hand-tools.webp"
+  },
+  {
+    "name": "Taparia Tool Trolley",
+    "type": "Tool trolley",
+    "categorySlug": "hand-tools",
+    "brandSlug": "taparia",
+    "image": "/images/products/taparia-tool-trolley.webp"
+  },
+  {
+    "name": "Taparia Screwdrivers",
+    "type": "Screwdriver set",
+    "categorySlug": "hand-tools",
+    "brandSlug": "taparia",
+    "image": "/images/products/taparia-screwdrivers.webp"
+  },
+  {
+    "name": "Taparia Tool Box",
+    "type": "Tool box",
+    "categorySlug": "hand-tools",
+    "brandSlug": "taparia",
+    "image": "/images/products/taparia-tool-box.webp"
+  },
+  {
+    "name": "Taparia Wrenches",
+    "type": "Wrench",
+    "categorySlug": "hand-tools",
+    "brandSlug": "taparia",
+    "image": "/images/products/taparia-wrenches.webp"
+  },
+  {
+    "name": "Taparia Spanner Set",
+    "type": "Spanner set",
+    "categorySlug": "hand-tools",
+    "brandSlug": "taparia",
+    "image": "/images/products/taparia-spanner-set.webp"
+  },
+  {
+    "name": "Stanley Mechanic Hand Tool Set",
+    "type": "Tool set",
+    "categorySlug": "hand-tools",
+    "brandSlug": "stanley",
+    "image": "/images/products/stanley-mechanic-hand-tool-set.webp"
+  },
+  {
+    "name": "Stanley Hand Tools with Tool Box",
+    "type": "Tool kit",
+    "categorySlug": "hand-tools",
+    "brandSlug": "stanley",
+    "image": "/images/products/stanley-hand-tools-with-tool-box.webp"
+  },
+  {
+    "name": "Stanley Tools Cabinet",
+    "type": "Tool cabinet",
+    "categorySlug": "hand-tools",
+    "brandSlug": "stanley",
+    "image": "/images/products/stanley-tools-cabinet.webp"
+  },
+  {
+    "name": "Stanley Tool Box",
+    "type": "Tool box",
+    "categorySlug": "hand-tools",
+    "brandSlug": "stanley",
+    "image": "/images/products/stanley-tool-box.webp"
+  },
+  {
+    "name": "Stanley Measuring Tools",
+    "type": "Auto level",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "stanley",
+    "image": "/images/products/stanley-measuring-tools.webp"
+  },
+  {
+    "name": "Stanley Power Tools",
+    "type": "Cordless range",
+    "categorySlug": "power-tools",
+    "brandSlug": "stanley",
+    "image": "/images/products/stanley-power-tools.webp"
+  },
+  {
+    "name": "Miles Manual Gun Tacker",
+    "type": "Staple gun",
+    "categorySlug": "hand-tools",
+    "brandSlug": "miles",
+    "image": "/images/products/miles-manual-gun-tacker.webp"
+  },
+  {
+    "name": "Miles Pneumatic Wire Stapler",
+    "type": "Air stapler",
+    "categorySlug": "power-tools",
+    "brandSlug": "miles",
+    "image": "/images/products/miles-pneumatic-wire-stapler.webp"
+  },
+  {
+    "name": "Miles Staples 26/6",
+    "type": "Staples",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "miles",
+    "image": "/images/products/miles-staples-26-6.webp"
+  },
+  {
+    "name": "Miles Staples 23/8-H",
+    "type": "Staples",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "miles",
+    "image": "/images/products/miles-staples-23-8-h.webp"
+  },
+  {
+    "name": "Brad Nails",
+    "type": "Nails",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "miles",
+    "image": "/images/products/brad-nails.webp"
+  },
+  {
+    "name": "Totem Dies and Taps",
+    "type": "Taps and dies",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "totem",
+    "image": "/images/products/totem-dies-and-taps.webp"
+  },
+  {
+    "name": "Totem Thread Taps",
+    "type": "Taps",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "totem",
+    "image": "/images/products/totem-thread-taps.webp"
+  },
+  {
+    "name": "Miranda Premium Cutting Tools Range",
+    "type": "Cutting tools",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "miranda",
+    "image": "/images/products/miranda-premium-cutting-tools-range.webp"
+  },
+  {
+    "name": "Miranda Reaming, Milling & Annular Cutters",
+    "type": "Milling cutters",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "miranda",
+    "image": "/images/products/miranda-reaming-milling-annular-cutters.webp"
+  },
+  {
+    "name": "Vertex Tooling Products",
+    "type": "Machine tooling",
+    "categorySlug": "machinery",
+    "brandSlug": "vertex",
+    "image": "/images/products/vertex-tooling-products.webp"
+  },
+  {
+    "name": "Vertex Milling Vice",
+    "type": "Machine vice",
+    "categorySlug": "machinery",
+    "brandSlug": "vertex",
+    "image": "/images/products/vertex-milling-vice.webp"
+  },
+  {
+    "name": "Vertex Swivel Machine Vice",
+    "type": "Machine vice",
+    "categorySlug": "machinery",
+    "brandSlug": "vertex",
+    "image": "/images/products/vertex-swivel-machine-vice.webp"
+  },
+  {
+    "name": "Vertex Clamping Studs & Nuts",
+    "type": "Clamping kit",
+    "categorySlug": "machinery",
+    "brandSlug": "vertex",
+    "image": "/images/products/vertex-clamping-studs-nuts.webp"
+  },
+  {
+    "name": "Machine Clamp",
+    "type": "Clamp",
+    "categorySlug": "machinery",
+    "image": "/images/products/machine-clamp.webp"
+  },
+  {
+    "name": "Precision Sine Vice",
+    "type": "Vice",
+    "categorySlug": "machinery",
+    "image": "/images/products/precision-sine-vice.webp"
+  },
+  {
+    "name": "Vertical Toggle Clamp",
+    "type": "Toggle clamp",
+    "categorySlug": "machinery",
+    "image": "/images/products/vertical-toggle-clamp.webp"
+  },
+  {
+    "name": "Hydraulic Swing Clamp",
+    "type": "Swing clamp",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-swing-clamp.webp"
+  },
+  {
+    "name": "Horizontal Toggle Clamps",
+    "type": "Toggle clamp",
+    "categorySlug": "machinery",
+    "image": "/images/products/horizontal-toggle-clamps.webp"
+  },
+  {
+    "name": "Push-Pull Toggle Clamp",
+    "type": "Toggle clamp",
+    "categorySlug": "machinery",
+    "image": "/images/products/push-pull-toggle-clamp.webp"
+  },
+  {
+    "name": "T-Slot Bolt",
+    "type": "T-bolt",
+    "categorySlug": "fasteners-hardware",
+    "image": "/images/products/t-slot-bolt.webp"
+  },
+  {
+    "name": "T-Slot Nut",
+    "type": "T-nut",
+    "categorySlug": "fasteners-hardware",
+    "image": "/images/products/t-slot-nut.webp"
+  },
+  {
+    "name": "Clamping Stud",
+    "type": "Stud",
+    "categorySlug": "fasteners-hardware",
+    "image": "/images/products/clamping-stud.webp"
+  },
+  {
+    "name": "Coupling Nut",
+    "type": "Coupling nut",
+    "categorySlug": "fasteners-hardware",
+    "image": "/images/products/coupling-nut.webp"
+  },
+  {
+    "name": "Clamping Kit",
+    "type": "Clamping kit",
+    "categorySlug": "machinery",
+    "image": "/images/products/clamping-kit.webp"
+  },
+  {
+    "name": "Rexroth Hydraulic Valves",
+    "type": "Hydraulic valve",
+    "categorySlug": "machinery",
+    "brandSlug": "rexroth",
+    "image": "/images/products/rexroth-hydraulic-valves.webp"
+  },
+  {
+    "name": "Yuken Variable Vane Pump",
+    "type": "Vane pump",
+    "categorySlug": "machinery",
+    "brandSlug": "yuken",
+    "image": "/images/products/yuken-variable-vane-pump.webp"
+  },
+  {
+    "name": "Yuken Directional Valve",
+    "type": "Directional valve",
+    "categorySlug": "machinery",
+    "brandSlug": "yuken",
+    "image": "/images/products/yuken-directional-valve.webp"
+  },
+  {
+    "name": "Hydraulic Pumps, Valves & Controls",
+    "type": "Hydraulic components",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-pumps-valves-controls.webp"
+  },
+  {
+    "name": "Niigata Seiki Welding Gauge",
+    "type": "Welding gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "niigata-seiki",
+    "image": "/images/products/niigata-seiki-welding-gauge.webp"
+  },
+  {
+    "name": "Niigata Seiki Pin Gauge",
+    "type": "Pin gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "niigata-seiki",
+    "image": "/images/products/niigata-seiki-pin-gauge.webp"
+  },
+  {
+    "name": "Niigata Seiki Taper Scale",
+    "type": "Taper scale",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "niigata-seiki",
+    "image": "/images/products/niigata-seiki-taper-scale.webp"
+  },
+  {
+    "name": "Niigata Seiki Angle Gauge",
+    "type": "Angle gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "niigata-seiki",
+    "image": "/images/products/niigata-seiki-angle-gauge.webp"
+  },
+  {
+    "name": "Peacock Dial Gauge",
+    "type": "Dial gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "peacock",
+    "image": "/images/products/peacock-dial-gauge.webp"
+  },
+  {
+    "name": "Peacock Thickness Gauge",
+    "type": "Thickness gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "peacock",
+    "image": "/images/products/peacock-thickness-gauge.webp"
+  },
+  {
+    "name": "Peacock Dial Indicators",
+    "type": "Dial indicator",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "peacock",
+    "image": "/images/products/peacock-dial-indicators.webp"
+  },
+  {
+    "name": "Peacock Dial Gauge Stand",
+    "type": "Gauge stand",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "peacock",
+    "image": "/images/products/peacock-dial-gauge-stand.webp"
+  },
+  {
+    "name": "TruThread Thread Plug Gauge",
+    "type": "Thread gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "truthread",
+    "image": "/images/products/truthread-thread-plug-gauge.webp"
+  },
+  {
+    "name": "TruThread Thread Ring Gauge",
+    "type": "Thread gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "truthread",
+    "image": "/images/products/truthread-thread-ring-gauge.webp"
+  },
+  {
+    "name": "Ultra V-Blocks",
+    "type": "V-block",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "ultra",
+    "image": "/images/products/ultra-v-blocks.webp"
+  },
+  {
+    "name": "Ultra Magnetic Base",
+    "type": "Magnetic base",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "ultra",
+    "image": "/images/products/ultra-magnetic-base.webp"
+  },
+  {
+    "name": "Insize Measuring Instruments",
+    "type": "Measuring range",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "insize",
+    "image": "/images/products/insize-measuring-instruments.webp"
+  },
+  {
+    "name": "Insize Calipers",
+    "type": "Caliper",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "insize",
+    "image": "/images/products/insize-calipers.webp"
+  },
+  {
+    "name": "Insize Pitch & Welding Gauge",
+    "type": "Pitch gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "insize",
+    "image": "/images/products/insize-pitch-welding-gauge.webp"
+  },
+  {
+    "name": "Insize Tachometer",
+    "type": "Tachometer",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "insize",
+    "image": "/images/products/insize-tachometer.webp"
+  },
+  {
+    "name": "Insize Digital Caliper",
+    "type": "Digital caliper",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "insize",
+    "image": "/images/products/insize-digital-caliper.webp"
+  },
+  {
+    "name": "Insize Dial Caliper Gauge",
+    "type": "Caliper gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "insize",
+    "image": "/images/products/insize-dial-caliper-gauge.webp"
+  },
+  {
+    "name": "Insize Digital Thickness Gauge",
+    "type": "Thickness gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "insize",
+    "image": "/images/products/insize-digital-thickness-gauge.webp"
+  },
+  {
+    "name": "Insize Height Gauge",
+    "type": "Height gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "insize",
+    "image": "/images/products/insize-height-gauge.webp"
+  },
+  {
+    "name": "Insize Digital Angle Measure",
+    "type": "Angle gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "insize",
+    "image": "/images/products/insize-digital-angle-measure.webp"
+  },
+  {
+    "name": "Mitutoyo Digital Vernier",
+    "type": "Digital caliper",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-digital-vernier.webp"
+  },
+  {
+    "name": "Mitutoyo Vernier Caliper",
+    "type": "Vernier caliper",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-vernier-caliper.webp"
+  },
+  {
+    "name": "Mitutoyo Digimatic Indicator",
+    "type": "Digital indicator",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-digimatic-indicator.webp"
+  },
+  {
+    "name": "Mitutoyo Measuring Instruments",
+    "type": "Measuring range",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-measuring-instruments.webp"
+  },
+  {
+    "name": "Mitutoyo Dial Test Indicator",
+    "type": "Test indicator",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-dial-test-indicator.webp"
+  },
+  {
+    "name": "Mitutoyo Digital Micrometer",
+    "type": "Micrometer",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-digital-micrometer.webp"
+  },
+  {
+    "name": "Mitutoyo Bore Gauge",
+    "type": "Bore gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-bore-gauge.webp"
+  },
+  {
+    "name": "Mitutoyo Digimatic Height Gauge",
+    "type": "Height gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-digimatic-height-gauge.webp"
+  },
+  {
+    "name": "Mitutoyo Coolant Proof Vernier",
+    "type": "Digital caliper",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-coolant-proof-vernier.webp"
+  },
+  {
+    "name": "Mitutoyo Feeler Gauge",
+    "type": "Feeler gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-feeler-gauge.webp"
+  },
+  {
+    "name": "Mitutoyo Bevel Protractor",
+    "type": "Bevel protractor",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-bevel-protractor.webp"
+  },
+  {
+    "name": "Mitutoyo Magnetic Stand",
+    "type": "Magnetic stand",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "mitutoyo",
+    "image": "/images/products/mitutoyo-magnetic-stand.webp"
+  },
+  {
+    "name": "Unbrako Allen Bolts",
+    "type": "Socket head bolt",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "unbrako",
+    "image": "/images/products/unbrako-allen-bolts.webp"
+  },
+  {
+    "name": "Unbrako Hex Bolts",
+    "type": "Hex bolt",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "unbrako",
+    "image": "/images/products/unbrako-hex-bolts.webp"
+  },
+  {
+    "name": "Unbrako Stainless Fasteners",
+    "type": "Fasteners",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "unbrako",
+    "image": "/images/products/unbrako-stainless-fasteners.webp"
+  },
+  {
+    "name": "Unbrako Fasteners Range",
+    "type": "Fasteners",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "unbrako",
+    "image": "/images/products/unbrako-fasteners-range.webp"
+  },
+  {
+    "name": "Electra Track MIG 350 Welding Machine",
+    "type": "MIG welder",
+    "categorySlug": "welding",
+    "brandSlug": "electra",
+    "image": "/images/products/electra-track-mig-350-welding-machine.webp"
+  },
+  {
+    "name": "Electra TIG Welding Machine",
+    "type": "TIG welder",
+    "categorySlug": "welding",
+    "brandSlug": "electra",
+    "image": "/images/products/electra-tig-welding-machine.webp"
+  },
+  {
+    "name": "Electra Track MIG 500 Welding Machine",
+    "type": "MIG welder",
+    "categorySlug": "welding",
+    "brandSlug": "electra",
+    "image": "/images/products/electra-track-mig-500-welding-machine.webp"
+  },
+  {
+    "name": "Electra Earth Clamp Cable",
+    "type": "Welding accessory",
+    "categorySlug": "welding",
+    "brandSlug": "electra",
+    "image": "/images/products/electra-earth-clamp-cable.webp"
+  },
+  {
+    "name": "Electra Welding Lead",
+    "type": "Welding cable",
+    "categorySlug": "welding",
+    "brandSlug": "electra",
+    "image": "/images/products/electra-welding-lead.webp"
+  },
+  {
+    "name": "Auto-Darkening Welding Helmet",
+    "type": "Welding helmet",
+    "categorySlug": "welding",
+    "brandSlug": "electra",
+    "image": "/images/products/auto-darkening-welding-helmet.webp"
+  },
+  {
+    "name": "Leather Welding Gloves",
+    "type": "Welding gloves",
+    "categorySlug": "welding",
+    "brandSlug": "electra",
+    "image": "/images/products/leather-welding-gloves.webp"
+  },
+  {
+    "name": "MIG Welding Consumables",
+    "type": "Welding consumables",
+    "categorySlug": "welding",
+    "brandSlug": "electra",
+    "image": "/images/products/mig-welding-consumables.webp"
+  },
+  {
+    "name": "Pidilite Fevicol Adhesives Range",
+    "type": "Adhesive",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "pidilite",
+    "image": "/images/products/pidilite-fevicol-adhesives-range.webp"
+  },
+  {
+    "name": "Pidilite Steelgrip Tapes",
+    "type": "Insulation tape",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "pidilite",
+    "image": "/images/products/pidilite-steelgrip-tapes.webp"
+  },
+  {
+    "name": "Fevicol SH Synthetic Resin Adhesive",
+    "type": "Adhesive",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "pidilite",
+    "image": "/images/products/fevicol-sh-synthetic-resin-adhesive.webp"
+  },
+  {
+    "name": "WD-40 Range",
+    "type": "Lubricant spray",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "wd-40",
+    "image": "/images/products/wd-40-range.webp"
+  },
+  {
+    "name": "Fevikwik 203 Instant Adhesive",
+    "type": "Adhesive",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "pidilite",
+    "image": "/images/products/fevikwik-203-instant-adhesive.webp"
+  },
+  {
+    "name": "Steelgrip PVC Tape",
+    "type": "Insulation tape",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "pidilite",
+    "image": "/images/products/steelgrip-pvc-tape.webp"
+  },
+  {
+    "name": "M-Seal Epoxy Compound",
+    "type": "Epoxy",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "pidilite",
+    "image": "/images/products/m-seal-epoxy-compound.webp"
+  },
+  {
+    "name": "WD-40 Multi-Use Spray",
+    "type": "Lubricant spray",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "wd-40",
+    "image": "/images/products/wd-40-multi-use-spray.webp"
+  },
+  {
+    "name": "OKS Lubricants & Maintenance Range",
+    "type": "Lubricant",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "oks",
+    "image": "/images/products/oks-lubricants-maintenance-range.webp"
+  },
+  {
+    "name": "OKS 3751 Adhesive Lubricant with PTFE",
+    "type": "Lubricant spray",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "oks",
+    "image": "/images/products/oks-3751-adhesive-lubricant-with-ptfe.webp"
+  },
+  {
+    "name": "Magnaflux Spotcheck NDT Aerosols",
+    "type": "NDT spray",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "magnaflux",
+    "image": "/images/products/magnaflux-spotcheck-ndt-aerosols.webp"
+  },
+  {
+    "name": "Checkmate Super DPT Sprays",
+    "type": "NDT spray",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "checkmate",
+    "image": "/images/products/checkmate-super-dpt-sprays.webp"
+  },
+  {
+    "name": "Wesaf Aerosol Sprays, Paints & Greases",
+    "type": "Aerosol spray",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "wesaf",
+    "image": "/images/products/wesaf-aerosol-sprays-paints-greases.webp"
+  },
+  {
+    "name": "Berger WeatherCoat All Guard",
+    "type": "Exterior paint",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "berger",
+    "image": "/images/products/berger-weathercoat-all-guard.webp"
+  },
+  {
+    "name": "British Paints Clean & Protect Walls",
+    "type": "Interior paint",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "british-paints",
+    "image": "/images/products/british-paints-clean-protect-walls.webp"
+  },
+  {
+    "name": "British Paints Interior Emulsion",
+    "type": "Interior emulsion",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "british-paints",
+    "image": "/images/products/british-paints-interior-emulsion.webp"
+  },
+  {
+    "name": "British Paints Red Oxide Primer",
+    "type": "Primer",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "british-paints",
+    "image": "/images/products/british-paints-red-oxide-primer.webp"
+  },
+  {
+    "name": "British Paints GLO Hi-Gloss Enamel",
+    "type": "Enamel paint",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "british-paints",
+    "image": "/images/products/british-paints-glo-hi-gloss-enamel.webp"
+  },
+  {
+    "name": "Esdee Industrial Paints",
+    "type": "Industrial paint",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "esdee",
+    "image": "/images/products/esdee-industrial-paints.webp"
+  },
+  {
+    "name": "Esdee Cellocoat Sparkle Auto Lacquer",
+    "type": "Auto lacquer",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "esdee",
+    "image": "/images/products/esdee-cellocoat-sparkle-auto-lacquer.webp"
+  },
+  {
+    "name": "Esdee Cellocoat Automotive Paint",
+    "type": "Automotive paint",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "esdee",
+    "image": "/images/products/esdee-cellocoat-automotive-paint.webp"
+  },
+  {
+    "name": "Cutting Nozzle & Flashback Arrestors",
+    "type": "Gas cutting",
+    "categorySlug": "welding",
+    "image": "/images/products/cutting-nozzle-flashback-arrestors.webp"
+  },
+  {
+    "name": "Smith Gas Regulator",
+    "type": "Gas regulator",
+    "categorySlug": "welding",
+    "image": "/images/products/smith-gas-regulator.webp"
+  },
+  {
+    "name": "Twin Gauge Gas Regulator",
+    "type": "Gas regulator",
+    "categorySlug": "welding",
+    "image": "/images/products/twin-gauge-gas-regulator.webp"
+  },
+  {
+    "name": "TIG Welding Torch & Parts",
+    "type": "TIG torch",
+    "categorySlug": "welding",
+    "image": "/images/products/tig-welding-torch-parts.webp"
+  },
+  {
+    "name": "Gas Cutting Torch",
+    "type": "Gas cutting torch",
+    "categorySlug": "welding",
+    "image": "/images/products/gas-cutting-torch.webp"
+  },
+  {
+    "name": "Mangalam Welding Electrodes",
+    "type": "Welding rod",
+    "categorySlug": "welding",
+    "brandSlug": "mangalam",
+    "image": "/images/products/mangalam-welding-electrodes.webp"
+  },
+  {
+    "name": "Mangalam Welding Rod",
+    "type": "Welding rod",
+    "categorySlug": "welding",
+    "brandSlug": "mangalam",
+    "image": "/images/products/mangalam-welding-rod.webp"
+  },
+  {
+    "name": "Victor Welding Electrodes",
+    "type": "Welding electrode",
+    "categorySlug": "welding",
+    "brandSlug": "victor",
+    "image": "/images/products/victor-welding-electrodes.webp"
+  },
+  {
+    "name": "Victor Victomag MIG Wire",
+    "type": "MIG wire",
+    "categorySlug": "welding",
+    "brandSlug": "victor",
+    "image": "/images/products/victor-victomag-mig-wire.webp"
+  },
+  {
+    "name": "JK Files",
+    "type": "Files",
+    "categorySlug": "hand-tools",
+    "brandSlug": "jk-files",
+    "image": "/images/products/jk-files.webp"
+  },
+  {
+    "name": "JK Diamond Files",
+    "type": "Diamond files",
+    "categorySlug": "hand-tools",
+    "brandSlug": "jk-files",
+    "image": "/images/products/jk-diamond-files.webp"
+  },
+  {
+    "name": "Mittal Files",
+    "type": "Files",
+    "categorySlug": "hand-tools",
+    "brandSlug": "mittal",
+    "image": "/images/products/mittal-files.webp"
+  },
+  {
+    "name": "Mittal Hand Files",
+    "type": "Hand files",
+    "categorySlug": "hand-tools",
+    "brandSlug": "mittal",
+    "image": "/images/products/mittal-hand-files.webp"
+  },
+  {
+    "name": "CUMI Coated Abrasives",
+    "type": "Coated abrasives",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "cumi",
+    "image": "/images/products/cumi-coated-abrasives.webp"
+  },
+  {
+    "name": "WolCut Zirconia Fiber Disc",
+    "type": "Fiber disc",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "wolcut",
+    "image": "/images/products/wolcut-zirconia-fiber-disc.webp"
+  },
+  {
+    "name": "WolCut Flap Wheel",
+    "type": "Flap wheel",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "wolcut",
+    "image": "/images/products/wolcut-flap-wheel.webp"
+  },
+  {
+    "name": "WolCut Polishing Wheel",
+    "type": "Polishing wheel",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "wolcut",
+    "image": "/images/products/wolcut-polishing-wheel.webp"
+  },
+  {
+    "name": "WolCut Emery Belts",
+    "type": "Emery belt",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "wolcut",
+    "image": "/images/products/wolcut-emery-belts.webp"
+  },
+  {
+    "name": "WolCut Matt Shine Wheel",
+    "type": "Mop wheel",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "wolcut",
+    "image": "/images/products/wolcut-matt-shine-wheel.webp"
+  },
+  {
+    "name": "WolCut Cutting Wheel",
+    "type": "Cutting wheel",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "wolcut",
+    "image": "/images/products/wolcut-cutting-wheel.webp"
+  },
+  {
+    "name": "WolCut Velcro Disc",
+    "type": "Velcro disc",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "wolcut",
+    "image": "/images/products/wolcut-velcro-disc.webp"
+  },
+  {
+    "name": "WolCut Emery Paper",
+    "type": "Emery paper",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "wolcut",
+    "image": "/images/products/wolcut-emery-paper.webp"
+  },
+  {
+    "name": "WolCut Emery Cloth Roll",
+    "type": "Emery cloth",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "wolcut",
+    "image": "/images/products/wolcut-emery-cloth-roll.webp"
+  },
+  {
+    "name": "Carborundum Belts & Grinding Wheels",
+    "type": "Abrasive wheels",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "cumi",
+    "image": "/images/products/carborundum-belts-grinding-wheels.webp"
+  },
+  {
+    "name": "Backup Pad",
+    "type": "Backup pad",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/backup-pad.webp"
+  },
+  {
+    "name": "Abrasive Disc",
+    "type": "Abrasive disc",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/abrasive-disc.webp"
+  },
+  {
+    "name": "Sanding & Polishing Pad",
+    "type": "Polishing pad",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/sanding-polishing-pad.webp"
+  },
+  {
+    "name": "Mounted Points",
+    "type": "Mounted point",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/mounted-points.webp"
+  },
+  {
+    "name": "Scotch-Brite Heavy Duty Scour Pad",
+    "type": "Scour pad",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/scotch-brite-heavy-duty-scour-pad.webp"
+  },
+  {
+    "name": "Taparia Segmented Tile Cutter Blade",
+    "type": "Diamond blade",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "taparia",
+    "image": "/images/products/taparia-segmented-tile-cutter-blade.webp"
+  },
+  {
+    "name": "Step Drill",
+    "type": "Step drill",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/step-drill.webp"
+  },
+  {
+    "name": "Aluminium Oxide Wheel",
+    "type": "Grinding wheel",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/aluminium-oxide-wheel.webp"
+  },
+  {
+    "name": "Taper Face Wheel",
+    "type": "Grinding wheel",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/taper-face-wheel.webp"
+  },
+  {
+    "name": "Silicon Carbide Wheel",
+    "type": "Grinding wheel",
+    "categorySlug": "cutting-abrasives"
+  },
+  {
+    "name": "Centreless Wheel",
+    "type": "Grinding wheel",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/centreless-wheel.webp"
+  },
+  {
+    "name": "Parting Wheel",
+    "type": "Parting wheel",
+    "categorySlug": "cutting-abrasives",
+    "image": "/images/products/parting-wheel.webp"
+  },
+  {
+    "name": "BDS Magnetic Drills & Annular Cutters",
+    "type": "Magnetic drill",
+    "categorySlug": "machinery",
+    "brandSlug": "bds",
+    "image": "/images/products/bds-magnetic-drills-annular-cutters.webp"
+  },
+  {
+    "name": "BDS Broach Cutter",
+    "type": "Broach cutter",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bds",
+    "image": "/images/products/bds-broach-cutter.webp"
+  },
+  {
+    "name": "BDS Core Drilling Machine",
+    "type": "Magnetic drill",
+    "categorySlug": "machinery",
+    "brandSlug": "bds",
+    "image": "/images/products/bds-core-drilling-machine.webp"
+  },
+  {
+    "name": "BDS HSS Core Drill Bit",
+    "type": "Core drill bit",
+    "categorySlug": "cutting-abrasives",
+    "brandSlug": "bds",
+    "image": "/images/products/bds-hss-core-drill-bit.webp"
+  },
+  {
+    "name": "BDS Magnetic Drill Machine",
+    "type": "Magnetic drill",
+    "categorySlug": "machinery",
+    "brandSlug": "bds",
+    "image": "/images/products/bds-magnetic-drill-machine.webp"
+  },
+  {
+    "name": "Wilo Pressure Booster Pump",
+    "type": "Booster pump",
+    "categorySlug": "machinery",
+    "brandSlug": "wilo",
+    "image": "/images/products/wilo-pressure-booster-pump.webp"
+  },
+  {
+    "name": "Grundfos Pressure Booster Pump",
+    "type": "Booster pump",
+    "categorySlug": "machinery",
+    "brandSlug": "grundfos",
+    "image": "/images/products/grundfos-pressure-booster-pump.webp"
+  },
+  {
+    "name": "Self-Priming Monoblock Pump",
+    "type": "Water pump",
+    "categorySlug": "machinery",
+    "image": "/images/products/self-priming-monoblock-pump.webp"
+  },
+  {
+    "name": "Submersible & Monoblock Pumps",
+    "type": "Water pump",
+    "categorySlug": "machinery",
+    "image": "/images/products/submersible-monoblock-pumps.webp"
+  },
+  {
+    "name": "KSB Industrial Pumps",
+    "type": "Industrial pump",
+    "categorySlug": "machinery",
+    "brandSlug": "ksb",
+    "image": "/images/products/ksb-industrial-pumps.webp"
+  },
+  {
+    "name": "Unik GI Pipe Fittings",
+    "type": "GI fittings",
+    "categorySlug": "valves-piping",
+    "brandSlug": "unik",
+    "image": "/images/products/unik-gi-pipe-fittings.webp"
+  },
+  {
+    "name": "MS Butt-Weld Pipe Fittings",
+    "type": "MS fittings",
+    "categorySlug": "valves-piping",
+    "brandSlug": "unik",
+    "image": "/images/products/ms-butt-weld-pipe-fittings.webp"
+  },
+  {
+    "name": "Forged Pipe Fittings",
+    "type": "Forged fittings",
+    "categorySlug": "valves-piping",
+    "image": "/images/products/forged-pipe-fittings.webp"
+  },
+  {
+    "name": "Kains Diaphragm Seal Gauges",
+    "type": "Pressure gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "kains",
+    "image": "/images/products/kains-diaphragm-seal-gauges.webp"
+  },
+  {
+    "name": "WIKA Pressure Transmitter",
+    "type": "Pressure transmitter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "wika",
+    "image": "/images/products/wika-pressure-transmitter.webp"
+  },
+  {
+    "name": "WIKA Digital Pressure Gauge",
+    "type": "Pressure gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "wika",
+    "image": "/images/products/wika-digital-pressure-gauge.webp"
+  },
+  {
+    "name": "WIKA Bimetal Thermometer",
+    "type": "Thermometer",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "wika",
+    "image": "/images/products/wika-bimetal-thermometer.webp"
+  },
+  {
+    "name": "Kains Diaphragm Pressure Gauge",
+    "type": "Pressure gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "kains",
+    "image": "/images/products/kains-diaphragm-pressure-gauge.webp"
+  },
+  {
+    "name": "Danfoss Pressure & Temperature Switches",
+    "type": "Pressure switch",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "danfoss",
+    "image": "/images/products/danfoss-pressure-temperature-switches.webp"
+  },
+  {
+    "name": "Indfos Pressure Switches",
+    "type": "Pressure switch",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "indfos",
+    "image": "/images/products/indfos-pressure-switches.webp"
+  },
+  {
+    "name": "Fire Suppression System",
+    "type": "Fire suppression",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "honeywell",
+    "image": "/images/products/fire-suppression-system.webp"
+  },
+  {
+    "name": "Honeywell Fire Alarm Systems",
+    "type": "Fire alarm",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "honeywell",
+    "image": "/images/products/honeywell-fire-alarm-systems.webp"
+  },
+  {
+    "name": "Fire Fighting Equipment Range",
+    "type": "Fire equipment",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/fire-fighting-equipment-range.webp"
+  },
+  {
+    "name": "Impact by Honeywell Smoke Detector",
+    "type": "Smoke detector",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "honeywell",
+    "image": "/images/products/impact-by-honeywell-smoke-detector.webp"
+  },
+  {
+    "name": "Kartar Mechanical Foam Extinguisher",
+    "type": "Fire extinguisher",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-mechanical-foam-extinguisher.webp"
+  },
+  {
+    "name": "Kartar Fire Sprinkler",
+    "type": "Sprinkler",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-fire-sprinkler.webp"
+  },
+  {
+    "name": "Kartar Fire Hose",
+    "type": "Fire hose",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-fire-hose.webp"
+  },
+  {
+    "name": "Kartar Fire Ball Valve",
+    "type": "Ball valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-fire-ball-valve.webp"
+  },
+  {
+    "name": "Kartar Landing Valve",
+    "type": "Landing valve",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-landing-valve.webp"
+  },
+  {
+    "name": "Kartar Butterfly Valve",
+    "type": "Butterfly valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-butterfly-valve.webp"
+  },
+  {
+    "name": "Kartar Sluice Valve",
+    "type": "Sluice valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-sluice-valve.webp"
+  },
+  {
+    "name": "Kartar Ball Valve",
+    "type": "Ball valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-ball-valve.webp"
+  },
+  {
+    "name": "Kartar Pressure Reducing Valve",
+    "type": "Pressure reducing valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-pressure-reducing-valve.webp"
+  },
+  {
+    "name": "Kartar Non Return Valve",
+    "type": "Non return valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-non-return-valve.webp"
+  },
+  {
+    "name": "Kartar Y Type Strainer",
+    "type": "Y strainer",
+    "categorySlug": "valves-piping",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-y-type-strainer.webp"
+  },
+  {
+    "name": "Kartar Hose Reel",
+    "type": "Hose reel",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-hose-reel.webp"
+  },
+  {
+    "name": "Kartar Fire Extinguishers",
+    "type": "Fire extinguisher",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "kartar",
+    "image": "/images/products/kartar-fire-extinguishers.webp"
+  },
+  {
+    "name": "Zoloto Bronze Globe Valve",
+    "type": "Globe valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "zoloto",
+    "image": "/images/products/zoloto-bronze-globe-valve.webp"
+  },
+  {
+    "name": "Zoloto Ball Valve",
+    "type": "Ball valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "zoloto",
+    "image": "/images/products/zoloto-ball-valve.webp"
+  },
+  {
+    "name": "Zoloto Y Strainer",
+    "type": "Y strainer",
+    "categorySlug": "valves-piping",
+    "brandSlug": "zoloto",
+    "image": "/images/products/zoloto-y-strainer.webp"
+  },
+  {
+    "name": "Zoloto Needle Valve",
+    "type": "Needle valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "zoloto",
+    "image": "/images/products/zoloto-needle-valve.webp"
+  },
+  {
+    "name": "Sant Foot Valve",
+    "type": "Foot valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "sant",
+    "image": "/images/products/sant-foot-valve.webp"
+  },
+  {
+    "name": "Sant Check Valve",
+    "type": "Check valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "sant",
+    "image": "/images/products/sant-check-valve.webp"
+  },
+  {
+    "name": "Sant Gate Valve",
+    "type": "Gate valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "sant",
+    "image": "/images/products/sant-gate-valve.webp"
+  },
+  {
+    "name": "Sant Safety Valve",
+    "type": "Safety valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "sant",
+    "image": "/images/products/sant-safety-valve.webp"
+  },
+  {
+    "name": "Prince CPVC Elbow",
+    "type": "CPVC fitting",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-cpvc-elbow.webp"
+  },
+  {
+    "name": "Prince CPVC Union",
+    "type": "CPVC fitting",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-cpvc-union.webp"
+  },
+  {
+    "name": "Prince CPVC Solvent Cement",
+    "type": "Solvent cement",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-cpvc-solvent-cement.webp"
+  },
+  {
+    "name": "Prince CPVC Tank Nipple",
+    "type": "CPVC fitting",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-cpvc-tank-nipple.webp"
+  },
+  {
+    "name": "Prince FlowGuard Plus CPVC Pipe",
+    "type": "CPVC pipe",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-flowguard-plus-cpvc-pipe.webp"
+  },
+  {
+    "name": "Prince Easyfit UPVC Pipes & Fittings",
+    "type": "UPVC range",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-easyfit-upvc-pipes-fittings.webp"
+  },
+  {
+    "name": "Prince UPVC Tee",
+    "type": "UPVC fitting",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-upvc-tee.webp"
+  },
+  {
+    "name": "Prince UPVC Flange",
+    "type": "UPVC fitting",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-upvc-flange.webp"
+  },
+  {
+    "name": "Prince UPVC Ball Valve",
+    "type": "UPVC valve",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-upvc-ball-valve.webp"
+  },
+  {
+    "name": "Prince UPVC Union",
+    "type": "UPVC fitting",
+    "categorySlug": "valves-piping",
+    "brandSlug": "prince",
+    "image": "/images/products/prince-upvc-union.webp"
+  },
+  {
+    "name": "Industrial Bearings Range",
+    "type": "Bearings",
+    "categorySlug": "machinery",
+    "image": "/images/products/industrial-bearings-range.webp"
+  },
+  {
+    "name": "Deep Groove Ball Bearing",
+    "type": "Ball bearing",
+    "categorySlug": "machinery",
+    "image": "/images/products/deep-groove-ball-bearing.webp"
+  },
+  {
+    "name": "Taper Roller Bearing",
+    "type": "Roller bearing",
+    "categorySlug": "machinery",
+    "image": "/images/products/taper-roller-bearing.webp"
+  },
+  {
+    "name": "Pillow Block Bearing",
+    "type": "Pillow block",
+    "categorySlug": "machinery",
+    "image": "/images/products/pillow-block-bearing.webp"
+  },
+  {
+    "name": "Thrust Roller Bearing",
+    "type": "Roller bearing",
+    "categorySlug": "machinery",
+    "image": "/images/products/thrust-roller-bearing.webp"
+  },
+  {
+    "name": "Miniature Ball Bearing",
+    "type": "Ball bearing",
+    "categorySlug": "machinery",
+    "image": "/images/products/miniature-ball-bearing.webp"
+  },
+  {
+    "name": "Thrust Ball Bearing",
+    "type": "Ball bearing",
+    "categorySlug": "machinery",
+    "image": "/images/products/thrust-ball-bearing.webp"
+  },
+  {
+    "name": "Cylindrical Roller Bearing",
+    "type": "Roller bearing",
+    "categorySlug": "machinery",
+    "image": "/images/products/cylindrical-roller-bearing.webp"
+  },
+  {
+    "name": "Special Bearing",
+    "type": "Bearing",
+    "categorySlug": "machinery",
+    "image": "/images/products/special-bearing.webp"
+  },
+  {
+    "name": "Bearing Lock Nuts",
+    "type": "Lock nut",
+    "categorySlug": "fasteners-hardware",
+    "image": "/images/products/bearing-lock-nuts.webp"
+  },
+  {
+    "name": "Bearing Lock Nut & Lock Washer",
+    "type": "Lock washer",
+    "categorySlug": "fasteners-hardware",
+    "image": "/images/products/bearing-lock-nut-lock-washer.webp"
+  },
+  {
+    "name": "Recoil Thread Insert Kit",
+    "type": "Thread insert kit",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "recoil",
+    "image": "/images/products/recoil-thread-insert-kit.webp"
+  },
+  {
+    "name": "Lovejoy Jaw Couplings & Spiders",
+    "type": "Coupling",
+    "categorySlug": "machinery",
+    "brandSlug": "lovejoy",
+    "image": "/images/products/lovejoy-jaw-couplings-spiders.webp"
+  },
+  {
+    "name": "KTR Jaw Coupling",
+    "type": "Coupling",
+    "categorySlug": "machinery",
+    "brandSlug": "ktr",
+    "image": "/images/products/ktr-jaw-coupling.webp"
+  },
+  {
+    "name": "KTR Bellows Coupling",
+    "type": "Coupling",
+    "categorySlug": "machinery",
+    "brandSlug": "ktr",
+    "image": "/images/products/ktr-bellows-coupling.webp"
+  },
+  {
+    "name": "KTR Steel Jaw Coupling",
+    "type": "Coupling",
+    "categorySlug": "machinery",
+    "brandSlug": "ktr",
+    "image": "/images/products/ktr-steel-jaw-coupling.webp"
+  },
+  {
+    "name": "KTR Rigid Shaft Coupling",
+    "type": "Coupling",
+    "categorySlug": "machinery",
+    "brandSlug": "ktr",
+    "image": "/images/products/ktr-rigid-shaft-coupling.webp"
+  },
+  {
+    "name": "KTR Gear Coupling",
+    "type": "Coupling",
+    "categorySlug": "machinery",
+    "brandSlug": "ktr",
+    "image": "/images/products/ktr-gear-coupling.webp"
+  },
+  {
+    "name": "Hiwin Linear Guideway",
+    "type": "Linear guide",
+    "categorySlug": "machinery",
+    "brandSlug": "hiwin",
+    "image": "/images/products/hiwin-linear-guideway.webp"
+  },
+  {
+    "name": "Linear Bearing",
+    "type": "Linear bearing",
+    "categorySlug": "machinery",
+    "brandSlug": "hiwin",
+    "image": "/images/products/linear-bearing.webp"
+  },
+  {
+    "name": "OKS 2621 Contact Cleaner Spray",
+    "type": "Cleaner spray",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "oks",
+    "image": "/images/products/oks-2621-contact-cleaner-spray.webp"
+  },
+  {
+    "name": "OKS Sprays & Grease Gun",
+    "type": "Lubricant",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "oks",
+    "image": "/images/products/oks-sprays-grease-gun.webp"
+  },
+  {
+    "name": "Imada Force Gauge",
+    "type": "Force gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "imada",
+    "image": "/images/products/imada-force-gauge.webp"
+  },
+  {
+    "name": "Imada Digital Force Gauge",
+    "type": "Force gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "imada",
+    "image": "/images/products/imada-digital-force-gauge.webp"
+  },
+  {
+    "name": "Kristeel-Shinwa Scales, Tapes & Calipers",
+    "type": "Measuring tools",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "kristeel-shinwa",
+    "image": "/images/products/kristeel-shinwa-scales-tapes-calipers.webp"
+  },
+  {
+    "name": "Kristeel-Shinwa Measuring Instruments",
+    "type": "Measuring range",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "kristeel-shinwa",
+    "image": "/images/products/kristeel-shinwa-measuring-instruments.webp"
+  },
+  {
+    "name": "Pawan Die Springs",
+    "type": "Die spring",
+    "categorySlug": "machinery",
+    "brandSlug": "pawan",
+    "image": "/images/products/pawan-die-springs.webp"
+  },
+  {
+    "name": "Pawan Die Springs, Heavy Duty",
+    "type": "Die spring",
+    "categorySlug": "machinery",
+    "brandSlug": "pawan",
+    "image": "/images/products/pawan-die-springs-heavy-duty.webp"
+  },
+  {
+    "name": "Acme Suede Safety Shoes",
+    "type": "Safety shoes",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "acme",
+    "image": "/images/products/acme-suede-safety-shoes.webp"
+  },
+  {
+    "name": "Acme Leather Safety Shoes",
+    "type": "Safety shoes",
+    "categorySlug": "safety-ppe",
+    "brandSlug": "acme",
+    "image": "/images/products/acme-leather-safety-shoes.webp"
+  },
+  {
+    "name": "Schneider TeSys Contactor",
+    "type": "Contactor",
+    "categorySlug": "electricals",
+    "brandSlug": "schneider",
+    "image": "/images/products/schneider-tesys-contactor.webp"
+  },
+  {
+    "name": "Schneider Push Buttons & Selector Switches",
+    "type": "Push button",
+    "categorySlug": "electricals",
+    "brandSlug": "schneider",
+    "image": "/images/products/schneider-push-buttons-selector-switches.webp"
+  },
+  {
+    "name": "Schneider Miniature Circuit Breaker",
+    "type": "MCB",
+    "categorySlug": "electricals",
+    "brandSlug": "schneider",
+    "image": "/images/products/schneider-miniature-circuit-breaker.webp"
+  },
+  {
+    "name": "Schneider Thermal Overload Relay",
+    "type": "Overload relay",
+    "categorySlug": "electricals",
+    "brandSlug": "schneider",
+    "image": "/images/products/schneider-thermal-overload-relay.webp"
+  },
+  {
+    "name": "Polycab House Wires",
+    "type": "Wire",
+    "categorySlug": "electricals",
+    "brandSlug": "polycab",
+    "image": "/images/products/polycab-house-wires.webp"
+  },
+  {
+    "name": "Polycab Power & Control Cables",
+    "type": "Cable",
+    "categorySlug": "electricals",
+    "brandSlug": "polycab",
+    "image": "/images/products/polycab-power-control-cables.webp"
+  },
+  {
+    "name": "JiGo Automation Products",
+    "type": "Automation",
+    "categorySlug": "electricals",
+    "brandSlug": "jigo",
+    "image": "/images/products/jigo-automation-products.webp"
+  },
+  {
+    "name": "JiGo Panel Accessories",
+    "type": "Panel accessories",
+    "categorySlug": "electricals",
+    "brandSlug": "jigo",
+    "image": "/images/products/jigo-panel-accessories.webp"
+  },
+  {
+    "name": "JiGo Cable Ties",
+    "type": "Cable tie",
+    "categorySlug": "electricals",
+    "brandSlug": "jigo",
+    "image": "/images/products/jigo-cable-ties.webp"
+  },
+  {
+    "name": "JiGo Industrial Plug & Sockets",
+    "type": "Plug and socket",
+    "categorySlug": "electricals",
+    "brandSlug": "jigo",
+    "image": "/images/products/jigo-industrial-plug-sockets.webp"
+  },
+  {
+    "name": "JiGo Cooling Fan",
+    "type": "Cooling fan",
+    "categorySlug": "electricals",
+    "brandSlug": "jigo",
+    "image": "/images/products/jigo-cooling-fan.webp"
+  },
+  {
+    "name": "JiGo Cable Hose & Glands",
+    "type": "Cable gland",
+    "categorySlug": "electricals",
+    "brandSlug": "jigo",
+    "image": "/images/products/jigo-cable-hose-glands.webp"
+  },
+  {
+    "name": "Sibass Plug and Sockets IP44/67",
+    "type": "Plug and socket",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-plug-and-sockets-ip44-67.webp"
+  },
+  {
+    "name": "Sibass Plug & Sockets IP44/55/67",
+    "type": "Plug and socket",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-plug-sockets-ip44-55-67.webp"
+  },
+  {
+    "name": "Sibass Heavy Duty Connectors",
+    "type": "Connector",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-heavy-duty-connectors.webp"
+  },
+  {
+    "name": "Sibass Pendant Stations",
+    "type": "Pendant station",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-pendant-stations.webp"
+  },
+  {
+    "name": "Sibass Wireless Radio Remotes",
+    "type": "Radio remote",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-wireless-radio-remotes.webp"
+  },
+  {
+    "name": "Sibass Solid State Relays",
+    "type": "Relay",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-solid-state-relays.webp"
+  },
+  {
+    "name": "Sibass Contactors",
+    "type": "Contactor",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-contactors.webp"
+  },
+  {
+    "name": "Sibass Voltmeter / Ammeter",
+    "type": "Panel meter",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-voltmeter-ammeter.webp"
+  },
+  {
+    "name": "Sibass Cable Drums",
+    "type": "Cable drum",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-cable-drums.webp"
+  },
+  {
+    "name": "Sibass Spring Return Cable Reels",
+    "type": "Cable reel",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-spring-return-cable-reels.webp"
+  },
+  {
+    "name": "Sibass Temperature Controllers",
+    "type": "Temperature controller",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-temperature-controllers.webp"
+  },
+  {
+    "name": "Sibass MC4 Connectors & Tools",
+    "type": "Connector",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-mc4-connectors-tools.webp"
+  },
+  {
+    "name": "Sibass Flexible Conduit & Glands",
+    "type": "Conduit",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-flexible-conduit-glands.webp"
+  },
+  {
+    "name": "Sibass Cooling Fans",
+    "type": "Cooling fan",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-cooling-fans.webp"
+  },
+  {
+    "name": "Sibass Push Buttons",
+    "type": "Push button",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-push-buttons.webp"
+  },
+  {
+    "name": "Sibass Proximity Sensors",
+    "type": "Proximity sensor",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-proximity-sensors.webp"
+  },
+  {
+    "name": "Sibass Junction Box IP67",
+    "type": "Junction box",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-junction-box-ip67.webp"
+  },
+  {
+    "name": "Sibass AC Drives",
+    "type": "AC drive",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-ac-drives.webp"
+  },
+  {
+    "name": "Sibass Tower Lights",
+    "type": "Tower light",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-tower-lights.webp"
+  },
+  {
+    "name": "Sibass Limit / Micro Switches",
+    "type": "Limit switch",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-limit-micro-switches.webp"
+  },
+  {
+    "name": "Sibass Cable Drag Chains",
+    "type": "Drag chain",
+    "categorySlug": "electricals",
+    "brandSlug": "sibass",
+    "image": "/images/products/sibass-cable-drag-chains.webp"
+  },
+  {
+    "name": "Selec Automation & Power Products",
+    "type": "Controllers",
+    "categorySlug": "electricals",
+    "brandSlug": "selec",
+    "image": "/images/products/selec-automation-power-products.webp"
+  },
+  {
+    "name": "Jainson Cable Lugs & Terminals",
+    "type": "Cable lug",
+    "categorySlug": "electricals",
+    "brandSlug": "jainson",
+    "image": "/images/products/jainson-cable-lugs-terminals.webp"
+  },
+  {
+    "name": "Jainson Crimping Tools Range",
+    "type": "Crimping tool",
+    "categorySlug": "hand-tools",
+    "brandSlug": "jainson",
+    "image": "/images/products/jainson-crimping-tools-range.webp"
+  },
+  {
+    "name": "Jainson Chakra-6 Ferrule Crimping Tool",
+    "type": "Crimping tool",
+    "categorySlug": "hand-tools",
+    "brandSlug": "jainson",
+    "image": "/images/products/jainson-chakra-6-ferrule-crimping-tool.webp",
+    "specs": [
+      ["Capacity", "0.5 mm² to 6 mm²"],
+      ["Weight", "375 g"],
+      ["Design", "Dieless, end sealing ferrules"]
+    ]
+  },
+  {
+    "name": "Jainson Chetak-6 Ferrule Crimping Tool",
+    "type": "Crimping tool",
+    "categorySlug": "hand-tools",
+    "brandSlug": "jainson",
+    "image": "/images/products/jainson-chetak-6-ferrule-crimping-tool.webp",
+    "specs": [
+      ["Capacity", "0.5 mm² to 6 mm²"],
+      ["Weight", "525 g"],
+      ["Design", "End sealing ferrules"]
+    ]
+  },
+  {
+    "name": "Jainson Agnee-95 Crimping Tool",
+    "type": "Crimping tool",
+    "categorySlug": "hand-tools",
+    "brandSlug": "jainson",
+    "image": "/images/products/jainson-agnee-95-crimping-tool.webp",
+    "specs": [
+      ["Capacity", "10 mm² to 95 mm²"],
+      ["Weight", "3.9 kg"],
+      ["Design", "Dieless"]
+    ]
+  },
+  {
+    "name": "Jainson Arjun-50 Compression Tool",
+    "type": "Compression tool",
+    "categorySlug": "hand-tools",
+    "brandSlug": "jainson",
+    "image": "/images/products/jainson-arjun-50-compression-tool.webp",
+    "specs": [
+      ["Capacity", "16, 25, 35, 50 mm²"],
+      ["Weight", "2.5 kg"],
+      ["Design", "Heavy duty, dieless"]
+    ]
+  },
+  {
+    "name": "Crompton Pedestal & Wall Fans",
+    "type": "Industrial fan",
+    "categorySlug": "machinery",
+    "brandSlug": "crompton",
+    "image": "/images/products/crompton-pedestal-wall-fans.webp"
+  },
+  {
+    "name": "Almonard Industrial Wall Fan",
+    "type": "Industrial fan",
+    "categorySlug": "machinery",
+    "brandSlug": "almonard",
+    "image": "/images/products/almonard-industrial-wall-fan.webp"
+  },
+  {
+    "name": "Crompton High Speed Wall Fan",
+    "type": "Wall fan",
+    "categorySlug": "machinery",
+    "brandSlug": "crompton",
+    "image": "/images/products/crompton-high-speed-wall-fan.webp"
+  },
+  {
+    "name": "Crompton Wall Fan",
+    "type": "Wall fan",
+    "categorySlug": "machinery",
+    "brandSlug": "crompton",
+    "image": "/images/products/crompton-wall-fan.webp"
+  },
+  {
+    "name": "Crompton Exhaust Fan",
+    "type": "Exhaust fan",
+    "categorySlug": "machinery",
+    "brandSlug": "crompton"
+  },
+  {
+    "name": "Brown Reinforced Kraft Paper Tape",
+    "type": "Packing tape",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/brown-reinforced-kraft-paper-tape.webp"
+  },
+  {
+    "name": "PVC Pipe Wrapping Tape",
+    "type": "Packing tape",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/pvc-pipe-wrapping-tape.webp"
+  },
+  {
+    "name": "Heat Sealing Tape",
+    "type": "Packing tape",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/heat-sealing-tape.webp"
+  },
+  {
+    "name": "Kraft Paper Tape",
+    "type": "Packing tape",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/kraft-paper-tape.webp"
+  },
+  {
+    "name": "Bag Neck Sealing Tape",
+    "type": "Packing tape",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/bag-neck-sealing-tape.webp"
+  },
+  {
+    "name": "Double Side Tissue Tape",
+    "type": "Tape",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/double-side-tissue-tape.webp"
+  },
+  {
+    "name": "Velcro Tape",
+    "type": "Tape",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/velcro-tape.webp"
+  },
+  {
+    "name": "Magic Tape",
+    "type": "Tape",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/magic-tape.webp"
+  },
+  {
+    "name": "Reflective Fluorescent Tape",
+    "type": "Tape",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/reflective-fluorescent-tape.webp"
+  },
+  {
+    "name": "Backup Rod",
+    "type": "Backup rod",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/backup-rod.webp"
+  },
+  {
+    "name": "Bubble Roll",
+    "type": "Packing roll",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/bubble-roll.webp"
+  },
+  {
+    "name": "Foam Roll",
+    "type": "Packing roll",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/foam-roll.webp"
+  },
+  {
+    "name": "Foam Sheet",
+    "type": "Packing sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/foam-sheet.webp"
+  },
+  {
+    "name": "Corrugated Roll",
+    "type": "Packing roll",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/corrugated-roll.webp"
+  },
+  {
+    "name": "Empty Box",
+    "type": "Carton",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/empty-box.webp"
+  },
+  {
+    "name": "Hand Stretch Film Dispenser",
+    "type": "Dispenser",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/hand-stretch-film-dispenser.webp"
+  },
+  {
+    "name": "Kraft Paper",
+    "type": "Packing paper",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/kraft-paper.webp"
+  },
+  {
+    "name": "Stretch Film",
+    "type": "Stretch film",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/stretch-film.webp"
+  },
+  {
+    "name": "Stretch Baby Roll",
+    "type": "Stretch film",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/stretch-baby-roll.webp"
+  },
+  {
+    "name": "Coloured Stretch Film",
+    "type": "Stretch film",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/coloured-stretch-film.webp"
+  },
+  {
+    "name": "SS Strap",
+    "type": "Strapping",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/ss-strap.webp"
+  },
+  {
+    "name": "Metal Strap",
+    "type": "Strapping",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/metal-strap.webp"
+  },
+  {
+    "name": "Cord Strap",
+    "type": "Strapping",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/cord-strap.webp"
+  },
+  {
+    "name": "PET Strap",
+    "type": "Strapping",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/pet-strap.webp"
+  },
+  {
+    "name": "PVC Strap",
+    "type": "Strapping",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/pvc-strap.webp"
+  },
+  {
+    "name": "ESD Dotted Glove",
+    "type": "ESD glove",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/esd-dotted-glove.webp"
+  },
+  {
+    "name": "Antistatic Apron",
+    "type": "ESD apron",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/antistatic-apron.webp"
+  },
+  {
+    "name": "Antistatic Slipper",
+    "type": "ESD footwear",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/antistatic-slipper.webp"
+  },
+  {
+    "name": "Antistatic Shoe Cover",
+    "type": "ESD footwear",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/antistatic-shoe-cover.webp"
+  },
+  {
+    "name": "PU Top Fit Glove",
+    "type": "ESD glove",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/pu-top-fit-glove.webp"
+  },
+  {
+    "name": "Antistatic Cap",
+    "type": "ESD cap",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/antistatic-cap.webp"
+  },
+  {
+    "name": "Antistatic Wrist Strap",
+    "type": "Wrist strap",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/antistatic-wrist-strap.webp"
+  },
+  {
+    "name": "Finger Cots",
+    "type": "Finger cots",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/finger-cots.webp"
+  },
+  {
+    "name": "Road Safety Barrier",
+    "type": "Barrier",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/road-safety-barrier.webp"
+  },
+  {
+    "name": "Traffic Safety Cones",
+    "type": "Traffic cone",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/traffic-safety-cones.webp"
+  },
+  {
+    "name": "Wheel Clamp",
+    "type": "Wheel clamp",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/wheel-clamp.webp"
+  },
+  {
+    "name": "Corner Guards",
+    "type": "Corner guard",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/corner-guards.webp"
+  },
+  {
+    "name": "Convex Safety Mirror",
+    "type": "Safety mirror",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/convex-safety-mirror.webp"
+  },
+  {
+    "name": "Barricade Warning Light",
+    "type": "Warning light",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/barricade-warning-light.webp"
+  },
+  {
+    "name": "Spring Posts & Speed Breaker",
+    "type": "Road safety",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/spring-posts-speed-breaker.webp"
+  },
+  {
+    "name": "Traffic Baton",
+    "type": "Traffic baton",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/traffic-baton.webp"
+  },
+  {
+    "name": "Safety Helmets",
+    "type": "Safety helmet",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/safety-helmets.webp"
+  },
+  {
+    "name": "Ear Plugs",
+    "type": "Hearing protection",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/ear-plugs.webp"
+  },
+  {
+    "name": "Safety Goggles",
+    "type": "Eye protection",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/safety-goggles.webp"
+  },
+  {
+    "name": "Full Brim Hard Hat",
+    "type": "Safety helmet",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/full-brim-hard-hat.webp"
+  },
+  {
+    "name": "Ear Muffs",
+    "type": "Hearing protection",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/ear-muffs.webp"
+  },
+  {
+    "name": "Face Shield",
+    "type": "Face protection",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/face-shield.webp"
+  },
+  {
+    "name": "Reflective Safety Jacket",
+    "type": "Hi-vis jacket",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/reflective-safety-jacket.webp"
+  },
+  {
+    "name": "Respirator Mask",
+    "type": "Respiratory protection",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/respirator-mask.webp"
+  },
+  {
+    "name": "Safety Harness",
+    "type": "Fall protection",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/safety-harness.webp"
+  },
+  {
+    "name": "PVC Coated Gloves",
+    "type": "Work gloves",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/pvc-coated-gloves.webp"
+  },
+  {
+    "name": "Leather Hand Gloves",
+    "type": "Work gloves",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/leather-hand-gloves.webp"
+  },
+  {
+    "name": "Nitrile Coated Gloves",
+    "type": "Work gloves",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/nitrile-coated-gloves.webp"
+  },
+  {
+    "name": "Canvas & Leather Gloves",
+    "type": "Work gloves",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/canvas-leather-gloves.webp"
+  },
+  {
+    "name": "Heat Resistant Gauntlets",
+    "type": "Work gloves",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/heat-resistant-gauntlets.webp"
+  },
+  {
+    "name": "Dotted Knitted Gloves",
+    "type": "Work gloves",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/dotted-knitted-gloves.webp"
+  },
+  {
+    "name": "Gumboots",
+    "type": "Safety boots",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/gumboots.webp"
+  },
+  {
+    "name": "Steel Toe Safety Shoes",
+    "type": "Safety shoes",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/steel-toe-safety-shoes.webp"
+  },
+  {
+    "name": "Slip-On Safety Boots",
+    "type": "Safety boots",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/slip-on-safety-boots.webp"
+  },
+  {
+    "name": "Leather Safety Boots",
+    "type": "Safety boots",
+    "categorySlug": "safety-ppe",
+    "image": "/images/products/leather-safety-boots.webp"
+  },
+  {
+    "name": "Hydraulic Hose Assemblies",
+    "type": "Hydraulic hose",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-hose-assemblies.webp"
+  },
+  {
+    "name": "Hydraulic Fittings",
+    "type": "Hydraulic fitting",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-fittings.webp"
+  },
+  {
+    "name": "Hydraulic Adaptors",
+    "type": "Hydraulic adaptor",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-adaptors.webp"
+  },
+  {
+    "name": "Hydraulic Brass Fittings",
+    "type": "Hydraulic fitting",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-brass-fittings.webp"
+  },
+  {
+    "name": "Hydraulic Elbow Fittings",
+    "type": "Hydraulic fitting",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-elbow-fittings.webp"
+  },
+  {
+    "name": "Hydraulic Hoses & End Fittings",
+    "type": "Hydraulic hose",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-hoses-end-fittings.webp"
+  },
+  {
+    "name": "Hydraulic U-Seals",
+    "type": "Hydraulic seal",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-u-seals.webp"
+  },
+  {
+    "name": "Hydraulic Piston Seals",
+    "type": "Hydraulic seal",
+    "categorySlug": "machinery",
+    "image": "/images/products/hydraulic-piston-seals.webp"
+  },
+  {
+    "name": "High Pressure Hydraulic Hoses",
+    "type": "Hydraulic hose",
+    "categorySlug": "machinery",
+    "image": "/images/products/high-pressure-hydraulic-hoses.webp"
+  },
+  {
+    "name": "Pneumatic Push-In Fittings",
+    "type": "Pneumatic fitting",
+    "categorySlug": "machinery",
+    "image": "/images/products/pneumatic-push-in-fittings.webp"
+  },
+  {
+    "name": "PU Tubes & Coil Hoses",
+    "type": "Pneumatic tube",
+    "categorySlug": "machinery",
+    "image": "/images/products/pu-tubes-coil-hoses.webp"
+  },
+  {
+    "name": "FRL Units",
+    "type": "FRL unit",
+    "categorySlug": "machinery",
+    "image": "/images/products/frl-units.webp"
+  },
+  {
+    "name": "Air Gun",
+    "type": "Air blow gun",
+    "categorySlug": "machinery",
+    "image": "/images/products/air-gun.webp"
+  },
+  {
+    "name": "Flexible Coolant Pipe",
+    "type": "Coolant pipe",
+    "categorySlug": "machinery",
+    "image": "/images/products/flexible-coolant-pipe.webp"
+  },
+  {
+    "name": "Pneumatic Couplers",
+    "type": "Coupler",
+    "categorySlug": "machinery",
+    "image": "/images/products/pneumatic-couplers.webp"
+  },
+  {
+    "name": "Pneumatic Cylinder",
+    "type": "Pneumatic cylinder",
+    "categorySlug": "machinery",
+    "image": "/images/products/pneumatic-cylinder.webp"
+  },
+  {
+    "name": "Compact Pneumatic Cylinder",
+    "type": "Pneumatic cylinder",
+    "categorySlug": "machinery",
+    "image": "/images/products/compact-pneumatic-cylinder.webp"
+  },
+  {
+    "name": "Pneumatic Cylinders Range",
+    "type": "Pneumatic cylinder",
+    "categorySlug": "machinery",
+    "image": "/images/products/pneumatic-cylinders-range.webp"
+  },
+  {
+    "name": "Aluminium Profile System & Fittings",
+    "type": "Aluminium profile",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/aluminium-profile-system-fittings.webp"
+  },
+  {
+    "name": "Aluminium Profile",
+    "type": "Aluminium profile",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/aluminium-profile.webp"
+  },
+  {
+    "name": "T Nuts",
+    "type": "T-nut",
+    "categorySlug": "fasteners-hardware",
+    "image": "/images/products/t-nuts.webp"
+  },
+  {
+    "name": "Angle Brackets",
+    "type": "Bracket",
+    "categorySlug": "fasteners-hardware",
+    "image": "/images/products/angle-brackets.webp"
+  },
+  {
+    "name": "Aluminium Profile with T-Nuts",
+    "type": "Aluminium profile",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/aluminium-profile-with-t-nuts.webp"
+  },
+  {
+    "name": "Metrix+ Ultrasonic Thickness Gauge UTG 27",
+    "type": "Thickness gauge",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "metrix",
+    "image": "/images/products/metrix-ultrasonic-thickness-gauge-utg-27.webp"
+  },
+  {
+    "name": "Metrix+ Vibration Meter VM 8200+",
+    "type": "Vibration meter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "metrix",
+    "image": "/images/products/metrix-vibration-meter-vm-8200.webp"
+  },
+  {
+    "name": "Metrix+ Lux Meter",
+    "type": "Lux meter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "metrix",
+    "image": "/images/products/metrix-lux-meter.webp"
+  },
+  {
+    "name": "Metrix+ Sound Level Meter",
+    "type": "Sound level meter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "metrix",
+    "image": "/images/products/metrix-sound-level-meter.webp"
+  },
+  {
+    "name": "Meco Digital Multimeter",
+    "type": "Multimeter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "meco",
+    "image": "/images/products/meco-digital-multimeter.webp"
+  },
+  {
+    "name": "Meco Digital Clamp Meter",
+    "type": "Clamp meter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "meco",
+    "image": "/images/products/meco-digital-clamp-meter.webp"
+  },
+  {
+    "name": "Meco DIT 99C Digital Insulation Tester",
+    "type": "Insulation tester",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "meco",
+    "image": "/images/products/meco-dit-99c-digital-insulation-tester.webp"
+  },
+  {
+    "name": "Meco Bench Digital Multimeter",
+    "type": "Multimeter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "meco",
+    "image": "/images/products/meco-bench-digital-multimeter.webp"
+  },
+  {
+    "name": "HTC Multimeter",
+    "type": "Multimeter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "htc",
+    "image": "/images/products/htc-multimeter.webp"
+  },
+  {
+    "name": "HTC Clamp Meter",
+    "type": "Clamp meter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "htc",
+    "image": "/images/products/htc-clamp-meter.webp"
+  },
+  {
+    "name": "Motwane Multimeter",
+    "type": "Multimeter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "motwane",
+    "image": "/images/products/motwane-multimeter.webp"
+  },
+  {
+    "name": "Motwane Clamp Meter",
+    "type": "Clamp meter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "motwane",
+    "image": "/images/products/motwane-clamp-meter.webp"
+  },
+  {
+    "name": "Fluke 117 True RMS Multimeter",
+    "type": "Multimeter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "fluke",
+    "image": "/images/products/fluke-117-true-rms-multimeter.webp"
+  },
+  {
+    "name": "Fluke Clamp Meter",
+    "type": "Clamp meter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "fluke",
+    "image": "/images/products/fluke-clamp-meter.webp"
+  },
+  {
+    "name": "Fluke Infrared Thermometer",
+    "type": "Thermometer",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "fluke",
+    "image": "/images/products/fluke-infrared-thermometer.webp"
+  },
+  {
+    "name": "Fluke IR Gun",
+    "type": "IR thermometer",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "fluke",
+    "image": "/images/products/fluke-ir-gun.webp"
+  },
+  {
+    "name": "Fluke Products Range",
+    "type": "Test instruments",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "fluke",
+    "image": "/images/products/fluke-products-range.webp"
+  },
+  {
+    "name": "Fluke Measuring Instruments",
+    "type": "Test instruments",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "fluke",
+    "image": "/images/products/fluke-measuring-instruments.webp"
+  },
+  {
+    "name": "Fluke Insulation Tester",
+    "type": "Insulation tester",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "fluke",
+    "image": "/images/products/fluke-insulation-tester.webp"
+  },
+  {
+    "name": "Fluke Volt Testers & Detectors",
+    "type": "Voltage tester",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "fluke",
+    "image": "/images/products/fluke-volt-testers-detectors.webp"
+  },
+  {
+    "name": "Fluke 424D Laser Distance Meter",
+    "type": "Laser distance meter",
+    "categorySlug": "measuring-testing",
+    "brandSlug": "fluke",
+    "image": "/images/products/fluke-424d-laser-distance-meter.webp"
+  },
+  {
+    "name": "Wire Ropes",
+    "type": "Wire rope",
+    "categorySlug": "machinery",
+    "image": "/images/products/wire-ropes.webp"
+  },
+  {
+    "name": "Polyester & Chain Slings",
+    "type": "Lifting sling",
+    "categorySlug": "machinery",
+    "image": "/images/products/polyester-chain-slings.webp"
+  },
+  {
+    "name": "Lifting Chain",
+    "type": "Chain",
+    "categorySlug": "machinery",
+    "image": "/images/products/lifting-chain.webp"
+  },
+  {
+    "name": "Lever and Chain Block",
+    "type": "Chain block",
+    "categorySlug": "machinery",
+    "image": "/images/products/lever-and-chain-block.webp"
+  },
+  {
+    "name": "Hand Pallet Truck",
+    "type": "Pallet truck",
+    "categorySlug": "machinery",
+    "image": "/images/products/hand-pallet-truck.webp"
+  },
+  {
+    "name": "Electric Wire Rope Hoist",
+    "type": "Electric hoist",
+    "categorySlug": "machinery",
+    "image": "/images/products/electric-wire-rope-hoist.webp"
+  },
+  {
+    "name": "KBK Aluminium Rail System",
+    "type": "Rail system",
+    "categorySlug": "machinery",
+    "image": "/images/products/kbk-aluminium-rail-system.webp"
+  },
+  {
+    "name": "Material Handling Equipment",
+    "type": "Hoists",
+    "categorySlug": "machinery",
+    "image": "/images/products/material-handling-equipment.webp"
+  },
+  {
+    "name": "Spring Balancer",
+    "type": "Spring balancer",
+    "categorySlug": "machinery",
+    "image": "/images/products/spring-balancer.webp"
+  },
+  {
+    "name": "Chain & Lever Block",
+    "type": "Chain block",
+    "categorySlug": "machinery",
+    "image": "/images/products/chain-lever-block.webp"
+  },
+  {
+    "name": "Lever Block",
+    "type": "Lever block",
+    "categorySlug": "machinery",
+    "image": "/images/products/lever-block.webp"
+  },
+  {
+    "name": "Jib Crane",
+    "type": "Jib crane",
+    "categorySlug": "machinery",
+    "image": "/images/products/jib-crane.webp"
+  },
+  {
+    "name": "Neoprene Rubber Sheet",
+    "type": "Rubber sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/neoprene-rubber-sheet.webp"
+  },
+  {
+    "name": "Silicone Rubber Sheet",
+    "type": "Rubber sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/silicone-rubber-sheet.webp"
+  },
+  {
+    "name": "Rubber Sheet",
+    "type": "Rubber sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/rubber-sheet.webp"
+  },
+  {
+    "name": "ISI Standard Rubber Sheet",
+    "type": "Rubber sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/isi-standard-rubber-sheet.webp"
+  },
+  {
+    "name": "Silicone Foam Rubber",
+    "type": "Foam rubber",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/silicone-foam-rubber.webp"
+  },
+  {
+    "name": "SBR Rubber Sheet",
+    "type": "Rubber sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/sbr-rubber-sheet.webp"
+  },
+  {
+    "name": "Gum Rubber Sheet",
+    "type": "Rubber sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/gum-rubber-sheet.webp"
+  },
+  {
+    "name": "Rubber Tube",
+    "type": "Rubber tube",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/rubber-tube.webp"
+  },
+  {
+    "name": "Fire Resistant Sponge Sheet",
+    "type": "Sponge sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/fire-resistant-sponge-sheet.webp"
+  },
+  {
+    "name": "Rubber Foam Sheet",
+    "type": "Foam rubber",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/rubber-foam-sheet.webp"
+  },
+  {
+    "name": "PVC Flexible Sheet",
+    "type": "PVC sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/pvc-flexible-sheet.webp"
+  },
+  {
+    "name": "PVC Strip Curtain",
+    "type": "PVC curtain",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/pvc-strip-curtain.webp"
+  },
+  {
+    "name": "Cast Nylon Rods",
+    "type": "Nylon rod",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/cast-nylon-rods.webp"
+  },
+  {
+    "name": "Cast Nylon Sheets",
+    "type": "Nylon sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/cast-nylon-sheets.webp"
+  },
+  {
+    "name": "Acrylic Sheet",
+    "type": "Acrylic sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/acrylic-sheet.webp"
+  },
+  {
+    "name": "Acrylic Tube",
+    "type": "Acrylic tube",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/acrylic-tube.webp"
+  },
+  {
+    "name": "Delrin Rod",
+    "type": "Delrin rod",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/delrin-rod.webp"
+  },
+  {
+    "name": "Delrin Sheet",
+    "type": "Delrin sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/delrin-sheet.webp"
+  },
+  {
+    "name": "Fabric Bakelite Rod",
+    "type": "Bakelite rod",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/fabric-bakelite-rod.webp"
+  },
+  {
+    "name": "Hylam Fabric Sheet",
+    "type": "Hylam sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/hylam-fabric-sheet.webp"
+  },
+  {
+    "name": "Bakelite Sheet",
+    "type": "Bakelite sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/bakelite-sheet.webp"
+  },
+  {
+    "name": "Glass Epoxy Tube",
+    "type": "Epoxy tube",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/glass-epoxy-tube.webp"
+  },
+  {
+    "name": "Aluminium Sheets & Plates",
+    "type": "Aluminium sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/aluminium-sheets-plates.webp"
+  },
+  {
+    "name": "Copper Round Bars",
+    "type": "Copper bar",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/copper-round-bars.webp"
+  },
+  {
+    "name": "SS Plates & Sheets",
+    "type": "Stainless sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/ss-plates-sheets.webp"
+  },
+  {
+    "name": "Copper Sheets & Plates",
+    "type": "Copper sheet",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/copper-sheets-plates.webp"
+  },
+  {
+    "name": "SS Round Bars",
+    "type": "Stainless bar",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/ss-round-bars.webp"
+  },
+  {
+    "name": "SS Butt-Weld Pipe Fittings",
+    "type": "Stainless fitting",
+    "categorySlug": "valves-piping",
+    "image": "/images/products/ss-butt-weld-pipe-fittings.webp"
+  },
+  {
+    "name": "Stainless Steel Shims",
+    "type": "Shim",
+    "categorySlug": "industrial-materials",
+    "image": "/images/products/stainless-steel-shims.webp"
+  },
+  {
+    "name": "SS Pipes",
+    "type": "Stainless pipe",
+    "categorySlug": "valves-piping",
+    "image": "/images/products/ss-pipes.webp"
+  },
+  {
+    "name": "SS Flanges",
+    "type": "Flange",
+    "categorySlug": "valves-piping",
+    "image": "/images/products/ss-flanges.webp"
+  },
+  {
+    "name": "SS Forged Pipe Fittings",
+    "type": "Stainless fitting",
+    "categorySlug": "valves-piping",
+    "image": "/images/products/ss-forged-pipe-fittings.webp"
+  },
+  {
+    "name": "Loctite 243 Threadlocker",
+    "type": "Threadlocker",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "loctite",
+    "image": "/images/products/loctite-243-threadlocker.webp",
+    "specs": [
+      ["Pack", "250 ml"],
+      ["Strength", "Medium"]
+    ]
+  },
+  {
+    "name": "Loctite 270 Threadlocker",
+    "type": "Threadlocker",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "loctite",
+    "image": "/images/products/loctite-270-threadlocker.webp",
+    "specs": [
+      ["Pack", "50 ml"],
+      ["Strength", "High"]
+    ]
+  },
+  {
+    "name": "Loctite 638 Retaining Compound",
+    "type": "Retaining compound",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "loctite",
+    "image": "/images/products/loctite-638-retaining-compound.webp",
+    "specs": [
+      ["Pack", "50 ml"],
+      ["Strength", "High"]
+    ]
+  },
+  {
+    "name": "Loctite 574 Flange Sealant",
+    "type": "Flange sealant",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "loctite",
+    "image": "/images/products/loctite-574-flange-sealant.webp"
+  },
+  {
+    "name": "Loctite 406 Instant Adhesive",
+    "type": "Instant adhesive",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "loctite",
+    "image": "/images/products/loctite-406-instant-adhesive.webp",
+    "specs": [["Pack", "20 g"]]
+  },
+  {
+    "name": "Loctite 401 Instant Adhesive",
+    "type": "Instant adhesive",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "loctite",
+    "image": "/images/products/loctite-401-instant-adhesive.webp",
+    "specs": [["Pack", "20 g"]]
+  },
+  {
+    "name": "Loctite 495 Instant Adhesive",
+    "type": "Instant adhesive",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "loctite",
+    "image": "/images/products/loctite-495-instant-adhesive.webp",
+    "specs": [["Pack", "20 g"]]
+  },
+  {
+    "name": "Loctite 420 Instant Adhesive",
+    "type": "Instant adhesive",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "loctite",
+    "image": "/images/products/loctite-420-instant-adhesive.webp",
+    "specs": [["Pack", "20 g"]]
+  },
+  {
+    "name": "Loctite 401 Instant Adhesive Tube",
+    "type": "Instant adhesive",
+    "categorySlug": "industrial-materials",
+    "brandSlug": "loctite",
+    "image": "/images/products/loctite-401-instant-adhesive-tube.webp",
+    "specs": [["Pack", "3 g"]]
+  },
+  {
+    "name": "Hilti HKV Flush Anchor",
+    "type": "Flush anchor",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-hkv-flush-anchor.webp"
+  },
+  {
+    "name": "Hilti Anchor Fasteners",
+    "type": "Anchor",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-anchor-fasteners.webp"
+  },
+  {
+    "name": "Hilti Chemical Dispenser Gun",
+    "type": "Dispenser gun",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-chemical-dispenser-gun.webp"
+  },
+  {
+    "name": "Hilti Epoxy Chemical Anchor",
+    "type": "Chemical anchor",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-epoxy-chemical-anchor.webp"
+  },
+  {
+    "name": "Hilti Chemical Capsules & Studs",
+    "type": "Chemical anchor",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-chemical-capsules-studs.webp"
+  },
+  {
+    "name": "Hilti Chemical Anchor Set",
+    "type": "Chemical anchor",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-chemical-anchor-set.webp"
+  },
+  {
+    "name": "Hilti Anchor Rods, Boxed",
+    "type": "Anchor rod",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-anchor-rods-boxed.webp"
+  },
+  {
+    "name": "Hilti Wedge Anchor",
+    "type": "Anchor",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-wedge-anchor.webp"
+  },
+  {
+    "name": "Hilti Through Bolt",
+    "type": "Anchor",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-through-bolt.webp"
+  },
+  {
+    "name": "Hilti Threaded Rods",
+    "type": "Threaded rod",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-threaded-rods.webp"
+  },
+  {
+    "name": "Hilti Sleeve Anchors",
+    "type": "Sleeve anchor",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-sleeve-anchors.webp"
+  },
+  {
+    "name": "Hilti Screw Anchor",
+    "type": "Screw anchor",
+    "categorySlug": "fasteners-hardware",
+    "brandSlug": "hilti",
+    "image": "/images/products/hilti-screw-anchor.webp"
+  }
+]

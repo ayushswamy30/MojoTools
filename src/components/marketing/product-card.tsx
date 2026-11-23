@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Product } from '@/features/content/products'
 import type { CategoryIcon } from '@/features/content/site'
@@ -5,32 +6,34 @@ import { formatPrice } from '@/lib/format'
 import { cn } from '@/lib/cn'
 import { CategoryArt } from './category-art'
 
-export type ProductLabels = { sampleBadge: string; plusGst: string; off: string }
+export type ProductLabels = { priceOnRequest: string; plusGst: string; off: string }
 
-/** Picture panel with the product type on a dark band (stand-in until real photos, A8). */
+/** Picture panel with the product type on a dark band; category art when there is no photo. */
 export function ProductVisual({
   product,
   icon,
-  sampleBadge,
+  sizes,
   className,
 }: {
   product: Product
   icon: CategoryIcon
-  sampleBadge?: string
+  sizes: string
   className?: string
 }) {
   return (
     <div
       className={cn('relative flex flex-col overflow-hidden rounded-sm bg-steel-100', className)}
     >
-      {sampleBadge ? (
-        <span className="absolute top-3 left-3 rounded-sm bg-white px-2 py-0.5 font-mono text-xs text-steel-600">
-          {sampleBadge}
-        </span>
-      ) : null}
-      <div className="grid flex-1 place-items-center p-6">
-        <CategoryArt name={icon} className="size-1/2 text-ink-900" />
-      </div>
+      {product.image ? (
+        <div className="relative min-h-0 flex-1 bg-white">
+          {/* Empty alt: the product name is the adjacent text. */}
+          <Image src={product.image} alt="" fill sizes={sizes} className="object-contain p-3" />
+        </div>
+      ) : (
+        <div className="grid flex-1 place-items-center p-6">
+          <CategoryArt name={icon} className="size-1/2 text-ink-900" />
+        </div>
+      )}
       <span className="bg-ink-900 px-3 py-2 text-center font-display text-sm font-extrabold tracking-wider text-white uppercase [font-stretch:125%]">
         {product.type}
       </span>
@@ -47,6 +50,12 @@ export function Price({
   labels: ProductLabels
   size?: 'md' | 'lg'
 }) {
+  if (product.pricePaise === undefined)
+    return (
+      <p className={cn('font-bold text-ink-900', size === 'lg' ? 'text-2xl' : 'text-sm')}>
+        {labels.priceOnRequest}
+      </p>
+    )
   const saving =
     product.mrpPaise && product.mrpPaise > product.pricePaise
       ? product.mrpPaise - product.pricePaise
@@ -88,7 +97,7 @@ export function ProductCard({
       <ProductVisual
         product={product}
         icon={icon}
-        sampleBadge={labels.sampleBadge}
+        sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
         className="aspect-[4/5] transition-shadow duration-200 ease-brand group-hover:shadow-hover"
       />
       <h3 className="mt-3 border-b border-steel-200 pb-1 font-sans text-sm leading-snug font-bold text-ink-900 underline-offset-4 group-hover:underline">

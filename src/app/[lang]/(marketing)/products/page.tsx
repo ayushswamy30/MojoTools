@@ -1,12 +1,7 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { business, categories, whatsappHref } from '@/features/content/site'
-import {
-  brandName,
-  findProduct,
-  isSampleCatalogue,
-  productsInCategory,
-} from '@/features/content/products'
+import { brandName, findProduct, productsInCategory } from '@/features/content/products'
 import { getDictionary, t, type Dictionary } from '@/i18n/dictionary'
 import en from '@/i18n/messages/en.json'
 import { Container } from '@/components/ui/container'
@@ -46,7 +41,7 @@ function Catalog({
   const category =
     categories.find((c) => c.slug === (product?.categorySlug ?? categorySlug)) ?? defaultCategory
   const items = productsInCategory(category)
-  const labels = { sampleBadge: p.sampleBadge, plusGst: p.plusGst, off: p.off }
+  const labels = { priceOnRequest: p.priceOnRequest, plusGst: p.plusGst, off: p.off }
 
   return (
     <>
@@ -62,11 +57,6 @@ function Catalog({
             {category.name}
           </h2>
         </div>
-        {isSampleCatalogue ? (
-          <p className="mt-4 rounded-sm border-l-4 border-brand-yellow bg-brand-yellow-soft px-4 py-2 text-sm text-ink-900">
-            {p.sampleNote}
-          </p>
-        ) : null}
 
         {items.length > 0 ? (
           <ul className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
@@ -97,7 +87,7 @@ function Catalog({
           quoteHref={`/quote?${new URLSearchParams({
             type: 'quote',
             category: category.slug,
-            brand: product.brandSlug,
+            ...(product.brandSlug ? { brand: product.brandSlug } : {}),
             message: t(p.quoteMessage, { product: product.name, sku: product.sku }),
           })}`}
           whatsappHref={whatsappHref(`Hi, I'm looking for ${product.name} (${product.sku})`)}
