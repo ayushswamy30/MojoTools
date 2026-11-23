@@ -23,6 +23,7 @@
 - **09 Nov 2026**: Docs brought up to date: README, `PROGRESS.md` (rewritten), `TASKS.md` progress notes, DESIGN `FeatureCards` / `StoreGallery` / `SectionTitle` / home wireframe, DECISIONS P19. 25 unit + 72 e2e tests.
 - **23 Nov 2026**: Contact page reworked after the UX audit (P21): quick actions in the hero, map beside contact details, shorter Contact form, newsletter moved to the footer. Real store address, map embed and directions added. Removed the form's `encType`, which caused a React hydration error. PRD PS-5, DESIGN, TASKS, LEGAL, OPEN-QUESTIONS and PROGRESS updated. Last local run: 25 unit tests passed; browser tests 72 passed, 2 failed (Mojo Mitra launcher on mobile, cause not yet found), 6 skipped.
 - **23 Nov 2026**: Real catalogue loaded from the owner's company profile deck: 515 products with photos and 102 authorised brands with logos, across 11 categories (Fasteners & Hardware split into Valves & Piping, Electricals and Industrial Materials). Prices show "Price on request"; test contact details added (DECISIONS P22).
+- **23 Nov 2026**: Product search added to the header and Products page (P23). Contact details moved out of the repo into environment variables (P24).
 
 ## Consolidation log (08 Oct 2026)
 

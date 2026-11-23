@@ -120,6 +120,41 @@ test('products page: Power Tools by default, strip switches category, product op
   await expect(page.getByLabel(/^Category/)).toHaveValue('welding')
 })
 
+test('header search finds a product by name from any page', async ({ page }) => {
+  await page.goto('/about')
+  await page.getByRole('banner').getByRole('button', { name: 'Search products' }).click()
+  const input = page.getByRole('searchbox', { name: 'Search products' })
+  await expect(input).toBeFocused()
+  await input.fill('makita heat gun')
+  await input.press('Enter')
+  await expect(page).toHaveURL(/\/products\?q=makita/)
+  await expect(page.getByRole('status')).toContainText('1 product')
+
+  await page.getByRole('link', { name: /Makita Heat Gun/ }).click()
+  const dialog = page.getByRole('dialog', { name: /Makita Heat Gun/ })
+  await expect(dialog).toBeVisible()
+  await page.keyboard.press('Escape')
+  await expect(dialog).toBeHidden()
+  await expect(page).toHaveURL(/\/products\?q=makita/)
+})
+
+test('Products page search: main bar, item code, and a way forward when nothing matches', async ({
+  page,
+}) => {
+  await page.goto('/products')
+  await page.getByRole('banner').getByRole('button', { name: 'Search products' }).click()
+  const input = page.locator('#product-search')
+  await expect(input).toBeFocused()
+  await input.fill('mt-pt-001')
+  await input.press('Enter')
+  await expect(page.getByRole('status')).toContainText('1 product')
+
+  await page.goto('/products?q=zzzznotaproduct')
+  await expect(page.getByRole('status')).toContainText('No products match')
+  await page.getByRole('link', { name: 'Ask us for this item' }).click()
+  await expect(page).toHaveURL(/\/quote\?type=quote&message=/)
+})
+
 test('old /brands links redirect to Distributorship', async ({ page }) => {
   await page.goto('/brands/dewalt')
   await expect(page).toHaveURL(/\/distributorship\/dewalt$/)

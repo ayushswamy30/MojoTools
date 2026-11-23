@@ -1,3 +1,4 @@
+import { publicEnv } from '@/lib/public-env'
 import brandData from './brands.json'
 
 /**
@@ -25,10 +26,10 @@ export const business = {
     pincode: '122001',
   },
   hours: 'Mon–Sat, 9:30 am – 7:00 pm', // SEED (A6)
-  // shortcut: WhatsApp assumed to be the mobile number; owner will test these before launch (A6).
-  phone: '+91 98105 65271',
-  whatsapp: '+91 98105 65271',
-  email: 'mojotoolsindia@gmail.com',
+  // From env (publicEnv): testing uses the owner's details; set the business ones at launch (A6).
+  phone: publicEnv.contactPhone,
+  whatsapp: publicEnv.contactWhatsapp,
+  email: publicEnv.contactEmail,
   gstin: null as string | null, // SEED (A6): shown only when supplied
   mapEmbedUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508!2d77.0131118!3d28.4400333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d191aa94e98f5%3A0x5ce3d2e91144bb61!2sMOJO%20TOOLS%20AND%20TRADING%20INDIA%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin' as
