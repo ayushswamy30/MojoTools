@@ -6,7 +6,7 @@ export function Logo({ name, homeLabel }: { name: string; homeLabel: string }) {
     <Link
       href="/"
       aria-label={`${name}, ${homeLabel}`}
-      className="inline-flex min-h-11 items-center gap-2 font-display text-xl font-extrabold tracking-tight whitespace-nowrap text-white uppercase [font-stretch:125%]"
+      className="inline-flex min-h-11 items-center gap-2 font-display text-lg font-extrabold tracking-tight whitespace-nowrap text-white uppercase [font-stretch:125%] min-[360px]:text-xl"
     >
       <span
         aria-hidden="true"

@@ -6,12 +6,13 @@ import { cn } from '@/lib/cn'
 import { telHref } from '@/lib/format'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
+import { HeaderSearch } from './header-search'
 import { HeaderShell } from './header-shell'
 import { Logo } from './logo'
 import { MobileNav } from './mobile-nav'
 import { NavLinks, type NavItem } from './nav-links'
 
-/** R0 header (DESIGN §4): logo · page links · GET A QUOTE. R1 swaps in search/cart/account. */
+/** R0 header (DESIGN §4): logo · page links · search · GET A QUOTE. R1 adds cart/account. */
 export function Header({ dict }: { dict: Dictionary }) {
   const c = dict.chrome
   const items: NavItem[] = [
@@ -24,7 +25,7 @@ export function Header({ dict }: { dict: Dictionary }) {
   const wa = whatsappHref('Hi, I have an enquiry')
   return (
     <HeaderShell className="on-dark sticky top-0 z-[var(--z-sticky-header)] bg-ink-900">
-      <Container className="flex h-16 items-center justify-between gap-6">
+      <Container className="flex h-16 items-center justify-between gap-2 sm:gap-6">
         {/* Mobile: hamburger on the left, next to the logo (owner feedback, DECISIONS P13). */}
         <div className="flex items-center gap-1">
           <MobileNav
@@ -45,16 +46,24 @@ export function Header({ dict }: { dict: Dictionary }) {
         <nav aria-label={c.mainNav} className="hidden lg:block">
           <NavLinks items={items} className="flex items-center gap-8" />
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <HeaderSearch
+            labels={{
+              search: c.search,
+              searchPlaceholder: c.searchPlaceholder,
+              searchSubmit: c.searchSubmit,
+            }}
+          />
           <Link
             href="/quote"
             className={cn(buttonVariants({ variant: 'primary' }), 'hidden sm:inline-flex')}
           >
             {c.getQuote}
           </Link>
+          {/* Under 400px there is no room beside search; Call stays in the menu. */}
           <a
             href={telHref(business.phone)}
-            className="inline-flex size-11 items-center justify-center rounded-sm text-white lg:hidden"
+            className="hidden size-11 items-center justify-center rounded-sm text-white min-[400px]:inline-flex lg:hidden"
           >
             <Phone aria-hidden="true" className="size-5" />
             <span className="sr-only">{c.call}</span>

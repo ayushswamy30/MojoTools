@@ -67,6 +67,62 @@ export const findProduct = (slug: string | undefined) =>
 export const brandName = (slug: string | undefined) =>
   slug ? (brands.find((brand) => brand.slug === slug)?.name ?? slug) : 'Brand on request'
 
+const squash = (text: string) => text.toLowerCase().replace(/[^a-z0-9]/g, '')
+// Light plural handling so "valves" finds "Ball Valve".
+const searchWords = (text: string) =>
+  text
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((word) => word.length > 1)
+    .map((word) => (word.length > 3 ? word.replace(/s$/, '') : word))
+
+const searchIndex = products.map((product) => {
+  const category = categories.find((c) => c.slug === product.categorySlug)?.name ?? ''
+  const brand = product.brandSlug ? brandName(product.brandSlug) : ''
+  const text = `${product.name} ${product.type} ${brand} ${category} ${product.sku}`
+  return {
+    product,
+    name: product.name.toLowerCase(),
+    nameWords: searchWords(product.name),
+    words: searchWords(text),
+    squashed: squash(text),
+    sku: squash(product.sku),
+  }
+})
+
+/** Finds products by name, type, brand, category or item code; best matches first. */
+export function searchProducts(query: string): Product[] {
+  const phrase = query.trim().toLowerCase()
+  const code = squash(phrase)
+  const exactCode = searchIndex.find((entry) => entry.sku === code)
+  if (exactCode) return [exactCode.product]
+  // "PT-001" is the item code without its MT prefix.
+  if (/\d/.test(code) && /[a-z]/.test(code) && code.length >= 4) {
+    const partial = searchIndex.filter((entry) => entry.sku.endsWith(code))
+    if (partial.length > 0) return partial.map((entry) => entry.product)
+  }
+  const tokens = searchWords(phrase)
+  if (tokens.length === 0) return []
+  return searchIndex
+    .filter((entry) =>
+      tokens.every(
+        (token) =>
+          entry.words.some((word) => word.startsWith(token)) ||
+          // Model numbers: "wd40" finds "WD-40".
+          (/\d/.test(token) && entry.squashed.includes(token)),
+      ),
+    )
+    .map((entry) => ({
+      product: entry.product,
+      score:
+        (entry.name.startsWith(phrase) ? 4 : 0) +
+        (entry.name.includes(phrase) ? 2 : 0) +
+        tokens.filter((token) => entry.nameWords.includes(token)).length,
+    }))
+    .sort((a, b) => b.score - a.score)
+    .map((entry) => entry.product)
+}
+
 // Catalogue self-check: every product points at a real category and brand, and slugs are unique.
 for (const product of products) {
   if (!categories.some((c) => c.slug === product.categorySlug))

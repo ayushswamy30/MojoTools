@@ -343,6 +343,8 @@ Every transition writes an `order_events` row and may trigger email.
 `Upload XLSX → parse (SheetJS) → validate rows (Zod) → preview with errors → upsert by SKU in a transaction → revalidate tags → import report`. Images are matched by filename = SKU (`SKU.jpg`, `SKU_2.jpg`); alt text defaults to "{Brand} {Product name}".
 
 ## 7. Search (R1)
+
+**R0:** `searchProducts` in `features/content/products.ts` searches the static catalogue on the server by name, type, brand, category and item code. The header and Products page submit a plain GET form to `/products?q=…`, so it works without JavaScript. Results are capped at 48.
 - `products.search_tsv` = weighted tsvector (name A, brand B, category C, description D).
 - `product_variants.sku` with a `pg_trgm` GIN index.
 - Query order: **exact SKU → SKU prefix → FTS rank → trigram similarity on name**.
@@ -367,6 +369,8 @@ Every transition writes an `order_events` row and may trigger email.
 | Production | Vercel prod | Supabase prod | live keys, daily backups (PITR) |
 
 CI (GitHub Actions): typecheck → lint (incl. jsx-a11y) → unit tests → build → Playwright smoke + **axe** on preview (fail on serious/critical violations).
+
+**Public contact details:** `NEXT_PUBLIC_CONTACT_PHONE`, `NEXT_PUBLIC_CONTACT_WHATSAPP` and `NEXT_PUBLIC_CONTACT_EMAIL` are set in Vercel and `.env.local`, never in the repo. They are built into the pages, so changing them needs a redeploy. Without them the site shows reserved demo values.
 
 ## 10. Integrations
 
